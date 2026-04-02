@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Central Government Governance – AI Incident Database</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- TOP NAV -->
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <div class="topnav-brand">
+        <span class="brand-dot"></span>
+        <span class="brand-name">AI Incident Database</span>
+        <span class="brand-tag">India · 2021–2025</span>
+      </div>
+      <div class="topnav-links">
+        <a href="index.html" class="nav-link">States</a>
+        <a href="overall.html" class="nav-link">Analysis</a>
+        <a href="governance.html" class="nav-link active">Central Governance</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE DRAWER -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="drawer" id="drawer">
+    <div class="drawer-header">
+      <span class="brand-name">Navigation</span>
+      <button class="drawer-close" id="drawerClose">✕</button>
+    </div>
+    <ul class="drawer-list">
+      <li><a href="index.html" class="drawer-link"><span>🗺️</span> All States</a></li>
+      <li><a href="overall.html" class="drawer-link"><span>📊</span> Overall Analysis</a></li>
+      <li><a href="governance.html" class="drawer-link active"><span>🏛️</span> Central Governance</a></li>
+    </ul>
+  </aside>
+
+  <!-- HERO -->
+  <header class="state-hero">
+    <div class="state-hero-inner">
+      <a href="index.html" class="back-btn">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        All States
+      </a>
+      <h1 class="state-title">Central Government Governance</h1>
+      <p class="state-subtitle">National-level laws, policies, and regulatory measures on AI misuse in India</p>
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <main class="state-main">
+    <div class="incident-list" id="govList"></div>
+  </main>
+
+  <footer class="site-footer">
+    <p>B.Tech Project · IIIT Delhi · Dept. of Social Science & Humanities</p>
+    <p>Anshul Jain · Dhruv Kantroo · Siddhant Gautam</p>
+  </footer>
+
+  <script>
+    // ── Drawer ──────────────────────────────────────────────
+    const hamburger = document.getElementById('hamburger');
+    const drawer    = document.getElementById('drawer');
+    const overlay   = document.getElementById('drawerOverlay');
+    const closeBtn  = document.getElementById('drawerClose');
+    hamburger.addEventListener('click', () => { drawer.classList.add('open'); overlay.classList.add('active'); });
+    closeBtn.addEventListener('click',  () => { drawer.classList.remove('open'); overlay.classList.remove('active'); });
+    overlay.addEventListener('click',   () => { drawer.classList.remove('open'); overlay.classList.remove('active'); });
+
+    // ── Central Governance Data ──────────────────────────────
+    const centralGovData = [
+      {
+        title: "Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021",
+        date: "Feb 25, 2021",
+        type: "Legislation",
+        description: "The IT Rules 2021 require major social media intermediaries (with 5 million+ users) to appoint a Chief Compliance Officer, a Nodal Contact Person, and a Resident Grievance Officer in India. Platforms must remove flagged content within 36 hours for emergency requests and 15 days for standard grievances. The rules also mandate a monthly compliance report and proactive monitoring of AI-generated content. However, critics argue the rules give the government broad takedown powers with insufficient judicial oversight.",
+        link: "https://meity.gov.in/itmediaguidelines"
+      },
+      {
+        title: "Digital Personal Data Protection Act (DPDPA), 2023",
+        date: "Aug 11, 2023",
+        type: "Legislation",
+        description: "India's first comprehensive data protection law establishes rights for 'data principals' (citizens) and obligations for 'data fiduciaries' (organisations). Relevant to AI misuse: it requires explicit consent before processing personal data, mandates purpose limitation (data cannot be reused for AI training without consent), and establishes a Data Protection Board to adjudicate violations. Penalties can reach ₹250 crore per violation. Critics note broad government exemptions for national security that could be misused.",
+        link: "https://www.meity.gov.in/data-protection-framework"
+      },
+      {
+        title: "MeitY Advisory on Deepfakes — Platforms Must Act in 36 Hours",
+        date: "Dec 26, 2023",
+        type: "Regulatory Advisory",
+        description: "Following a surge in celebrity deepfakes during election season, the Ministry of Electronics and IT (MeitY) issued a formal advisory to all social media platforms. Platforms are required to remove deepfake content within 36 hours of being notified. The advisory cited Rules 3(1)(b)(vii) and 3(2)(b) of the IT Rules 2021, which prohibit content that impersonates another person. MeitY warned that non-compliance could result in loss of safe harbour protections under Section 79 of the IT Act.",
+        link: "https://www.meity.gov.in/content/advisory-social-media-intermediaries-deepfake"
+      },
+      {
+        title: "Election Commission of India — AI & Deepfake Guidelines for General Elections 2024",
+        date: "Mar 2024",
+        type: "Electoral Regulation",
+        description: "Ahead of the 2024 Lok Sabha elections, the Election Commission issued comprehensive guidelines on AI use in political campaigns. All AI-generated content in political advertisements must carry a visible disclaimer. Campaigns are prohibited from using deepfakes of political opponents. Platforms must remove flagged electoral deepfakes within 3 hours during election silence periods. The EC also established a dedicated monitoring cell for AI-generated content across 14 major social media platforms.",
+        link: "https://eci.gov.in/files/file/14897-election-commission-of-india-handbook-on-combating-misinformation/"
+      },
+      {
+        title: "Bharatiya Nyaya Sanhita (BNS), 2023 — Cybercrime Provisions",
+        date: "Dec 25, 2023",
+        type: "Legislation",
+        description: "India's replacement for the IPC introduced updated cybercrime provisions directly applicable to AI misuse. Section 318 (cheating) and Section 319 (cheating by personation) now cover AI-enabled identity fraud and deepfake scams. Section 356 covers criminal defamation through digital means including AI-manipulated media. The BNS also introduced provisions for organised cybercrime (Section 111), with enhanced penalties when crimes are committed using technology tools.",
+        link: "https://legislative.gov.in/acts/bharatiya-nyaya-sanhita-2023/"
+      },
+      {
+        title: "Indian Cyber Crime Coordination Centre (I4C) — National Helpline 1930",
+        date: "Ongoing (est. 2018, expanded 2023)",
+        type: "Law Enforcement Infrastructure",
+        description: "The I4C under the Ministry of Home Affairs coordinates cybercrime response across all states. The national helpline 1930 allows citizens to report AI-enabled fraud including deepfakes, voice cloning scams, and digital arrest frauds. I4C maintains the National Cybercrime Reporting Portal (cybercrime.gov.in) and coordinates with state police, banks, and platforms for real-time fund freezing. In 2024, I4C specifically expanded its deepfake tracking capacity in response to election-season misuse.",
+        link: "https://i4c.mha.gov.in/"
+      },
+      {
+        title: "CERT-In (Indian Computer Emergency Response Team) Directions, 2022",
+        date: "Apr 28, 2022",
+        type: "Regulatory Directive",
+        description: "CERT-In issued mandatory directions requiring all organisations (including AI platforms and cloud providers) to report cybersecurity incidents within 6 hours. Organisations must maintain logs of ICT systems for 180 days within Indian jurisdiction. Virtual private network providers and data centres must maintain subscriber data. These provisions give law enforcement access to data trails needed to investigate AI-assisted fraud — though they also raised concerns about surveillance overreach.",
+        link: "https://www.cert-in.org.in/Directions70B.jsp"
+      },
+      {
+        title: "National Cyber Security Policy (Revised Framework 2024)",
+        date: "2024 (Draft)",
+        type: "Policy Framework",
+        description: "India's revised National Cyber Security Policy (2024 draft) for the first time explicitly addresses AI-specific risks including adversarial AI attacks, deepfake-based social engineering, and AI-assisted malware. It proposes a National AI Security Framework, mandatory AI risk assessments for critical infrastructure, and a Centre of Excellence for AI Security. However, as of 2025 the framework remains in draft stage, and implementation timelines have not been published.",
+        link: "https://ncsp.cert-in.org.in/"
+      },
+      {
+        title: "MeitY's Advisory on Regulation of Unlawful Content on OTT/Social Media",
+        date: "Nov 2023",
+        type: "Regulatory Advisory",
+        description: "MeitY issued an advisory specifically targeting AI-generated unlawful content on OTT platforms and social media. It directed platforms to deploy 'reasonable efforts' including automated tools to detect deepfake and synthetic media. Platforms were instructed to label AI-generated content and provide users with a mechanism to report AI-manipulated media. The advisory was seen as a precursor to more formal AI content regulation, though critics noted it lacked binding enforcement mechanisms.",
+        link: "https://www.meity.gov.in"
+      },
+      {
+        title: "Parliamentary Standing Committee Report on AI Regulation",
+        date: "Jul 2023",
+        type: "Policy",
+        description: "India's Parliamentary Standing Committee on Communications and Information Technology released a report calling for a dedicated AI regulatory body, mandatory AI impact assessments before deployment of high-risk systems, and algorithmic transparency requirements for social media platforms. The report specifically highlighted the regulatory gap around deepfakes and called for a Deepfake Prevention Act. As of 2025, dedicated AI legislation remains pending.",
+        link: "https://sansad.in/ls/committees/reports"
+      },
+      {
+        title: "Ministry of Information and Broadcasting (MIB) — Fake News Warning to News Channels",
+        date: "Apr 2023 onwards",
+        type: "Regulatory Advisory",
+        description: "The MIB issued a series of warnings to satellite news channels against broadcasting AI-generated content presented as factual reporting without disclosure. Channels that violated guidelines faced show-cause notices and temporary broadcast suspensions in some cases. The ministry also directed all news broadcasters to watermark or label AI-generated visuals used in news programming.",
+        link: "https://www.mib.gov.in"
+      },
+      {
+        title: "Telecom Regulatory Authority of India (TRAI) — Recommendations on AI in Telecom",
+        date: "Aug 2024",
+        type: "Regulatory Advisory",
+        description: "TRAI issued recommendations on the use of AI in the telecom sector, specifically addressing AI-enabled voice spoofing and robocall fraud. Telecom operators are required to deploy AI-based anti-spoofing systems to detect cloned voice calls. TRAI also recommended mandatory disclosure when automated AI systems are used in customer interactions — directly relevant to AI voice cloning scams documented across multiple states.",
+        link: "https://www.trai.gov.in"
+      }
+    ];
+
+    // ── Render ────────────────────────────────────────────────
+    function renderGovCards() {
+      const list = document.getElementById('govList');
+      centralGovData.forEach((item, i) => {
+        const card = document.createElement('div');
+        card.className = 'incident-card';
+        card.style.animationDelay = (i * 0.055) + 's';
+
+        const typeClass = 'type-' + item.type.toLowerCase().replace(/[^a-z]/g,'-');
+
+        const header = document.createElement('div');
+        header.className = 'incident-header';
+        header.innerHTML = `
+          <div class="incident-header-left">
+            <div class="incident-title">${item.title}</div>
+            <div class="incident-meta">
+              <span class="incident-date">📅 ${item.date}</span>
+              <span class="type-badge ${typeClass}">${item.type}</span>
+            </div>
+          </div>
+          <div class="incident-toggle">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M2 4l4 4 4-4"/>
+            </svg>
+          </div>
+        `;
+
+        const dropdown = document.createElement('div');
+        dropdown.className = 'incident-dropdown';
+        const inner = document.createElement('div');
+        inner.className = 'dropdown-inner';
+        inner.innerHTML = `
+          <p class="dropdown-text">${item.description}</p>
+          <a class="read-more-btn" href="${item.link}" target="_blank" rel="noopener">🔗 Official Source <span>→</span></a>
+        `;
+        dropdown.appendChild(inner);
+
+        header.addEventListener('click', () => {
+          const isOpen = card.classList.contains('open');
+          card.classList.toggle('open', !isOpen);
+          dropdown.style.maxHeight = isOpen ? '0' : dropdown.scrollHeight + 'px';
+        });
+
+        card.appendChild(header);
+        card.appendChild(dropdown);
+        list.appendChild(card);
+      });
+    }
+
+    renderGovCards();
+  </script>
+</body>
+</html>

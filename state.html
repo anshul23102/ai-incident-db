@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>State – Incidents</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- TOP NAV -->
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <div class="topnav-brand">
+        <span class="brand-dot"></span>
+        <span class="brand-name">AI Incident Database</span>
+        <span class="brand-tag">India · 2021–2025</span>
+      </div>
+      <div class="topnav-links">
+        <a href="index.html" class="nav-link">States</a>
+        <a href="overall.html" class="nav-link">Analysis</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE DRAWER -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="drawer" id="drawer">
+    <div class="drawer-header">
+      <span class="brand-name">Navigation</span>
+      <button class="drawer-close" id="drawerClose">✕</button>
+    </div>
+    <ul class="drawer-list">
+      <li><a href="index.html" class="drawer-link"><span>🗺️</span> All States</a></li>
+      <li><a href="overall.html" class="drawer-link"><span>📊</span> Overall Analysis</a></li>
+    </ul>
+  </aside>
+
+  <!-- STATE HEADER -->
+  <header class="state-hero">
+    <div class="state-hero-inner">
+      <a href="index.html" class="back-btn">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        All States
+      </a>
+      <h1 id="stateTitle" class="state-title">State – Incidents</h1>
+      <p id="incidentCount" class="state-subtitle"></p>
+    </div>
+  </header>
+
+  <!-- TABS -->
+  <div class="tab-bar">
+    <div class="tab-bar-inner">
+      <button class="tab-btn active" data-tab="incidents">⚠️ Incidents</button>
+      <button class="tab-btn" data-tab="governance">🏛️ Governance</button>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <main class="state-main">
+    <p id="noIncidentsMessage" class="empty-state" style="display:none;"></p>
+    <div id="incidentList" class="incident-list"></div>
+  </main>
+
+  <footer class="site-footer">
+    <p>B.Tech Project · IIIT Delhi · Dept. of Social Science & Humanities</p>
+    <p>Anshul Jain · Dhruv Kantroo · Siddhant Gautam</p>
+  </footer>
+
+  <script src="state.js"></script>
+</body>
+</html>

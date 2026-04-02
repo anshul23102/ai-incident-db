@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Incident Database – India</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- TOP NAV -->
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <div class="topnav-brand">
+        <span class="brand-dot"></span>
+        <span class="brand-name">AI Incident Database</span>
+        <span class="brand-tag">India · 2021–2025</span>
+      </div>
+      <div class="topnav-links">
+        <a href="index.html" class="nav-link active">States</a>
+        <a href="overall.html" class="nav-link">Analysis</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE DRAWER -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="drawer" id="drawer">
+    <div class="drawer-header">
+      <span class="brand-name">Navigation</span>
+      <button class="drawer-close" id="drawerClose">✕</button>
+    </div>
+    <ul class="drawer-list">
+      <li><a href="index.html" class="drawer-link active"><span>🗺️</span> All States</a></li>
+      <li><a href="overall.html" class="drawer-link"><span>📊</span> Overall Analysis</a></li>
+    </ul>
+  </aside>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow">Literature Review</div>
+      <h1 class="hero-title">AI Misuse Across<br><em>India's States</em></h1>
+      <p class="hero-sub">A documented state-wise record of AI-related harm — deepfakes, fraud, misinformation, and surveillance risks — from 2021 to 2025.</p>
+      <div class="hero-stats">
+        <div class="stat"><strong>25+</strong><span>States covered</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>6</strong><span>Harm categories</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>2021–25</strong><span>Time period</span></div>
+      </div>
+      <a href="governance.html" class="central-gov-btn">
+        🏛️ View Central Government Governance Measures →
+      </a>
+    </div>
+    <div class="hero-grid-bg"></div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main-container">
+    <div class="controls-bar">
+      <div class="search-wrap">
+        <svg class="search-icon" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.8"/><path d="M13 13l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <input type="text" id="searchInput" class="search-input" placeholder="Search a state…" autocomplete="off" />
+      </div>
+      <select id="stateSelect" class="state-select">
+        <option value="">All States</option>
+        <option>Andhra Pradesh</option>
+        <option>Arunachal Pradesh</option>
+        <option>Assam</option>
+        <option>Bihar</option>
+        <option>Chhattisgarh</option>
+        <option>Goa</option>
+        <option>Gujarat</option>
+        <option>Haryana/ Delhi</option>
+        <option>Himachal Pradesh</option>
+        <option>Jharkhand</option>
+        <option>Karnataka</option>
+        <option>Kerala</option>
+        <option>Madhya Pradesh</option>
+        <option>Maharashtra</option>
+        <option>Manipur</option>
+        <option>Meghalaya</option>
+        <option>Mizoram</option>
+        <option>Nagaland</option>
+        <option>Odisha</option>
+        <option>Punjab</option>
+        <option>Rajasthan</option>
+        <option>Sikkim</option>
+        <option>Tamil Nadu</option>
+        <option>Telangana</option>
+        <option>Tripura</option>
+        <option>Uttar Pradesh</option>
+        <option>Uttarakhand</option>
+        <option>West Bengal</option>
+      </select>
+    </div>
+
+    <ul id="stateList" class="state-grid">
+      <li data-state="Andhra Pradesh"><a href="state.html?state=Andhra%20Pradesh"><span class="state-name">Andhra Pradesh</span><span class="state-arrow">→</span></a></li>
+      <li data-state="Arunachal Pradesh"><a href="state.html?state=Arunachal%20Pradesh"><span class="state-name">Arunachal Pradesh</span><span class="state-arrow">→</span></a></li>
+      <li data-state="Assam"><a href="state.html?state=Assam"><span class="state-name">Assam</span><span class="state-arrow">→</span></a></li>
+      <li data-state="Bihar"><a href="state.html?state=Bihar"><span class="state-name">Bihar</span><span class="state-arrow">→</span></a></li>
+      <li data-state="Chhattisgarh"><a href="state.html?state=Chhattisgarh"><span class="state-name">Chhattisgarh</span><span class="state-arrow">→</span></a></li>
+      <li data-state="Goa"><a href="state.html?state=Goa"><span class="state-name">Goa</span><span class="state-arrow">→</span></a></li>
+      <li data-state="Gujarat"><a href="state.html?state=Gujarat"><span class="state-name">Gujarat</span><span class="state-arrow">→</span></a></li>
+      <li data-state="Haryana/ Delhi"><a href="state.html?state=Haryana%2F%20Delhi"><span class="state-name">Haryana / Delhi</span><span class="state-arrow">→</span></a></li>
+      <li data-state="Himachal Pradesh"><a href="state.html?state=Himachal%20Pradesh"><span class="state-name">Himachal Pradesh</span><span class="state-arrow">→</span></a></li>
+      <li data-state="Jharkhand"><a href="state.html?state=Jharkhand"><span class="state-name">Jharkhand</span><span class="state-arrow">→</span></a></li>
+      <li data-state="Karnataka"><a href="state.html?state=Karnataka"><span class="state-name">Karnataka</span><span class="state-arrow">→</span></a></li>
+      <li data-state="Kerala"><a href="state.html?state=Kerala"><span class="state-name">Kerala</span><span class="state-arrow">→</span></a></li>
+      <li data-state="Madhya Pradesh"><a href="state.html?state=Madhya%20Pradesh"><span class="state-name">Madhya Pradesh</span><span class="state-arrow">→</span></a></li>
+      <li data-state="Maharashtra"><a href="state.html?state=Maharashtra"><span class="state-name">Maharashtra</span><span class="state-arrow">→</span></a></li>
+      <li data-state="Manipur"><a href="state.html?state=Manipur"><span class="state-name">Manipur</span><span class="state-arrow">→</span></a></li>
+      <li data-state="Meghalaya"><a href="state.html?state=Meghalaya"><span class="state-name">Meghalaya</span><span class="state-arrow">→</span></a></li>
+      <li data-state="Mizoram"><a href="state.html?state=Mizoram"><span class="state-name">Mizoram</span><span class="state-arrow">→</span></a></li>
+      <li data-state="Nagaland"><a href="state.html?state=Nagaland"><span class="state-name">Nagaland</span><span class="state-arrow">→</span></a></li>
+      <li data-state="Odisha"><a href="state.html?state=Odisha"><span class="state-name">Odisha</span><span class="state-arrow">→</span></a></li>
+      <li data-state="Punjab"><a href="state.html?state=Punjab"><span class="state-name">Punjab</span><span class="state-arrow">→</span></a></li>
+      <li data-state="Rajasthan"><a href="state.html?state=Rajasthan"><span class="state-name">Rajasthan</span><span class="state-arrow">→</span></a></li>
+      <li data-state="Sikkim"><a href="state.html?state=Sikkim"><span class="state-name">Sikkim</span><span class="state-arrow">→</span></a></li>
+      <li data-state="Tamil Nadu"><a href="state.html?state=Tamil%20Nadu"><span class="state-name">Tamil Nadu</span><span class="state-arrow">→</span></a></li>
+      <li data-state="Telangana"><a href="state.html?state=Telangana"><span class="state-name">Telangana</span><span class="state-arrow">→</span></a></li>
+      <li data-state="Tripura"><a href="state.html?state=Tripura"><span class="state-name">Tripura</span><span class="state-arrow">→</span></a></li>
+      <li data-state="Uttar Pradesh"><a href="state.html?state=Uttar%20Pradesh"><span class="state-name">Uttar Pradesh</span><span class="state-arrow">→</span></a></li>
+      <li data-state="Uttarakhand"><a href="state.html?state=Uttarakhand"><span class="state-name">Uttarakhand</span><span class="state-arrow">→</span></a></li>
+      <li data-state="West Bengal"><a href="state.html?state=West%20Bengal"><span class="state-name">West Bengal</span><span class="state-arrow">→</span></a></li>
+    </ul>
+
+    <p id="noResults" class="no-results" style="display:none;">No states match your search.</p>
+  </main>
+
+  <footer class="site-footer">
+    <p>B.Tech Project · IIIT Delhi · Dept. of Social Science & Humanities</p>
+    <p>Anshul Jain · Dhruv Kantroo · Siddhant Gautam</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
