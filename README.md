@@ -25,7 +25,11 @@ An interactive web-based dashboard for visualizing and analyzing governance and 
 ## 🌐 Live Demo
 
 Deployed via GitHub Pages — check the **Deployments** section on the right panel of this repository.
+## 👥 Authors & Contributors
 
-## 👤 Author
-
-**Anshul Jain** ([@anshul23102](https://github.com/anshul23102))
+| Name | GitHub | Email |
+|------|--------|-------|
+| Anshul Jain | [@anshul23102](https://github.com/anshul23102) | anshul23102@iiitd.ac.in |
+| Dhruv Kantroo | [@dhruv22167](https://github.com/dhruv22167) | dhruv22167@iiitd.ac.in |
+| Sukhmani Kaur | — | — |
+| Siddhant Gautam | [@siddhant21100](https://github.com/siddhant21100) | siddhant21100@iiitd.ac.in |
