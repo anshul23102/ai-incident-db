@@ -63,6 +63,13 @@ The clip was an AI-generated deepfake created to gain her trust.
 Believing the video, she invested her money into an online platform promoted in the message.
 She lost ₹3.75 crore after scammers used the deepfake to manipulate her.`,
     link: "https://www.deccanherald.com/india/karnataka/bengaluru/sadhguru-invested-in-online-firm-bengaluru-woman-falls-for-ai-generated-deepfake-video-loses-rs-375-crore-3723681"
+    },
+    {
+      title: "ChatGPT Medical Advice Leads to Harmful Outcomes — Hyderabad/Bengaluru Cases",
+      date: "Nov 10, 2025",
+      summary: `Globally documented AI Incident #1281 specifically flagged alleged harmful health outcomes following the use of ChatGPT-generated medical advice in Hyderabad. Similar cases were reported across urban India including Bengaluru, where patients sought AI chatbot advice instead of professional consultation.
+Experts warned that AI chatbots providing medical guidance without disclaimer systems create serious public health risks — particularly among users who lack digital literacy to distinguish AI responses from verified medical opinion.`,
+      link: "https://incidentdatabase.ai/blog/incident-report-2025-november-december-2026-january/"
     }
   ],
   "Bihar": [
@@ -180,6 +187,21 @@ Experts say this is a powerful example of how AI can be used to steal someone’
     A case has been filed under laws related to cybercrime, defamation, and privacy violation.
     The incident shocked people in Assam and showed how AI can be misused to harm someone’s image and dignity.`,
     link: "https://timesofindia.indiatimes.com/city/guwahati/tinsukia-techie-held-for-creating-circulating-morphed-pics-using-ai/articleshow/122422410.cms"
+  },
+  {
+    title: "Assam-Based Influencer 'Dhunu Joni' AI Body-Swap Deepfake Controversy",
+    date: "Nov 2025",
+    summary: `An Assam-based social media influencer known as Dhunu Joni became the subject of a deepfake controversy in November 2025, when a clip allegedly created using AI body-swap technology was widely circulated.
+Reports from multiple fact-checking outlets suggested the footage was AI-generated rather than authentic. The influencer subsequently deactivated all her social media accounts amid the controversy and harassment.
+The case was part of a broader wave of AI-generated MMS scandals targeting women influencers across India in November 2025, highlighting the weaponisation of generative AI tools for gender-based online violence.`,
+    link: "https://zeenews.india.com/viral/year-ender-2025-viral-videos-19-minute-mms-leaks-digital-privacy-2999174.html"
+  },
+  {
+    title: "7,621 Cybercrime Complaints in Assam — Highest in Northeast India",
+    date: "2023 (documented 2024)",
+    summary: `Assam recorded 7,621 cybercrime complaints in 2023 — the highest among all northeastern states — involving ₹3,441.8 lakh. A NIELIT cybersecurity conference held in Guwahati in November 2025 specifically flagged AI-driven fraud as a major and growing component of these cases.
+Microsoft cybersecurity experts at the conference noted that India lost ₹22,845 crore to cybercrime in 2024, with AI-enabled attacks being a significant driver. The average cost of a data breach in India in 2025 reached ₹22 crore — the highest on record.`,
+    link: "https://assamtribune.com/india-lost-rs-22845-cr-to-cybercrime-in-2024-20.5l-incidents-logged-microsoft"
   }
 ],
 
@@ -432,6 +454,23 @@ link:"https://www.tribuneindia.com/news/haryana/manisha-death-case-firs-against-
     summary:`Cities like Gurugram implemented AI-powered traffic cameras for enforcing speed limits, detecting helmet violations, and catching fake number plates. Result: Improved compliance and reduced accidents. Concern: These systems operate with no human discretion, raising issues around constant surveillance and appeal mechanisms.`,
     link:"https://timesofindia.indiatimes.com/city/gurgaon/revolutionary-ai-system-helps-police-crack-down-on-fake-number-plates-and-stolen-vehicles/articleshow/114130014.cms#:~:text=Gurgaon%3A%20The%20police%20have%20launched,characteristics%20like%20colour%20and%20model"
 
+  },
+  {
+    title: "Nirmala Sitharaman Deepfake Crypto Scam — National Scale, Delhi Epicentre",
+    date: "Jun 2025",
+    summary: `A widely circulated AI-generated deepfake video falsely showed Finance Minister Nirmala Sitharaman endorsing a fictitious cryptocurrency scheme called "Quantum AI," duping thousands of investors across India.
+A similar deepfake falsely featured Google CEO Sundar Pichai lending credibility to a fake government investment platform.
+CloudSEK's report found that brand abuse accounts for nearly one-third of all cybercrime incidents in India. Losses from AI-enabled financial scams were projected to exceed ₹20,000 crore by end of 2025 — a 76% rise from 2024.
+Delhi's cyber police coordinated with MeitY and platforms to remove the videos. The incident prompted I4C to expand its deepfake tracking capacity.`,
+    link: "https://nationalcybersecurity.com/india-faces-%E2%82%B920000-crore-cybercrime-threat-in-2025-amid-surge-in-ai-driven-deepfake-investment-scams-cybercrime-infosec/"
+  },
+  {
+    title: "Ankur Warikoo Deepfake — Delhi HC Issues Landmark John Doe Order",
+    date: "2025",
+    summary: `Delhi High Court granted a landmark John Doe order to personal finance influencer Ankur Warikoo after AI-generated deepfake videos using his face, voice, and likeness circulated on social media — luring followers into WhatsApp groups for fraudulent stock market advice.
+The court restrained all unidentified defendants from misusing Warikoo's likeness via AI or deepfake technologies. Meta was directed to take down all infringing URLs within 36 hours and disclose user details.
+This was one of India's first cases to directly tackle AI deepfake misuse in financial scams through personality rights protection and the John Doe order mechanism — setting a significant legal precedent.`,
+    link: "https://law.asia/ai-deepfake-legal-response/"
   }
 ],
 "Arunachal Pradesh": [
@@ -469,7 +508,16 @@ The clashes led to stone-pelting, arson, petrol bomb attacks, and six deaths, wi
 While the issue was fundamentally about land encroachment by multiple communities, it was framed as a religious conflict online.`,
     link: "https://www.aljazeera.com/features/2024/2/13/killed-by-police-bullets-deadly-attacks-on-muslims-in-indias-haldwani"
   },
-  
+  {
+    title: "Dehradun Senior Loses ₹12 Lakh to 'Quantum AI' Deepfake Investment Scam",
+    date: "Dec 25, 2025",
+    summary: `A 76-year-old resident of Dehradun lost over ₹12 lakh after being lured by an online advertisement misusing Finance Minister Nirmala Sitharaman's image to promote a fake trading platform called "Quantum AI".
+The ad was AI-generated deepfake content. The victim was drawn into a scam run by a foreign company (Naka Solutions, London) through Indian agents.
+The platform showed fake profits to build trust. When he tried to withdraw, fraudsters demanded "tax payments" to multiple bank accounts. After extracting ₹2.5 lakh in final fees, the agent disappeared.
+The victim filed a complaint at the Cyber Crime Police Station, which registered a case and launched investigation.`,
+    link: "https://www.fastbull.com/brokersview/news/deepfake-quantum-ai-ad-leads-to-%E2%82%B912-million-loss-for-dehradun-senior-312199"
+  },
+
 ],
 "Sikkim": [
   {
@@ -501,6 +549,14 @@ The scammers then call the victim, pretending to be a family member or close rel
 They create panic by claiming that the family member has been kidnapped, is in danger, or has been arrested, and demand immediate money.
 The case highlights how AI can be misused for psychological scams, identity deception, and financial fraud.`,
     link:"https://timesofindia.indiatimes.com/city/ludhiana/voice-cloning-conmen-use-ai-to-lay-new-traps/articleshow/102963547.cms"
+  },
+  {
+    title: "Kashmiri Students Harassed in Punjab After Pahalgam Attack AI Misinformation",
+    date: "May 2025",
+    summary: `In the aftermath of the Pahalgam terror attack and Operation Sindoor, Kashmiri Muslim students studying in Punjab, Haryana, and Uttarakhand faced targeted harassment, physical assaults, and eviction threats — fuelled by AI-generated misinformation and hateful synthetic media circulated on WhatsApp and Telegram.
+AI-generated Hindutva pop tracks calling for retribution and economic boycott of Indian Muslims were widely shared, blurring the line between expression and incitement.
+GNET researchers documented how the synthetic content amplified sectarian grievances, contributing to real-world violence and fear among minority communities in multiple states.`,
+    link: "https://gnet-research.org/2025/08/18/digital-aftershocks-deepfakes-in-the-wake-of-the-pahalgam-attack-in-kashmir/"
   }
   // {
   //   title: "-",
@@ -666,6 +722,107 @@ Experts warn that as AI-powered tools (like customer service chatbots, automated
 link : 'https://e-pao.net/epSubPageExtractor.asp?src=education.GNU_Open_Source_LINUX.AI_sparks_employment_concerns_in_Manipur_By_Makakmayum_Baadshah'
 
      }
+  ],
+  
+  "Jammu & Kashmir": [
+    {
+      title: "Pahalgam Terror Attack — AI-Generated Victim Photos Go Viral",
+      date: "Apr 23, 2025",
+      summary: `On April 22, 2025, terrorists killed 26 tourists at Baisaran Valley, Pahalgam. Within hours, AI-generated images falsely claiming to show victims flooded social media. 
+Fact-checkers at Newschecker and Logically Facts ran the images through AI detection tools (Hive Moderation, SightEngine, WasitAI) which found them 96–99% likely to be AI-generated. 
+Telltale signs included unnaturally shaped limbs, indistinct faces, and glossy textures typical of generative AI.
+The images gathered over 257,000 views on X before being debunked. The incident was the most fact-checked event in India in April 2025, accounting for 23% of all BOOM fact-checks that month.`,
+      link: "https://newschecker.in/ai-deepfake/pahalgam-terror-attack-ai-generated-photo-goes-viral"
+    },
+    {
+      title: "Deepfake Trump Videos Falsely Warn Pakistan After Pahalgam Attack",
+      date: "Apr 25, 2025",
+      summary: `Multiple AI-manipulated videos of US President Donald Trump circulated on social media claiming he warned Pakistan against attacking India after the Pahalgam attack.
+In the videos, Trump's voice was AI-cloned to say "If Pakistan attacks India, I will destroy Pakistan. Modi is my friend."
+Newschecker found the clips were manipulated versions of a 2016 C-SPAN video, with AI voice cloning overlaid. Trump never made such statements.
+The videos spread across Facebook and X, capitalising on public anger after the terror attack.`,
+      link: "https://newschecker.in/ai-deepfake/pahalgam-terror-attack-viral-videos-of-donald-trump-warning-pakistan-against-attacking-india-is-deepfake"
+    },
+    {
+      title: "Operation Sindoor — AI Deepfakes of Modi, Amit Shah, Jaishankar 'Apologising'",
+      date: "May 10, 2025",
+      summary: `During India's Operation Sindoor military response (May 7–10, 2025), deepfake videos of PM Narendra Modi, Home Minister Amit Shah, and External Affairs Minister S. Jaishankar falsely showing them apologising to Pakistan and admitting defeat went massively viral.
+BOOM extracted audio from these videos and ran them through Deepfake-o-meter (University at Buffalo's Media Forensics Lab), confirming all were AI-generated.
+PIB Fact Check issued an emergency alert: "This fake video has been created using AI technology."
+India's Chief of Defence Services General Anil Chauhan admitted that 15% of operational time during Operation Sindoor was spent debunking fake news, underlining the real military cost of AI disinformation.`,
+      link: "https://factly.in/ai-generated-videos-are-being-falsely-shared-as-pm-modi-amit-shah-and-jaishankar-apologising-for-launching-operation-sindoor/"
+    },
+    {
+      title: "Operation Sindoor — Deepfake of Pakistan PM Shehbaz Sharif 'Conceding Defeat'",
+      date: "May 09, 2025",
+      summary: `A deepfake video of Pakistan PM Shehbaz Sharif, edited to show him lamenting defeat and a lack of support from China and the UAE, went viral across Indian social media during Operation Sindoor.
+The original video actually showed Sharif commending Pakistan's Air Force response. AI voice cloning and lip-sync technology were used to fabricate an entirely different speech.
+Fact-checkers at BOOM, Alt News, and IFJ debunked the clip. It was shared over 700,000 times before being widely debunked — illustrating how AI disinformation can outpace verification in wartime.`,
+      link: "https://www.ifj.org/media-centre/news/detail/category/ai/article/ifjblog-ai-deepfakes-and-the-fog-of-war-disinformation-in-the-2025-india-pakistan-conflict"
+    },
+    {
+      title: "Deepfake of Former Indian Army Chief General Malik 'Praising Pakistan'",
+      date: "Dec 19, 2025",
+      summary: `Pakistani propaganda-linked accounts circulated a deepfake video falsely showing former Indian Army Chief General V.P. Malik praising Pakistan's military and admitting the destruction of Indian Rafale jets and S-400 systems.
+The original video was an ANI interview where General Malik actually said India has "better weapons and equipment" than Pakistan.
+Newschecker used Google Lens to trace the original. General Malik himself called it out publicly: "It is a deepfake. Pakistani ISI at work!"
+Security analysts noted such disinformation campaigns intensified after Operation Sindoor, targeting senior defence officials to undermine military morale.`,
+      link: "https://thecommunemag.com/isi-at-work-deepfake-video-falsely-shows-former-army-chief-ved-malik-praising-pakistan/"
+    },
+    {
+      title: "AI Deepfakes of Naval Chief and DGNO — Infowarfare After Operation Sindoor",
+      date: "Nov 29, 2025",
+      summary: `Deepfake videos of Chief of Naval Staff Admiral Dinesh K. Tripathi and the Director General of Naval Operations (DGNO) circulated, falsely showing them criticising the Indian government and admitting operational losses during Operation Sindoor.
+India's Deepfakes Analysis Unit (DAU) confirmed the audio in both clips was entirely synthetic. A separate deepfake targeted Army Chief General Upendra Dwivedi with a fabricated WION logo overlay — debunked by PIB Fact Check.
+The campaign was part of a coordinated cross-border information warfare operation timed with Pakistan's test of a ship-launched ballistic missile.`,
+      link: "https://www.wionews.com/world/infowarfare-pakistan-uses-ai-deep-fakes-of-indian-military-leaders-to-spread-misinformation-indian-army-deep-fake-infowar-1764419695262"
+    },
+    {
+      title: "Pahalgam to Operation Sindoor — India's Largest AI Disinformation Wave",
+      date: "May 07, 2025",
+      summary: `The April–May 2025 period saw India's worst AI-driven disinformation surge on record. After the Pahalgam attack and Operation Sindoor, social media was flooded with AI-generated images, deepfake military videos, fabricated government advisories, and recycled war footage from Gaza, Iran, and Sudan falsely labelled as Indian military operations.
+BOOM published 69 Operation Sindoor-related fact-checks in 4 days; 68% contained old or unrelated footage. Grok AI chatbot on X spread false battlefield claims, outpacing human fact-checkers by a factor of 86 (MIT study).
+Fake donation campaigns, phishing links disguised as news alerts, and AI-generated "ATM shutdown" warnings went viral. Times Now, Zee News, ABP News, and Aaj Tak aired unverified AI content as news.
+India's MeitY deployed its Deepfakes Analysis Unit (DAU) for the first time in a wartime context, offering a WhatsApp fact-check bot to citizens.`,
+      link: "https://www.boomlive.in/boom-research/boom-misinformation-report-may-2025-operation-sindoor-india-pakistan-armed-conflict-28733"
+    }
+  ],
+  
+  "Meghalaya": [
+    {
+      title: "Deepfake Controversy — 'Sweet Zannat' Influencer Case",
+      date: "Nov 2025",
+      summary: `Meghalaya-based Instagram creator 'Sweet Zannat' was drawn into a deepfake controversy when a 19-minute alleged private video circulated online.
+The video triggered intense online speculation and caused significant distress to the creator. The episode was part of a series of AI-generated MMS scandals in November 2025 involving women content creators across India.
+Experts confirmed the clip had markers of AI body-swap deepfake technology. The case added to national debate about digital consent, online privacy, and the weaponisation of AI to harm women's reputations.`,
+      link: "https://zeenews.india.com/viral/year-ender-2025-viral-videos-19-minute-mms-leaks-digital-privacy-2999174.html"
+    },
+    {
+      title: "₹424 Lakh Lost to Cybercrime — Meghalaya's Growing Digital Vulnerability",
+      date: "2023 (documented 2024)",
+      summary: `According to government data reported via the Citizen Financial Cyber Fraud Reporting Management System, Meghalaya recorded 654 cybercrime complaints involving ₹424.2 lakh in attempted fraud in 2023.
+While not all cases were AI-specific, the trend reflects rising digital vulnerability in a state with low digital literacy. Experts noted that AI-enabled phishing and scam calls are increasingly penetrating smaller northeastern states as smartphone adoption rises.`,
+      link: "https://www.sentinelassam.com/topheadlines/assam-7621-cases-of-cyber-fraud-in-2023"
+    }
+  ],
+  
+  "Nagaland": [
+    {
+      title: "Cybercrime Rising — 224 Complaints, ₹148.94 Lakh Reported in 2023",
+      date: "2023 (documented 2024)",
+      summary: `Nagaland recorded 224 cybercrime complaints involving ₹148.94 lakh in 2023, according to the Citizen Financial Cyber Fraud Reporting Management System. While specific AI-enabled incidents were not individually documented, the trend reflects the state's growing exposure to AI-assisted fraud — particularly voice cloning scams, phishing, and fake investment platforms — as smartphone adoption increases in the region.
+NIELIT's Assam & Nagaland centre hosted a cybersecurity conference in November 2025 specifically addressing the surge of AI-driven attacks in the Northeast.`,
+      link: "https://www.sentinelassam.com/topheadlines/assam-7621-cases-of-cyber-fraud-in-2023"
+    }
+  ],
+  
+  "Mizoram": [
+    {
+      title: "239 Cybercrime Complaints, ₹484 Lakh at Risk in 2023",
+      date: "2023 (documented 2024)",
+      summary: `Mizoram reported 239 cybercrime complaints involving ₹484.12 lakh in 2023 — disproportionately high relative to its small population, suggesting sophisticated targeting by scammers. The majority involved online financial fraud. AI-enabled voice cloning and investment scams are increasingly being flagged in smaller northeastern states as fake apps and WhatsApp-based fraud networks expand into areas previously untouched by major cybercrime.`,
+      link: "https://www.sentinelassam.com/topheadlines/assam-7621-cases-of-cyber-fraud-in-2023"
+    }
   ],
 
   "Telangana": [
