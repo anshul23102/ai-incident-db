@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Search – AI Incident Database</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .search-hero {
+      max-width: 640px;
+      margin: 0 auto 32px;
+      text-align: center;
+    }
+    .search-hero p { font-size: 0.9rem; color: var(--text-3); margin-bottom: 20px; }
+    .global-search-wrap {
+      position: relative;
+      max-width: 640px;
+      margin: 0 auto 28px;
+    }
+    .global-search-icon {
+      position: absolute; left: 16px; top: 50%;
+      transform: translateY(-50%);
+      width: 18px; height: 18px;
+      color: var(--text-3);
+      pointer-events: none;
+    }
+    .global-search-input {
+      width: 100%;
+      padding: 14px 16px 14px 48px;
+      background: var(--card-bg);
+      border: 2px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      color: var(--text);
+      font-size: 1rem;
+      font-family: inherit;
+      outline: none;
+      transition: all var(--transition);
+    }
+    .global-search-input::placeholder { color: var(--text-3); }
+    .global-search-input:focus {
+      border-color: rgba(240,165,0,0.5);
+      box-shadow: 0 0 0 4px rgba(240,165,0,0.08);
+    }
+    .search-meta {
+      font-size: 0.82rem;
+      color: var(--text-3);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .result-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 18px 20px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .result-card:hover {
+      border-color: rgba(240,165,0,0.3);
+      transform: translateX(4px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+    }
+    .result-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.97rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 8px;
+      line-height: 1.4;
+    }
+    .result-title mark {
+      background: rgba(240,165,0,0.25);
+      color: var(--amber-2);
+      border-radius: 3px;
+      padding: 0 2px;
+    }
+    .result-snippet {
+      font-size: 0.82rem;
+      color: var(--text-3);
+      line-height: 1.6;
+      margin-bottom: 10px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+    .result-snippet mark {
+      background: rgba(240,165,0,0.2);
+      color: var(--amber-2);
+      border-radius: 3px;
+      padding: 0 2px;
+    }
+    .result-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .result-state {
+      font-size: 0.73rem;
+      color: var(--amber);
+      background: rgba(240,165,0,0.1);
+      border: 1px solid rgba(240,165,0,0.2);
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-weight: 500;
+    }
+    .result-date { font-size: 0.73rem; color: var(--text-3); }
+    .result-cat {
+      font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-weight: 500;
+      border: 1px solid;
+    }
+    .empty-search {
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--text-3);
+    }
+    .empty-search .big { font-size: 2.5rem; margin-bottom: 12px; }
+    .empty-search p { font-size: 0.9rem; }
+    .suggestions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 16px;
+    }
+    .suggestion-pill {
+      padding: 6px 14px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      font-size: 0.8rem;
+      color: var(--text-2);
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .suggestion-pill:hover {
+      border-color: rgba(240,165,0,0.3);
+      color: var(--amber);
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <div class="topnav-brand">
+        <span class="brand-dot"></span>
+        <span class="brand-name">AI Incident Database</span>
+        <span class="brand-tag">India · 2021–2025</span>
+      </div>
+      <div class="topnav-links">
+        <a href="index.html" class="nav-link">States</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="timeline.html" class="nav-link">Timeline</a>
+        <a href="search.html" class="nav-link active">Search</a>
+        <a href="overall.html" class="nav-link">Map</a>
+        <a href="governance.html" class="nav-link">Governance</a>
+      </div>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="drawer" id="drawer">
+    <div class="drawer-header">
+      <span class="brand-name">Navigation</span>
+      <button class="drawer-close" id="drawerClose">✕</button>
+    </div>
+    <ul class="drawer-list">
+      <li><a href="index.html" class="drawer-link">🗺️ All States</a></li>
+      <li><a href="dashboard.html" class="drawer-link">📊 Dashboard</a></li>
+      <li><a href="timeline.html" class="drawer-link">📅 Timeline</a></li>
+      <li><a href="search.html" class="drawer-link active">🔍 Search</a></li>
+      <li><a href="overall.html" class="drawer-link">🗾 Map</a></li>
+      <li><a href="governance.html" class="drawer-link">🏛️ Central Governance</a></li>
+    </ul>
+  </aside>
+
+  <header class="state-hero">
+    <div class="state-hero-inner">
+      <a href="index.html" class="back-btn">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        All States
+      </a>
+      <h1 class="state-title">Search All Incidents</h1>
+      <p class="state-subtitle">Search across every documented AI incident in India — by keyword, state, or topic</p>
+    </div>
+  </header>
+
+  <main class="state-main">
+    <div class="global-search-wrap">
+      <svg class="global-search-icon" viewBox="0 0 20 20" fill="none">
+        <circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.8"/>
+        <path d="M13 13l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      </svg>
+      <input type="text" id="globalSearch" class="global-search-input"
+        placeholder='Try "deepfake", "voice cloning", "Karnataka", "election"…'
+        autocomplete="off" autofocus />
+    </div>
+
+    <p class="search-meta" id="searchMeta"></p>
+    <div id="resultsRoot"></div>
+  </main>
+
+  <footer class="site-footer">
+    <p>B.Tech Project · IIIT Delhi · Dept. of Social Science & Humanities</p>
+    <p>Anshul Jain · Dhruv Kantroo · Siddhant Gautam · Sukhmani Kaur</p>
+  </footer>
+
+  <script src="state.js"></script>
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const drawer    = document.getElementById('drawer');
+    const overlay   = document.getElementById('drawerOverlay');
+    const closeBtn  = document.getElementById('drawerClose');
+    hamburger.addEventListener('click', () => { drawer.classList.add('open'); overlay.classList.add('active'); });
+    closeBtn.addEventListener('click',  () => { drawer.classList.remove('open'); overlay.classList.remove('active'); });
+    overlay.addEventListener('click',   () => { drawer.classList.remove('open'); overlay.classList.remove('active'); });
+
+    const CAT_RULES = [
+      { key:"electoral",    label:"Political / Electoral",  color:"#c17f24", keywords:["election","electoral","political","CM","BJP","Congress","poll","vote","defam"] },
+      { key:"blackmail",    label:"Deepfake Blackmail",     color:"#7ec8e3", keywords:["blackmail","sextortion","obscene","morphed","suicide","extort","explicit"] },
+      { key:"voice",        label:"Voice Cloning",          color:"#c084fc", keywords:["voice cloning","voice scam","cloned voice","AI voice","kidnap","ransom"] },
+      { key:"fraud",        label:"Investment Fraud",       color:"#f97316", keywords:["fraud","investment","scam","lakh","crore","trading","fake app","stock","crypto","phishing"] },
+      { key:"arrest",       label:"Digital Arrest",         color:"#4ade80", keywords:["digital arrest","IPS","CBI","RBI","officer","pose as"] },
+      { key:"surveillance", label:"Surveillance",           color:"#94a3b8", keywords:["facial recognition","CCTV","surveillance","attendance","biometric"] },
+      { key:"identity",     label:"Identity Theft",         color:"#fb923c", keywords:["identity","fake profile","persona","fake account","impersonat"] },
+      { key:"communal",     label:"Communal Conflict",      color:"#f0abfc", keywords:["communal","riot","violence","religion","kumbh","misinformation","fake news"] },
+    ];
+
+    function classifyIncident(inc) {
+      const text = (inc.title + " " + (inc.summary || "")).toLowerCase();
+      for (const cat of CAT_RULES) {
+        if (cat.keywords.some(k => text.includes(k.toLowerCase()))) return cat;
+      }
+      return { key:"other", label:"Other", color:"#6b748a" };
+    }
+
+    const all = [];
+    Object.entries(incidentsData).forEach(([state, incidents]) => {
+      incidents.forEach(inc => all.push({ ...inc, state, cat: classifyIncident(inc) }));
+    });
+
+    function highlight(text, query) {
+      if (!query) return text;
+      const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      return text.replace(new RegExp(`(${escaped})`, 'gi'), '<mark>$1</mark>');
+    }
+
+    function doSearch(query) {
+      const q = query.trim().toLowerCase();
+      const meta = document.getElementById("searchMeta");
+      const root = document.getElementById("resultsRoot");
+
+      if (!q) {
+        meta.textContent = `${all.length} incidents indexed across all states`;
+        root.innerHTML = `
+          <div class="empty-search">
+            <div class="big">🔍</div>
+            <p>Start typing to search incidents, summaries, states, and dates</p>
+            <div class="suggestions">
+              ${["deepfake","voice cloning","election","investment fraud","Karnataka","Uttar Pradesh","sextortion","digital arrest","2024","surveillance"].map(s =>
+                `<span class="suggestion-pill" onclick="setSearch('${s}')">${s}</span>`
+              ).join("")}
+            </div>
+          </div>`;
+        return;
+      }
+
+      const results = all.filter(inc => {
+        const haystack = (inc.title + " " + inc.state + " " + (inc.summary || "") + " " + (inc.date || "")).toLowerCase();
+        return haystack.includes(q);
+      });
+
+      meta.textContent = `${results.length} result${results.length !== 1 ? "s" : ""} for "${query}"`;
+
+      if (results.length === 0) {
+        root.innerHTML = `<div class="empty-search"><div class="big">😶</div><p>No incidents found for "<strong>${query}</strong>"</p><p style="margin-top:8px;font-size:0.8rem;">Try broader terms like "deepfake", "fraud", or a state name</p></div>`;
+        return;
+      }
+
+      root.innerHTML = results.map(inc => `
+        <div class="result-card" onclick="window.location.href='state.html?state=${encodeURIComponent(inc.state)}'">
+          <div class="result-title">${highlight(inc.title, query)}</div>
+          ${inc.summary ? `<div class="result-snippet">${highlight(inc.summary.trim().substring(0, 180), query)}…</div>` : ""}
+          <div class="result-meta">
+            <span class="result-state">${inc.state}</span>
+            ${inc.date ? `<span class="result-date">${inc.date.trim()}</span>` : ""}
+            <span class="result-cat" style="color:${inc.cat.color}; border-color:${inc.cat.color}40; background:${inc.cat.color}12">${inc.cat.label}</span>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    function setSearch(val) {
+      document.getElementById("globalSearch").value = val;
+      doSearch(val);
+    }
+
+    document.getElementById("globalSearch").addEventListener("input", e => doSearch(e.target.value));
+
+    const urlQ = new URLSearchParams(window.location.search).get("q");
+    if (urlQ) { document.getElementById("globalSearch").value = urlQ; doSearch(urlQ); }
+    else doSearch("");
+  </script>
+</body>
+</html>

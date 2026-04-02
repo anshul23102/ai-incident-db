@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard – AI Incident Database</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    .dash-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .stat-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .stat-card .stat-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: var(--amber);
+      line-height: 1;
+    }
+    .stat-card .stat-label {
+      font-size: 0.8rem;
+      color: var(--text-3);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .stat-card .stat-sub {
+      font-size: 0.82rem;
+      color: var(--text-2);
+      margin-top: 4px;
+    }
+    .chart-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      margin-bottom: 16px;
+    }
+    .chart-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .chart-card p {
+      font-size: 0.8rem;
+      color: var(--text-3);
+      margin-bottom: 20px;
+    }
+    .chart-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    @media (max-width: 700px) { .chart-two-col { grid-template-columns: 1fr; } }
+    .custom-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 16px;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      color: var(--text-2);
+    }
+    .legend-swatch {
+      width: 10px; height: 10px;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <div class="topnav-brand">
+        <span class="brand-dot"></span>
+        <span class="brand-name">AI Incident Database</span>
+        <span class="brand-tag">India · 2021–2025</span>
+      </div>
+      <div class="topnav-links">
+        <a href="index.html" class="nav-link">States</a>
+        <a href="dashboard.html" class="nav-link active">Dashboard</a>
+        <a href="timeline.html" class="nav-link">Timeline</a>
+        <a href="search.html" class="nav-link">Search</a>
+        <a href="overall.html" class="nav-link">Map</a>
+        <a href="governance.html" class="nav-link">Governance</a>
+      </div>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="drawer" id="drawer">
+    <div class="drawer-header">
+      <span class="brand-name">Navigation</span>
+      <button class="drawer-close" id="drawerClose">✕</button>
+    </div>
+    <ul class="drawer-list">
+      <li><a href="index.html" class="drawer-link">🗺️ All States</a></li>
+      <li><a href="dashboard.html" class="drawer-link active">📊 Dashboard</a></li>
+      <li><a href="timeline.html" class="drawer-link">📅 Timeline</a></li>
+      <li><a href="search.html" class="drawer-link">🔍 Search</a></li>
+      <li><a href="overall.html" class="drawer-link">🗾 Map</a></li>
+      <li><a href="governance.html" class="drawer-link">🏛️ Central Governance</a></li>
+    </ul>
+  </aside>
+
+  <header class="state-hero">
+    <div class="state-hero-inner">
+      <a href="index.html" class="back-btn">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        All States
+      </a>
+      <h1 class="state-title">Data Dashboard</h1>
+      <p class="state-subtitle">Statistical analysis of AI-related incidents across India, 2021–2025</p>
+    </div>
+  </header>
+
+  <main class="state-main">
+
+    <!-- STAT CARDS -->
+    <div class="dash-grid" id="statCards"></div>
+
+    <!-- ROW 1: incidents by state + by year -->
+    <div class="chart-two-col">
+      <div class="chart-card">
+        <h3>Incidents by Year</h3>
+        <p>How AI misuse has grown from 2021 to 2025</p>
+        <div style="position:relative; height:220px;">
+          <canvas id="yearChart"></canvas>
+        </div>
+      </div>
+      <div class="chart-card">
+        <h3>Harm Category Breakdown</h3>
+        <p>Distribution across all documented incidents</p>
+        <div style="position:relative; height:180px;">
+          <canvas id="catChart"></canvas>
+        </div>
+        <div class="custom-legend" id="catLegend"></div>
+      </div>
+    </div>
+
+    <!-- ROW 2: full width bar chart -->
+    <div class="chart-card">
+      <h3>Incidents by State</h3>
+      <p>Total documented incidents per state — click a bar to go to that state's page</p>
+      <div style="position:relative; height:420px;">
+        <canvas id="stateChart"></canvas>
+      </div>
+    </div>
+
+    <!-- ROW 3: monthly trend -->
+    <div class="chart-card">
+      <h3>Monthly Trend — 2024 & 2025</h3>
+      <p>Incident frequency over recent months</p>
+      <div style="position:relative; height:200px;">
+        <canvas id="monthChart"></canvas>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>B.Tech Project · IIIT Delhi · Dept. of Social Science & Humanities</p>
+    <p>Anshul Jain · Dhruv Kantroo · Siddhant Gautam · Sukhmani Kaur</p>
+  </footer>
+
+  <script src="state.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+  <script>
+    /* ── Drawer ── */
+    const hamburger = document.getElementById('hamburger');
+    const drawer    = document.getElementById('drawer');
+    const overlay   = document.getElementById('drawerOverlay');
+    const closeBtn  = document.getElementById('drawerClose');
+    hamburger.addEventListener('click', () => { drawer.classList.add('open'); overlay.classList.add('active'); });
+    closeBtn.addEventListener('click',  () => { drawer.classList.remove('open'); overlay.classList.remove('active'); });
+    overlay.addEventListener('click',   () => { drawer.classList.remove('open'); overlay.classList.remove('active'); });
+
+    /* ── Category classifier ── */
+    const CAT_RULES = [
+      { key: "electoral",     label: "Political / Electoral",       color: "#c17f24", keywords: ["election","electoral","political","deepfake political","CM","BJP","Congress","RJD","TMC","SP ","MLA","MP ","poll","vote","campaign","defam"] },
+      { key: "blackmail",     label: "Deepfake Blackmail / Sextortion", color: "#7ec8e3", keywords: ["blackmail","sextortion","obscene","morphed","suicide","extort","intimate","explicit","revenge"] },
+      { key: "voice",         label: "Voice Cloning Scams",         color: "#c084fc", keywords: ["voice cloning","voice scam","cloned voice","AI voice","kidnap","ransom","emergency"] },
+      { key: "fraud",         label: "Investment / Financial Fraud", color: "#f97316", keywords: ["fraud","investment","scam","lakh","crore","trading","fake app","stock","crypto","ponzi","trump hotel","phishing"] },
+      { key: "arrest",        label: "Digital Arrest / Impersonation", color: "#4ade80", keywords: ["digital arrest","IPS","CBI","RBI","officer","deepfake IPS","pose as"] },
+      { key: "surveillance",  label: "Surveillance & Governance Risk", color: "#94a3b8", keywords: ["facial recognition","CCTV","surveillance","attendance","biometric","AI tool","deep trace","traffic"] },
+      { key: "identity",      label: "Identity Theft / Social Harm", color: "#fb923c", keywords: ["identity","fake profile","persona","fake account","impersonat","babydoll","fake social"] },
+      { key: "communal",      label: "Communal Conflict / Misinformation", color: "#f0abfc", keywords: ["communal","riot","violence","religion","caste","kumbh","misinformation","fake news","mislead","stampede"] },
+    ];
+
+    function classifyIncident(inc) {
+      const text = (inc.title + " " + (inc.summary || "")).toLowerCase();
+      for (const cat of CAT_RULES) {
+        if (cat.keywords.some(k => text.includes(k.toLowerCase()))) return cat;
+      }
+      return { key: "other", label: "Other", color: "#6b748a" };
+    }
+
+    function parseYear(dateStr) {
+      if (!dateStr) return null;
+      const m = dateStr.match(/\b(20\d{2})\b/);
+      return m ? parseInt(m[1]) : null;
+    }
+
+    function parseMonth(dateStr) {
+      if (!dateStr) return null;
+      const d = new Date(dateStr.trim().replace(/,(\S)/, ', $1'));
+      if (!isNaN(d)) return { year: d.getFullYear(), month: d.getMonth() };
+      return null;
+    }
+
+    /* ── Flatten all incidents ── */
+    const allIncidents = [];
+    Object.entries(incidentsData).forEach(([state, incidents]) => {
+      incidents.forEach(inc => {
+        allIncidents.push({ ...inc, state, cat: classifyIncident(inc), year: parseYear(inc.date), monthData: parseMonth(inc.date) });
+      });
+    });
+
+    /* ── Stat cards ── */
+    const statData = [
+      { num: allIncidents.length, label: "Total Incidents", sub: "Across all 28 states" },
+      { num: Object.keys(incidentsData).length, label: "States Covered", sub: "Out of 28 documented" },
+      { num: [...new Set(allIncidents.map(i => i.cat.key))].length, label: "Harm Categories", sub: "Distinct types identified" },
+      { num: allIncidents.filter(i => i.year === 2025).length, label: "2025 Incidents", sub: "Most active year on record" },
+    ];
+    document.getElementById("statCards").innerHTML = statData.map(s =>
+      `<div class="stat-card">
+        <div class="stat-num">${s.num}</div>
+        <div class="stat-label">${s.label}</div>
+        <div class="stat-sub">${s.sub}</div>
+      </div>`
+    ).join("");
+
+    /* ── Year chart ── */
+    const yearCounts = {};
+    allIncidents.forEach(i => { if (i.year) yearCounts[i.year] = (yearCounts[i.year] || 0) + 1; });
+    const years = Object.keys(yearCounts).sort();
+    new Chart(document.getElementById("yearChart"), {
+      type: "line",
+      data: {
+        labels: years,
+        datasets: [{
+          label: "Incidents",
+          data: years.map(y => yearCounts[y]),
+          borderColor: "#f0a500",
+          backgroundColor: "rgba(240,165,0,0.08)",
+          tension: 0.4,
+          fill: true,
+          pointBackgroundColor: "#f0a500",
+          pointRadius: 5,
+          pointHoverRadius: 7,
+          borderWidth: 2.5,
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { ticks: { color: "#6b748a", font: { size: 12 } }, grid: { color: "rgba(255,255,255,0.04)" } },
+          y: { ticks: { color: "#6b748a", font: { size: 12 }, stepSize: 1 }, grid: { color: "rgba(255,255,255,0.06)" }, beginAtZero: true }
+        }
+      }
+    });
+
+    /* ── Category donut ── */
+    const catCounts = {};
+    allIncidents.forEach(i => {
+      catCounts[i.cat.key] = (catCounts[i.cat.key] || { label: i.cat.label, color: i.cat.color, count: 0 });
+      catCounts[i.cat.key].count++;
+    });
+    const catEntries = Object.values(catCounts).sort((a,b) => b.count - a.count);
+    new Chart(document.getElementById("catChart"), {
+      type: "doughnut",
+      data: {
+        labels: catEntries.map(c => c.label),
+        datasets: [{ data: catEntries.map(c => c.count), backgroundColor: catEntries.map(c => c.color), borderWidth: 0, hoverOffset: 6 }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${ctx.raw} incidents` } } },
+        cutout: "65%"
+      }
+    });
+    document.getElementById("catLegend").innerHTML = catEntries.map(c =>
+      `<div class="legend-item"><span class="legend-swatch" style="background:${c.color}"></span>${c.label} (${c.count})</div>`
+    ).join("");
+
+    /* ── State bar chart ── */
+    const stateCounts = Object.entries(incidentsData)
+      .map(([s, arr]) => ({ state: s, count: arr.length }))
+      .sort((a,b) => b.count - a.count);
+    const stateChart = new Chart(document.getElementById("stateChart"), {
+      type: "bar",
+      data: {
+        labels: stateCounts.map(s => s.state),
+        datasets: [{
+          data: stateCounts.map(s => s.count),
+          backgroundColor: stateCounts.map((_, i) => i < 3 ? "#f0a500" : "#1a2d4f"),
+          borderColor:     stateCounts.map((_, i) => i < 3 ? "#ffc840" : "#2a4066"),
+          borderWidth: 1,
+          borderRadius: 4,
+          hoverBackgroundColor: "#f0a500",
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ` ${ctx.raw} incidents` } } },
+        scales: {
+          x: { ticks: { color: "#6b748a", font: { size: 11 }, maxRotation: 45, autoSkip: false }, grid: { display: false } },
+          y: { ticks: { color: "#6b748a", stepSize: 1 }, grid: { color: "rgba(255,255,255,0.05)" }, beginAtZero: true }
+        },
+        onClick: (e, els) => {
+          if (els.length) {
+            const state = stateCounts[els[0].index].state;
+            window.location.href = `state.html?state=${encodeURIComponent(state)}`;
+          }
+        }
+      }
+    });
+
+    /* ── Monthly trend 2024-2025 ── */
+    const monthMap = {};
+    allIncidents.forEach(i => {
+      if (!i.monthData) return;
+      const { year, month } = i.monthData;
+      if (year < 2024) return;
+      const key = `${year}-${String(month+1).padStart(2,'0')}`;
+      monthMap[key] = (monthMap[key] || 0) + 1;
+    });
+    const monthLabels = [];
+    const monthVals = [];
+    for (let y = 2024; y <= 2025; y++) {
+      for (let m = 0; m < 12; m++) {
+        const key = `${y}-${String(m+1).padStart(2,'0')}`;
+        const names = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+        monthLabels.push(`${names[m]} ${y}`);
+        monthVals.push(monthMap[key] || 0);
+      }
+    }
+    new Chart(document.getElementById("monthChart"), {
+      type: "bar",
+      data: {
+        labels: monthLabels,
+        datasets: [{
+          data: monthVals,
+          backgroundColor: monthVals.map(v => v > 4 ? "#f0a500" : v > 2 ? "#c17f24" : "#1a2d4f"),
+          borderRadius: 3, borderWidth: 0,
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: { ticks: { color: "#6b748a", font: { size: 10 }, maxRotation: 45, autoSkip: false }, grid: { display: false } },
+          y: { ticks: { color: "#6b748a", stepSize: 1 }, grid: { color: "rgba(255,255,255,0.05)" }, beginAtZero: true }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
