@@ -1,4 +1,4 @@
-# AI Incident Database – India 🇮🇳
+# AI Incident Database – India
 
 A state-wise interactive database documenting AI-related harm incidents across India from 2021 to 2025. Built as part of a B.Tech Project at IIIT Delhi, Department of Social Science and Humanities.
 
