@@ -1443,6 +1443,157 @@ const governanceData = {
       description: "Following communal violence in Tripura in October 2021 — escalated by WhatsApp and Facebook misinformation — platforms removed flagged content under government direction. The incident prompted early calls for algorithmic accountability and faster content moderation in communally sensitive regions.",
       link: "https://www.aljazeera.com/news/2021/11/5/india-tripura-muslims-mosques-violence-bjp-vhp"
     }
+  ],
+
+  "Jammu & Kashmir": [
+    {
+      title: "MeitY Deepfakes Analysis Unit Deployed During Operation Sindoor",
+      date: "May 2025",
+      type: "Law Enforcement",
+      description: "Following the Pahalgam terror attack (April 22, 2025) and Operation Sindoor (May 7–10, 2025), MeitY deployed its Deepfakes Analysis Unit (DAU) for the first time in a wartime context. The DAU launched a WhatsApp-based fact-check bot for citizens and coordinated with PIB Fact Check to issue emergency debunks of AI-generated videos falsely showing senior leaders — PM Modi, Amit Shah, and External Affairs Minister Jaishankar — apologising to Pakistan. This marked India's first use of a dedicated government AI verification body during an active military operation.",
+      link: "https://www.boomlive.in/boom-research/boom-misinformation-report-may-2025-operation-sindoor-india-pakistan-armed-conflict-28733"
+    },
+    {
+      title: "PIB Fact Check Issues Emergency Alerts on Operation Sindoor Deepfakes",
+      date: "May 10, 2025",
+      type: "Regulatory Advisory",
+      description: "The Press Information Bureau's Fact Check unit issued a series of emergency public alerts during Operation Sindoor, explicitly warning citizens that AI-generated deepfake videos of PM Modi, Home Minister Amit Shah, and Defence officials were circulating. PIB's alerts — including the statement 'This fake video has been created using AI technology' — were among the fastest official debunks in Indian government history, issued within hours of videos going viral.",
+      link: "https://factly.in/ai-generated-videos-are-being-falsely-shared-as-pm-modi-amit-shah-and-jaishankar-apologising-for-launching-operation-sindoor/"
+    },
+    {
+      title: "Army Chief Acknowledges AI Disinformation Cost — 15% of Operational Time Lost",
+      date: "May 2025",
+      type: "Policy",
+      description: "India's Chief of Defence Services General Anil Chauhan publicly admitted that 15% of operational time during Operation Sindoor was spent countering fake news and AI-generated disinformation — including deepfakes of military leaders. This acknowledgment represents a formal recognition by India's highest military authority of AI disinformation as an operational security threat, and has since informed discussions on a dedicated military counter-disinformation doctrine.",
+      link: "https://www.ifj.org/media-centre/news/detail/category/ai/article/ifjblog-ai-deepfakes-and-the-fog-of-war-disinformation-in-the-2025-india-pakistan-conflict"
+    },
+    {
+      title: "Internet Suspensions and Social Media Monitoring in J&K Post-Pahalgam",
+      date: "Apr 2025",
+      type: "Law Enforcement",
+      description: "Following the Pahalgam attack, J&K authorities implemented targeted internet restrictions in sensitive areas and directed district police to actively monitor social media for AI-generated content designed to incite communal violence or spread false narratives about casualties. Police advisories warned citizens that sharing AI-generated fake images or videos related to the attack was a punishable offence under the IT Act and BNS.",
+      link: "https://newschecker.in/ai-deepfake/pahalgam-terror-attack-ai-generated-photo-goes-viral"
+    }
+  ],
+
+  "Meghalaya": [
+    {
+      title: "National Commission for Women Takes Cognisance of AI Deepfake MMS Cases",
+      date: "Nov 2025",
+      type: "Judicial Action",
+      description: "The National Commission for Women (NCW) took suo motu cognisance of a wave of AI-generated deepfake MMS scandals targeting women content creators in November 2025, including the 'Sweet Zannat' case from Meghalaya. The NCW issued notices to state police and directed them to file FIRs under the Prohibition of Sexually Explicit Deep Fake Material Rules 2025 and the IT Act. The Commission also called for platforms to deploy automated deepfake detection before content goes viral.",
+      link: "https://zeenews.india.com/viral/year-ender-2025-viral-videos-19-minute-mms-leaks-digital-privacy-2999174.html"
+    },
+    {
+      title: "Citizen Financial Cyber Fraud Reporting System — Meghalaya Enrolled",
+      date: "2023 (documented 2024)",
+      type: "Law Enforcement",
+      description: "Meghalaya is enrolled in the Ministry of Home Affairs' Citizen Financial Cyber Fraud Reporting and Management System, through which 654 cybercrime complaints involving ₹424.2 lakh were registered in 2023. The system enables real-time coordination between police, banks, and payment platforms to freeze fraudulent transactions within the golden hour. Meghalaya Police Cyber Cell has been directed by I4C to increase capacity for AI-enabled fraud detection as cases rise.",
+      link: "https://www.sentinelassam.com/topheadlines/assam-7621-cases-of-cyber-fraud-in-2023"
+    },
+    {
+      title: "Prohibition of Sexually Explicit Deep Fake Material Rules, 2025 — Northeast Application",
+      date: "2025",
+      type: "Legislation",
+      description: "The central government's Prohibition of Sexually Explicit Deep Fake Material Rules 2025 directly applies to cases like the 'Sweet Zannat' deepfake controversy in Meghalaya. The rules criminalise creation, storage, and distribution of AI-generated sexually explicit content of identifiable individuals. Offenders face up to 7 years imprisonment and fines up to ₹10 lakh. State police in the Northeast have been directed by MeitY to register cases under these rules in addition to existing IT Act provisions.",
+      link: "https://www.meity.gov.in"
+    }
+  ],
+
+  "Nagaland": [
+    {
+      title: "NIELIT Cybersecurity Conference — AI Fraud in Northeast Flagged",
+      date: "Nov 2025",
+      type: "Policy",
+      description: "NIELIT's Assam and Nagaland centre hosted a cybersecurity conference in November 2025 specifically addressing the surge of AI-driven attacks across the Northeast. Microsoft cybersecurity experts presented data showing India lost ₹22,845 crore to cybercrime in 2024, with AI-enabled voice cloning and investment scams as major vectors in smaller states. The conference recommended dedicated AI-fraud awareness campaigns targeting digital-first youth populations in Nagaland and neighbouring states.",
+      link: "https://www.sentinelassam.com/topheadlines/assam-7621-cases-of-cyber-fraud-in-2023"
+    },
+    {
+      title: "MHA Cybercrime Helpline 1930 — Extended to Nagaland",
+      date: "2023 (Ongoing)",
+      type: "Law Enforcement",
+      description: "The Ministry of Home Affairs' national cybercrime helpline 1930 and the National Cybercrime Reporting Portal (cybercrime.gov.in) are the primary response mechanisms for AI-enabled fraud in Nagaland, given the absence of a dedicated state cyber crime unit with AI-specific capacity. Nagaland Police have been directed to coordinate with I4C for all fraud cases involving voice cloning, deepfakes, or AI-generated investment scams. In 2023, 224 complaints involving ₹148.94 lakh were logged through this system from the state.",
+      link: "https://i4c.mha.gov.in/"
+    },
+    {
+      title: "IT Act and BNS 2023 — Applicable Framework for AI Crimes in Nagaland",
+      date: "2023",
+      type: "Legislation",
+      description: "In the absence of Nagaland-specific AI governance measures, offences involving AI-generated fraud are prosecuted under the Information Technology Act 2000 (Sections 66C, 66D for identity fraud and impersonation) and the Bharatiya Nyaya Sanhita 2023 (Sections 318–319 for cheating and personation, Section 356 for digital defamation). Nagaland Police have been trained under MHA's cybercrime capacity building programme to identify and register AI-assisted fraud cases under these provisions.",
+      link: "https://legislative.gov.in/acts/bharatiya-nyaya-sanhita-2023/"
+    }
+  ],
+
+  "Mizoram": [
+    {
+      title: "Citizen Financial Cyber Fraud Reporting System — Mizoram Enrolled",
+      date: "2023 (documented 2024)",
+      type: "Law Enforcement",
+      description: "Mizoram reported 239 cybercrime complaints involving ₹484.12 lakh through the MHA's Citizen Financial Cyber Fraud Reporting and Management System in 2023 — disproportionately high for its population size. The system allows real-time freezing of fraudulent transactions. Mizoram Police Cyber Cell coordinates with I4C and state banks to recover funds lost to AI-enabled phishing, fake investment apps, and voice cloning scams, which have been identified as the primary fraud vectors in the state.",
+      link: "https://www.sentinelassam.com/topheadlines/assam-7621-cases-of-cyber-fraud-in-2023"
+    },
+    {
+      title: "MeitY Digital Literacy Push — Northeast States Including Mizoram",
+      date: "2024 (Ongoing)",
+      type: "Policy",
+      description: "MeitY's Digital Shakti and Cyber Jagrukta campaigns have been extended to Mizoram as part of a Northeast-focused digital literacy initiative. The campaigns specifically train women, students, and rural users to identify AI-generated scam content including fake investment videos, voice-cloned emergency calls, and deepfake impersonations. Given Mizoram's high per-capita cybercrime exposure, the state was prioritised for outreach in the 2024 campaign cycle.",
+      link: "https://www.meity.gov.in"
+    },
+    {
+      title: "IT Act and BNS 2023 — Applicable Framework for AI Crimes in Mizoram",
+      date: "2023",
+      type: "Legislation",
+      description: "AI-enabled fraud in Mizoram is prosecuted under the IT Act 2000 and Bharatiya Nyaya Sanhita 2023, the applicable national frameworks in the absence of state-specific AI legislation. Section 66D of the IT Act (cheating by personation using computer resources) is the primary provision used against voice cloning and impersonation scams. Mizoram Police have been trained under MHA's national cybercrime capacity building programme to identify AI-specific fraud signatures.",
+      link: "https://legislative.gov.in/acts/bharatiya-nyaya-sanhita-2023/"
+    }
+  ],
+
+  "Arunachal Pradesh": [
+    {
+      title: "Newschecker Fact-Check Debunks Elon Musk Deepfake on Arunachal Pradesh",
+      date: "Mar 07, 2025",
+      type: "Platform Action",
+      description: "Newschecker, an IFCN-certified Indian fact-checking organisation, published a formal debunk of deepfake videos falsely depicting Elon Musk making statements about a BJP/RSS conspiracy in Arunachal Pradesh. The fact-check identified technical markers — mismatched lip movements, reused footage across multiple clips — confirming AI manipulation. Meta and X removed the flagged videos following the fact-check report, demonstrating the platform-civil society coordination mechanism that now governs AI misinformation responses in India.",
+      link: "https://newschecker.in/ai-deepfake/elon-musks-deepfake-videos-on-bjp-rss-conspiracy-in-arunachal-pradesh-debunked"
+    },
+    {
+      title: "Election Commission AI Content Rules Apply to Arunachal Pradesh Elections",
+      date: "2024",
+      type: "Electoral Regulation",
+      description: "The Election Commission of India's 2024 guidelines on AI and deepfake content in political campaigns apply to Arunachal Pradesh's state electoral processes. All AI-generated or digitally edited political media must carry visible disclaimers. The EC's dedicated AI monitoring cell, active across 14 social media platforms, covers Arunachal Pradesh and has the authority to direct removal of electoral deepfakes within 3 hours during silence periods. The Elon Musk deepfake case illustrates the state's vulnerability to such cross-border AI disinformation targeting tribal and border regions.",
+      link: "https://eci.gov.in/files/file/14897-election-commission-of-india-handbook-on-combating-misinformation/"
+    },
+    {
+      title: "IT Act and BNS 2023 — Applicable Legal Framework",
+      date: "2023",
+      type: "Legislation",
+      description: "In the absence of Arunachal Pradesh-specific AI policy, deepfake-related offences are handled under the IT Act 2000 and the Bharatiya Nyaya Sanhita 2023. The state police cyber cell registers cases under Section 66D (cheating by personation via computer), Section 505 IPC/BNS equivalents (statements causing public mischief), and the relevant deepfake provisions introduced under the IT Rules 2021 amendments. Given the state's proximity to a sensitive international border, central agencies including CERT-In also coordinate on cases involving political disinformation.",
+      link: "https://legislative.gov.in/acts/bharatiya-nyaya-sanhita-2023/"
+    }
+  ],
+
+  "Haryana": [
+    {
+      title: "AI Deployed to Monitor Haryana Teacher Eligibility Test (HTET)",
+      date: "Jun 20, 2025",
+      type: "Policy",
+      description: "Haryana introduced AI-based surveillance to monitor candidates during the HTET July 2025 examination, following repeated impersonation and cheating scandals. The system cross-referenced candidates' past exam histories and flagged suspicious behaviour in real time. While the government framed it as an anti-cheating measure, civil liberties groups raised concerns about the collection of student biometric and behavioural data without adequate consent frameworks or data retention policies — highlighting a governance gap in the state's use of AI in public services.",
+      link: "https://timesofindia.indiatimes.com/city/chandigarh/stung-by-repeated-cheating-cases-haryana-introduces-ai-to-monitor-haryana-teacher-eligibility-test/articleshow/121960786.cms"
+    },
+    {
+      title: "Haryana Police Cyber Crime Units — AI Fraud Response",
+      date: "2024 (Ongoing)",
+      type: "Law Enforcement",
+      description: "Haryana Police operate dedicated cybercrime units in Gurugram, Faridabad, and Panchkula — among the most active in North India given the states' dense corporate and urban population. These units handle AI-enabled voice cloning scams, deepfake blackmail cases, and digital arrest fraud. Cases are registered under the IT Act and BNS 2023, with coordination routed through I4C and the national helpline 1930. Haryana's proximity to Delhi means many cross-jurisdictional cases involving Delhi-based victims are jointly investigated.",
+      link: "https://i4c.mha.gov.in/"
+    },
+    {
+      title: "Prohibition of Sexually Explicit Deep Fake Material Rules 2025 — Applicable to Haryana Cases",
+      date: "2025",
+      type: "Legislation",
+      description: "The central government's Prohibition of Sexually Explicit Deep Fake Material Rules 2025 directly addresses cases documented in Haryana — including AI-generated obscene imagery used for blackmail. The rules criminalise creation and distribution of deepfake sexual content of identifiable individuals, with penalties up to 7 years imprisonment. Haryana Police have been directed by MeitY to register applicable cases under these rules in addition to existing IT Act provisions for sextortion and blackmail.",
+      link: "https://www.meity.gov.in"
+    }
   ]
 
 };
