@@ -959,27 +959,6 @@ NIELIT's Assam & Nagaland centre hosted a cybersecurity conference in November 2
   
 ],
 
-"Haryana": [
-  // {
-  //   title: "AI Glitch Cuts Off Pensions, Wrongly Declares Thousands of Elderly “Dead”",
-  //   date: "25 Jan 2024",
-  //   summary:`The Goa Industrial Development Corporation (GIDC) installed 26 AI-powered smart CCTV cameras at the Pilerne Industrial Estate in 2025. The system includes 4 Automatic Number Plate Recognition (ANPR) units and covers eight key locations to enhance safety, particularly for women working in industrial zones. Officials stated it would operate 24×7, recording activity and triggering alerts`,
-  //   link: "https://timesofindia.indiatimes.com/city/goa/ai-tech-to-boost-womens-safety-at-gidc-estates/articleshow/125233064.cms?"
-  // },
-  // {
-  //   title: "Faridabad Man Blackmailed With AI-Generated Pics Of 3 Sisters",
-  //   date: "Oct 27, 2024",
-  //   summary:`Lawyer Girraj Pandey was duped by a phone call in which scammers used AI-cloned voice of his friend to ask for money. Pandey transferred ₹25,000 (after fake SMS “deposit” alerts) before realizing it was a scam. Police and bank took no immediate action.`,
-  //   link: "https://timesofindia.indiatimes.com/city/delhi/lawyer-duped-by-deepfake-voice-scam-helpless-as-authorities-allegedly-fail-to-act/articleshow/114311267.cms#:~:text=The%20scammer%20had%20cleverly%20sent,just%20as%20I%E2%80%99ve%20done%20in"
-  // },
-  // {
-  //   title: "Lawyer duped by deepfake voice scam, helpless as authorities allegedly fail to act",
-  //   date: "Oct 17, 2024",
-  //   summary:`A 19‑year-old college student, Rahul Bharti, was blackmailed with AI-generated obscene images/videos of himself and his three sisters. The accused demanded ₹20,000 to not circulate the fakes. Under severe distress, Rahul consumed poison and died by suicide.`,
-  //   link: "https://www.ndtv.com/india-news/faridabad-man-blackmailed-with-ai-generated-pics-of-3-sisters-he-dies-by-suicide-9522971#:~:text=Investigation%20revealed%20a%20chat%20between,come%20to%20me"
-  // }
-],
-
 "Himachal Pradesh": [
   {
     title: "Cyber fraudsters lure Himachal Pradesh's elderly men into honey trap",
@@ -1161,6 +1140,27 @@ const governanceData = {
       type: "Policy",
       description: "Haryana introduced AI surveillance to monitor the HTET examination, flagging candidates with histories of impersonation. While credited with improving exam integrity, critics raised concerns about student data privacy, consent, and the lack of an appeals mechanism for AI-flagged decisions.",
       link: "https://timesofindia.indiatimes.com/city/chandigarh/stung-by-repeated-cheating-cases-haryana-introduces-ai-to-monitor-haryana-teacher-eligibility-test/articleshow/121960786.cms"
+    },
+    {
+      title: "AI Deployed to Monitor Haryana Teacher Eligibility Test (HTET)",
+      date: "Jun 20, 2025",
+      type: "Policy",
+      description: "Haryana introduced AI-based surveillance to monitor candidates during the HTET July 2025 examination, following repeated impersonation and cheating scandals. The system cross-referenced candidates' past exam histories and flagged suspicious behaviour in real time. While the government framed it as an anti-cheating measure, civil liberties groups raised concerns about the collection of student biometric and behavioural data without adequate consent frameworks or data retention policies — highlighting a governance gap in the state's use of AI in public services.",
+      link: "https://timesofindia.indiatimes.com/city/chandigarh/stung-by-repeated-cheating-cases-haryana-introduces-ai-to-monitor-haryana-teacher-eligibility-test/articleshow/121960786.cms"
+    },
+    {
+      title: "Haryana Police Cyber Crime Units — AI Fraud Response",
+      date: "2024 (Ongoing)",
+      type: "Law Enforcement",
+      description: "Haryana Police operate dedicated cybercrime units in Gurugram, Faridabad, and Panchkula — among the most active in North India given the states' dense corporate and urban population. These units handle AI-enabled voice cloning scams, deepfake blackmail cases, and digital arrest fraud. Cases are registered under the IT Act and BNS 2023, with coordination routed through I4C and the national helpline 1930. Haryana's proximity to Delhi means many cross-jurisdictional cases involving Delhi-based victims are jointly investigated.",
+      link: "https://i4c.mha.gov.in/"
+    },
+    {
+      title: "Prohibition of Sexually Explicit Deep Fake Material Rules 2025 — Applicable to Haryana Cases",
+      date: "2025",
+      type: "Legislation",
+      description: "The central government's Prohibition of Sexually Explicit Deep Fake Material Rules 2025 directly addresses cases documented in Haryana — including AI-generated obscene imagery used for blackmail. The rules criminalise creation and distribution of deepfake sexual content of identifiable individuals, with penalties up to 7 years imprisonment. Haryana Police have been directed by MeitY to register applicable cases under these rules in addition to existing IT Act provisions for sextortion and blackmail.",
+      link: "https://www.meity.gov.in"
     }
   ],
 
@@ -1569,30 +1569,6 @@ const governanceData = {
       type: "Legislation",
       description: "In the absence of Arunachal Pradesh-specific AI policy, deepfake-related offences are handled under the IT Act 2000 and the Bharatiya Nyaya Sanhita 2023. The state police cyber cell registers cases under Section 66D (cheating by personation via computer), Section 505 IPC/BNS equivalents (statements causing public mischief), and the relevant deepfake provisions introduced under the IT Rules 2021 amendments. Given the state's proximity to a sensitive international border, central agencies including CERT-In also coordinate on cases involving political disinformation.",
       link: "https://legislative.gov.in/acts/bharatiya-nyaya-sanhita-2023/"
-    }
-  ],
-
-  "Haryana": [
-    {
-      title: "AI Deployed to Monitor Haryana Teacher Eligibility Test (HTET)",
-      date: "Jun 20, 2025",
-      type: "Policy",
-      description: "Haryana introduced AI-based surveillance to monitor candidates during the HTET July 2025 examination, following repeated impersonation and cheating scandals. The system cross-referenced candidates' past exam histories and flagged suspicious behaviour in real time. While the government framed it as an anti-cheating measure, civil liberties groups raised concerns about the collection of student biometric and behavioural data without adequate consent frameworks or data retention policies — highlighting a governance gap in the state's use of AI in public services.",
-      link: "https://timesofindia.indiatimes.com/city/chandigarh/stung-by-repeated-cheating-cases-haryana-introduces-ai-to-monitor-haryana-teacher-eligibility-test/articleshow/121960786.cms"
-    },
-    {
-      title: "Haryana Police Cyber Crime Units — AI Fraud Response",
-      date: "2024 (Ongoing)",
-      type: "Law Enforcement",
-      description: "Haryana Police operate dedicated cybercrime units in Gurugram, Faridabad, and Panchkula — among the most active in North India given the states' dense corporate and urban population. These units handle AI-enabled voice cloning scams, deepfake blackmail cases, and digital arrest fraud. Cases are registered under the IT Act and BNS 2023, with coordination routed through I4C and the national helpline 1930. Haryana's proximity to Delhi means many cross-jurisdictional cases involving Delhi-based victims are jointly investigated.",
-      link: "https://i4c.mha.gov.in/"
-    },
-    {
-      title: "Prohibition of Sexually Explicit Deep Fake Material Rules 2025 — Applicable to Haryana Cases",
-      date: "2025",
-      type: "Legislation",
-      description: "The central government's Prohibition of Sexually Explicit Deep Fake Material Rules 2025 directly addresses cases documented in Haryana — including AI-generated obscene imagery used for blackmail. The rules criminalise creation and distribution of deepfake sexual content of identifiable individuals, with penalties up to 7 years imprisonment. Haryana Police have been directed by MeitY to register applicable cases under these rules in addition to existing IT Act provisions for sextortion and blackmail.",
-      link: "https://www.meity.gov.in"
     }
   ]
 
