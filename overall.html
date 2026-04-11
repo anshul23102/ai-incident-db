@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Map – AI Incident Database</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .map-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .map-card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP NAV -->
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <div class="topnav-brand">
+        <span class="brand-dot"></span>
+        <span class="brand-name">AI Incident Database</span>
+        <span class="brand-tag">India · 2021–2025</span>
+      </div>
+      <div class="topnav-links">
+        <a href="index.html" class="nav-link">States</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+        <a href="timeline.html" class="nav-link">Timeline</a>
+        <a href="search.html" class="nav-link">Search</a>
+        <a href="overall.html" class="nav-link active">Map</a>
+        <a href="governance.html" class="nav-link">Governance</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE DRAWER -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <aside class="drawer" id="drawer">
+    <div class="drawer-header">
+      <span class="brand-name">Navigation</span>
+      <button class="drawer-close" id="drawerClose">✕</button>
+    </div>
+    <ul class="drawer-list">
+      <li><a href="index.html" class="drawer-link"><span>🗺️</span> All States</a></li>
+      <li><a href="dashboard.html" class="drawer-link"><span>📊</span> Dashboard</a></li>
+      <li><a href="timeline.html" class="drawer-link"><span>📅</span> Timeline</a></li>
+      <li><a href="search.html" class="drawer-link"><span>🔍</span> Search</a></li>
+      <li><a href="overall.html" class="drawer-link active"><span>🗾</span> Map</a></li>
+      <li><a href="governance.html" class="drawer-link"><span>🏛️</span> Central Governance</a></li>
+    </ul>
+  </aside>
+
+  <!-- HERO -->
+  <header class="state-hero">
+    <div class="state-hero-inner">
+      <h1 class="state-title">Overall Analysis</h1>
+      <p class="state-subtitle">A visual mapping of AI-related incidents across India</p>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="state-main">
+    <div class="map-card">
+      <img src="Overall_analysis.png" alt="Overall Analysis Map of AI Incidents in India">
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>B.Tech Project · IIIT Delhi · Dept. of Social Science & Humanities</p>
+    <p>Anshul Jain · Dhruv Kantroo · Siddhant Gautam · Sukhmani Kaur</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
