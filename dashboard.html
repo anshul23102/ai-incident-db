@@ -186,6 +186,72 @@
       </div>
     </div>
 
+    <!-- CLASSIFICATION SECTION HEADER -->
+    <div style="margin:2.5rem 0 1.2rem">
+      <div class="section-eyebrow">Multi-Axis Classification</div>
+      <div class="section-title" style="font-size:1.4rem">Incident Breakdown</div>
+      <div class="section-desc">Every incident classified across severity, AI technology used, victim profile and response outcome</div>
+    </div>
+
+    <!-- ROW 4: severity + victim profile -->
+    <div class="chart-two-col reveal">
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <div class="chart-card-title">Severity Distribution</div>
+          <div class="chart-card-sub">Critical = death/crore-scale loss · Major = FIR/arrest · Notable = advisory/risk</div>
+        </div>
+        <div style="position:relative;height:200px;">
+          <canvas id="sevChart"></canvas>
+        </div>
+        <div class="custom-legend" id="sevLegend"></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <div class="chart-card-title">Victim Profile</div>
+          <div class="chart-card-sub">Who bears the brunt of AI-enabled harm in India</div>
+        </div>
+        <div style="position:relative;height:200px;">
+          <canvas id="victimChart"></canvas>
+        </div>
+        <div class="custom-legend" id="victimLegend"></div>
+      </div>
+    </div>
+
+    <!-- ROW 5: AI technology + response outcome -->
+    <div class="chart-two-col reveal">
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <div class="chart-card-title">AI Technology Used</div>
+          <div class="chart-card-sub">Which AI tool or technique enabled the incident</div>
+        </div>
+        <div style="position:relative;height:220px;">
+          <canvas id="techChart"></canvas>
+        </div>
+        <div class="custom-legend" id="techLegend"></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-card-header">
+          <div class="chart-card-title">Response Outcome</div>
+          <div class="chart-card-sub">What happened after — arrests, FIRs, advisories or silence</div>
+        </div>
+        <div style="position:relative;height:200px;">
+          <canvas id="respChart"></canvas>
+        </div>
+        <div class="custom-legend" id="respLegend"></div>
+      </div>
+    </div>
+
+    <!-- ROW 6: lifecycle stage bar -->
+    <div class="chart-card reveal">
+      <div class="chart-card-header">
+        <div class="chart-card-title">Incident Lifecycle Stage</div>
+        <div class="chart-card-sub">Which phase is most documented — creation, distribution, harm or response?</div>
+      </div>
+      <div style="position:relative;height:180px;">
+        <canvas id="lifecycleChart"></canvas>
+      </div>
+    </div>
+
   </main>
 
   <footer class="site-footer">
@@ -367,6 +433,9 @@
       }
     });
 
+    /* ── Classify all incidents using the full system from state.js ── */
+    allIncidents.forEach(inc => { inc.full = classifyFull(inc); });
+
     /* ── Monthly trend 2024-2025 ── */
     const monthMap = {};
     allIncidents.forEach(i => {
@@ -402,6 +471,90 @@
         scales: {
           x: { ticks: { color: "#6b748a", font: { size: 10 }, maxRotation: 45, autoSkip: false }, grid: { display: false } },
           y: { ticks: { color: "#6b748a", stepSize: 1 }, grid: { color: "rgba(255,255,255,0.05)" }, beginAtZero: true }
+        }
+      }
+    });
+    /* ── Helper: count by key from a classification axis ── */
+    function countBy(axis) {
+      const map = {};
+      allIncidents.forEach(inc => {
+        const item = inc.full[axis];
+        if (!map[item.key]) map[item.key] = { label: item.label, color: item.color, count: 0 };
+        map[item.key].count++;
+      });
+      return Object.values(map).sort((a, b) => b.count - a.count);
+    }
+
+    function makeDoughnut(canvasId, legendId, entries) {
+      new Chart(document.getElementById(canvasId), {
+        type: 'doughnut',
+        data: {
+          labels: entries.map(e => e.label),
+          datasets: [{ data: entries.map(e => e.count), backgroundColor: entries.map(e => e.color), borderWidth: 0, hoverOffset: 6 }]
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ` ${ctx.label}: ${ctx.raw}` } } },
+          cutout: '62%'
+        }
+      });
+      document.getElementById(legendId).innerHTML = entries.map(e =>
+        `<div class="legend-item"><span class="legend-swatch" style="background:${e.color}"></span>${e.label} (${e.count})</div>`
+      ).join('');
+    }
+
+    function makeHorizBar(canvasId, legendId, entries) {
+      new Chart(document.getElementById(canvasId), {
+        type: 'bar',
+        data: {
+          labels: entries.map(e => e.label),
+          datasets: [{ data: entries.map(e => e.count), backgroundColor: entries.map(e => e.color + 'cc'), borderColor: entries.map(e => e.color), borderWidth: 1, borderRadius: 4 }]
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true, maintainAspectRatio: false,
+          plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ` ${ctx.raw} incidents` } } },
+          scales: {
+            x: { ticks: { color: '#6b748a', font: { size: 11 } }, grid: { color: 'rgba(255,255,255,0.05)' }, beginAtZero: true },
+            y: { ticks: { color: '#9aa3b0', font: { size: 11 } }, grid: { display: false } }
+          }
+        }
+      });
+      if (legendId) {
+        document.getElementById(legendId).innerHTML = entries.map(e =>
+          `<div class="legend-item"><span class="legend-swatch" style="background:${e.color}"></span>${e.label} (${e.count})</div>`
+        ).join('');
+      }
+    }
+
+    /* ── Severity chart ── */
+    const sevOrder = ['critical', 'major', 'notable'];
+    const sevEntries = countBy('severity').sort((a, b) => sevOrder.indexOf(a.label.toLowerCase()) - sevOrder.indexOf(b.label.toLowerCase()));
+    makeDoughnut('sevChart', 'sevLegend', sevEntries);
+
+    /* ── Victim profile chart ── */
+    makeHorizBar('victimChart', 'victimLegend', countBy('victimProfile'));
+
+    /* ── AI Technology chart ── */
+    makeHorizBar('techChart', 'techLegend', countBy('aiTechnology').filter(e => e.label !== 'Other AI'));
+
+    /* ── Response outcome chart ── */
+    makeDoughnut('respChart', 'respLegend', countBy('response'));
+
+    /* ── Lifecycle stage chart ── */
+    const lcEntries = countBy('lifecycle');
+    new Chart(document.getElementById('lifecycleChart'), {
+      type: 'bar',
+      data: {
+        labels: lcEntries.map(e => e.label),
+        datasets: [{ data: lcEntries.map(e => e.count), backgroundColor: lcEntries.map(e => e.color + 'cc'), borderColor: lcEntries.map(e => e.color), borderWidth: 1, borderRadius: 5 }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ` ${ctx.raw} incidents` } } },
+        scales: {
+          x: { ticks: { color: '#9aa3b0', font: { size: 12 } }, grid: { display: false } },
+          y: { ticks: { color: '#6b748a', stepSize: 1 }, grid: { color: 'rgba(255,255,255,0.05)' }, beginAtZero: true }
         }
       }
     });

@@ -1698,6 +1698,95 @@ const governanceData = {
 
 
 // ─────────────────────────────────────────────────────────
+// FULL CLASSIFICATION SYSTEM — all 6 axes
+// ─────────────────────────────────────────────────────────
+
+const HARM_TYPES = [
+  { key:"deepfake-blackmail", label:"Deepfake Blackmail",        color:"#f43f5e", keywords:["blackmail","sextortion","obscene","morphed","explicit","extort","revenge","intimate","nude","naked"] },
+  { key:"investment-fraud",   label:"Investment Fraud",           color:"#f97316", keywords:["fraud","investment","scam","trading","stock","crypto","fake app","quantum ai","trump hotel","ponzi","phishing","fake profit"] },
+  { key:"political",          label:"Political / Electoral",      color:"#eab308", keywords:["election","electoral","cm ","bjp","congress","rjd","tmc","sp ","mla","mp ","poll","vote","campaign","defam","candidate","bypoll","lok sabha","assembly election"] },
+  { key:"voice-cloning",      label:"Voice Cloning",              color:"#a855f7", keywords:["voice cloning","voice scam","cloned voice","ai voice","kidnap","ransom","voice modulation","fake voice"] },
+  { key:"digital-arrest",     label:"Digital Arrest",             color:"#3b82f6", keywords:["digital arrest","ips ","cbi","rbi","narcotics","customs","pose as","digital house arrest"] },
+  { key:"surveillance",       label:"Surveillance",               color:"#06b6d4", keywords:["facial recognition","cctv","surveillance","biometric","attendance","deep trace","traffic challan","e-challan"] },
+  { key:"communal",           label:"Communal / Disinformation",  color:"#ec4899", keywords:["communal","riot","religion","caste","misinformation","fake news","stampede","kumbh","pahalgam","operation sindoor","inflammatory","disinformation"] },
+  { key:"identity-theft",     label:"Identity Theft",             color:"#8b5cf6", keywords:["identity","fake profile","persona","fake account","impersonat","babydoll","fake social"] },
+  { key:"other",              label:"Other",                      color:"#6b748a", keywords:[] },
+];
+
+const VICTIM_PROFILES = [
+  { key:"woman",       label:"Women / Girls",     color:"#f43f5e", keywords:["woman","female","girl","sister","mother","homemaker","wife"," sdm","influencer"] },
+  { key:"politician",  label:"Politician",         color:"#f97316", keywords:["cm ","pm ","minister","mla","chief minister","nirmala","fadnavis","naidu","mamata","modi","amit shah","candidate","bjp leader","congress leader"] },
+  { key:"student",     label:"Student / Youth",    color:"#eab308", keywords:["student","college","school","youth","teenager","19-year","classmate","class "] },
+  { key:"elderly",     label:"Elderly / Senior",   color:"#22c55e", keywords:["elderly","senior","retired","73-year","76-year","72-year","pensioner","old man","old woman"] },
+  { key:"institution", label:"Institution",         color:"#06b6d4", keywords:["school campus","hospital","company","bank","university","exam","army","military"] },
+  { key:"general",     label:"General Public",     color:"#6b748a", keywords:[] },
+];
+
+const SEVERITY_LEVELS = [
+  { key:"critical", label:"Critical",  color:"#ef4444", keywords:["suicide","death","died","crore","killed","terror","pahalgam","national security","operation sindoor","stampede","murder"] },
+  { key:"major",    label:"Major",     color:"#f97316", keywords:["lakh","arrested","court","high court","fir","lost","cheated","extort","fraud","scam","blackmail","sentenced"] },
+  { key:"notable",  label:"Notable",   color:"#22c55e", keywords:["warning","advisory","awareness","concern","risk","proposal","surveillance","debate","issued"] },
+];
+
+const AI_TECHNOLOGIES = [
+  { key:"deepfake-video",     label:"Deepfake Video",            color:"#f43f5e", keywords:["deepfake","fake video","morphed video","ai video","ai-generated video","ai generated video"] },
+  { key:"voice-cloning",      label:"Voice Cloning",             color:"#a855f7", keywords:["voice cloning","voice scam","cloned voice","ai voice","voice modulation"] },
+  { key:"ai-image",           label:"AI Generated Image",        color:"#f97316", keywords:["morphed image","morphed pic","ai-generated image","ai image","ai photo","fake image","generated image"] },
+  { key:"fake-app",           label:"Fake App / Platform",       color:"#eab308", keywords:["fake app","trading app","investment app","platform","quantum ai","app stopped","fake website"] },
+  { key:"chatbot",            label:"Chatbot / LLM",             color:"#22c55e", keywords:["chatgpt","chatbot","llm","generative ai"] },
+  { key:"facial-recognition", label:"Facial Recognition",        color:"#06b6d4", keywords:["facial recognition","face recognition","biometric","ai surveillance","cctv ai"] },
+  { key:"algorithmic",        label:"Algorithmic Amplification", color:"#3b82f6", keywords:["algorithm","bot network","coordinated","amplification","140+ accounts","coordinated sharing"] },
+  { key:"other-ai",           label:"Other AI",                  color:"#6b748a", keywords:[] },
+];
+
+const RESPONSE_OUTCOMES = [
+  { key:"arrested",    label:"Arrested / Convicted", color:"#22c55e", keywords:["arrested","held","detained","booked","nabbed","custody","convicted","sentence"] },
+  { key:"court-order", label:"Court / FIR",          color:"#06b6d4", keywords:["court","high court","fir","judgment","bail","john doe","13 firs","21 firs"] },
+  { key:"advisory",    label:"Advisory Only",         color:"#eab308", keywords:["advisory","warning issued","warned","awareness","guideline","circular"] },
+  { key:"no-response", label:"No Response",           color:"#ef4444", keywords:[] },
+];
+
+const LIFECYCLE_STAGES = [
+  { key:"creation",     label:"Creation",     color:"#a855f7", keywords:["created","generated","using ai","used ai","ai tool","made by","ai-generated","synthesized"] },
+  { key:"distribution", label:"Distribution", color:"#f97316", keywords:["circulated","shared","viral","spread","whatsapp","facebook","social media","posted","forwarded"] },
+  { key:"harm",         label:"Harm Caused",  color:"#ef4444", keywords:["lost","died","suicide","transferred","cheated","blackmailed","duped","victim"] },
+  { key:"response",     label:"Response",     color:"#22c55e", keywords:["arrested","fir","court","advisory","removed","debunked","action taken","busted"] },
+];
+
+function classifyFull(inc) {
+  const text = ((inc.title||"")+" "+(inc.summary||"")+" "+(inc.description||"")).toLowerCase();
+
+  function firstMatch(rules) {
+    for (const r of rules) {
+      if (!r.keywords.length) continue;
+      if (r.keywords.some(k => text.includes(k))) return r;
+    }
+    return rules[rules.length - 1];
+  }
+
+  let severity = SEVERITY_LEVELS[2];
+  if (/suicide|death|died|crore|\bkilled\b|terror|pahalgam|national security|operation sindoor|stampede|murder/.test(text)) {
+    severity = SEVERITY_LEVELS[0];
+  } else if (/lakh|arrested|court|fir|blackmail|cheated|fraud|scam|lost|extort/.test(text)) {
+    severity = SEVERITY_LEVELS[1];
+  }
+
+  let response = RESPONSE_OUTCOMES[3];
+  for (const r of RESPONSE_OUTCOMES.slice(0, 3)) {
+    if (r.keywords.some(k => text.includes(k))) { response = r; break; }
+  }
+
+  return {
+    harmType:      firstMatch(HARM_TYPES),
+    victimProfile: firstMatch(VICTIM_PROFILES),
+    severity,
+    aiTechnology:  firstMatch(AI_TECHNOLOGIES),
+    response,
+    lifecycle:     firstMatch(LIFECYCLE_STAGES),
+  };
+}
+
+// ─────────────────────────────────────────────────────────
 // DRAWER + TABS + RENDER
 // ─────────────────────────────────────────────────────────
 document.addEventListener("DOMContentLoaded", () => {

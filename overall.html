@@ -8,6 +8,52 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <style>
+    /* ── Filter bar ── */
+    .map-filter-section {
+      margin-bottom: 20px;
+    }
+    .map-filter-label {
+      font-size: 0.72rem;
+      color: var(--text-3);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-bottom: 8px;
+      font-weight: 600;
+    }
+    .map-filter-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+    .map-filter-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 12px;
+      border-radius: 20px;
+      border: 1.5px solid var(--card-border);
+      background: none;
+      color: var(--text-3);
+      font-size: 0.75rem;
+      font-weight: 500;
+      cursor: pointer;
+      font-family: inherit;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+    .map-filter-btn .dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .map-filter-btn:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
+    .map-filter-btn.active {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    /* ── Map wrapper ── */
     .map-wrapper {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
@@ -15,7 +61,6 @@
       padding: 24px;
       margin-bottom: 2rem;
     }
-
     .map-header {
       display: flex;
       justify-content: space-between;
@@ -24,7 +69,6 @@
       gap: 16px;
       margin-bottom: 20px;
     }
-
     .map-header h2 {
       font-family: 'Syne', sans-serif;
       font-size: 1.1rem;
@@ -32,34 +76,29 @@
       color: var(--text);
       margin: 0 0 4px;
     }
-
     .map-header p {
       font-size: 0.8rem;
       color: var(--text-2);
       margin: 0;
     }
-
     .map-legend {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
       gap: 4px;
     }
-
     .legend-label {
       font-size: 0.72rem;
       color: var(--text-2);
       text-transform: uppercase;
       letter-spacing: 0.05em;
     }
-
     .legend-bar {
       width: 160px;
       height: 10px;
       border-radius: 5px;
-      background: linear-gradient(to right, #1a3a6b, #f0a500);
+      background: linear-gradient(to right, #22c55e, #eab308, #ef4444);
     }
-
     .legend-range {
       display: flex;
       justify-content: space-between;
@@ -67,12 +106,10 @@
       font-size: 0.7rem;
       color: var(--text-3);
     }
-
     #mapContainer {
       width: 100%;
       position: relative;
     }
-
     .map-loading {
       display: flex;
       align-items: center;
@@ -82,122 +119,56 @@
       font-size: 0.9rem;
       gap: 12px;
     }
-
     .map-loading::before {
       content: '';
       flex-shrink: 0;
-      width: 18px;
-      height: 18px;
-      border: 2px solid rgba(240, 165, 0, 0.25);
+      width: 18px; height: 18px;
+      border: 2px solid rgba(240,165,0,0.25);
       border-top-color: #f0a500;
       border-radius: 50%;
       animation: spin 0.8s linear infinite;
     }
-
     @keyframes spin { to { transform: rotate(360deg); } }
-
-    .state-path {
-      cursor: pointer;
-      transition: filter 0.12s;
-    }
-
-    .state-path:hover { filter: brightness(1.3) saturate(1.2); }
-
+    .state-path { cursor: pointer; transition: filter 0.12s; }
+    .state-path:hover { filter: brightness(1.25) saturate(1.3); }
     .state-path.no-data { cursor: default; }
     .state-path.no-data:hover { filter: none; }
 
-    /* Tooltip */
+    /* ── Tooltip ── */
     #mapTooltip {
       position: fixed;
       background: #0f1e35;
-      border: 1px solid rgba(240, 165, 0, 0.22);
+      border: 1px solid rgba(240,165,0,0.22);
       border-radius: 12px;
       padding: 14px 16px;
       pointer-events: none;
       z-index: 9999;
-      min-width: 210px;
-      max-width: 275px;
-      box-shadow: 0 10px 36px rgba(0, 0, 0, 0.55);
+      min-width: 220px;
+      max-width: 290px;
+      box-shadow: 0 10px 36px rgba(0,0,0,0.55);
       opacity: 0;
       transition: opacity 0.12s;
     }
+    .tip-state { font-family:'Syne',sans-serif; font-size:0.95rem; font-weight:700; color:#f0a500; margin-bottom:5px; }
+    .tip-count { font-size:0.82rem; color:var(--text); margin-bottom:9px; }
+    .tip-count strong { font-size:1.05rem; font-weight:700; }
+    .tip-sev { display:flex; gap:6px; margin-bottom:8px; flex-wrap:wrap; }
+    .tip-sev-chip { font-size:0.68rem; padding:2px 8px; border-radius:20px; font-weight:600; }
+    .tip-cats { display:flex; flex-wrap:wrap; gap:4px; margin-bottom:9px; }
+    .tip-cat { font-size:0.68rem; padding:2px 8px; border-radius:20px; font-weight:700; color:#0b1426; }
+    .tip-latest { font-size:0.73rem; color:var(--text-2); line-height:1.45; border-top:1px solid rgba(255,255,255,0.06); padding-top:8px; }
+    .tip-latest strong { color:var(--text); }
+    .tip-cta { font-size:0.7rem; color:#f0a500; margin-top:7px; opacity:0.75; }
+    .tip-nodata { font-size:0.8rem; color:var(--text-3); margin-top:2px; }
+    .map-error { display:flex; align-items:center; justify-content:center; height:420px; flex-direction:column; gap:10px; color:var(--text-2); font-size:0.9rem; }
 
-    .tip-state {
-      font-family: 'Syne', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: #f0a500;
-      margin-bottom: 5px;
-    }
-
-    .tip-count {
-      font-size: 0.82rem;
-      color: var(--text);
-      margin-bottom: 9px;
-    }
-
-    .tip-count strong {
-      font-size: 1.05rem;
-      font-weight: 700;
-    }
-
-    .tip-cats {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 4px;
-      margin-bottom: 9px;
-    }
-
-    .tip-cat {
-      font-size: 0.68rem;
-      padding: 2px 8px;
-      border-radius: 20px;
-      font-weight: 700;
-      color: #0b1426;
-    }
-
-    .tip-latest {
-      font-size: 0.73rem;
-      color: var(--text-2);
-      line-height: 1.45;
-      border-top: 1px solid rgba(255,255,255,0.06);
-      padding-top: 8px;
-    }
-
-    .tip-latest strong { color: var(--text); }
-
-    .tip-cta {
-      font-size: 0.7rem;
-      color: #f0a500;
-      margin-top: 7px;
-      opacity: 0.75;
-    }
-
-    .tip-nodata {
-      font-size: 0.8rem;
-      color: var(--text-3);
-      margin-top: 2px;
-    }
-
-    .map-error {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 420px;
-      flex-direction: column;
-      gap: 10px;
-      color: var(--text-2);
-      font-size: 0.9rem;
-    }
-
-    /* Stats row */
+    /* ── Stats row ── */
     .map-stat-row {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
       gap: 12px;
       margin-bottom: 2rem;
     }
-
     .map-stat {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
@@ -205,54 +176,36 @@
       padding: 16px;
       text-align: center;
     }
+    .map-stat-num { font-family:'Syne',sans-serif; font-size:1.7rem; font-weight:800; color:var(--amber); }
+    .map-stat-label { font-size:0.74rem; color:var(--text-2); margin-top:3px; }
 
-    .map-stat-num {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.7rem;
-      font-weight: 800;
-      color: var(--amber);
-    }
-
-    .map-stat-label {
-      font-size: 0.74rem;
-      color: var(--text-2);
-      margin-top: 3px;
-    }
-
-    /* Category chips */
-    .cat-legend {
-      margin-top: 18px;
+    /* ── Severity summary row ── */
+    .sev-row {
       display: flex;
+      gap: 10px;
       flex-wrap: wrap;
-      gap: 6px;
-      align-items: center;
+      margin-bottom: 1.5rem;
     }
-
-    .cat-legend-label {
-      font-size: 0.72rem;
-      color: var(--text-2);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-right: 2px;
+    .sev-card {
+      flex: 1;
+      min-width: 120px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      border-left: 4px solid;
     }
+    .sev-card-num { font-family:'Syne',sans-serif; font-size:1.5rem; font-weight:800; }
+    .sev-card-label { font-size:0.72rem; color:var(--text-2); margin-top:2px; }
 
-    .cat-chip {
-      font-size: 0.7rem;
-      padding: 3px 10px;
-      border-radius: 20px;
-      font-weight: 700;
-      color: #0b1426;
-    }
-
-    @media (max-width: 600px) {
-      .map-legend { align-items: flex-start; }
-      .legend-bar, .legend-range { width: 120px; }
+    @media (max-width:600px) {
+      .map-legend { align-items:flex-start; }
+      .legend-bar, .legend-range { width:120px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- TOP NAV -->
   <nav class="topnav">
     <div class="topnav-inner">
       <div class="topnav-brand">
@@ -274,7 +227,6 @@
     </div>
   </nav>
 
-  <!-- MOBILE DRAWER -->
   <div class="drawer-overlay" id="drawerOverlay"></div>
   <aside class="drawer" id="drawer">
     <div class="drawer-header">
@@ -291,60 +243,90 @@
     </ul>
   </aside>
 
-  <!-- HERO -->
   <header class="state-hero">
     <div class="state-hero-inner">
-      <h1 class="state-title">Interactive Map</h1>
-      <p class="state-subtitle">Hover over any state to explore AI-related incidents · Click to view state details</p>
+      <span class="section-eyebrow" style="margin-top:8px">Choropleth Map</span>
+      <h1 class="state-title">Interactive Incident Map</h1>
+      <p class="state-subtitle">Filter by harm type, severity, AI technology and more · Green = fewer incidents · Red = more</p>
     </div>
   </header>
 
-  <!-- MAIN -->
   <main class="state-main">
 
-    <!-- Stats row -->
+    <!-- Stat cards -->
     <div class="map-stat-row" id="mapStats"></div>
+
+    <!-- Severity summary -->
+    <div class="sev-row" id="sevRow"></div>
+
+    <!-- Filter bar -->
+    <div class="map-filter-section">
+      <div class="map-filter-label">Filter map by —</div>
+
+      <div class="map-filter-label" style="margin-top:10px;opacity:0.7">Harm Type</div>
+      <div class="map-filter-row" id="harmFilterRow"></div>
+
+      <div class="map-filter-label" style="margin-top:6px;opacity:0.7">Severity</div>
+      <div class="map-filter-row" id="sevFilterRow"></div>
+
+      <div class="map-filter-label" style="margin-top:6px;opacity:0.7">AI Technology</div>
+      <div class="map-filter-row" id="techFilterRow"></div>
+
+      <div class="map-filter-label" style="margin-top:6px;opacity:0.7">Response Outcome</div>
+      <div class="map-filter-row" id="respFilterRow"></div>
+    </div>
+
+    <!-- Active filter label -->
+    <p id="activeFilterLabel" style="font-size:0.82rem;color:var(--text-3);margin-bottom:16px;min-height:1.2em;"></p>
 
     <!-- Map card -->
     <div class="map-wrapper">
       <div class="map-header">
         <div>
-          <h2>AI Incident Density — India 2021–2025</h2>
-          <p>States shaded by number of documented incidents. Hover to explore, click to drill in.</p>
+          <h2 id="mapTitle">AI Incident Density — India 2021–2025</h2>
+          <p id="mapSubtitle">Colour intensity: green (safe/few) → red (danger/many)</p>
         </div>
         <div class="map-legend">
-          <span class="legend-label">Incidents per state</span>
+          <span class="legend-label">Incident count</span>
           <div class="legend-bar"></div>
           <div class="legend-range">
-            <span>0</span>
+            <span style="color:#22c55e">Fewer</span>
             <span id="legendMax">–</span>
+            <span style="color:#ef4444">More</span>
           </div>
         </div>
       </div>
-
       <div id="mapContainer">
         <div class="map-loading">Loading map data…</div>
-      </div>
-
-      <div class="cat-legend">
-        <span class="cat-legend-label">Categories</span>
       </div>
     </div>
 
   </main>
 
-  <!-- Floating tooltip -->
   <div id="mapTooltip"></div>
 
   <footer class="site-footer">
-    <p>B.Tech Project · IIIT Delhi · Dept. of Social Science & Humanities</p>
-    <p>Anshul Jain · Dhruv Kantroo · Siddhant Gautam · Sukhmani Kaur</p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-brand-name">AI Incident Database · India</span>
+        <p class="footer-brand-desc">Documenting AI-related harm across India from 2021 to 2025.</p>
+      </div>
+      <div class="footer-links">
+        <span class="footer-links-title">Explore</span>
+        <a href="index.html" class="footer-link">State Directory</a>
+        <a href="dashboard.html" class="footer-link">Dashboard</a>
+        <a href="timeline.html" class="footer-link">Interactive Map</a>
+        <a href="governance.html" class="footer-link">Governance</a>
+        <a href="search.html" class="footer-link">Search</a>
+      </div>
+    </div>
+    <div class="footer-bottom">B.Tech Project · IIIT Delhi · Dept. of Social Science &amp; Humanities · Anshul Jain · Dhruv Kantroo · Siddhant Gautam · Sukhmani Kaur</div>
   </footer>
 
   <script src="state.js"></script>
   <script src="d3.v7.min.js"></script>
   <script>
-    /* ── Mobile drawer ── */
+    /* ── Drawer ── */
     const hamburger = document.getElementById('hamburger');
     const drawer    = document.getElementById('drawer');
     const overlay   = document.getElementById('drawerOverlay');
@@ -353,53 +335,7 @@
     closeBtn .addEventListener('click', () => { drawer.classList.remove('open'); overlay.classList.remove('active'); });
     overlay  .addEventListener('click', () => { drawer.classList.remove('open'); overlay.classList.remove('active'); });
 
-    /* ── Category rules (mirrors dashboard.html) ── */
-    const CAT_RULES = [
-      { key: 'electoral',    short: 'Electoral',      label: 'Political / Electoral',           color: '#c17f24', keywords: ['election','electoral','political','deepfake political','CM','BJP','Congress','RJD','TMC','SP ','MLA','MP ','poll','vote','campaign','defam'] },
-      { key: 'blackmail',    short: 'Blackmail',       label: 'Deepfake Blackmail / Sextortion', color: '#7ec8e3', keywords: ['blackmail','sextortion','obscene','morphed','suicide','extort','intimate','explicit','revenge'] },
-      { key: 'voice',        short: 'Voice Cloning',   label: 'Voice Cloning Scams',             color: '#c084fc', keywords: ['voice cloning','voice scam','cloned voice','AI voice','kidnap','ransom','emergency'] },
-      { key: 'fraud',        short: 'Financial Fraud', label: 'Investment / Financial Fraud',    color: '#f97316', keywords: ['fraud','investment','scam','lakh','crore','trading','fake app','stock','crypto','ponzi','trump hotel','phishing'] },
-      { key: 'arrest',       short: 'Digital Arrest',  label: 'Digital Arrest / Impersonation', color: '#4ade80', keywords: ['digital arrest','IPS','CBI','RBI','officer','deepfake IPS','pose as'] },
-      { key: 'surveillance', short: 'Surveillance',    label: 'Surveillance & Governance Risk',  color: '#94a3b8', keywords: ['facial recognition','CCTV','surveillance','attendance','biometric','AI tool','deep trace','traffic'] },
-      { key: 'identity',     short: 'Identity Theft',  label: 'Identity Theft / Social Harm',   color: '#fb923c', keywords: ['identity','fake profile','persona','fake account','impersonat','babydoll','fake social'] },
-      { key: 'communal',     short: 'Communal',        label: 'Communal Conflict / Misinfo',     color: '#f0abfc', keywords: ['communal','riot','violence','religion','caste','kumbh','misinformation','fake news','mislead','stampede'] },
-    ];
-
-    function classifyIncident(inc) {
-      const text = ((inc.title || '') + ' ' + (inc.summary || '')).toLowerCase();
-      for (const cat of CAT_RULES) {
-        if (cat.keywords.some(k => text.includes(k.toLowerCase()))) return cat;
-      }
-      return { key: 'other', short: 'Other', label: 'Other', color: '#6b748a' };
-    }
-
-    /* ── Build per-state stats from incidentsData (loaded via state.js) ── */
-    const stateStats  = {};
-    let   totalCount  = 0;
-
-    Object.entries(incidentsData).forEach(([key, incidents]) => {
-      const catMap = {};
-      incidents.forEach(inc => {
-        const cat = classifyIncident(inc);
-        if (!catMap[cat.key]) catMap[cat.key] = { ...cat, count: 0 };
-        catMap[cat.key].count++;
-      });
-
-      const sorted = [...incidents].sort((a, b) => {
-        const ya = (a.date || '').match(/\b(20\d{2})\b/);
-        const yb = (b.date || '').match(/\b(20\d{2})\b/);
-        return (yb ? +yb[1] : 0) - (ya ? +ya[1] : 0);
-      });
-
-      stateStats[key] = {
-        count:   incidents.length,
-        topCats: Object.values(catMap).sort((a, b) => b.count - a.count).slice(0, 3),
-        latest:  sorted[0] || null,
-      };
-      totalCount += incidents.length;
-    });
-
-    /* ── Map GeoJSON state name → data key ── */
+    /* ── GeoJSON name → data key ── */
     const GEO_NAME_MAP = {
       'Delhi':             'Haryana/ Delhi',
       'Haryana':           'Haryana/ Delhi',
@@ -412,61 +348,169 @@
       return GEO_NAME_MAP[geoName] || geoName;
     }
 
-    /* ── Populate summary stats ── */
-    const maxCount = Math.max(...Object.values(stateStats).map(s => s.count));
-    const [topState, topStats] = Object.entries(stateStats).sort((a, b) => b[1].count - a[1].count)[0];
+    /* ── Classify all incidents ── */
+    const allClassified = [];
+    Object.entries(incidentsData).forEach(([state, incidents]) => {
+      incidents.forEach(inc => {
+        allClassified.push({ ...inc, state, cls: classifyFull(inc) });
+      });
+    });
 
-    document.getElementById('legendMax').textContent = maxCount;
+    /* ── Active filters (one active per dimension, null = all) ── */
+    const activeFilters = { harmType: null, severity: null, aiTechnology: null, response: null };
 
+    /* ── Filter incidents ── */
+    function getFiltered() {
+      return allClassified.filter(inc => {
+        if (activeFilters.harmType    && inc.cls.harmType.key     !== activeFilters.harmType)    return false;
+        if (activeFilters.severity    && inc.cls.severity.key     !== activeFilters.severity)    return false;
+        if (activeFilters.aiTechnology && inc.cls.aiTechnology.key !== activeFilters.aiTechnology) return false;
+        if (activeFilters.response    && inc.cls.response.key     !== activeFilters.response)    return false;
+        return true;
+      });
+    }
+
+    /* ── Build per-state stats from a filtered list ── */
+    function buildStats(incidents) {
+      const stats = {};
+      incidents.forEach(inc => {
+        if (!stats[inc.state]) stats[inc.state] = { count: 0, items: [] };
+        stats[inc.state].count++;
+        stats[inc.state].items.push(inc);
+      });
+      return stats;
+    }
+
+    /* ── Build global summary stats (no filter) ── */
+    const globalStats = buildStats(allClassified);
+    const totalCount  = allClassified.length;
+    const [topState]  = Object.entries(globalStats).sort((a, b) => b[1].count - a[1].count)[0];
+
+    /* ── Severity summary ── */
+    const sevCounts = { critical: 0, major: 0, notable: 0 };
+    allClassified.forEach(inc => { sevCounts[inc.cls.severity.key] = (sevCounts[inc.cls.severity.key] || 0) + 1; });
+    document.getElementById('sevRow').innerHTML = [
+      { key:'critical', label:'Critical Incidents',  color:'#ef4444' },
+      { key:'major',    label:'Major Incidents',     color:'#f97316' },
+      { key:'notable',  label:'Notable Incidents',   color:'#22c55e' },
+    ].map(s => `
+      <div class="sev-card" style="border-left-color:${s.color}">
+        <div class="sev-card-num" style="color:${s.color}">${sevCounts[s.key]||0}</div>
+        <div class="sev-card-label">${s.label}</div>
+      </div>`
+    ).join('');
+
+    /* ── Top stat cards ── */
     document.getElementById('mapStats').innerHTML = [
-      { num: totalCount,                       label: 'Total Incidents'               },
-      { num: Object.keys(stateStats).length,   label: 'States Covered'                },
-      { num: topStats.count,                   label: `Most Active: ${topState}`       },
-      { num: CAT_RULES.length,                 label: 'Harm Categories'               },
+      { num: totalCount,                             label: 'Total Incidents'      },
+      { num: Object.keys(incidentsData).length,      label: 'States Covered'       },
+      { num: topState,                               label: 'Most Active State'    },
+      { num: HARM_TYPES.length - 1,                  label: 'Harm Categories'      },
     ].map(s => `
       <div class="map-stat">
         <div class="map-stat-num">${s.num}</div>
         <div class="map-stat-label">${s.label}</div>
-      </div>
-    `).join('');
+      </div>`
+    ).join('');
 
-    /* ── Category chips ── */
-    document.querySelector('.cat-legend').insertAdjacentHTML('beforeend',
-      CAT_RULES.map(c =>
-        `<span class="cat-chip" style="background:${c.color}" title="${c.label}">${c.short}</span>`
-      ).join('')
-    );
+    /* ── Build filter buttons ── */
+    function makeFilterRow(containerId, items, dimension) {
+      const row = document.getElementById(containerId);
+      // "All" button
+      const allBtn = document.createElement('button');
+      allBtn.className = 'map-filter-btn active';
+      allBtn.dataset.val = '__all__';
+      allBtn.innerHTML = 'All';
+      allBtn.style.borderColor = 'rgba(255,255,255,0.2)';
+      allBtn.addEventListener('click', () => setFilter(dimension, null, allBtn, row));
+      row.appendChild(allBtn);
+
+      items.filter(i => i.key !== 'other' && i.key !== 'other-ai' && i.key !== 'general').forEach(item => {
+        const btn = document.createElement('button');
+        btn.className = 'map-filter-btn';
+        btn.dataset.val = item.key;
+        btn.innerHTML = `<span class="dot" style="background:${item.color}"></span>${item.label}`;
+        btn.addEventListener('click', () => setFilter(dimension, item.key, btn, row));
+        row.appendChild(btn);
+      });
+    }
+
+    function setFilter(dimension, value, clickedBtn, row) {
+      activeFilters[dimension] = value;
+      row.querySelectorAll('.map-filter-btn').forEach(b => {
+        b.classList.remove('active');
+        b.style.background = '';
+        b.style.borderColor = '';
+        b.style.color = '';
+      });
+      // Find the color for active state
+      let activeColor = '#f0a500';
+      if (value) {
+        const allItems = [...HARM_TYPES, ...SEVERITY_LEVELS, ...AI_TECHNOLOGIES, ...RESPONSE_OUTCOMES];
+        const found = allItems.find(i => i.key === value);
+        if (found) activeColor = found.color;
+      }
+      clickedBtn.classList.add('active');
+      clickedBtn.style.background = value ? activeColor + '22' : 'rgba(240,165,0,0.1)';
+      clickedBtn.style.borderColor = value ? activeColor + '88' : 'rgba(240,165,0,0.4)';
+      clickedBtn.style.color = value ? activeColor : '#f0a500';
+      updateMap();
+    }
+
+    makeFilterRow('harmFilterRow',  HARM_TYPES,        'harmType');
+    makeFilterRow('sevFilterRow',   SEVERITY_LEVELS,   'severity');
+    makeFilterRow('techFilterRow',  AI_TECHNOLOGIES,   'aiTechnology');
+    makeFilterRow('respFilterRow',  RESPONSE_OUTCOMES, 'response');
 
     /* ── Tooltip ── */
     const tooltip = document.getElementById('mapTooltip');
 
-    function showTooltip(event, d) {
-      const raw  = d.properties.ST_NM || d.properties.NAME_1 || d.properties.name || '';
-      const key  = getDataKey(raw);
+    function showTooltip(event, d, stateStats) {
+      const raw   = d.properties.ST_NM || d.properties.NAME_1 || d.properties.name || '';
+      const key   = getDataKey(raw);
       const stats = key ? stateStats[key] : null;
       const name  = key || raw;
 
       let html = `<div class="tip-state">${name}</div>`;
 
       if (stats && stats.count > 0) {
-        html += `<div class="tip-count"><strong>${stats.count}</strong> incident${stats.count !== 1 ? 's' : ''} documented</div>`;
+        const activeLabel = getActiveFilterLabel();
+        html += `<div class="tip-count"><strong>${stats.count}</strong> incident${stats.count !== 1 ? 's' : ''} ${activeLabel ? '· ' + activeLabel : 'documented'}</div>`;
 
-        if (stats.topCats.length) {
-          html += `<div class="tip-cats">` +
-            stats.topCats.map(c => `<span class="tip-cat" style="background:${c.color}">${c.short}</span>`).join('') +
-            `</div>`;
+        // Severity breakdown
+        const sevMap = {};
+        stats.items.forEach(inc => {
+          const s = inc.cls.severity;
+          if (!sevMap[s.key]) sevMap[s.key] = { ...s, count: 0 };
+          sevMap[s.key].count++;
+        });
+        const sevChips = Object.values(sevMap).sort((a,b) => {
+          const order = { critical: 0, major: 1, notable: 2 };
+          return order[a.key] - order[b.key];
+        }).map(s => `<span class="tip-sev-chip" style="background:${s.color}22;color:${s.color};border:1px solid ${s.color}44">${s.count} ${s.label}</span>`).join('');
+        if (sevChips) html += `<div class="tip-sev">${sevChips}</div>`;
+
+        // Top harm types
+        const harmMap = {};
+        stats.items.forEach(inc => {
+          const h = inc.cls.harmType;
+          if (!harmMap[h.key]) harmMap[h.key] = { ...h, count: 0 };
+          harmMap[h.key].count++;
+        });
+        const topHarms = Object.values(harmMap).sort((a,b) => b.count - a.count).slice(0, 3);
+        if (topHarms.length) {
+          html += `<div class="tip-cats">${topHarms.map(h => `<span class="tip-cat" style="background:${h.color}">${h.label}</span>`).join('')}</div>`;
         }
 
-        if (stats.latest) {
-          const t = stats.latest.title.length > 70
-            ? stats.latest.title.slice(0, 70) + '…'
-            : stats.latest.title;
+        // Latest incident
+        const latest = stats.items[0];
+        if (latest) {
+          const t = latest.title.length > 65 ? latest.title.slice(0, 65) + '…' : latest.title;
           html += `<div class="tip-latest"><strong>Latest:</strong> ${t}</div>`;
         }
-
         html += `<div class="tip-cta">Click to view all incidents →</div>`;
       } else {
-        html += `<div class="tip-nodata">No incidents documented for this region</div>`;
+        html += `<div class="tip-nodata">No incidents match this filter for this region</div>`;
       }
 
       tooltip.innerHTML = html;
@@ -475,8 +519,8 @@
     }
 
     function moveTooltip(event) {
-      const tw = tooltip.offsetWidth  || 240;
-      const th = tooltip.offsetHeight || 130;
+      const tw = tooltip.offsetWidth  || 250;
+      const th = tooltip.offsetHeight || 140;
       const vw = window.innerWidth;
       const vh = window.innerHeight;
       let left = event.clientX + 16;
@@ -490,14 +534,71 @@
 
     function hideTooltip() { tooltip.style.opacity = '0'; }
 
-    /* ── D3 choropleth ── */
-    const colorScale = d3.scaleSequential()
-      .domain([0, maxCount])
-      .interpolator(d3.interpolateRgb('#1a3a6b', '#f0a500'));
+    function getActiveFilterLabel() {
+      const parts = [];
+      if (activeFilters.harmType) {
+        const f = HARM_TYPES.find(h => h.key === activeFilters.harmType);
+        if (f) parts.push(f.label);
+      }
+      if (activeFilters.severity) {
+        const f = SEVERITY_LEVELS.find(h => h.key === activeFilters.severity);
+        if (f) parts.push(f.label);
+      }
+      if (activeFilters.aiTechnology) {
+        const f = AI_TECHNOLOGIES.find(h => h.key === activeFilters.aiTechnology);
+        if (f) parts.push(f.label);
+      }
+      if (activeFilters.response) {
+        const f = RESPONSE_OUTCOMES.find(h => h.key === activeFilters.response);
+        if (f) parts.push(f.label);
+      }
+      return parts.join(' · ');
+    }
 
-    const GEO_URL = 'india_states.geojson';
+    /* ── D3 map ── */
+    let svgPaths = null;
 
-    d3.json(GEO_URL).then(geoData => {
+    function updateMap() {
+      const filtered  = getFiltered();
+      const stats     = buildStats(filtered);
+      const maxCount  = Math.max(...Object.values(stats).map(s => s.count), 1);
+      const filterLabel = getActiveFilterLabel();
+
+      document.getElementById('legendMax').textContent = maxCount;
+      document.getElementById('activeFilterLabel').textContent =
+        filterLabel ? `Showing: ${filterLabel} (${filtered.length} incidents)` : `Showing all ${filtered.length} incidents`;
+      document.getElementById('mapTitle').textContent =
+        filterLabel ? `Incidents: ${filterLabel}` : 'AI Incident Density — India 2021–2025';
+
+      const colorScale = d3.scaleSequential()
+        .domain([0, maxCount])
+        .interpolator(d3.interpolateRgbBasis(['#22c55e', '#eab308', '#f97316', '#ef4444']));
+
+      if (svgPaths) {
+        svgPaths
+          .attr('fill', d => {
+            const key   = getDataKey(d.properties.ST_NM || d.properties.NAME_1 || '');
+            const s     = stats[key];
+            return s && s.count > 0 ? colorScale(s.count) : '#162540';
+          })
+          .classed('no-data', d => {
+            const key = getDataKey(d.properties.ST_NM || d.properties.NAME_1 || '');
+            return !stats[key] || stats[key].count === 0;
+          })
+          .on('mouseover', (event, d) => showTooltip(event, d, stats))
+          .on('click', (event, d) => {
+            const key = getDataKey(d.properties.ST_NM || d.properties.NAME_1 || '');
+            if (key && stateHasData(key)) window.location.href = `state.html?state=${encodeURIComponent(key)}`;
+          });
+      }
+    }
+
+    function stateHasData(key) {
+      return !!(incidentsData[key] && incidentsData[key].length > 0);
+    }
+
+    /* ── Load GeoJSON & draw ── */
+    d3.json('india_states.geojson').then(geoData => {
       const container = document.getElementById('mapContainer');
       const W = container.clientWidth || 800;
       const H = Math.round(W * 1.08);
@@ -512,37 +613,23 @@
       const projection = d3.geoMercator().fitSize([W, H - 10], geoData);
       const pathGen    = d3.geoPath().projection(projection);
 
-      svg.selectAll('path')
+      svgPaths = svg.selectAll('path')
         .data(geoData.features)
         .enter()
         .append('path')
-        .attr('class', d => {
-          const key = getDataKey(d.properties.ST_NM || d.properties.NAME_1 || '');
-          return 'state-path' + (stateStats[key] ? '' : ' no-data');
-        })
+        .attr('class', 'state-path')
         .attr('d', pathGen)
-        .attr('fill', d => {
-          const key   = getDataKey(d.properties.ST_NM || d.properties.NAME_1 || '');
-          const stats = stateStats[key];
-          return stats ? colorScale(stats.count) : '#162540';
-        })
         .attr('stroke', '#0b1426')
         .attr('stroke-width', 0.7)
-        .on('mouseover', (event, d) => showTooltip(event, d))
-        .on('mousemove', (event)    => moveTooltip(event))
-        .on('mouseout',  ()         => hideTooltip())
-        .on('click', (event, d) => {
-          const key = getDataKey(d.properties.ST_NM || d.properties.NAME_1 || '');
-          if (key && stateStats[key]) {
-            window.location.href = `state.html?state=${encodeURIComponent(key)}`;
-          }
-        });
+        .on('mousemove', (event) => moveTooltip(event))
+        .on('mouseout',  ()      => hideTooltip());
 
+      updateMap(); // initial render
     }).catch(() => {
       document.getElementById('mapContainer').innerHTML = `
         <div class="map-error">
           <span style="font-size:1.5rem">⚠️</span>
-          <span>Could not load map data. Please check your internet connection.</span>
+          <span>Could not load map data. Run via a local server (python3 -m http.server).</span>
         </div>`;
     });
   </script>
