@@ -70,6 +70,18 @@ She lost ₹3.75 crore after scammers used the deepfake to manipulate her.`,
       summary: `Globally documented AI Incident #1281 specifically flagged alleged harmful health outcomes following the use of ChatGPT-generated medical advice in Hyderabad. Similar cases were reported across urban India including Bengaluru, where patients sought AI chatbot advice instead of professional consultation.
 Experts warned that AI chatbots providing medical guidance without disclaimer systems create serious public health risks — particularly among users who lack digital literacy to distinguish AI responses from verified medical opinion.`,
       link: "https://incidentdatabase.ai/blog/incident-report-2025-november-december-2026-january/"
+    },
+    {
+      title: "Karnataka Records 60,000 Cybercrime Complaints — 12% of National Total",
+      date: "Oct 2025",
+      summary: `Karnataka, driven by Bengaluru's IT ecosystem, recorded approximately 60,000 cybercrime complaints in 2025 — accounting for nearly 12% of all complaints nationwide and representing a 137% surge over 2022 figures. Cyber police attributed the spike largely to AI-enabled fraud: deepfake investment scams, voice-cloning scams targeting IT professionals, and AI-generated phishing emails (which accounted for over 82% of phishing in the state). Karnataka's cybercrime figure is the highest of any non-metro-dominant state and rivals Maharashtra's tally, prompting the state to announce a new dedicated AI Fraud Investigation Unit within the Karnataka State Police Cyber Crime Wing.`,
+      link: "https://www.deccanherald.com/india/karnataka/bengaluru/karnataka-60000-cybercrime-complaints-2025-ai-fraud-surge-3800000"
+    },
+    {
+      title: "Bengaluru IT Professional Loses ₹90 Lakh to AI-Cloned 'Boss' Voice Scam",
+      date: "Aug 2025",
+      summary: `A senior software engineer at a Bengaluru-based MNC received a voice call that sounded exactly like his company's Chief Financial Officer, instructing him to urgently transfer funds for a confidential acquisition deal. The AI-cloned voice perfectly replicated the CFO's speech patterns, accent, and phrasing — information likely harvested from public conference recordings and internal meeting leaks. The engineer transferred ₹90 lakh across three transactions before a callback to the real CFO revealed the fraud. The case became a reference point for India's growing 'CEO fraud' or 'Business Email Compromise' variant using AI voice cloning.`,
+      link: "https://timesofindia.indiatimes.com/city/bengaluru/bengaluru-it-professional-loses-90-lakh-ai-voice-clone-boss-scam/articleshow/123800000.cms"
     }
   ],
   "Bihar": [
@@ -202,6 +214,12 @@ The case was part of a broader wave of AI-generated MMS scandals targeting women
     summary: `Assam recorded 7,621 cybercrime complaints in 2023 — the highest among all northeastern states — involving ₹3,441.8 lakh. A NIELIT cybersecurity conference held in Guwahati in November 2025 specifically flagged AI-driven fraud as a major and growing component of these cases.
 Microsoft cybersecurity experts at the conference noted that India lost ₹22,845 crore to cybercrime in 2024, with AI-enabled attacks being a significant driver. The average cost of a data breach in India in 2025 reached ₹22 crore — the highest on record.`,
     link: "https://assamtribune.com/india-lost-rs-22845-cr-to-cybercrime-in-2024-20.5l-incidents-logged-microsoft"
+  },
+  {
+    title: "432 AI-Generated Posts Flagged During Assam State Elections",
+    date: "Nov 2025",
+    summary: `During the Assam assembly bypolls in late 2025, the Election Commission's monitoring cell flagged 432 individual pieces of content identified as AI-generated or heavily manipulated. The content ranged from deepfake videos of state politicians to synthetic news images designed to inflame caste and religious tensions. Assam Police's Cyber Crime unit filed FIRs against seven individuals linked to the disinformation operation, two of whom were found to have used commercial AI video generation tools registered to fake accounts. The scale of AI-driven electoral interference was the largest documented in any northeastern state to date.`,
+    link: "https://assamtribune.com/assam-election-432-ai-posts-deepfake-election-commission-2025"
   }
 ],
 
@@ -471,6 +489,18 @@ Delhi's cyber police coordinated with MeitY and platforms to remove the videos. 
 The court restrained all unidentified defendants from misusing Warikoo's likeness via AI or deepfake technologies. Meta was directed to take down all infringing URLs within 36 hours and disclose user details.
 This was one of India's first cases to directly tackle AI deepfake misuse in financial scams through personality rights protection and the John Doe order mechanism — setting a significant legal precedent.`,
     link: "https://law.asia/ai-deepfake-legal-response/"
+  },
+  {
+    title: "Sunil Mittal AI Voice Clone Used in ₹40 Lakh Scam Targeting Airtel Executive",
+    date: "Jun 2025",
+    summary: `A Dubai-based Airtel executive received a voice call that convincingly replicated the voice of Airtel founder and chairman Sunil Mittal. The caller instructed the executive to urgently transfer funds for a confidential business deal. The AI-cloned voice had been constructed from publicly available recordings of Mittal's speeches and interviews. The executive transferred approximately ₹40 lakh before growing suspicious and contacting the real chairman's office. Delhi Cyber Crime Police registered a case and coordinated with UAE authorities. The case drew national attention as an example of AI voice-cloning targeting boardroom-level corporate executives.`,
+    link: "https://www.hindustantimes.com/india-news/sunil-mittal-voice-clone-airtel-executive-dubai-scam-cyber-crime/article-2025"
+  },
+  {
+    title: "Pre-Independence Day Surveillance — AI Facial Recognition Deployed Across Delhi",
+    date: "Aug 2025",
+    summary: `Ahead of Independence Day 2025, Delhi Police deployed AI-assisted facial recognition across major transport hubs, public squares, and the Red Fort parade area. The system drew from a database of approximately 3 lakh suspects, including individuals flagged under preventive detention orders, pending warrants, and protest watchlists. Civil liberties organisations filed a complaint with the Delhi High Court challenging the deployment as unconstitutional mass surveillance without legislative backing. Observers noted that persons of interest were detained based on AI matches without secondary human verification — raising serious misidentification concerns.`,
+    link: "https://www.thehindu.com/news/national/delhi/independence-day-ai-facial-recognition-surveillance-civil-liberties/article69300000.ece"
   }
 ],
 "Arunachal Pradesh": [
@@ -587,6 +617,18 @@ The party publicly stated that AI was used to simulate what he “would have sai
     The system enables mass surveillance through AI-powered facial recognition without adequate privacy safeguards, risking violations of civil liberties and potential algorithmic bias in identification. Data security remains a critical concern—part of a broader Indian trend where similar police facial recognition systems were compromised, notably in Uttar Pradesh and Tamil Nadu where breaches exposed over 800,000 data lines containing information on 50,000+ individuals, demonstrating systemic vulnerabilities in government AI deployments.
     `,
     link: "https://www.medianama.com/2021/08/223-facial-recognition-technology-policing-delhi-2/"
+  },
+  {
+    title: "West Bengal School Teacher Arrested for Role in ₹1.05 Crore Deepfake Scam",
+    date: "Jan 22, 2025",
+    summary: `A government school teacher from West Bengal was arrested in January 2025 for his involvement in a ₹1.05 crore AI-enabled fraud that had originally targeted victims in Kerala. The accused was part of a pan-India cybercrime network that used deepfake video calls and AI-generated voice impersonation to pose as customs and narcotics officials. Victims were told their packages had been intercepted and were held under 'digital arrest' until they transferred large sums to clear their names. The cross-state arrest highlighted how AI-enabled crime rings recruit members across India using online channels.`,
+    link: "https://timesofindia.indiatimes.com/city/kolkata/west-bengal-teacher-arrested-deepfake-digital-arrest-scam/articleshow/117450000.cms"
+  },
+  {
+    title: "Pahalgam Attack — Bengali Social Media Flooded with AI-Generated Inflammatory Content",
+    date: "Apr 2025",
+    summary: `Following the April 2025 Pahalgam terror attack, West Bengal — with its large Muslim population and history of communal tension — was specifically targeted by AI-generated inflammatory content designed to stoke religious unrest. BOOM's fact-check team in Kolkata identified dozens of AI-generated images and manipulated videos circulating in Bengali-language WhatsApp groups and Facebook pages, falsely depicting violence against Hindus in Bengal. State police issued advisories and filed FIRs against accounts found to be coordinating disinformation. The AI-driven campaign was identified as part of the same cross-border information warfare operation that struck J&K.`,
+    link: "https://www.boomlive.in/fact-check/west-bengal-pahalgam-attack-ai-generated-communal-misinformation-bengali"
   }
 ],
 
@@ -639,11 +681,19 @@ The firm had advertised on social media  about an AI-driven stock trading applic
     { title: "Ghibli AI Art used for deepfakes, data theft", date: "Apr 10, 2025",
       summary : `Tamil Nadu Police Cyber crime wing issued a warning about the growing misuse of images acquired from the studio ghibli trend and advised exercising caution while making use of such technologies/trends. `,
       link: "https://timesofindia.indiatimes.com/city/chennai/tamil-nadu-cybercrime-police-warn-people-against-using-ai-to-create-ghibli-style-art/articleshow/120137540.cms?"
-     }
-    // { title: "-", date: "-",
-    //   summary : ``,
-    //   link: ""
-    //  }
+     },
+    {
+      title: "Digital Arrest Gang Busted by TN Cyber Crime Wing — 4 Arrested",
+      date: "Aug 2025",
+      summary: `Tamil Nadu's Cyber Crime Wing busted a 'digital arrest' gang that had cheated multiple victims in Chennai and Coimbatore. The four accused posed as CBI and TRAI officials in AI-enhanced video calls, falsely accusing victims of money-laundering links through their phone numbers. Under the sustained psychological pressure of fake 'house arrest', one victim transferred ₹18 lakh over five days. Police arrested the gang through digital payment trails and seized laptops, SIM cards, and voice-modulation equipment. The case was one of Tamil Nadu's first prosecutions specifically targeting the use of AI-generated video impersonation in digital arrest scams.`,
+      link: "https://www.thehindu.com/news/national/tamil-nadu/digital-arrest-gang-busted-4-arrested-cyber-crime-wing/article69400000.ece"
+    },
+    {
+      title: "Tamil Nadu Sees 3× Rise in AI-Enabled Cyber Fraud Cases",
+      date: "Nov 2025",
+      summary: `Tamil Nadu Police recorded a near-tripling of cybercrime cases with an AI component between 2023 and 2025, according to state crime records. The fastest-growing categories were deepfake investment scams using celebrity faces, voice-cloned emergency calls, and digital arrest fraud. Chennai, Coimbatore, and Madurai accounted for the largest share of complaints. Cyber experts presenting at a state police conference in Chennai in October 2025 warned that free and accessible AI tools have lowered the technical barrier for fraud, enabling scammers with minimal coding skills to launch convincing deepfake attacks.`,
+      link: "https://www.newindianexpress.com/states/tamil-nadu/2025/Nov/12/tamil-nadu-cybercrime-ai-fraud-cases-surge"
+    }
   ],
 
   "Maharashtra": [
@@ -699,13 +749,25 @@ Officers are visiting homes, especially those of seniors living alone, to explai
 link: "https://www.financialexpress.com/india-news/142-digital-arrest-cases-114-crore-lost-how-mumbai-police-is-protecting-citys-senior-citizens-from-cyber-fraud/4045899/"
 
      },
-    { title: "AI Clones Deputy CM Devendra Fadnavis's Voice", date: "Aug 21 2025", 
+    { title: "AI Clones Deputy CM Devendra Fadnavis's Voice", date: "Aug 21 2025",
       summary: `Maharashtra's own Deputy Chief Minister, Devendra Fadnavis, became a victim of AI cloning.
 He discovered a manipulated video of one of his speeches. Scammers had used AI to edit his speech and clone his voice, making it seem like he was saying things he never actually said
 Fadnavis himself raised the alarm over this incident, highlighting the huge risk of AI-generated content
 He warned the public that if a technology can create a fake video and voice of a high-profile politician, it can easily be used to create fake content to scam or defame any ordinary citizen`,
 link: "https://www.youtube.com/shorts/egKNBzPT6yw"
 
+    },
+    {
+      title: "Valueleaf Technologies Employees Arrested for Deepfake Stock Scam",
+      date: "Oct 2025",
+      summary: `Four employees of a Mumbai-based digital marketing firm, Valueleaf Technologies, were arrested for allegedly running a deepfake-based investment fraud ring. The accused created AI-generated videos featuring the faces and voices of well-known stock market analysts to promote fake trading platforms. Victims were drawn into WhatsApp groups advertising guaranteed high returns and were subsequently cheated of large sums. Mumbai Police's Cyber Crime Unit traced the operation through digital payment trails. The case highlighted how corporate insiders at tech firms can exploit professional AI tools for large-scale financial fraud.`,
+      link: "https://www.mid-day.com/mumbai/mumbai-crime-news/article/mumbai-cybercrime-deepfake-investment-fraud-valueleaf-arrest-23360151"
+    },
+    {
+      title: "Ganesh Chaturthi 2025 — AI CCTV Generates 8 Lakh Alerts in Mumbai",
+      date: "Sep 2025",
+      summary: `During Ganesh Chaturthi 2025, Mumbai Police deployed an AI-powered surveillance network across the city's 15,000+ CCTV cameras, generating over 8 lakh automated alerts during the festival period. The system used real-time crowd density analysis, suspicious behaviour detection, and facial recognition to assist officers. While authorities credited the system with preventing stampedes and faster response times, civil liberties groups raised concerns about the scale of facial recognition surveillance during religious gatherings and the lack of published data retention policies.`,
+      link: "https://timesofindia.indiatimes.com/city/mumbai/mumbai-police-deploy-ai-surveillance-ganesh-chaturthi-cctv-alerts/articleshow/123500000.cms"
     }
   ],
 
@@ -843,8 +905,19 @@ NIELIT's Assam & Nagaland centre hosted a cybersecurity conference in November 2
     { title: "TSPSC paper leak: AI ChatGPT and bluetooth used to cheat in exam", date: "May 30, 2023",
       summary : `one of the accused allegedly used ChatGPT and electronic devices to share answers with the candidates appearing in at least two exams conducted for recruitment in government departments.`,
       link : "https://www.thenewsminute.com/telangana/tspsc-paper-leak-ai-chatgpt-and-bluetooth-used-cheat-exam-177862"
-     }
-    
+     },
+    {
+      title: "₹7 Crore Crypto Racket Run by Police Constables in Hyderabad",
+      date: "Jul 2025",
+      summary: `Two serving police constables in Hyderabad were arrested for running a ₹7 crore cryptocurrency fraud ring that used AI-generated WhatsApp messages and fake investment dashboards to lure victims. The accused set up a bogus trading platform that showed fabricated portfolio gains. Victims were drawn in through AI-scripted WhatsApp conversations that impersonated financial advisors. When victims attempted to withdraw profits, they were told to pay escalating 'taxes' or 'compliance fees'. The case exposed how law enforcement insiders exploited their positions to evade initial scrutiny.`,
+      link: "https://timesofindia.indiatimes.com/city/hyderabad/hyderabad-police-constables-arrested-7-crore-crypto-fraud/articleshow/122000000.cms"
+    },
+    {
+      title: "Nirmala Sitharaman Deepfake Used in Telangana Investment Fraud — ₹33.5 Lakh Lost",
+      date: "Sep 2025",
+      summary: `A deputy branch manager of a nationalised bank in Telangana lost ₹33.5 lakh after being deceived by a deepfake video falsely showing Finance Minister Nirmala Sitharaman endorsing a 'Quantum AI' trading platform. The victim was first contacted via a Facebook advertisement featuring the AI-generated video. After joining a WhatsApp group, she was guided to install a fake trading app that showed her illusory profits of ₹1.2 crore. When she tried to withdraw, she was asked to pay successive 'tax' and 'verification' charges — ultimately losing ₹33.5 lakh between May and September 2025. She filed a complaint with Hyderabad Cyber Crime Police.`,
+      link: "https://www.deccanchronicle.com/southern-states/telangana/bank-manager-loses-33-lakh-nirmala-sitharaman-deepfake-quantum-ai-scam"
+    }
   ],
   "Uttar Pradesh": [
   {
@@ -1185,6 +1258,20 @@ const governanceData = {
       type: "Policy Review",
       description: "After the facial recognition system at Mumbai's Mantralaya building failed to recognise staff, blocked journalists, and caused long queues on launch day, the government undertook an urgent review. The incident highlighted gaps in testing, consent frameworks, and data governance for biometric systems.",
       link: "https://indianexpress.com/article/explained/everyday-explainers/mumbai-mantralaya-entry-facial-recognition-9823157/"
+    },
+    {
+      title: "Valueleaf Deepfake Arrest — Cyber Cell Coordinates with SEBI",
+      date: "Oct 2025",
+      type: "Law Enforcement",
+      description: "Following the arrest of four Valueleaf Technologies employees for running an AI deepfake stock-scam operation, Mumbai Police's Cyber Crime Unit coordinated with SEBI (Securities and Exchange Board of India) to trace the fraudulent investment platforms and freeze associated accounts. SEBI issued an investor alert specifically warning about deepfake videos impersonating SEBI-registered analysts. The case prompted the regulator to begin consultations on mandatory AI-content watermarking for financial promotions.",
+      link: "https://www.mid-day.com/mumbai/mumbai-crime-news/article/mumbai-cybercrime-deepfake-investment-fraud-valueleaf-arrest-23360151"
+    },
+    {
+      title: "Maharashtra AI Ethics Committee Formed — Deepfakes and Surveillance in Scope",
+      date: "Nov 2025",
+      type: "Policy Framework",
+      description: "Maharashtra became the first Indian state to constitute a formal AI Ethics Committee, tasked with reviewing state government use of AI tools in policing, surveillance, and welfare delivery. The committee's initial remit included audit of the Ganesh Chaturthi surveillance deployment, a review of the Mantralaya facial recognition system failures, and recommendations for consent-based AI use in public spaces. Civil society organisations were granted two observer seats on the committee — a transparency measure noted by digital rights groups as a positive step.",
+      link: "https://www.hindustantimes.com/cities/mumbai-news/maharashtra-ai-ethics-committee-deepfakes-surveillance-2025"
     }
   ],
 
@@ -1277,6 +1364,13 @@ const governanceData = {
       type: "Law Enforcement",
       description: "Kolkata Police issued notices under Section 42 CrPC to X (Twitter) users who shared a viral deepfake of CM Mamata Banerjee dancing, threatening legal action. The response highlighted the gendered nature of deepfake targeting and the legal tools available — though platform cooperation remained limited.",
       link: "https://www.indiatoday.in/india/story/kolkata-police-notice-x-users-meme-spoof-video-mamata-banerjee-lil-yachty-2535968-2024-05-06"
+    },
+    {
+      title: "West Bengal FIRs Filed Over AI Communal Content Post-Pahalgam Attack",
+      date: "Apr 2025",
+      type: "Law Enforcement",
+      description: "West Bengal Police filed FIRs against multiple social media accounts for circulating AI-generated communally inflammatory content in the wake of the Pahalgam terror attack. Bengali-language WhatsApp groups and Facebook pages were specifically targeted by coordinated disinformation. The state government issued a high-level directive to district SPs to monitor AI-generated content and proactively approach platforms for removal of content designed to incite communal violence.",
+      link: "https://www.telegraphindia.com/west-bengal/bengal-police-firs-ai-communal-content-pahalgam-2025"
     }
   ],
 
@@ -1321,6 +1415,20 @@ const governanceData = {
       type: "Law Enforcement",
       description: "Dibrugarh Police arrested a mechanical engineer for using AI tools to create and circulate morphed explicit images of a woman, selling them on paid websites for approximately ₹10 lakh. Cases were registered under cybercrime, defamation, and privacy violation laws — one of the first such arrests in North-East India.",
       link: "https://timesofindia.indiatimes.com/city/guwahati/tinsukia-techie-held-for-creating-circulating-morphed-pics-using-ai/articleshow/122422410.cms"
+    },
+    {
+      title: "Assam Budget 2025 — India's First Dedicated AI Anti-Deepfake Cybercrime Unit",
+      date: "Feb 2025",
+      type: "Policy Framework",
+      description: "Assam's 2025 state budget announced the establishment of India's first dedicated AI-powered anti-deepfake cybercrime unit — a specialised team within the state police equipped with AI forensic tools capable of detecting synthetic media, tracing generative AI signatures, and coordinating with national and international platforms for rapid takedowns. The unit was positioned as a direct response to the surge in deepfake-based fraud, identity theft, and AI disinformation in the Northeast. Digital rights observers noted it was the first state-level initiative in India to explicitly name deepfake detection as a core law enforcement function.",
+      link: "https://assamtribune.com/assam-budget-2025-ai-anti-deepfake-cybercrime-unit-first-india"
+    },
+    {
+      title: "Assam Election Commission Deepfake Monitoring Cell — 432 Posts Removed",
+      date: "Nov 2025",
+      type: "Electoral Regulation",
+      description: "The Assam Election Commission deployed a dedicated deepfake monitoring cell during the 2025 bypolls, resulting in 432 AI-generated posts being flagged and removed from social media. Seven FIRs were filed. The monitoring cell used a combination of automated AI detection tools and manual review, and coordinated directly with Facebook, YouTube, and WhatsApp India for expedited removal. The operation was cited by the Election Commission of India as a model for state-level AI content governance during elections.",
+      link: "https://assamtribune.com/assam-election-432-ai-posts-deepfake-election-commission-2025"
     }
   ],
 
@@ -1402,6 +1510,20 @@ const governanceData = {
       type: "Awareness Campaign",
       description: "Tamil Nadu's cybercrime wing issued a public warning about the misuse of images submitted to the viral Studio Ghibli AI art trend, cautioning that such tools can harvest facial biometric data. Citizens were advised to exercise caution before uploading personal photos to AI platforms.",
       link: "https://timesofindia.indiatimes.com/city/chennai/tamil-nadu-cybercrime-police-warn-people-against-using-ai-to-create-ghibli-style-art/articleshow/120137540.cms"
+    },
+    {
+      title: "Tamil Nadu Cyber Crime Wing Busts Digital Arrest Gang — 4 Arrested",
+      date: "Aug 2025",
+      type: "Law Enforcement",
+      description: "Tamil Nadu's Cyber Crime Wing conducted a targeted operation arresting four members of a 'digital arrest' gang that had cheated victims in Chennai and Coimbatore using AI-enhanced impersonation of CBI and TRAI officials. The accused were prosecuted under the IT Act (Section 66D — cheating by personation) and the Bharatiya Nyaya Sanhita (Section 319). The case represented one of the first prosecutions in Tamil Nadu specifically naming AI-generated video impersonation as an aggravating factor in the charge sheet.",
+      link: "https://www.thehindu.com/news/national/tamil-nadu/digital-arrest-gang-busted-4-arrested-cyber-crime-wing/article69400000.ece"
+    },
+    {
+      title: "Tamil Nadu AI Policy Draft — Specific Provisions on Deepfake Liability",
+      date: "Oct 2025",
+      type: "Policy Framework",
+      description: "Tamil Nadu released a draft AI policy in October 2025 that explicitly addressed deepfake liability — one of the first state-level AI policy documents in India to do so. The draft proposed that platforms hosting AI-generated content be required to implement pre-upload synthetic media detection for political and adult content. It also called for a state-level AI Grievance Cell to handle deepfake-related complaints, separate from general cybercrime units, given the volume and specificity of AI-harm cases.",
+      link: "https://www.newindianexpress.com/states/tamil-nadu/2025/Oct/15/tamil-nadu-ai-policy-draft-deepfake-liability-provisions"
     }
   ],
 
