@@ -8,146 +8,107 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <style>
-    /* ── Filter bar ── */
-    .map-filter-section {
-      margin-bottom: 20px;
-    }
+    /* ─── Filter bar ─── */
+    .map-filter-section { margin-bottom: 20px; }
     .map-filter-label {
-      font-size: 0.72rem;
-      color: var(--text-3);
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      margin-bottom: 8px;
-      font-weight: 600;
+      font-size: 0.72rem; color: var(--text-3); text-transform: uppercase;
+      letter-spacing: 0.07em; margin-bottom: 8px; font-weight: 600;
     }
-    .map-filter-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-      margin-bottom: 10px;
-    }
+    .map-filter-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
     .map-filter-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      padding: 5px 12px;
-      border-radius: 20px;
-      border: 1.5px solid var(--card-border);
-      background: none;
-      color: var(--text-3);
-      font-size: 0.75rem;
-      font-weight: 500;
-      cursor: pointer;
-      font-family: inherit;
-      transition: all 0.15s;
-      white-space: nowrap;
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 5px 12px; border-radius: 20px;
+      border: 1.5px solid var(--card-border); background: none;
+      color: var(--text-3); font-size: 0.75rem; font-weight: 500;
+      cursor: pointer; font-family: inherit; transition: all 0.15s; white-space: nowrap;
     }
-    .map-filter-btn .dot {
-      width: 7px; height: 7px;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
+    .map-filter-btn .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
     .map-filter-btn:hover { color: var(--text); border-color: rgba(255,255,255,0.2); }
-    .map-filter-btn.active {
-      color: #fff;
-      font-weight: 600;
-    }
+    .map-filter-btn.active { font-weight: 600; }
 
-    /* ── Map wrapper ── */
+    /* ─── Map wrapper ─── */
     .map-wrapper {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: var(--radius-lg);
-      padding: 24px;
-      margin-bottom: 2rem;
+      background: var(--card-bg); border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg); padding: 24px; margin-bottom: 2rem;
     }
     .map-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      flex-wrap: wrap;
-      gap: 16px;
-      margin-bottom: 20px;
+      display: flex; justify-content: space-between; align-items: flex-start;
+      flex-wrap: wrap; gap: 16px; margin-bottom: 16px;
     }
-    .map-header h2 {
-      font-family: 'Syne', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--text);
-      margin: 0 0 4px;
-    }
-    .map-header p {
-      font-size: 0.8rem;
-      color: var(--text-2);
-      margin: 0;
-    }
-    .map-legend {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 4px;
-    }
-    .legend-label {
-      font-size: 0.72rem;
-      color: var(--text-2);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-    .legend-bar {
-      width: 160px;
-      height: 10px;
-      border-radius: 5px;
-      background: linear-gradient(to right, #22c55e, #eab308, #ef4444);
-    }
-    .legend-range {
-      display: flex;
-      justify-content: space-between;
-      width: 160px;
-      font-size: 0.7rem;
-      color: var(--text-3);
-    }
-    #mapContainer {
-      width: 100%;
-      position: relative;
-    }
+    .map-header h2 { font-family:'Syne',sans-serif; font-size:1.1rem; font-weight:700; color:var(--text); margin:0 0 4px; }
+    .map-header p  { font-size:0.8rem; color:var(--text-2); margin:0; }
+    .map-legend { display:flex; flex-direction:column; align-items:flex-end; gap:4px; }
+    .legend-label { font-size:0.72rem; color:var(--text-2); text-transform:uppercase; letter-spacing:0.05em; }
+    .legend-bar { width:160px; height:10px; border-radius:5px; background:linear-gradient(to right,#22c55e,#eab308,#ef4444); }
+    .legend-range { display:flex; justify-content:space-between; width:160px; font-size:0.7rem; color:var(--text-3); }
+    #mapContainer { width:100%; position:relative; }
     .map-loading {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 500px;
-      color: var(--text-2);
-      font-size: 0.9rem;
-      gap: 12px;
+      display:flex; align-items:center; justify-content:center;
+      height:500px; color:var(--text-2); font-size:0.9rem; gap:12px;
     }
     .map-loading::before {
-      content: '';
-      flex-shrink: 0;
-      width: 18px; height: 18px;
-      border: 2px solid rgba(240,165,0,0.25);
-      border-top-color: #f0a500;
-      border-radius: 50%;
-      animation: spin 0.8s linear infinite;
+      content:''; flex-shrink:0; width:18px; height:18px;
+      border:2px solid rgba(240,165,0,0.25); border-top-color:#f0a500;
+      border-radius:50%; animation:spin 0.8s linear infinite;
     }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .state-path { cursor: pointer; transition: filter 0.12s; }
-    .state-path:hover { filter: brightness(1.25) saturate(1.3); }
-    .state-path.no-data { cursor: default; }
-    .state-path.no-data:hover { filter: none; }
+    @keyframes spin { to { transform:rotate(360deg); } }
+    .state-path { cursor:pointer; transition:filter 0.12s; }
+    .state-path:hover { filter:brightness(1.25) saturate(1.3); }
+    .state-path.no-data { cursor:default; }
+    .state-path.no-data:hover { filter:none; }
+    .map-error { display:flex; align-items:center; justify-content:center; height:420px; flex-direction:column; gap:10px; color:var(--text-2); font-size:0.9rem; }
 
-    /* ── Tooltip ── */
+    /* ─── Year scrubber ─── */
+    .year-scrubber {
+      display: flex; align-items: center; gap: 14px;
+      padding: 14px 0 18px; flex-wrap: wrap;
+    }
+    .play-btn {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(240,165,0,0.12); border: 1.5px solid rgba(240,165,0,0.35);
+      color: #f0a500; font-size: 0.9rem; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; transition: all 0.15s; font-family: inherit;
+    }
+    .play-btn:hover { background: rgba(240,165,0,0.22); }
+    .year-scrubber-right { flex: 1; min-width: 200px; }
+    .year-display {
+      font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700;
+      color: var(--amber); margin-bottom: 6px; display: block;
+    }
+    .year-range-wrap { position: relative; }
+    input[type=range].year-range {
+      width: 100%; height: 4px; border-radius: 2px; cursor: pointer;
+      appearance: none; -webkit-appearance: none;
+      background: linear-gradient(to right, #f0a500 var(--pct,0%), rgba(255,255,255,0.1) var(--pct,0%));
+      outline: none; border: none;
+    }
+    input[type=range].year-range::-webkit-slider-thumb {
+      -webkit-appearance: none; width: 18px; height: 18px;
+      background: #f0a500; border-radius: 50%; cursor: pointer;
+      box-shadow: 0 0 8px rgba(240,165,0,0.5);
+    }
+    .year-ticks {
+      display: flex; justify-content: space-between;
+      font-size: 0.68rem; color: var(--text-3); margin-top: 5px; padding: 0 2px;
+    }
+    .all-years-btn {
+      padding: 4px 12px; border-radius: 20px; font-size: 0.74rem;
+      border: 1.5px solid var(--card-border); background: none;
+      color: var(--text-3); cursor: pointer; font-family: inherit;
+      transition: all 0.15s; white-space: nowrap; flex-shrink: 0;
+    }
+    .all-years-btn.active {
+      background: rgba(240,165,0,0.1); border-color: rgba(240,165,0,0.4); color: #f0a500;
+    }
+
+    /* ─── Tooltip ─── */
     #mapTooltip {
-      position: fixed;
-      background: #0f1e35;
-      border: 1px solid rgba(240,165,0,0.22);
-      border-radius: 12px;
-      padding: 14px 16px;
-      pointer-events: none;
-      z-index: 9999;
-      min-width: 220px;
-      max-width: 290px;
-      box-shadow: 0 10px 36px rgba(0,0,0,0.55);
-      opacity: 0;
-      transition: opacity 0.12s;
+      position: fixed; background: #0f1e35;
+      border: 1px solid rgba(240,165,0,0.22); border-radius: 12px;
+      padding: 14px 16px; pointer-events: none; z-index: 9999;
+      min-width: 220px; max-width: 290px;
+      box-shadow: 0 10px 36px rgba(0,0,0,0.55); opacity: 0; transition: opacity 0.12s;
     }
     .tip-state { font-family:'Syne',sans-serif; font-size:0.95rem; font-weight:700; color:#f0a500; margin-bottom:5px; }
     .tip-count { font-size:0.82rem; color:var(--text); margin-bottom:9px; }
@@ -156,51 +117,113 @@
     .tip-sev-chip { font-size:0.68rem; padding:2px 8px; border-radius:20px; font-weight:600; }
     .tip-cats { display:flex; flex-wrap:wrap; gap:4px; margin-bottom:9px; }
     .tip-cat { font-size:0.68rem; padding:2px 8px; border-radius:20px; font-weight:700; color:#0b1426; }
-    .tip-latest { font-size:0.73rem; color:var(--text-2); line-height:1.45; border-top:1px solid rgba(255,255,255,0.06); padding-top:8px; }
-    .tip-latest strong { color:var(--text); }
     .tip-cta { font-size:0.7rem; color:#f0a500; margin-top:7px; opacity:0.75; }
     .tip-nodata { font-size:0.8rem; color:var(--text-3); margin-top:2px; }
-    .map-error { display:flex; align-items:center; justify-content:center; height:420px; flex-direction:column; gap:10px; color:var(--text-2); font-size:0.9rem; }
 
-    /* ── Stats row ── */
-    .map-stat-row {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 12px;
-      margin-bottom: 2rem;
-    }
-    .map-stat {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: var(--radius);
-      padding: 16px;
-      text-align: center;
-    }
+    /* ─── Stats row ─── */
+    .map-stat-row { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin-bottom:2rem; }
+    .map-stat { background:var(--card-bg); border:1px solid var(--card-border); border-radius:var(--radius); padding:16px; text-align:center; }
     .map-stat-num { font-family:'Syne',sans-serif; font-size:1.7rem; font-weight:800; color:var(--amber); }
     .map-stat-label { font-size:0.74rem; color:var(--text-2); margin-top:3px; }
 
-    /* ── Severity summary row ── */
-    .sev-row {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      margin-bottom: 1.5rem;
-    }
-    .sev-card {
-      flex: 1;
-      min-width: 120px;
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: var(--radius);
-      padding: 14px 16px;
-      border-left: 4px solid;
-    }
+    /* ─── Severity summary ─── */
+    .sev-row { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:1.5rem; }
+    .sev-card { flex:1; min-width:120px; background:var(--card-bg); border:1px solid var(--card-border); border-radius:var(--radius); padding:14px 16px; border-left:4px solid; }
     .sev-card-num { font-family:'Syne',sans-serif; font-size:1.5rem; font-weight:800; }
     .sev-card-label { font-size:0.72rem; color:var(--text-2); margin-top:2px; }
+
+    /* ─── State side panel ─── */
+    .state-panel-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.45);
+      z-index: 1000; opacity: 0; pointer-events: none; transition: opacity 0.25s;
+    }
+    .state-panel-overlay.visible { opacity: 1; pointer-events: all; }
+
+    .state-panel {
+      position: fixed; top: 0; right: -440px; width: 400px; max-width: 92vw;
+      height: 100vh; background: #0d1b2e;
+      border-left: 1px solid rgba(240,165,0,0.18);
+      box-shadow: -8px 0 40px rgba(0,0,0,0.6);
+      z-index: 1001; overflow-y: auto; transition: right 0.32s cubic-bezier(0.4,0,0.2,1);
+      display: flex; flex-direction: column;
+    }
+    .state-panel.open { right: 0; }
+
+    .sp-header {
+      position: sticky; top: 0; background: #0d1b2e;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      padding: 20px 20px 16px; display: flex; align-items: flex-start;
+      justify-content: space-between; gap: 12px; z-index: 2;
+    }
+    .sp-name { font-family:'Syne',sans-serif; font-size:1.25rem; font-weight:800; color:#f0a500; }
+    .sp-count { font-size:0.8rem; color:var(--text-2); margin-top:3px; }
+    .sp-close {
+      width: 30px; height: 30px; border-radius: 50%;
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12);
+      color: var(--text-2); font-size: 0.85rem; cursor: pointer; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; transition: all 0.15s;
+    }
+    .sp-close:hover { background: rgba(255,255,255,0.12); color: var(--text); }
+
+    .sp-body { padding: 0 20px 24px; flex: 1; }
+
+    .sp-section { margin-top: 22px; }
+    .sp-section-label {
+      font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.08em;
+      color: var(--text-3); font-weight: 600; margin-bottom: 12px;
+    }
+
+    /* Donut + legend */
+    .sp-donut-wrap { display: flex; align-items: center; gap: 14px; }
+    .sp-donut-canvas { flex-shrink: 0; }
+    .sp-donut-legend { flex: 1; display: flex; flex-direction: column; gap: 6px; }
+    .sp-legend-item {
+      display: flex; align-items: center; gap: 7px;
+      font-size: 0.74rem; color: var(--text-2); line-height: 1.3;
+    }
+    .sp-legend-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; display: inline-block; }
+    .sp-legend-num { margin-left: auto; font-weight: 700; color: var(--text); font-size: 0.78rem; }
+
+    /* Severity bars */
+    .sp-sev-row { display:flex; align-items:center; gap:8px; margin-bottom:7px; }
+    .sp-sev-label { font-size:0.72rem; color:var(--text-2); width:52px; flex-shrink:0; }
+    .sp-sev-bar-wrap { flex:1; background:rgba(255,255,255,0.06); border-radius:4px; height:7px; overflow:hidden; }
+    .sp-sev-bar { height:100%; border-radius:4px; transition:width 0.4s ease; }
+    .sp-sev-num { font-size:0.72rem; font-weight:700; width:20px; text-align:right; flex-shrink:0; }
+
+    /* Sparkline */
+    .sp-sparkline-wrap { background:rgba(255,255,255,0.03); border-radius:8px; padding:8px 4px 4px; }
+
+    /* Incidents list */
+    .sp-incident {
+      display: flex; gap: 10px; align-items: flex-start;
+      padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .sp-incident:last-child { border-bottom: none; }
+    .sp-incident-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; margin-top:4px; }
+    .sp-incident-body { flex:1; min-width:0; }
+    .sp-incident-title { font-size:0.82rem; color:var(--text); line-height:1.4; margin-bottom:4px; }
+    .sp-incident-meta { display:flex; gap:8px; font-size:0.7rem; color:var(--text-3); flex-wrap:wrap; }
+    .sp-incident-sev { font-weight:600; }
+
+    .sp-cta {
+      display: flex; align-items: center; justify-content: center; gap: 6px;
+      margin: 24px 20px 0; padding: 12px; border-radius: var(--radius);
+      background: rgba(240,165,0,0.1); border: 1px solid rgba(240,165,0,0.3);
+      color: #f0a500; font-size: 0.85rem; font-weight: 600;
+      text-decoration: none; transition: all 0.15s; font-family: 'Syne', sans-serif;
+    }
+    .sp-cta:hover { background: rgba(240,165,0,0.18); border-color: rgba(240,165,0,0.5); }
+
+    /* Governance count in panel */
+    .sp-gov-row { display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px solid rgba(255,255,255,0.05); }
+    .sp-gov-label { font-size:0.78rem; color:var(--text-2); }
+    .sp-gov-val { font-size:0.82rem; font-weight:700; color:var(--text); }
 
     @media (max-width:600px) {
       .map-legend { align-items:flex-start; }
       .legend-bar, .legend-range { width:120px; }
+      .state-panel { width:100vw; max-width:100vw; }
     }
   </style>
 </head>
@@ -247,36 +270,28 @@
     <div class="state-hero-inner">
       <span class="section-eyebrow" style="margin-top:8px">Choropleth Map</span>
       <h1 class="state-title">Interactive Incident Map</h1>
-      <p class="state-subtitle">Filter by harm type, severity, AI technology and more · Green = fewer incidents · Red = more</p>
+      <p class="state-subtitle">Click any state for a detailed breakdown · Filter by harm type, severity, technology · Scrub through years</p>
     </div>
   </header>
 
   <main class="state-main">
 
-    <!-- Stat cards -->
     <div class="map-stat-row" id="mapStats"></div>
-
-    <!-- Severity summary -->
     <div class="sev-row" id="sevRow"></div>
 
     <!-- Filter bar -->
     <div class="map-filter-section">
       <div class="map-filter-label">Filter map by —</div>
-
       <div class="map-filter-label" style="margin-top:10px;opacity:0.7">Harm Type</div>
       <div class="map-filter-row" id="harmFilterRow"></div>
-
       <div class="map-filter-label" style="margin-top:6px;opacity:0.7">Severity</div>
       <div class="map-filter-row" id="sevFilterRow"></div>
-
       <div class="map-filter-label" style="margin-top:6px;opacity:0.7">AI Technology</div>
       <div class="map-filter-row" id="techFilterRow"></div>
-
       <div class="map-filter-label" style="margin-top:6px;opacity:0.7">Response Outcome</div>
       <div class="map-filter-row" id="respFilterRow"></div>
     </div>
 
-    <!-- Active filter label -->
     <p id="activeFilterLabel" style="font-size:0.82rem;color:var(--text-3);margin-bottom:16px;min-height:1.2em;"></p>
 
     <!-- Map card -->
@@ -284,7 +299,7 @@
       <div class="map-header">
         <div>
           <h2 id="mapTitle">AI Incident Density — India 2021–2025</h2>
-          <p id="mapSubtitle">Colour intensity: green (safe/few) → red (danger/many)</p>
+          <p id="mapSubtitle">Green (safe/few) → Red (danger/many) · Click a state to explore</p>
         </div>
         <div class="map-legend">
           <span class="legend-label">Incident count</span>
@@ -296,6 +311,22 @@
           </div>
         </div>
       </div>
+
+      <!-- Year scrubber -->
+      <div class="year-scrubber">
+        <button class="play-btn" id="playBtn" title="Play year animation">▶</button>
+        <button class="all-years-btn active" id="allYearsBtn">All Years</button>
+        <div class="year-scrubber-right">
+          <span class="year-display" id="yearDisplay">All Years</span>
+          <div class="year-range-wrap">
+            <input type="range" class="year-range" id="yearRange" min="2021" max="2025" step="1" value="2021">
+          </div>
+          <div class="year-ticks">
+            <span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span>
+          </div>
+        </div>
+      </div>
+
       <div id="mapContainer">
         <div class="map-loading">Loading map data…</div>
       </div>
@@ -303,7 +334,54 @@
 
   </main>
 
+  <!-- Floating tooltip -->
   <div id="mapTooltip"></div>
+
+  <!-- State side panel -->
+  <div class="state-panel-overlay" id="panelOverlay"></div>
+  <div class="state-panel" id="statePanel">
+    <div class="sp-header">
+      <div>
+        <div class="sp-name" id="spName"></div>
+        <div class="sp-count" id="spCount"></div>
+      </div>
+      <button class="sp-close" id="spClose">✕</button>
+    </div>
+    <div class="sp-body">
+
+      <div class="sp-section">
+        <div class="sp-section-label">Harm Type Breakdown</div>
+        <div class="sp-donut-wrap">
+          <canvas class="sp-donut-canvas" id="spDonut" width="110" height="110"></canvas>
+          <div class="sp-donut-legend" id="spDonutLegend"></div>
+        </div>
+      </div>
+
+      <div class="sp-section">
+        <div class="sp-section-label">Severity</div>
+        <div id="spSevBars"></div>
+      </div>
+
+      <div class="sp-section">
+        <div class="sp-section-label">Incidents by Year</div>
+        <div class="sp-sparkline-wrap">
+          <svg id="spSparkline" width="100%" height="70"></svg>
+        </div>
+      </div>
+
+      <div class="sp-section">
+        <div class="sp-section-label">At a Glance</div>
+        <div id="spGovRow"></div>
+      </div>
+
+      <div class="sp-section">
+        <div class="sp-section-label">Recent Incidents</div>
+        <div id="spIncidents"></div>
+      </div>
+
+      <a class="sp-cta" id="spLink" href="#">View all incidents &amp; governance →</a>
+    </div>
+  </div>
 
   <footer class="site-footer">
     <div class="footer-inner">
@@ -315,7 +393,6 @@
         <span class="footer-links-title">Explore</span>
         <a href="index.html" class="footer-link">State Directory</a>
         <a href="dashboard.html" class="footer-link">Dashboard</a>
-        <a href="timeline.html" class="footer-link">Interactive Map</a>
         <a href="governance.html" class="footer-link">Governance</a>
         <a href="search.html" class="footer-link">Search</a>
       </div>
@@ -325,313 +402,395 @@
 
   <script src="state.js"></script>
   <script src="d3.v7.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
   <script>
-    /* ── Drawer ── */
-    const hamburger = document.getElementById('hamburger');
-    const drawer    = document.getElementById('drawer');
-    const overlay   = document.getElementById('drawerOverlay');
-    const closeBtn  = document.getElementById('drawerClose');
-    hamburger.addEventListener('click', () => { drawer.classList.add('open');    overlay.classList.add('active'); });
-    closeBtn .addEventListener('click', () => { drawer.classList.remove('open'); overlay.classList.remove('active'); });
-    overlay  .addEventListener('click', () => { drawer.classList.remove('open'); overlay.classList.remove('active'); });
-
-    /* ── GeoJSON name → data key ── */
-    const GEO_NAME_MAP = {
-      'Delhi':             'Haryana/ Delhi',
-      'Haryana':           'Haryana/ Delhi',
-      'Jammu and Kashmir': 'Jammu & Kashmir',
-      'Orissa':            'Odisha',
-      'Uttaranchal':       'Uttarakhand',
-    };
-    function getDataKey(geoName) {
-      if (!geoName) return null;
-      return GEO_NAME_MAP[geoName] || geoName;
-    }
-
-    /* ── Classify all incidents ── */
-    const allClassified = [];
-    Object.entries(incidentsData).forEach(([state, incidents]) => {
-      incidents.forEach(inc => {
-        allClassified.push({ ...inc, state, cls: classifyFull(inc) });
-      });
+  /* ── Drawer ── */
+  ['hamburger','drawerClose','drawerOverlay'].forEach((id, i) => {
+    document.getElementById(id).addEventListener('click', () => {
+      drawer.classList.toggle('open', i === 0);
+      overlay2.classList.toggle('active', i === 0);
     });
+  });
+  const drawer  = document.getElementById('drawer');
+  const overlay2 = document.getElementById('drawerOverlay');
+  document.getElementById('hamburger').addEventListener('click', () => { drawer.classList.add('open'); overlay2.classList.add('active'); });
+  document.getElementById('drawerClose').addEventListener('click', () => { drawer.classList.remove('open'); overlay2.classList.remove('active'); });
+  overlay2.addEventListener('click', () => { drawer.classList.remove('open'); overlay2.classList.remove('active'); });
 
-    /* ── Active filters (one active per dimension, null = all) ── */
-    const activeFilters = { harmType: null, severity: null, aiTechnology: null, response: null };
+  /* ── GeoJSON name map ── */
+  const GEO_NAME_MAP = {
+    'Delhi':'Haryana/ Delhi','Haryana':'Haryana/ Delhi',
+    'Jammu and Kashmir':'Jammu & Kashmir','Orissa':'Odisha','Uttaranchal':'Uttarakhand',
+  };
+  const getDataKey = g => GEO_NAME_MAP[g] || g || null;
 
-    /* ── Filter incidents ── */
-    function getFiltered() {
-      return allClassified.filter(inc => {
-        if (activeFilters.harmType    && inc.cls.harmType.key     !== activeFilters.harmType)    return false;
-        if (activeFilters.severity    && inc.cls.severity.key     !== activeFilters.severity)    return false;
-        if (activeFilters.aiTechnology && inc.cls.aiTechnology.key !== activeFilters.aiTechnology) return false;
-        if (activeFilters.response    && inc.cls.response.key     !== activeFilters.response)    return false;
-        return true;
-      });
+  /* ── Classify all incidents ── */
+  const allClassified = [];
+  Object.entries(incidentsData).forEach(([state, incs]) => {
+    incs.forEach(inc => allClassified.push({ ...inc, state, cls: classifyFull(inc) }));
+  });
+
+  /* ── Filters state ── */
+  const activeFilters = { harmType: null, severity: null, aiTechnology: null, response: null };
+  let activeYear = null;
+  let playInterval = null;
+  let svgPaths = null;
+  let spChart = null;
+
+  /* ── Filter function ── */
+  function getFiltered() {
+    return allClassified.filter(inc => {
+      if (activeYear !== null) {
+        const m = (inc.date || '').match(/\b(20\d{2})\b/);
+        if (!m || parseInt(m[1]) !== activeYear) return false;
+      }
+      if (activeFilters.harmType     && inc.cls.harmType.key      !== activeFilters.harmType)     return false;
+      if (activeFilters.severity     && inc.cls.severity.key      !== activeFilters.severity)     return false;
+      if (activeFilters.aiTechnology && inc.cls.aiTechnology.key  !== activeFilters.aiTechnology) return false;
+      if (activeFilters.response     && inc.cls.response.key      !== activeFilters.response)     return false;
+      return true;
+    });
+  }
+
+  function buildStats(incidents) {
+    const s = {};
+    incidents.forEach(inc => {
+      if (!s[inc.state]) s[inc.state] = { count: 0, items: [] };
+      s[inc.state].count++;
+      s[inc.state].items.push(inc);
+    });
+    return s;
+  }
+
+  /* ── Summary numbers ── */
+  const globalStats = buildStats(allClassified);
+  const [topState]  = Object.entries(globalStats).sort((a,b) => b[1].count - a[1].count)[0];
+  const sevCounts   = { critical:0, major:0, notable:0 };
+  allClassified.forEach(i => { sevCounts[i.cls.severity.key] = (sevCounts[i.cls.severity.key]||0)+1; });
+
+  document.getElementById('mapStats').innerHTML = [
+    { num: allClassified.length,           label:'Total Incidents'  },
+    { num: Object.keys(incidentsData).length, label:'States Covered' },
+    { num: topState,                       label:'Most Active State' },
+    { num: HARM_TYPES.length - 1,          label:'Harm Categories'  },
+  ].map(s=>`<div class="map-stat"><div class="map-stat-num">${s.num}</div><div class="map-stat-label">${s.label}</div></div>`).join('');
+
+  document.getElementById('sevRow').innerHTML = [
+    {key:'critical',label:'Critical Incidents',color:'#ef4444'},
+    {key:'major',   label:'Major Incidents',   color:'#f97316'},
+    {key:'notable', label:'Notable Incidents', color:'#22c55e'},
+  ].map(s=>`<div class="sev-card" style="border-left-color:${s.color}">
+    <div class="sev-card-num" style="color:${s.color}">${sevCounts[s.key]||0}</div>
+    <div class="sev-card-label">${s.label}</div></div>`).join('');
+
+  /* ── Filter buttons ── */
+  function styleBtn(btn, color) {
+    btn.style.background    = color ? color+'22' : 'rgba(240,165,0,0.1)';
+    btn.style.borderColor   = color ? color+'88' : 'rgba(240,165,0,0.4)';
+    btn.style.color         = color || '#f0a500';
+  }
+  function clearRow(row) {
+    row.querySelectorAll('.map-filter-btn').forEach(b => {
+      b.classList.remove('active');
+      b.style.background = b.style.borderColor = b.style.color = '';
+    });
+  }
+
+  function makeFilterRow(id, items, dim) {
+    const row = document.getElementById(id);
+    const allBtn = document.createElement('button');
+    allBtn.className = 'map-filter-btn active';
+    allBtn.dataset.val = '__all__';
+    allBtn.textContent = 'All';
+    styleBtn(allBtn, null);
+    allBtn.addEventListener('click', () => setFilter(dim, null, allBtn, row));
+    row.appendChild(allBtn);
+
+    items.filter(i => i.key !== 'other' && i.key !== 'other-ai' && i.key !== 'general').forEach(item => {
+      const btn = document.createElement('button');
+      btn.className = 'map-filter-btn';
+      btn.dataset.val = item.key;
+      btn.innerHTML = `<span class="dot" style="background:${item.color}"></span>${item.label}`;
+      btn.addEventListener('click', () => setFilter(dim, item.key, btn, row));
+      row.appendChild(btn);
+    });
+  }
+
+  function setFilter(dim, value, clickedBtn, row) {
+    if (activeFilters[dim] === value) value = null;
+    activeFilters[dim] = value;
+    clearRow(row);
+    const targetBtn = value ? clickedBtn : row.querySelector('[data-val="__all__"]');
+    const found = [...HARM_TYPES,...SEVERITY_LEVELS,...AI_TECHNOLOGIES,...RESPONSE_OUTCOMES].find(i=>i.key===value);
+    styleBtn(targetBtn, found ? found.color : null);
+    targetBtn.classList.add('active');
+    updateMap();
+  }
+
+  makeFilterRow('harmFilterRow',  HARM_TYPES,        'harmType');
+  makeFilterRow('sevFilterRow',   SEVERITY_LEVELS,   'severity');
+  makeFilterRow('techFilterRow',  AI_TECHNOLOGIES,   'aiTechnology');
+  makeFilterRow('respFilterRow',  RESPONSE_OUTCOMES, 'response');
+
+  /* ── Year scrubber ── */
+  const yearRange    = document.getElementById('yearRange');
+  const yearDisplay  = document.getElementById('yearDisplay');
+  const allYearsBtn  = document.getElementById('allYearsBtn');
+  const playBtn      = document.getElementById('playBtn');
+
+  function updateRangeTrack() {
+    const pct = activeYear ? ((activeYear - 2021) / (2025 - 2021)) * 100 : 0;
+    yearRange.style.setProperty('--pct', pct + '%');
+  }
+
+  function setYear(y) {
+    activeYear = y;
+    yearDisplay.textContent = y ? String(y) : 'All Years';
+    if (y) yearRange.value = y;
+    allYearsBtn.classList.toggle('active', !y);
+    updateRangeTrack();
+    updateMap();
+  }
+
+  yearRange.addEventListener('input', e => setYear(parseInt(e.target.value)));
+  allYearsBtn.addEventListener('click', () => { stopPlay(); setYear(null); });
+
+  playBtn.addEventListener('click', () => {
+    if (playInterval) { stopPlay(); return; }
+    playBtn.textContent = '⏸';
+    let y = 2021;
+    setYear(y);
+    playInterval = setInterval(() => {
+      y++;
+      if (y > 2025) { stopPlay(); setYear(null); return; }
+      setYear(y);
+    }, 1000);
+  });
+
+  function stopPlay() {
+    if (playInterval) { clearInterval(playInterval); playInterval = null; }
+    playBtn.textContent = '▶';
+  }
+
+  /* ── Tooltip ── */
+  const tooltip = document.getElementById('mapTooltip');
+
+  function getActiveLabel() {
+    const parts = [];
+    if (activeYear) parts.push(String(activeYear));
+    if (activeFilters.harmType)     { const f=HARM_TYPES.find(h=>h.key===activeFilters.harmType);       if(f) parts.push(f.label); }
+    if (activeFilters.severity)     { const f=SEVERITY_LEVELS.find(h=>h.key===activeFilters.severity);   if(f) parts.push(f.label); }
+    if (activeFilters.aiTechnology) { const f=AI_TECHNOLOGIES.find(h=>h.key===activeFilters.aiTechnology);if(f) parts.push(f.label); }
+    if (activeFilters.response)     { const f=RESPONSE_OUTCOMES.find(h=>h.key===activeFilters.response);  if(f) parts.push(f.label); }
+    return parts.join(' · ');
+  }
+
+  function showTooltip(event, d, stats) {
+    const raw   = d.properties.ST_NM || d.properties.NAME_1 || '';
+    const key   = getDataKey(raw);
+    const s     = key ? stats[key] : null;
+    let html    = `<div class="tip-state">${key||raw}</div>`;
+
+    if (s && s.count > 0) {
+      html += `<div class="tip-count"><strong>${s.count}</strong> incident${s.count!==1?'s':''} ${getActiveLabel()?'· '+getActiveLabel():''}</div>`;
+      const sevMap = {};
+      s.items.forEach(i=>{ const sv=i.cls.severity; if(!sevMap[sv.key]) sevMap[sv.key]={...sv,count:0}; sevMap[sv.key].count++; });
+      const sevOrder={critical:0,major:1,notable:2};
+      const chips = Object.values(sevMap).sort((a,b)=>sevOrder[a.key]-sevOrder[b.key])
+        .map(sv=>`<span class="tip-sev-chip" style="background:${sv.color}22;color:${sv.color};border:1px solid ${sv.color}44">${sv.count} ${sv.label}</span>`).join('');
+      if(chips) html+=`<div class="tip-sev">${chips}</div>`;
+
+      const harmMap={};
+      s.items.forEach(i=>{ const h=i.cls.harmType; if(!harmMap[h.key]) harmMap[h.key]={...h,count:0}; harmMap[h.key].count++; });
+      const topH=Object.values(harmMap).sort((a,b)=>b.count-a.count).slice(0,3);
+      if(topH.length) html+=`<div class="tip-cats">${topH.map(h=>`<span class="tip-cat" style="background:${h.color}">${h.label}</span>`).join('')}</div>`;
+      html+=`<div class="tip-cta">Click to explore this state →</div>`;
+    } else {
+      html+=`<div style="font-size:0.8rem;color:var(--text-3);margin-top:2px">No incidents match current filter</div>`;
     }
+    tooltip.innerHTML = html;
+    tooltip.style.opacity = '1';
+    moveTooltip(event);
+  }
 
-    /* ── Build per-state stats from a filtered list ── */
-    function buildStats(incidents) {
-      const stats = {};
-      incidents.forEach(inc => {
-        if (!stats[inc.state]) stats[inc.state] = { count: 0, items: [] };
-        stats[inc.state].count++;
-        stats[inc.state].items.push(inc);
-      });
-      return stats;
+  function moveTooltip(e) {
+    const tw=tooltip.offsetWidth||250, th=tooltip.offsetHeight||140;
+    let left=e.clientX+16, top=e.clientY-16;
+    if(left+tw>window.innerWidth-12) left=e.clientX-tw-16;
+    if(top+th>window.innerHeight-12) top=e.clientY-th-16;
+    if(top<8) top=8;
+    tooltip.style.left=left+'px'; tooltip.style.top=top+'px';
+  }
+  function hideTooltip() { tooltip.style.opacity='0'; }
+
+  /* ── Map update ── */
+  function updateMap() {
+    const filtered = getFiltered();
+    const stats    = buildStats(filtered);
+    const maxCount = Math.max(...Object.values(stats).map(s=>s.count), 1);
+    const label    = getActiveLabel();
+
+    document.getElementById('legendMax').textContent = maxCount;
+    document.getElementById('activeFilterLabel').textContent =
+      label ? `Showing: ${label} (${filtered.length} incident${filtered.length!==1?'s':''})` : `Showing all ${filtered.length} incidents`;
+    document.getElementById('mapTitle').textContent =
+      label ? `Incidents: ${label}` : 'AI Incident Density — India 2021–2025';
+
+    const colorScale = d3.scaleSequential()
+      .domain([0, maxCount])
+      .interpolator(d3.interpolateRgbBasis(['#22c55e','#eab308','#f97316','#ef4444']));
+
+    if (svgPaths) {
+      svgPaths
+        .attr('fill', d => {
+          const key = getDataKey(d.properties.ST_NM || d.properties.NAME_1 || '');
+          const s   = stats[key];
+          return s && s.count > 0 ? colorScale(s.count) : '#162540';
+        })
+        .classed('no-data', d => {
+          const key = getDataKey(d.properties.ST_NM || d.properties.NAME_1 || '');
+          return !stats[key] || stats[key].count === 0;
+        })
+        .on('mouseover', (event, d) => showTooltip(event, d, stats))
+        .on('click', (event, d) => {
+          const key = getDataKey(d.properties.ST_NM || d.properties.NAME_1 || '');
+          if (key && incidentsData[key]) openStatePanel(key);
+        });
     }
+  }
 
-    /* ── Build global summary stats (no filter) ── */
-    const globalStats = buildStats(allClassified);
-    const totalCount  = allClassified.length;
-    const [topState]  = Object.entries(globalStats).sort((a, b) => b[1].count - a[1].count)[0];
+  /* ── State panel ── */
+  function openStatePanel(key) {
+    const incidents = allClassified.filter(i => i.state === key);
+    const govEntries = (governanceData && governanceData[key]) ? governanceData[key] : [];
 
-    /* ── Severity summary ── */
-    const sevCounts = { critical: 0, major: 0, notable: 0 };
-    allClassified.forEach(inc => { sevCounts[inc.cls.severity.key] = (sevCounts[inc.cls.severity.key] || 0) + 1; });
-    document.getElementById('sevRow').innerHTML = [
-      { key:'critical', label:'Critical Incidents',  color:'#ef4444' },
-      { key:'major',    label:'Major Incidents',     color:'#f97316' },
-      { key:'notable',  label:'Notable Incidents',   color:'#22c55e' },
-    ].map(s => `
-      <div class="sev-card" style="border-left-color:${s.color}">
-        <div class="sev-card-num" style="color:${s.color}">${sevCounts[s.key]||0}</div>
-        <div class="sev-card-label">${s.label}</div>
-      </div>`
+    document.getElementById('spName').textContent  = key;
+    document.getElementById('spCount').textContent = `${incidents.length} incident${incidents.length!==1?'s':''} · ${govEntries.length} governance entr${govEntries.length!==1?'ies':'y'}`;
+    document.getElementById('spLink').href = `state.html?state=${encodeURIComponent(key)}`;
+
+    /* Harm donut */
+    const harmMap = {};
+    incidents.forEach(i => { const h=i.cls.harmType; if(!harmMap[h.key]) harmMap[h.key]={label:h.label,color:h.color,count:0}; harmMap[h.key].count++; });
+    const harmEntries = Object.values(harmMap).sort((a,b)=>b.count-a.count);
+
+    if (spChart) { spChart.destroy(); spChart = null; }
+    const canvas = document.getElementById('spDonut');
+    const ctx = canvas.getContext('2d');
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    spChart = new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: harmEntries.map(h=>h.label),
+        datasets:[{ data:harmEntries.map(h=>h.count), backgroundColor:harmEntries.map(h=>h.color), borderWidth:0, hoverOffset:5 }]
+      },
+      options: {
+        responsive:false, animation:{duration:500},
+        plugins:{ legend:{display:false}, tooltip:{callbacks:{label:c=>` ${c.label}: ${c.raw}`}} },
+        cutout:'62%'
+      }
+    });
+    document.getElementById('spDonutLegend').innerHTML = harmEntries.slice(0,5).map(h=>
+      `<div class="sp-legend-item"><span class="sp-legend-dot" style="background:${h.color}"></span>${h.label}<span class="sp-legend-num">${h.count}</span></div>`
     ).join('');
 
-    /* ── Top stat cards ── */
-    document.getElementById('mapStats').innerHTML = [
-      { num: totalCount,                             label: 'Total Incidents'      },
-      { num: Object.keys(incidentsData).length,      label: 'States Covered'       },
-      { num: topState,                               label: 'Most Active State'    },
-      { num: HARM_TYPES.length - 1,                  label: 'Harm Categories'      },
-    ].map(s => `
-      <div class="map-stat">
-        <div class="map-stat-num">${s.num}</div>
-        <div class="map-stat-label">${s.label}</div>
-      </div>`
-    ).join('');
+    /* Severity bars */
+    const sevMap={critical:0,major:0,notable:0};
+    incidents.forEach(i=>{ sevMap[i.cls.severity.key]++; });
+    const maxSev=Math.max(...Object.values(sevMap),1);
+    document.getElementById('spSevBars').innerHTML=[
+      {key:'critical',label:'Critical',color:'#ef4444'},
+      {key:'major',   label:'Major',   color:'#f97316'},
+      {key:'notable', label:'Notable', color:'#22c55e'},
+    ].map(s=>`<div class="sp-sev-row">
+      <span class="sp-sev-label">${s.label}</span>
+      <div class="sp-sev-bar-wrap"><div class="sp-sev-bar" style="width:${(sevMap[s.key]/maxSev)*100}%;background:${s.color}"></div></div>
+      <span class="sp-sev-num" style="color:${s.color}">${sevMap[s.key]}</span>
+    </div>`).join('');
 
-    /* ── Build filter buttons ── */
-    function makeFilterRow(containerId, items, dimension) {
-      const row = document.getElementById(containerId);
-      // "All" button
-      const allBtn = document.createElement('button');
-      allBtn.className = 'map-filter-btn active';
-      allBtn.dataset.val = '__all__';
-      allBtn.innerHTML = 'All';
-      allBtn.style.borderColor = 'rgba(255,255,255,0.2)';
-      allBtn.addEventListener('click', () => setFilter(dimension, null, allBtn, row));
-      row.appendChild(allBtn);
-
-      items.filter(i => i.key !== 'other' && i.key !== 'other-ai' && i.key !== 'general').forEach(item => {
-        const btn = document.createElement('button');
-        btn.className = 'map-filter-btn';
-        btn.dataset.val = item.key;
-        btn.innerHTML = `<span class="dot" style="background:${item.color}"></span>${item.label}`;
-        btn.addEventListener('click', () => setFilter(dimension, item.key, btn, row));
-        row.appendChild(btn);
-      });
-    }
-
-    function setFilter(dimension, value, clickedBtn, row) {
-      activeFilters[dimension] = value;
-      row.querySelectorAll('.map-filter-btn').forEach(b => {
-        b.classList.remove('active');
-        b.style.background = '';
-        b.style.borderColor = '';
-        b.style.color = '';
-      });
-      // Find the color for active state
-      let activeColor = '#f0a500';
-      if (value) {
-        const allItems = [...HARM_TYPES, ...SEVERITY_LEVELS, ...AI_TECHNOLOGIES, ...RESPONSE_OUTCOMES];
-        const found = allItems.find(i => i.key === value);
-        if (found) activeColor = found.color;
-      }
-      clickedBtn.classList.add('active');
-      clickedBtn.style.background = value ? activeColor + '22' : 'rgba(240,165,0,0.1)';
-      clickedBtn.style.borderColor = value ? activeColor + '88' : 'rgba(240,165,0,0.4)';
-      clickedBtn.style.color = value ? activeColor : '#f0a500';
-      updateMap();
-    }
-
-    makeFilterRow('harmFilterRow',  HARM_TYPES,        'harmType');
-    makeFilterRow('sevFilterRow',   SEVERITY_LEVELS,   'severity');
-    makeFilterRow('techFilterRow',  AI_TECHNOLOGIES,   'aiTechnology');
-    makeFilterRow('respFilterRow',  RESPONSE_OUTCOMES, 'response');
-
-    /* ── Tooltip ── */
-    const tooltip = document.getElementById('mapTooltip');
-
-    function showTooltip(event, d, stateStats) {
-      const raw   = d.properties.ST_NM || d.properties.NAME_1 || d.properties.name || '';
-      const key   = getDataKey(raw);
-      const stats = key ? stateStats[key] : null;
-      const name  = key || raw;
-
-      let html = `<div class="tip-state">${name}</div>`;
-
-      if (stats && stats.count > 0) {
-        const activeLabel = getActiveFilterLabel();
-        html += `<div class="tip-count"><strong>${stats.count}</strong> incident${stats.count !== 1 ? 's' : ''} ${activeLabel ? '· ' + activeLabel : 'documented'}</div>`;
-
-        // Severity breakdown
-        const sevMap = {};
-        stats.items.forEach(inc => {
-          const s = inc.cls.severity;
-          if (!sevMap[s.key]) sevMap[s.key] = { ...s, count: 0 };
-          sevMap[s.key].count++;
-        });
-        const sevChips = Object.values(sevMap).sort((a,b) => {
-          const order = { critical: 0, major: 1, notable: 2 };
-          return order[a.key] - order[b.key];
-        }).map(s => `<span class="tip-sev-chip" style="background:${s.color}22;color:${s.color};border:1px solid ${s.color}44">${s.count} ${s.label}</span>`).join('');
-        if (sevChips) html += `<div class="tip-sev">${sevChips}</div>`;
-
-        // Top harm types
-        const harmMap = {};
-        stats.items.forEach(inc => {
-          const h = inc.cls.harmType;
-          if (!harmMap[h.key]) harmMap[h.key] = { ...h, count: 0 };
-          harmMap[h.key].count++;
-        });
-        const topHarms = Object.values(harmMap).sort((a,b) => b.count - a.count).slice(0, 3);
-        if (topHarms.length) {
-          html += `<div class="tip-cats">${topHarms.map(h => `<span class="tip-cat" style="background:${h.color}">${h.label}</span>`).join('')}</div>`;
-        }
-
-        // Latest incident
-        const latest = stats.items[0];
-        if (latest) {
-          const t = latest.title.length > 65 ? latest.title.slice(0, 65) + '…' : latest.title;
-          html += `<div class="tip-latest"><strong>Latest:</strong> ${t}</div>`;
-        }
-        html += `<div class="tip-cta">Click to view all incidents →</div>`;
-      } else {
-        html += `<div class="tip-nodata">No incidents match this filter for this region</div>`;
-      }
-
-      tooltip.innerHTML = html;
-      tooltip.style.opacity = '1';
-      moveTooltip(event);
-    }
-
-    function moveTooltip(event) {
-      const tw = tooltip.offsetWidth  || 250;
-      const th = tooltip.offsetHeight || 140;
-      const vw = window.innerWidth;
-      const vh = window.innerHeight;
-      let left = event.clientX + 16;
-      let top  = event.clientY - 16;
-      if (left + tw > vw - 12) left = event.clientX - tw - 16;
-      if (top  + th > vh - 12) top  = event.clientY - th - 16;
-      if (top < 8) top = 8;
-      tooltip.style.left = left + 'px';
-      tooltip.style.top  = top  + 'px';
-    }
-
-    function hideTooltip() { tooltip.style.opacity = '0'; }
-
-    function getActiveFilterLabel() {
-      const parts = [];
-      if (activeFilters.harmType) {
-        const f = HARM_TYPES.find(h => h.key === activeFilters.harmType);
-        if (f) parts.push(f.label);
-      }
-      if (activeFilters.severity) {
-        const f = SEVERITY_LEVELS.find(h => h.key === activeFilters.severity);
-        if (f) parts.push(f.label);
-      }
-      if (activeFilters.aiTechnology) {
-        const f = AI_TECHNOLOGIES.find(h => h.key === activeFilters.aiTechnology);
-        if (f) parts.push(f.label);
-      }
-      if (activeFilters.response) {
-        const f = RESPONSE_OUTCOMES.find(h => h.key === activeFilters.response);
-        if (f) parts.push(f.label);
-      }
-      return parts.join(' · ');
-    }
-
-    /* ── D3 map ── */
-    let svgPaths = null;
-
-    function updateMap() {
-      const filtered  = getFiltered();
-      const stats     = buildStats(filtered);
-      const maxCount  = Math.max(...Object.values(stats).map(s => s.count), 1);
-      const filterLabel = getActiveFilterLabel();
-
-      document.getElementById('legendMax').textContent = maxCount;
-      document.getElementById('activeFilterLabel').textContent =
-        filterLabel ? `Showing: ${filterLabel} (${filtered.length} incidents)` : `Showing all ${filtered.length} incidents`;
-      document.getElementById('mapTitle').textContent =
-        filterLabel ? `Incidents: ${filterLabel}` : 'AI Incident Density — India 2021–2025';
-
-      const colorScale = d3.scaleSequential()
-        .domain([0, maxCount])
-        .interpolator(d3.interpolateRgbBasis(['#22c55e', '#eab308', '#f97316', '#ef4444']));
-
-      if (svgPaths) {
-        svgPaths
-          .attr('fill', d => {
-            const key   = getDataKey(d.properties.ST_NM || d.properties.NAME_1 || '');
-            const s     = stats[key];
-            return s && s.count > 0 ? colorScale(s.count) : '#162540';
-          })
-          .classed('no-data', d => {
-            const key = getDataKey(d.properties.ST_NM || d.properties.NAME_1 || '');
-            return !stats[key] || stats[key].count === 0;
-          })
-          .on('mouseover', (event, d) => showTooltip(event, d, stats))
-          .on('click', (event, d) => {
-            const key = getDataKey(d.properties.ST_NM || d.properties.NAME_1 || '');
-            if (key && stateHasData(key)) window.location.href = `state.html?state=${encodeURIComponent(key)}`;
-          });
-      }
-    }
-
-    function stateHasData(key) {
-      return !!(incidentsData[key] && incidentsData[key].length > 0);
-    }
-
-    /* ── Load GeoJSON & draw ── */
-    d3.json('india_states.geojson').then(geoData => {
-      const container = document.getElementById('mapContainer');
-      const W = container.clientWidth || 800;
-      const H = Math.round(W * 1.08);
-
-      const svg = d3.select('#mapContainer')
-        .html('')
-        .append('svg')
-        .attr('viewBox', `0 0 ${W} ${H}`)
-        .attr('width', '100%')
-        .style('display', 'block');
-
-      const projection = d3.geoMercator().fitSize([W, H - 10], geoData);
-      const pathGen    = d3.geoPath().projection(projection);
-
-      svgPaths = svg.selectAll('path')
-        .data(geoData.features)
-        .enter()
-        .append('path')
-        .attr('class', 'state-path')
-        .attr('d', pathGen)
-        .attr('stroke', '#0b1426')
-        .attr('stroke-width', 0.7)
-        .on('mousemove', (event) => moveTooltip(event))
-        .on('mouseout',  ()      => hideTooltip());
-
-      updateMap(); // initial render
-    }).catch(() => {
-      document.getElementById('mapContainer').innerHTML = `
-        <div class="map-error">
-          <span style="font-size:1.5rem">⚠️</span>
-          <span>Could not load map data. Run via a local server (python3 -m http.server).</span>
-        </div>`;
+    /* Sparkline */
+    const yearMap={};
+    incidents.forEach(i=>{ const m=(i.date||'').match(/\b(20\d{2})\b/); if(m) yearMap[m[1]]=(yearMap[m[1]]||0)+1; });
+    const years=['2021','2022','2023','2024','2025'];
+    const vals=years.map(y=>yearMap[y]||0);
+    const svgEl=document.getElementById('spSparkline');
+    const W=svgEl.getBoundingClientRect().width||300;
+    const H=70; const mg={t:8,r:10,b:20,l:22};
+    const iW=W-mg.l-mg.r, iH=H-mg.t-mg.b;
+    const xSc=d3.scalePoint().domain(years).range([0,iW]);
+    const ySc=d3.scaleLinear().domain([0,Math.max(...vals,1)]).range([iH,0]);
+    const lineGen=d3.line().x((_,i)=>xSc(years[i])).y(d=>ySc(d)).curve(d3.curveCatmullRom);
+    const areaGen=d3.area().x((_,i)=>xSc(years[i])).y0(iH).y1(d=>ySc(d)).curve(d3.curveCatmullRom);
+    d3.select(svgEl).html('');
+    const g=d3.select(svgEl).append('g').attr('transform',`translate(${mg.l},${mg.t})`);
+    g.append('path').datum(vals).attr('fill','rgba(240,165,0,0.1)').attr('d',areaGen);
+    g.append('path').datum(vals).attr('fill','none').attr('stroke','#f0a500').attr('stroke-width',2).attr('d',lineGen);
+    vals.forEach((v,i)=>{ if(v>0) g.append('circle').attr('cx',xSc(years[i])).attr('cy',ySc(v)).attr('r',3.5).attr('fill','#f0a500'); });
+    years.forEach(y=>{
+      g.append('text').attr('x',xSc(y)).attr('y',iH+14).attr('text-anchor','middle').attr('fill','#6b748a').attr('font-size','10').text(`'${y.slice(2)}`);
     });
+
+    /* At a glance */
+    const techMap={};
+    incidents.forEach(i=>{ const t=i.cls.aiTechnology; if(!techMap[t.key]) techMap[t.key]={label:t.label,count:0}; techMap[t.key].count++; });
+    const topTech=Object.values(techMap).sort((a,b)=>b.count-a.count)[0];
+    const respMap={};
+    incidents.forEach(i=>{ const r=i.cls.response; if(!respMap[r.key]) respMap[r.key]={label:r.label,count:0}; respMap[r.key].count++; });
+    const topResp=Object.values(respMap).sort((a,b)=>b.count-a.count)[0];
+    document.getElementById('spGovRow').innerHTML=[
+      {label:'Top AI tool used', val: topTech?topTech.label:'—'},
+      {label:'Most common outcome', val: topResp?topResp.label:'—'},
+      {label:'Governance entries', val: govEntries.length},
+    ].map(r=>`<div class="sp-gov-row"><span class="sp-gov-label">${r.label}</span><span class="sp-gov-val">${r.val}</span></div>`).join('');
+
+    /* Recent incidents */
+    const sorted=[...incidents].sort((a,b)=>{
+      const ya=(a.date||'').match(/\b(20\d{2})\b/), yb=(b.date||'').match(/\b(20\d{2})\b/);
+      return (yb?+yb[1]:0)-(ya?+ya[1]:0);
+    });
+    document.getElementById('spIncidents').innerHTML=sorted.slice(0,4).map(inc=>`
+      <div class="sp-incident">
+        <div class="sp-incident-dot" style="background:${inc.cls.harmType.color}"></div>
+        <div class="sp-incident-body">
+          <div class="sp-incident-title">${inc.title.length>65?inc.title.slice(0,65)+'…':inc.title}</div>
+          <div class="sp-incident-meta">
+            <span class="sp-incident-sev" style="color:${inc.cls.severity.color}">${inc.cls.severity.label}</span>
+            <span>${inc.date?inc.date.trim():''}</span>
+          </div>
+        </div>
+      </div>`).join('');
+
+    /* Open */
+    document.getElementById('statePanel').classList.add('open');
+    document.getElementById('panelOverlay').classList.add('visible');
+    tooltip.style.opacity='0';
+  }
+
+  function closePanel() {
+    document.getElementById('statePanel').classList.remove('open');
+    document.getElementById('panelOverlay').classList.remove('visible');
+  }
+
+  document.getElementById('spClose').addEventListener('click', closePanel);
+  document.getElementById('panelOverlay').addEventListener('click', closePanel);
+
+  /* ── Load GeoJSON & draw ── */
+  d3.json('india_states.geojson').then(geoData => {
+    const container=document.getElementById('mapContainer');
+    const W=container.clientWidth||800;
+    const H=Math.round(W*1.08);
+    const svg=d3.select('#mapContainer').html('').append('svg')
+      .attr('viewBox',`0 0 ${W} ${H}`).attr('width','100%').style('display','block');
+    const proj=d3.geoMercator().fitSize([W,H-10],geoData);
+    const path=d3.geoPath().projection(proj);
+    svgPaths=svg.selectAll('path').data(geoData.features).enter().append('path')
+      .attr('class','state-path').attr('d',path)
+      .attr('stroke','#0b1426').attr('stroke-width',0.7)
+      .on('mousemove', e=>moveTooltip(e))
+      .on('mouseout',  ()=>hideTooltip());
+    updateMap();
+  }).catch(()=>{
+    document.getElementById('mapContainer').innerHTML=`<div class="map-error"><span style="font-size:1.5rem">⚠️</span><span>Could not load map. Run via a local server (python3 -m http.server).</span></div>`;
+  });
   </script>
 </body>
 </html>
