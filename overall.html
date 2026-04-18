@@ -436,24 +436,29 @@
     }
 
     function setFilter(dimension, value, clickedBtn, row) {
+      // Toggle: clicking the already-active filter deselects it
+      if (activeFilters[dimension] === value) value = null;
       activeFilters[dimension] = value;
+
+      // Reset all buttons in this row
       row.querySelectorAll('.map-filter-btn').forEach(b => {
         b.classList.remove('active');
         b.style.background = '';
         b.style.borderColor = '';
         b.style.color = '';
       });
-      // Find the color for active state
+
+      // Activate the right button
+      const targetBtn = value ? clickedBtn : row.querySelector('[data-val="__all__"]');
       let activeColor = '#f0a500';
       if (value) {
-        const allItems = [...HARM_TYPES, ...SEVERITY_LEVELS, ...AI_TECHNOLOGIES, ...RESPONSE_OUTCOMES];
-        const found = allItems.find(i => i.key === value);
+        const found = [...HARM_TYPES, ...SEVERITY_LEVELS, ...AI_TECHNOLOGIES, ...RESPONSE_OUTCOMES].find(i => i.key === value);
         if (found) activeColor = found.color;
       }
-      clickedBtn.classList.add('active');
-      clickedBtn.style.background = value ? activeColor + '22' : 'rgba(240,165,0,0.1)';
-      clickedBtn.style.borderColor = value ? activeColor + '88' : 'rgba(240,165,0,0.4)';
-      clickedBtn.style.color = value ? activeColor : '#f0a500';
+      targetBtn.classList.add('active');
+      targetBtn.style.background = value ? activeColor + '22' : 'rgba(240,165,0,0.1)';
+      targetBtn.style.borderColor = value ? activeColor + '88' : 'rgba(240,165,0,0.4)';
+      targetBtn.style.color = value ? activeColor : '#f0a500';
       updateMap();
     }
 
