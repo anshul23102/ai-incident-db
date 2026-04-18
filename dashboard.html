@@ -130,28 +130,33 @@
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         All States
       </a>
+      <span class="section-eyebrow" style="margin-top:8px">Analytics</span>
       <h1 class="state-title">Data Dashboard</h1>
-      <p class="state-subtitle">Statistical analysis of AI-related incidents across India, 2021–2025</p>
+      <p class="state-subtitle">Statistical breakdown of AI-related harm incidents across India, 2021–2025</p>
     </div>
   </header>
 
   <main class="state-main">
 
     <!-- STAT CARDS -->
-    <div class="dash-grid" id="statCards"></div>
+    <div class="stat-cards-row reveal" id="statCards"></div>
 
-    <!-- ROW 1: incidents by state + by year -->
-    <div class="chart-two-col">
+    <!-- ROW 1: year + category -->
+    <div class="chart-two-col reveal reveal-d1">
       <div class="chart-card">
-        <h3>Incidents by Year</h3>
-        <p>How AI misuse has grown from 2021 to 2025</p>
+        <div class="chart-card-header">
+          <div class="chart-card-title">Incidents by Year</div>
+          <div class="chart-card-sub">Growth trajectory of AI misuse from 2021 to 2025</div>
+        </div>
         <div style="position:relative; height:220px;">
           <canvas id="yearChart"></canvas>
         </div>
       </div>
       <div class="chart-card">
-        <h3>Harm Category Breakdown</h3>
-        <p>Distribution across all documented incidents</p>
+        <div class="chart-card-header">
+          <div class="chart-card-title">Harm Category Breakdown</div>
+          <div class="chart-card-sub">Distribution across all documented incidents</div>
+        </div>
         <div style="position:relative; height:180px;">
           <canvas id="catChart"></canvas>
         </div>
@@ -159,19 +164,23 @@
       </div>
     </div>
 
-    <!-- ROW 2: full width bar chart -->
-    <div class="chart-card">
-      <h3>Incidents by State</h3>
-      <p>Total documented incidents per state — click a bar to go to that state's page</p>
+    <!-- ROW 2: state bar chart -->
+    <div class="chart-card reveal reveal-d2">
+      <div class="chart-card-header">
+        <div class="chart-card-title">Incidents by State</div>
+        <div class="chart-card-sub">Total documented per state — click any bar to view that state</div>
+      </div>
       <div style="position:relative; height:420px;">
         <canvas id="stateChart"></canvas>
       </div>
     </div>
 
     <!-- ROW 3: monthly trend -->
-    <div class="chart-card">
-      <h3>Monthly Trend — 2024 & 2025</h3>
-      <p>Incident frequency over recent months</p>
+    <div class="chart-card reveal reveal-d3">
+      <div class="chart-card-header">
+        <div class="chart-card-title">Monthly Trend — 2024 & 2025</div>
+        <div class="chart-card-sub">Incident frequency by month — spikes often align with elections or major events</div>
+      </div>
       <div style="position:relative; height:200px;">
         <canvas id="monthChart"></canvas>
       </div>
@@ -180,8 +189,21 @@
   </main>
 
   <footer class="site-footer">
-    <p>B.Tech Project · IIIT Delhi · Dept. of Social Science & Humanities</p>
-    <p>Anshul Jain · Dhruv Kantroo · Siddhant Gautam · Sukhmani Kaur</p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-brand-name">AI Incident Database · India</span>
+        <p class="footer-brand-desc">Documenting AI-related harm across India from 2021 to 2025.</p>
+      </div>
+      <div class="footer-links">
+        <span class="footer-links-title">Explore</span>
+        <a href="index.html" class="footer-link">State Directory</a>
+        <a href="timeline.html" class="footer-link">Timeline</a>
+        <a href="overall.html" class="footer-link">Interactive Map</a>
+        <a href="governance.html" class="footer-link">Governance</a>
+        <a href="search.html" class="footer-link">Search</a>
+      </div>
+    </div>
+    <div class="footer-bottom">B.Tech Project · IIIT Delhi · Dept. of Social Science &amp; Humanities · Anshul Jain · Dhruv Kantroo · Siddhant Gautam · Sukhmani Kaur</div>
   </footer>
 
   <script src="state.js"></script>
@@ -245,12 +267,18 @@
       { num: allIncidents.filter(i => i.year === 2025).length, label: "2025 Incidents", sub: "Most active year on record" },
     ];
     document.getElementById("statCards").innerHTML = statData.map(s =>
-      `<div class="stat-card">
-        <div class="stat-num">${s.num}</div>
-        <div class="stat-label">${s.label}</div>
-        <div class="stat-sub">${s.sub}</div>
+      `<div class="stat-card-new">
+        <div class="num">${s.num}</div>
+        <div class="label">${s.label}</div>
+        <div class="sub">${s.sub}</div>
       </div>`
     ).join("");
+
+    /* ── Scroll reveal ── */
+    const revObs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revObs.unobserve(e.target); } });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
 
     /* ── Year chart ── */
     const yearCounts = {};

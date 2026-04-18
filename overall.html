@@ -8,18 +8,245 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
   <style>
-    .map-card {
+    .map-wrapper {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
       border-radius: var(--radius-lg);
-      padding: 16px;
-      text-align: center;
+      padding: 24px;
       margin-bottom: 2rem;
     }
-    .map-card img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
+
+    .map-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .map-header h2 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text);
+      margin: 0 0 4px;
+    }
+
+    .map-header p {
+      font-size: 0.8rem;
+      color: var(--text-2);
+      margin: 0;
+    }
+
+    .map-legend {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 4px;
+    }
+
+    .legend-label {
+      font-size: 0.72rem;
+      color: var(--text-2);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .legend-bar {
+      width: 160px;
+      height: 10px;
+      border-radius: 5px;
+      background: linear-gradient(to right, #1a3a6b, #f0a500);
+    }
+
+    .legend-range {
+      display: flex;
+      justify-content: space-between;
+      width: 160px;
+      font-size: 0.7rem;
+      color: var(--text-3);
+    }
+
+    #mapContainer {
+      width: 100%;
+      position: relative;
+    }
+
+    .map-loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 500px;
+      color: var(--text-2);
+      font-size: 0.9rem;
+      gap: 12px;
+    }
+
+    .map-loading::before {
+      content: '';
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      border: 2px solid rgba(240, 165, 0, 0.25);
+      border-top-color: #f0a500;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .state-path {
+      cursor: pointer;
+      transition: filter 0.12s;
+    }
+
+    .state-path:hover { filter: brightness(1.3) saturate(1.2); }
+
+    .state-path.no-data { cursor: default; }
+    .state-path.no-data:hover { filter: none; }
+
+    /* Tooltip */
+    #mapTooltip {
+      position: fixed;
+      background: #0f1e35;
+      border: 1px solid rgba(240, 165, 0, 0.22);
+      border-radius: 12px;
+      padding: 14px 16px;
+      pointer-events: none;
+      z-index: 9999;
+      min-width: 210px;
+      max-width: 275px;
+      box-shadow: 0 10px 36px rgba(0, 0, 0, 0.55);
+      opacity: 0;
+      transition: opacity 0.12s;
+    }
+
+    .tip-state {
+      font-family: 'Syne', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #f0a500;
+      margin-bottom: 5px;
+    }
+
+    .tip-count {
+      font-size: 0.82rem;
+      color: var(--text);
+      margin-bottom: 9px;
+    }
+
+    .tip-count strong {
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .tip-cats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 9px;
+    }
+
+    .tip-cat {
+      font-size: 0.68rem;
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-weight: 700;
+      color: #0b1426;
+    }
+
+    .tip-latest {
+      font-size: 0.73rem;
+      color: var(--text-2);
+      line-height: 1.45;
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 8px;
+    }
+
+    .tip-latest strong { color: var(--text); }
+
+    .tip-cta {
+      font-size: 0.7rem;
+      color: #f0a500;
+      margin-top: 7px;
+      opacity: 0.75;
+    }
+
+    .tip-nodata {
+      font-size: 0.8rem;
+      color: var(--text-3);
+      margin-top: 2px;
+    }
+
+    .map-error {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 420px;
+      flex-direction: column;
+      gap: 10px;
+      color: var(--text-2);
+      font-size: 0.9rem;
+    }
+
+    /* Stats row */
+    .map-stat-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      margin-bottom: 2rem;
+    }
+
+    .map-stat {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      padding: 16px;
+      text-align: center;
+    }
+
+    .map-stat-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: var(--amber);
+    }
+
+    .map-stat-label {
+      font-size: 0.74rem;
+      color: var(--text-2);
+      margin-top: 3px;
+    }
+
+    /* Category chips */
+    .cat-legend {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .cat-legend-label {
+      font-size: 0.72rem;
+      color: var(--text-2);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-right: 2px;
+    }
+
+    .cat-chip {
+      font-size: 0.7rem;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-weight: 700;
+      color: #0b1426;
+    }
+
+    @media (max-width: 600px) {
+      .map-legend { align-items: flex-start; }
+      .legend-bar, .legend-range { width: 120px; }
     }
   </style>
 </head>
@@ -67,23 +294,257 @@
   <!-- HERO -->
   <header class="state-hero">
     <div class="state-hero-inner">
-      <h1 class="state-title">Overall Analysis</h1>
-      <p class="state-subtitle">A visual mapping of AI-related incidents across India</p>
+      <h1 class="state-title">Interactive Map</h1>
+      <p class="state-subtitle">Hover over any state to explore AI-related incidents · Click to view state details</p>
     </div>
   </header>
 
   <!-- MAIN -->
   <main class="state-main">
-    <div class="map-card">
-      <img src="Overall_analysis.png" alt="Overall Analysis Map of AI Incidents in India">
+
+    <!-- Stats row -->
+    <div class="map-stat-row" id="mapStats"></div>
+
+    <!-- Map card -->
+    <div class="map-wrapper">
+      <div class="map-header">
+        <div>
+          <h2>AI Incident Density — India 2021–2025</h2>
+          <p>States shaded by number of documented incidents. Hover to explore, click to drill in.</p>
+        </div>
+        <div class="map-legend">
+          <span class="legend-label">Incidents per state</span>
+          <div class="legend-bar"></div>
+          <div class="legend-range">
+            <span>0</span>
+            <span id="legendMax">–</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="mapContainer">
+        <div class="map-loading">Loading map data…</div>
+      </div>
+
+      <div class="cat-legend">
+        <span class="cat-legend-label">Categories</span>
+      </div>
     </div>
+
   </main>
+
+  <!-- Floating tooltip -->
+  <div id="mapTooltip"></div>
 
   <footer class="site-footer">
     <p>B.Tech Project · IIIT Delhi · Dept. of Social Science & Humanities</p>
     <p>Anshul Jain · Dhruv Kantroo · Siddhant Gautam · Sukhmani Kaur</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="state.js"></script>
+  <script src="d3.v7.min.js"></script>
+  <script>
+    /* ── Mobile drawer ── */
+    const hamburger = document.getElementById('hamburger');
+    const drawer    = document.getElementById('drawer');
+    const overlay   = document.getElementById('drawerOverlay');
+    const closeBtn  = document.getElementById('drawerClose');
+    hamburger.addEventListener('click', () => { drawer.classList.add('open');    overlay.classList.add('active'); });
+    closeBtn .addEventListener('click', () => { drawer.classList.remove('open'); overlay.classList.remove('active'); });
+    overlay  .addEventListener('click', () => { drawer.classList.remove('open'); overlay.classList.remove('active'); });
+
+    /* ── Category rules (mirrors dashboard.html) ── */
+    const CAT_RULES = [
+      { key: 'electoral',    short: 'Electoral',      label: 'Political / Electoral',           color: '#c17f24', keywords: ['election','electoral','political','deepfake political','CM','BJP','Congress','RJD','TMC','SP ','MLA','MP ','poll','vote','campaign','defam'] },
+      { key: 'blackmail',    short: 'Blackmail',       label: 'Deepfake Blackmail / Sextortion', color: '#7ec8e3', keywords: ['blackmail','sextortion','obscene','morphed','suicide','extort','intimate','explicit','revenge'] },
+      { key: 'voice',        short: 'Voice Cloning',   label: 'Voice Cloning Scams',             color: '#c084fc', keywords: ['voice cloning','voice scam','cloned voice','AI voice','kidnap','ransom','emergency'] },
+      { key: 'fraud',        short: 'Financial Fraud', label: 'Investment / Financial Fraud',    color: '#f97316', keywords: ['fraud','investment','scam','lakh','crore','trading','fake app','stock','crypto','ponzi','trump hotel','phishing'] },
+      { key: 'arrest',       short: 'Digital Arrest',  label: 'Digital Arrest / Impersonation', color: '#4ade80', keywords: ['digital arrest','IPS','CBI','RBI','officer','deepfake IPS','pose as'] },
+      { key: 'surveillance', short: 'Surveillance',    label: 'Surveillance & Governance Risk',  color: '#94a3b8', keywords: ['facial recognition','CCTV','surveillance','attendance','biometric','AI tool','deep trace','traffic'] },
+      { key: 'identity',     short: 'Identity Theft',  label: 'Identity Theft / Social Harm',   color: '#fb923c', keywords: ['identity','fake profile','persona','fake account','impersonat','babydoll','fake social'] },
+      { key: 'communal',     short: 'Communal',        label: 'Communal Conflict / Misinfo',     color: '#f0abfc', keywords: ['communal','riot','violence','religion','caste','kumbh','misinformation','fake news','mislead','stampede'] },
+    ];
+
+    function classifyIncident(inc) {
+      const text = ((inc.title || '') + ' ' + (inc.summary || '')).toLowerCase();
+      for (const cat of CAT_RULES) {
+        if (cat.keywords.some(k => text.includes(k.toLowerCase()))) return cat;
+      }
+      return { key: 'other', short: 'Other', label: 'Other', color: '#6b748a' };
+    }
+
+    /* ── Build per-state stats from incidentsData (loaded via state.js) ── */
+    const stateStats  = {};
+    let   totalCount  = 0;
+
+    Object.entries(incidentsData).forEach(([key, incidents]) => {
+      const catMap = {};
+      incidents.forEach(inc => {
+        const cat = classifyIncident(inc);
+        if (!catMap[cat.key]) catMap[cat.key] = { ...cat, count: 0 };
+        catMap[cat.key].count++;
+      });
+
+      const sorted = [...incidents].sort((a, b) => {
+        const ya = (a.date || '').match(/\b(20\d{2})\b/);
+        const yb = (b.date || '').match(/\b(20\d{2})\b/);
+        return (yb ? +yb[1] : 0) - (ya ? +ya[1] : 0);
+      });
+
+      stateStats[key] = {
+        count:   incidents.length,
+        topCats: Object.values(catMap).sort((a, b) => b.count - a.count).slice(0, 3),
+        latest:  sorted[0] || null,
+      };
+      totalCount += incidents.length;
+    });
+
+    /* ── Map GeoJSON state name → data key ── */
+    const GEO_NAME_MAP = {
+      'Delhi':             'Haryana/ Delhi',
+      'Haryana':           'Haryana/ Delhi',
+      'Jammu and Kashmir': 'Jammu & Kashmir',
+      'Orissa':            'Odisha',
+      'Uttaranchal':       'Uttarakhand',
+    };
+    function getDataKey(geoName) {
+      if (!geoName) return null;
+      return GEO_NAME_MAP[geoName] || geoName;
+    }
+
+    /* ── Populate summary stats ── */
+    const maxCount = Math.max(...Object.values(stateStats).map(s => s.count));
+    const [topState, topStats] = Object.entries(stateStats).sort((a, b) => b[1].count - a[1].count)[0];
+
+    document.getElementById('legendMax').textContent = maxCount;
+
+    document.getElementById('mapStats').innerHTML = [
+      { num: totalCount,                       label: 'Total Incidents'               },
+      { num: Object.keys(stateStats).length,   label: 'States Covered'                },
+      { num: topStats.count,                   label: `Most Active: ${topState}`       },
+      { num: CAT_RULES.length,                 label: 'Harm Categories'               },
+    ].map(s => `
+      <div class="map-stat">
+        <div class="map-stat-num">${s.num}</div>
+        <div class="map-stat-label">${s.label}</div>
+      </div>
+    `).join('');
+
+    /* ── Category chips ── */
+    document.querySelector('.cat-legend').insertAdjacentHTML('beforeend',
+      CAT_RULES.map(c =>
+        `<span class="cat-chip" style="background:${c.color}" title="${c.label}">${c.short}</span>`
+      ).join('')
+    );
+
+    /* ── Tooltip ── */
+    const tooltip = document.getElementById('mapTooltip');
+
+    function showTooltip(event, d) {
+      const raw  = d.properties.ST_NM || d.properties.NAME_1 || d.properties.name || '';
+      const key  = getDataKey(raw);
+      const stats = key ? stateStats[key] : null;
+      const name  = key || raw;
+
+      let html = `<div class="tip-state">${name}</div>`;
+
+      if (stats && stats.count > 0) {
+        html += `<div class="tip-count"><strong>${stats.count}</strong> incident${stats.count !== 1 ? 's' : ''} documented</div>`;
+
+        if (stats.topCats.length) {
+          html += `<div class="tip-cats">` +
+            stats.topCats.map(c => `<span class="tip-cat" style="background:${c.color}">${c.short}</span>`).join('') +
+            `</div>`;
+        }
+
+        if (stats.latest) {
+          const t = stats.latest.title.length > 70
+            ? stats.latest.title.slice(0, 70) + '…'
+            : stats.latest.title;
+          html += `<div class="tip-latest"><strong>Latest:</strong> ${t}</div>`;
+        }
+
+        html += `<div class="tip-cta">Click to view all incidents →</div>`;
+      } else {
+        html += `<div class="tip-nodata">No incidents documented for this region</div>`;
+      }
+
+      tooltip.innerHTML = html;
+      tooltip.style.opacity = '1';
+      moveTooltip(event);
+    }
+
+    function moveTooltip(event) {
+      const tw = tooltip.offsetWidth  || 240;
+      const th = tooltip.offsetHeight || 130;
+      const vw = window.innerWidth;
+      const vh = window.innerHeight;
+      let left = event.clientX + 16;
+      let top  = event.clientY - 16;
+      if (left + tw > vw - 12) left = event.clientX - tw - 16;
+      if (top  + th > vh - 12) top  = event.clientY - th - 16;
+      if (top < 8) top = 8;
+      tooltip.style.left = left + 'px';
+      tooltip.style.top  = top  + 'px';
+    }
+
+    function hideTooltip() { tooltip.style.opacity = '0'; }
+
+    /* ── D3 choropleth ── */
+    const colorScale = d3.scaleSequential()
+      .domain([0, maxCount])
+      .interpolator(d3.interpolateRgb('#1a3a6b', '#f0a500'));
+
+    const GEO_URL = 'india_states.geojson';
+
+    d3.json(GEO_URL).then(geoData => {
+      const container = document.getElementById('mapContainer');
+      const W = container.clientWidth || 800;
+      const H = Math.round(W * 1.08);
+
+      const svg = d3.select('#mapContainer')
+        .html('')
+        .append('svg')
+        .attr('viewBox', `0 0 ${W} ${H}`)
+        .attr('width', '100%')
+        .style('display', 'block');
+
+      const projection = d3.geoMercator().fitSize([W, H - 10], geoData);
+      const pathGen    = d3.geoPath().projection(projection);
+
+      svg.selectAll('path')
+        .data(geoData.features)
+        .enter()
+        .append('path')
+        .attr('class', d => {
+          const key = getDataKey(d.properties.ST_NM || d.properties.NAME_1 || '');
+          return 'state-path' + (stateStats[key] ? '' : ' no-data');
+        })
+        .attr('d', pathGen)
+        .attr('fill', d => {
+          const key   = getDataKey(d.properties.ST_NM || d.properties.NAME_1 || '');
+          const stats = stateStats[key];
+          return stats ? colorScale(stats.count) : '#162540';
+        })
+        .attr('stroke', '#0b1426')
+        .attr('stroke-width', 0.7)
+        .on('mouseover', (event, d) => showTooltip(event, d))
+        .on('mousemove', (event)    => moveTooltip(event))
+        .on('mouseout',  ()         => hideTooltip())
+        .on('click', (event, d) => {
+          const key = getDataKey(d.properties.ST_NM || d.properties.NAME_1 || '');
+          if (key && stateStats[key]) {
+            window.location.href = `state.html?state=${encodeURIComponent(key)}`;
+          }
+        });
+
+    }).catch(() => {
+      document.getElementById('mapContainer').innerHTML = `
+        <div class="map-error">
+          <span style="font-size:1.5rem">⚠️</span>
+          <span>Could not load map data. Please check your internet connection.</span>
+        </div>`;
+    });
+  </script>
 </body>
 </html>

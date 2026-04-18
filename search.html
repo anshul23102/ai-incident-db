@@ -183,35 +183,44 @@
     </ul>
   </aside>
 
-  <header class="state-hero">
-    <div class="state-hero-inner">
-      <a href="index.html" class="back-btn">
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        All States
-      </a>
+  <header class="state-hero" style="text-align:center; padding-bottom:48px;">
+    <div class="state-hero-inner" style="align-items:center;">
+      <span class="section-eyebrow" style="margin-top:8px">Full-text Search</span>
       <h1 class="state-title">Search All Incidents</h1>
       <p class="state-subtitle">Search across every documented AI incident in India — by keyword, state, or topic</p>
+      <div class="global-search-wrap" style="margin-top:28px; width:100%; max-width:580px;">
+        <svg class="global-search-icon" viewBox="0 0 20 20" fill="none">
+          <circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.8"/>
+          <path d="M13 13l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+        <input type="text" id="globalSearch" class="global-search-input"
+          placeholder='Try "deepfake", "voice cloning", "Karnataka", "election"…'
+          autocomplete="off" autofocus />
+      </div>
     </div>
   </header>
 
   <main class="state-main">
-    <div class="global-search-wrap">
-      <svg class="global-search-icon" viewBox="0 0 20 20" fill="none">
-        <circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.8"/>
-        <path d="M13 13l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-      </svg>
-      <input type="text" id="globalSearch" class="global-search-input"
-        placeholder='Try "deepfake", "voice cloning", "Karnataka", "election"…'
-        autocomplete="off" autofocus />
-    </div>
-
     <p class="search-meta" id="searchMeta"></p>
     <div id="resultsRoot"></div>
   </main>
 
   <footer class="site-footer">
-    <p>B.Tech Project · IIIT Delhi · Dept. of Social Science & Humanities</p>
-    <p>Anshul Jain · Dhruv Kantroo · Siddhant Gautam · Sukhmani Kaur</p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-brand-name">AI Incident Database · India</span>
+        <p class="footer-brand-desc">Documenting AI-related harm across India from 2021 to 2025.</p>
+      </div>
+      <div class="footer-links">
+        <span class="footer-links-title">Explore</span>
+        <a href="index.html" class="footer-link">State Directory</a>
+        <a href="dashboard.html" class="footer-link">Dashboard</a>
+        <a href="timeline.html" class="footer-link">Timeline</a>
+        <a href="overall.html" class="footer-link">Interactive Map</a>
+        <a href="governance.html" class="footer-link">Governance</a>
+      </div>
+    </div>
+    <div class="footer-bottom">B.Tech Project · IIIT Delhi · Dept. of Social Science &amp; Humanities · Anshul Jain · Dhruv Kantroo · Siddhant Gautam · Sukhmani Kaur</div>
   </footer>
 
   <script src="state.js"></script>

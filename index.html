@@ -52,25 +52,47 @@
   <!-- HERO -->
   <header class="hero">
     <div class="hero-inner">
-      <div class="hero-eyebrow">Literature Review</div>
-      <h1 class="hero-title">AI Misuse Across<br><em>India's States</em></h1>
-      <p class="hero-sub">A documented state-wise record of AI-related harm — deepfakes, fraud, misinformation, and surveillance risks — from 2021 to 2025.</p>
+      <div class="hero-eyebrow">B.Tech Research · IIIT Delhi · 2025</div>
+      <h1 class="hero-title">
+        Mapping AI-related<br>harm across <em>India</em>
+      </h1>
+      <p class="hero-sub">A state-wise record of deepfakes, voice cloning scams, electoral fraud, financial scams, and surveillance risks — documented across 28 states from 2021 to 2025.</p>
       <div class="hero-stats">
-        <div class="stat"><strong>25+</strong><span>States covered</span></div>
+        <div class="stat"><strong id="cntTotal">–</strong><span>Incidents</span></div>
         <div class="stat-divider"></div>
-        <div class="stat"><strong>6</strong><span>Harm categories</span></div>
+        <div class="stat"><strong id="cntStates">29</strong><span>States</span></div>
         <div class="stat-divider"></div>
-        <div class="stat"><strong>2021–25</strong><span>Time period</span></div>
+        <div class="stat"><strong>8</strong><span>Harm types</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>2021–25</strong><span>Coverage</span></div>
       </div>
-      <a href="governance.html" class="central-gov-btn">
-        🏛️ View Central Government Governance Measures →
-      </a>
+      <div class="hero-actions">
+        <a href="dashboard.html" class="btn-primary">View Dashboard →</a>
+        <a href="overall.html" class="btn-secondary">🗺️ Interactive Map</a>
+        <a href="governance.html" class="btn-secondary">🏛️ Governance</a>
+      </div>
     </div>
     <div class="hero-grid-bg"></div>
   </header>
 
-  <!-- MAIN -->
+  <!-- HARM CATEGORIES SECTION -->
+  <section class="main-container" style="padding-bottom:0">
+    <div class="section-header">
+      <span class="section-eyebrow">Harm Taxonomy</span>
+      <h2 class="section-title">Types of AI-related harm documented</h2>
+      <p class="section-desc">Click a category to filter states by incident type</p>
+    </div>
+    <div class="cat-cards-grid" id="catCardsGrid"></div>
+    <div class="section-divider"></div>
+  </section>
+
+  <!-- STATE DIRECTORY -->
   <main class="main-container">
+    <div class="section-header">
+      <span class="section-eyebrow">State Directory</span>
+      <h2 class="section-title">Browse incidents by state</h2>
+    </div>
+
     <div class="controls-bar">
       <div class="search-wrap">
         <svg class="search-icon" viewBox="0 0 20 20" fill="none"><circle cx="8.5" cy="8.5" r="5.5" stroke="currentColor" stroke-width="1.8"/><path d="M13 13l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
@@ -110,46 +132,258 @@
       </select>
     </div>
 
+    <div class="filter-chips" id="filterChips">
+      <button class="filter-chip active" data-cat="">All</button>
+    </div>
+
     <ul id="stateList" class="state-grid">
-      <li data-state="Andhra Pradesh"><a href="state.html?state=Andhra%20Pradesh"><span class="state-name">Andhra Pradesh</span><span class="state-arrow">→</span></a></li>
-      <li data-state="Arunachal Pradesh"><a href="state.html?state=Arunachal%20Pradesh"><span class="state-name">Arunachal Pradesh</span><span class="state-arrow">→</span></a></li>
-      <li data-state="Assam"><a href="state.html?state=Assam"><span class="state-name">Assam</span><span class="state-arrow">→</span></a></li>
-      <li data-state="Bihar"><a href="state.html?state=Bihar"><span class="state-name">Bihar</span><span class="state-arrow">→</span></a></li>
-      <li data-state="Chhattisgarh"><a href="state.html?state=Chhattisgarh"><span class="state-name">Chhattisgarh</span><span class="state-arrow">→</span></a></li>
-      <li data-state="Goa"><a href="state.html?state=Goa"><span class="state-name">Goa</span><span class="state-arrow">→</span></a></li>
-      <li data-state="Gujarat"><a href="state.html?state=Gujarat"><span class="state-name">Gujarat</span><span class="state-arrow">→</span></a></li>
-      <li data-state="Haryana/ Delhi"><a href="state.html?state=Haryana%2F%20Delhi"><span class="state-name">Haryana / Delhi</span><span class="state-arrow">→</span></a></li>
-      <li data-state="Himachal Pradesh"><a href="state.html?state=Himachal%20Pradesh"><span class="state-name">Himachal Pradesh</span><span class="state-arrow">→</span></a></li>
-      <li data-state="Jharkhand"><a href="state.html?state=Jharkhand"><span class="state-name">Jharkhand</span><span class="state-arrow">→</span></a></li>
-      <li data-state="Jammu & Kashmir"><a href="state.html?state=Jammu%20%26%20Kashmir"><span class="state-name">Jammu & Kashmir</span><span class="state-arrow">→</span></a></li>
-      <li data-state="Karnataka"><a href="state.html?state=Karnataka"><span class="state-name">Karnataka</span><span class="state-arrow">→</span></a></li>
-      <li data-state="Kerala"><a href="state.html?state=Kerala"><span class="state-name">Kerala</span><span class="state-arrow">→</span></a></li>
-      <li data-state="Madhya Pradesh"><a href="state.html?state=Madhya%20Pradesh"><span class="state-name">Madhya Pradesh</span><span class="state-arrow">→</span></a></li>
-      <li data-state="Maharashtra"><a href="state.html?state=Maharashtra"><span class="state-name">Maharashtra</span><span class="state-arrow">→</span></a></li>
-      <li data-state="Manipur"><a href="state.html?state=Manipur"><span class="state-name">Manipur</span><span class="state-arrow">→</span></a></li>
-      <li data-state="Meghalaya"><a href="state.html?state=Meghalaya"><span class="state-name">Meghalaya</span><span class="state-arrow">→</span></a></li>
-      <li data-state="Mizoram"><a href="state.html?state=Mizoram"><span class="state-name">Mizoram</span><span class="state-arrow">→</span></a></li>
-      <li data-state="Nagaland"><a href="state.html?state=Nagaland"><span class="state-name">Nagaland</span><span class="state-arrow">→</span></a></li>
-      <li data-state="Odisha"><a href="state.html?state=Odisha"><span class="state-name">Odisha</span><span class="state-arrow">→</span></a></li>
-      <li data-state="Punjab"><a href="state.html?state=Punjab"><span class="state-name">Punjab</span><span class="state-arrow">→</span></a></li>
-      <li data-state="Rajasthan"><a href="state.html?state=Rajasthan"><span class="state-name">Rajasthan</span><span class="state-arrow">→</span></a></li>
-      <li data-state="Sikkim"><a href="state.html?state=Sikkim"><span class="state-name">Sikkim</span><span class="state-arrow">→</span></a></li>
-      <li data-state="Tamil Nadu"><a href="state.html?state=Tamil%20Nadu"><span class="state-name">Tamil Nadu</span><span class="state-arrow">→</span></a></li>
-      <li data-state="Telangana"><a href="state.html?state=Telangana"><span class="state-name">Telangana</span><span class="state-arrow">→</span></a></li>
-      <li data-state="Tripura"><a href="state.html?state=Tripura"><span class="state-name">Tripura</span><span class="state-arrow">→</span></a></li>
-      <li data-state="Uttar Pradesh"><a href="state.html?state=Uttar%20Pradesh"><span class="state-name">Uttar Pradesh</span><span class="state-arrow">→</span></a></li>
-      <li data-state="Uttarakhand"><a href="state.html?state=Uttarakhand"><span class="state-name">Uttarakhand</span><span class="state-arrow">→</span></a></li>
-      <li data-state="West Bengal"><a href="state.html?state=West%20Bengal"><span class="state-name">West Bengal</span><span class="state-arrow">→</span></a></li>
+      <li data-state="Andhra Pradesh"><a href="state.html?state=Andhra%20Pradesh"><span class="state-name">Andhra Pradesh</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="Arunachal Pradesh"><a href="state.html?state=Arunachal%20Pradesh"><span class="state-name">Arunachal Pradesh</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="Assam"><a href="state.html?state=Assam"><span class="state-name">Assam</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="Bihar"><a href="state.html?state=Bihar"><span class="state-name">Bihar</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="Chhattisgarh"><a href="state.html?state=Chhattisgarh"><span class="state-name">Chhattisgarh</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="Goa"><a href="state.html?state=Goa"><span class="state-name">Goa</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="Gujarat"><a href="state.html?state=Gujarat"><span class="state-name">Gujarat</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="Haryana/ Delhi"><a href="state.html?state=Haryana%2F%20Delhi"><span class="state-name">Haryana / Delhi</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="Himachal Pradesh"><a href="state.html?state=Himachal%20Pradesh"><span class="state-name">Himachal Pradesh</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="Jharkhand"><a href="state.html?state=Jharkhand"><span class="state-name">Jharkhand</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="Jammu & Kashmir"><a href="state.html?state=Jammu%20%26%20Kashmir"><span class="state-name">Jammu & Kashmir</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="Karnataka"><a href="state.html?state=Karnataka"><span class="state-name">Karnataka</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="Kerala"><a href="state.html?state=Kerala"><span class="state-name">Kerala</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="Madhya Pradesh"><a href="state.html?state=Madhya%20Pradesh"><span class="state-name">Madhya Pradesh</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="Maharashtra"><a href="state.html?state=Maharashtra"><span class="state-name">Maharashtra</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="Manipur"><a href="state.html?state=Manipur"><span class="state-name">Manipur</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="Meghalaya"><a href="state.html?state=Meghalaya"><span class="state-name">Meghalaya</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="Mizoram"><a href="state.html?state=Mizoram"><span class="state-name">Mizoram</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="Nagaland"><a href="state.html?state=Nagaland"><span class="state-name">Nagaland</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="Odisha"><a href="state.html?state=Odisha"><span class="state-name">Odisha</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="Punjab"><a href="state.html?state=Punjab"><span class="state-name">Punjab</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="Rajasthan"><a href="state.html?state=Rajasthan"><span class="state-name">Rajasthan</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="Sikkim"><a href="state.html?state=Sikkim"><span class="state-name">Sikkim</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="Tamil Nadu"><a href="state.html?state=Tamil%20Nadu"><span class="state-name">Tamil Nadu</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="Telangana"><a href="state.html?state=Telangana"><span class="state-name">Telangana</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="Tripura"><a href="state.html?state=Tripura"><span class="state-name">Tripura</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="Uttar Pradesh"><a href="state.html?state=Uttar%20Pradesh"><span class="state-name">Uttar Pradesh</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="Uttarakhand"><a href="state.html?state=Uttarakhand"><span class="state-name">Uttarakhand</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
+      <li data-state="West Bengal"><a href="state.html?state=West%20Bengal"><span class="state-name">West Bengal</span><div class="state-card-right"><span class="state-arrow">→</span></div></a></li>
     </ul>
 
     <p id="noResults" class="no-results" style="display:none;">No states match your search.</p>
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
-    <p>B.Tech Project · IIIT Delhi · Dept. of Social Science & Humanities</p>
-    <p>Anshul Jain · Dhruv Kantroo · Siddhant Gautam · Sukhmani Kaur</p>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-brand-name">AI Incident Database · India</span>
+        <p class="footer-brand-desc">A state-wise record of AI-related harm documented across India from 2021 to 2025, by researchers at IIIT Delhi.</p>
+      </div>
+      <div class="footer-links">
+        <span class="footer-links-title">Explore</span>
+        <a href="dashboard.html" class="footer-link">Dashboard & Charts</a>
+        <a href="timeline.html" class="footer-link">Incident Timeline</a>
+        <a href="overall.html" class="footer-link">Interactive Map</a>
+        <a href="governance.html" class="footer-link">Governance Tracker</a>
+        <a href="search.html" class="footer-link">Search Incidents</a>
+      </div>
+      <div class="footer-links">
+        <span class="footer-links-title">Research Team</span>
+        <span class="footer-link">Anshul Jain</span>
+        <span class="footer-link">Dhruv Kantroo</span>
+        <span class="footer-link">Siddhant Gautam</span>
+        <span class="footer-link">Sukhmani Kaur</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      B.Tech Project · IIIT Delhi · Dept. of Social Science & Humanities · Supervised by Suriya Krishna B S & Deepshikha Manohar
+    </div>
   </footer>
 
+  <script src="state.js"></script>
   <script src="script.js"></script>
+  <script>
+    /* ── Category rules ── */
+    const CAT_RULES = [
+      { key: 'electoral',    label: 'Electoral Misinfo',    icon: '🗳️', color: '#c17f24', rgb: '193,127,36',  keywords: ['election','electoral','political','deepfake political','CM','BJP','Congress','RJD','TMC','SP ','MLA','MP ','poll','vote','campaign','defam'] },
+      { key: 'blackmail',    label: 'Deepfake Blackmail',   icon: '🎭', color: '#7ec8e3', rgb: '126,200,227', keywords: ['blackmail','sextortion','obscene','morphed','suicide','extort','intimate','explicit','revenge'] },
+      { key: 'voice',        label: 'Voice Cloning Scams',  icon: '🎙️', color: '#c084fc', rgb: '192,132,252', keywords: ['voice cloning','voice scam','cloned voice','AI voice','kidnap','ransom','emergency'] },
+      { key: 'fraud',        label: 'Financial Fraud',      icon: '💸', color: '#f97316', rgb: '249,115,22',  keywords: ['fraud','investment','scam','lakh','crore','trading','fake app','stock','crypto','ponzi','trump hotel','phishing'] },
+      { key: 'arrest',       label: 'Digital Arrest',       icon: '🚔', color: '#4ade80', rgb: '74,222,128',  keywords: ['digital arrest','IPS','CBI','RBI','officer','deepfake IPS','pose as'] },
+      { key: 'surveillance', label: 'Surveillance Risks',   icon: '👁️', color: '#94a3b8', rgb: '148,163,184', keywords: ['facial recognition','CCTV','surveillance','attendance','biometric','AI tool','deep trace','traffic'] },
+      { key: 'identity',     label: 'Identity Theft',       icon: '🪪', color: '#fb923c', rgb: '251,146,60',  keywords: ['identity','fake profile','persona','fake account','impersonat','babydoll','fake social'] },
+      { key: 'communal',     label: 'Communal Misinfo',     icon: '⚡', color: '#f0abfc', rgb: '240,171,252', keywords: ['communal','riot','violence','religion','caste','kumbh','misinformation','fake news','mislead','stampede'] },
+    ];
+
+    function classifyIncident(inc) {
+      const text = ((inc.title || '') + ' ' + (inc.summary || '')).toLowerCase();
+      for (const cat of CAT_RULES) {
+        if (cat.keywords.some(k => text.includes(k.toLowerCase()))) return cat;
+      }
+      return { key: 'other', label: 'Other', icon: '📌', color: '#6b748a', rgb: '107,116,138' };
+    }
+
+    /* ── Build counts per state and per category ── */
+    const stateCounts = {};
+    const catCounts   = {};
+    const stateCats   = {};  // state → Set of cat keys
+
+    let totalIncidents = 0;
+    Object.entries(incidentsData).forEach(([state, incs]) => {
+      stateCounts[state] = incs.length;
+      totalIncidents += incs.length;
+      stateCats[state] = new Set();
+      incs.forEach(inc => {
+        const cat = classifyIncident(inc);
+        catCounts[cat.key] = (catCounts[cat.key] || 0) + 1;
+        stateCats[state].add(cat.key);
+      });
+    });
+
+    /* ── Hero: animated counter ── */
+    function animateCounter(el, target, dur = 1300) {
+      const t0 = performance.now();
+      (function tick(now) {
+        const p = Math.min((now - t0) / dur, 1);
+        el.textContent = Math.round((1 - Math.pow(1 - p, 3)) * target);
+        if (p < 1) requestAnimationFrame(tick);
+      })(performance.now());
+    }
+
+    const cntTotal  = document.getElementById('cntTotal');
+    const cntStates = document.getElementById('cntStates');
+
+    const heroObs = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) {
+        animateCounter(cntTotal,  totalIncidents);
+        animateCounter(cntStates, Object.keys(incidentsData).length);
+        heroObs.disconnect();
+      }
+    }, { threshold: 0.3 });
+    heroObs.observe(document.querySelector('.hero-stats'));
+
+    /* ── Hero: rotating word ── */
+    const rotWords = ['deepfakes', 'voice scams', 'election fraud', 'surveillance', 'financial fraud', 'identity theft', 'communal misinfo'];
+    let rotIdx = 0;
+    const rotEl = document.getElementById('rotWord');
+    setInterval(() => {
+      rotEl.style.opacity = '0';
+      rotEl.style.transform = 'translateY(-10px)';
+      setTimeout(() => {
+        rotIdx = (rotIdx + 1) % rotWords.length;
+        rotEl.textContent = rotWords[rotIdx];
+        rotEl.style.opacity = '1';
+        rotEl.style.transform = 'translateY(0)';
+      }, 220);
+    }, 2400);
+
+    /* ── Build category cards ── */
+    let activeCat = '';
+    const catGrid = document.getElementById('catCardsGrid');
+    const chips   = document.getElementById('filterChips');
+
+    CAT_RULES.forEach(cat => {
+      const count = catCounts[cat.key] || 0;
+
+      // Card
+      const card = document.createElement('div');
+      card.className = 'cat-card';
+      card.style.setProperty('--c-accent', cat.color);
+      card.style.setProperty('--c-accent-rgb', cat.rgb);
+      card.innerHTML = `
+        <span class="cat-card-icon">${cat.icon}</span>
+        <div class="cat-card-label">${cat.label}</div>
+        <div class="cat-card-meta">
+          <span class="cat-card-count">across states</span>
+          <span class="cat-card-num">${count}</span>
+        </div>`;
+      card.addEventListener('click', () => filterByCat(cat.key, card));
+      catGrid.appendChild(card);
+
+      // Chip
+      const chip = document.createElement('button');
+      chip.className = 'filter-chip';
+      chip.dataset.cat = cat.key;
+      chip.style.cssText = `border-color: rgba(${cat.rgb},0.3);`;
+      chip.textContent = cat.label;
+      chip.addEventListener('click', () => filterByCat(cat.key, null, chip));
+      chips.appendChild(chip);
+    });
+
+    function filterByCat(key, clickedCard, clickedChip) {
+      // Toggle off if same category clicked
+      if (activeCat === key) key = '';
+
+      activeCat = key;
+
+      // Update card active states
+      document.querySelectorAll('.cat-card').forEach((c, i) => {
+        c.classList.toggle('active-filter', CAT_RULES[i]?.key === key);
+      });
+
+      // Update chip active states
+      document.querySelectorAll('.filter-chip').forEach(c => {
+        c.classList.toggle('active', c.dataset.cat === key);
+      });
+      if (!key) document.querySelector('.filter-chip[data-cat=""]').classList.add('active');
+
+      // Filter state list
+      document.querySelectorAll('#stateList li[data-state]').forEach(li => {
+        const state = li.dataset.state;
+        const show = !key || (stateCats[state] && stateCats[state].has(key));
+        li.style.display = show ? '' : 'none';
+      });
+
+      const visible = document.querySelectorAll('#stateList li[data-state]:not([style*="none"])').length;
+      document.getElementById('noResults').style.display = visible === 0 ? '' : 'none';
+    }
+
+    // "All" chip
+    document.querySelector('.filter-chip[data-cat=""]').addEventListener('click', () => filterByCat(''));
+
+    /* ── Inject incident count badges into state cards ── */
+    document.querySelectorAll('#stateList li[data-state]').forEach(li => {
+      const count = stateCounts[li.dataset.state] || 0;
+      if (count > 0) {
+        const right = li.querySelector('.state-card-right');
+        const badge = document.createElement('span');
+        badge.className = 'incident-count-badge';
+        badge.textContent = count;
+        right.insertBefore(badge, right.firstChild);
+      }
+    });
+
+    /* ── Scroll reveal ── */
+    const revObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); revObs.unobserve(e.target); }
+      });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => revObs.observe(el));
+
+    /* ── Search & dropdown filter ── */
+    const searchInput = document.getElementById('searchInput');
+    const stateSelect = document.getElementById('stateSelect');
+    const stateList   = document.getElementById('stateList');
+    const noResults   = document.getElementById('noResults');
+
+    function applyFilters() {
+      const q = searchInput.value.trim().toLowerCase();
+      const sel = stateSelect.value.toLowerCase();
+      let visible = 0;
+      document.querySelectorAll('#stateList li[data-state]').forEach(li => {
+        const state = li.dataset.state.toLowerCase();
+        const catOk  = !activeCat || (stateCats[li.dataset.state] && stateCats[li.dataset.state].has(activeCat));
+        const textOk = !q || state.includes(q);
+        const selOk  = !sel || state === sel;
+        const show = catOk && textOk && selOk;
+        li.style.display = show ? '' : 'none';
+        if (show) visible++;
+      });
+      noResults.style.display = visible === 0 ? '' : 'none';
+    }
+
+    searchInput.addEventListener('input', applyFilters);
+    stateSelect.addEventListener('change', applyFilters);
+  </script>
 </body>
 </html>
