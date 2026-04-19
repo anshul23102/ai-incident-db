@@ -773,8 +773,6 @@
   document.getElementById('spClose').addEventListener('click', closePanel);
   document.getElementById('panelOverlay').addEventListener('click', closePanel);
 
-  const OCCUPIED_TERRITORIES = new Set(['Pakistan-administered Kashmir','Aksai Chin']);
-
   /* ── Load GeoJSON & draw ── */
   d3.json('india_states.geojson').then(geoData => {
     const container=document.getElementById('mapContainer');
@@ -783,50 +781,15 @@
     const svg=d3.select('#mapContainer').html('').append('svg')
       .attr('viewBox',`0 0 ${W} ${H}`).attr('width','100%').style('display','block');
 
-    /* Define hatch pattern for occupied territories */
-    const defs = svg.append('defs');
-    const pat = defs.append('pattern')
-      .attr('id','occupied-hatch').attr('patternUnits','userSpaceOnUse')
-      .attr('width',8).attr('height',8).attr('patternTransform','rotate(45)');
-    pat.append('rect').attr('width',8).attr('height',8).attr('fill','#1a2a40');
-    pat.append('line').attr('x1',0).attr('y1',0).attr('x2',0).attr('y2',8)
-      .attr('stroke','#2a3d58').attr('stroke-width',3);
-
-    /* Fit projection to core Indian states only — occupied-territory polygons
-       extend far outside India and would shrink the whole map if included. */
-    const coreFeatures = {
-      type: 'FeatureCollection',
-      features: geoData.features.filter(f => !OCCUPIED_TERRITORIES.has(f.properties.ST_NM))
-    };
-    const proj=d3.geoMercator().fitSize([W,H-10],coreFeatures);
+    /* Single projection fitted to all features (J&K extension is part of Indian territory) */
+    const proj=d3.geoMercator().fitSize([W,H-10],geoData);
     const path=d3.geoPath().projection(proj);
 
-    /* Layer 1 — occupied territories (hatched, drawn first so states sit on top) */
-    svg.selectAll('path.occupied')
-      .data(geoData.features.filter(f => OCCUPIED_TERRITORIES.has(f.properties.ST_NM)))
+    /* All state paths — J&K extension shares the same NAME_1 as J&K so colours match */
+    svgPaths=svg.selectAll('path.state')
+      .data(geoData.features)
       .enter().append('path')
-      .attr('class','state-path occupied')
-      .attr('d', path)
-      .attr('fill','url(#occupied-hatch)')
-      .attr('stroke','#2a4060').attr('stroke-width',0.8).attr('stroke-dasharray','4,3')
-      .style('opacity',0.85)
-      .on('mouseover', (event, d) => {
-        const name = d.properties.ST_NM;
-        const admin = name === 'Aksai Chin' ? 'China' : 'Pakistan';
-        tooltip.innerHTML = `
-          <div class="tip-state">${name}</div>
-          <div style="font-size:0.78rem;color:#f0a500;margin-top:3px">⚠ Occupied by ${admin}</div>
-          <div style="font-size:0.75rem;color:var(--text-3);margin-top:4px">Part of India's claimed J&K / Ladakh territory.<br>No incident data tracked for this region.</div>`;
-        tooltip.style.opacity='1'; moveTooltip(event);
-      })
-      .on('mousemove', e=>moveTooltip(e))
-      .on('mouseout', ()=>hideTooltip());
-
-    /* Layer 2 — core Indian states (top layer, interactive) */
-    svgPaths=svg.selectAll('path.normal')
-      .data(geoData.features.filter(f => !OCCUPIED_TERRITORIES.has(f.properties.ST_NM)))
-      .enter().append('path')
-      .attr('class','state-path normal').attr('d',path)
+      .attr('class','state-path state').attr('d',path)
       .attr('stroke','#0b1426').attr('stroke-width',0.7)
       .on('mousemove', e=>moveTooltip(e))
       .on('mouseout',  ()=>hideTooltip());
