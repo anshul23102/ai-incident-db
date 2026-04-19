@@ -798,7 +798,16 @@
     pat.append('line').attr('x1',0).attr('y1',0).attr('x2',0).attr('y2',8)
       .attr('stroke','#2a3d58').attr('stroke-width',3);
 
-    const proj=d3.geoMercator().fitSize([W,H-10],geoData);
+    /* Fit projection to core Indian states only — occupied-territory polygons
+       extend the bbox too far and would shrink the whole map. */
+    const coreFeatures = {
+      type: 'FeatureCollection',
+      features: geoData.features.filter(f =>
+        !OCCUPIED_TERRITORIES.has(f.properties.ST_NM) &&
+        f.properties.ST_NM !== 'Ladakh'
+      )
+    };
+    const proj=d3.geoMercator().fitSize([W,H-10],coreFeatures);
     const path=d3.geoPath().projection(proj);
 
     /* Draw occupied territories first (below normal states) */
