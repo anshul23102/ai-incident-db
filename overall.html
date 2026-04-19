@@ -793,20 +793,15 @@
       .attr('stroke','#2a3d58').attr('stroke-width',3);
 
     /* Fit projection to core Indian states only — occupied-territory polygons
-       extend the bbox too far and would shrink the whole map. */
+       extend far outside India and would shrink the whole map if included. */
     const coreFeatures = {
       type: 'FeatureCollection',
-      features: geoData.features.filter(f =>
-        !OCCUPIED_TERRITORIES.has(f.properties.ST_NM) &&
-        f.properties.ST_NM !== 'Ladakh'
-      )
+      features: geoData.features.filter(f => !OCCUPIED_TERRITORIES.has(f.properties.ST_NM))
     };
     const proj=d3.geoMercator().fitSize([W,H-10],coreFeatures);
     const path=d3.geoPath().projection(proj);
 
-    const BACKGROUND_STATES = new Set([...OCCUPIED_TERRITORIES, 'Ladakh']);
-
-    /* Layer 1 — occupied territories (hatched, bottom-most) */
+    /* Layer 1 — occupied territories (hatched, drawn first so states sit on top) */
     svg.selectAll('path.occupied')
       .data(geoData.features.filter(f => OCCUPIED_TERRITORIES.has(f.properties.ST_NM)))
       .enter().append('path')
@@ -827,22 +822,9 @@
       .on('mousemove', e=>moveTooltip(e))
       .on('mouseout', ()=>hideTooltip());
 
-    /* Layer 2 — Ladakh (background, rendered BEFORE core states so states sit on top) */
-    svg.selectAll('path.ladakh-bg')
-      .data(geoData.features.filter(f => f.properties.ST_NM === 'Ladakh'))
-      .enter().append('path')
-      .attr('class','state-path ladakh-bg').attr('d', path)
-      .attr('fill','#162540').attr('stroke','#0b1426').attr('stroke-width',0.7)
-      .on('mouseover', (event, d) => {
-        tooltip.innerHTML = `<div class="tip-state">Ladakh</div><div style="font-size:0.8rem;color:var(--text-3);margin-top:3px">Union Territory · No incidents tracked</div>`;
-        tooltip.style.opacity='1'; moveTooltip(event);
-      })
-      .on('mousemove', e=>moveTooltip(e))
-      .on('mouseout', ()=>hideTooltip());
-
-    /* Layer 3 — core Indian states (top layer, interactive) */
+    /* Layer 2 — core Indian states (top layer, interactive) */
     svgPaths=svg.selectAll('path.normal')
-      .data(geoData.features.filter(f => !BACKGROUND_STATES.has(f.properties.ST_NM)))
+      .data(geoData.features.filter(f => !OCCUPIED_TERRITORIES.has(f.properties.ST_NM)))
       .enter().append('path')
       .attr('class','state-path normal').attr('d',path)
       .attr('stroke','#0b1426').attr('stroke-width',0.7)
