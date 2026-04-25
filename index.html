@@ -60,7 +60,7 @@
       <div class="hero-stats">
         <div class="stat"><strong id="cntTotal">–</strong><span>Incidents</span></div>
         <div class="stat-divider"></div>
-        <div class="stat"><strong id="cntStates">29</strong><span>States</span></div>
+        <div class="stat"><strong id="cntStates">28</strong><span>States</span></div>
         <div class="stat-divider"></div>
         <div class="stat"><strong>8</strong><span>Harm types</span></div>
         <div class="stat-divider"></div>
@@ -255,7 +255,7 @@
     const heroObs = new IntersectionObserver(entries => {
       if (entries[0].isIntersecting) {
         animateCounter(cntTotal,  totalIncidents);
-        animateCounter(cntStates, Object.keys(incidentsData).length);
+        animateCounter(cntStates, 28);
         heroObs.disconnect();
       }
     }, { threshold: 0.3 });
