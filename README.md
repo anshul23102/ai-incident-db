@@ -95,7 +95,7 @@ All incidents are sourced from verified, publicly available sources including:
 Department of Social Science and Humanities
 
 - Anshul Jain (2023102)
-- Dhruv Kantroo (2022478)
+- Dhruv Kantroo (2022167)
 - Sukhmani Kaur 
 - Siddhant Gautam (2021100)
 
