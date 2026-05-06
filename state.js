@@ -137,6 +137,12 @@ If any fake or misleading AI post is found on a party’s official page, it must
 The EC said it will closely monitor social media and take strict action if anyone violates these rules.`,
     link: "https://economictimes.indiatimes.com/news/elections/assembly-elections/bihar/deep-threat-what-the-election-commission-wants-parties-and-voters-to-know-about-ai-messages-ahead-of-bihar-polls-2025/articleshow/124789631.cms"
   },
+    {
+    title: "Man Arrested for AI-Generated Deepfakes of President Murmu and PM Modi — Muzaffarpur",
+    date: "Jan 2026",
+    summary: `Pramod Kumar Raj of Muzaffarpur, Bihar, was arrested for creating and circulating AI-generated deepfake videos and audio clips with fabricated speeches attributed to President Droupadi Murmu and Prime Minister Narendra Modi. Muzaffarpur police seized his mobile phone for forensic analysis and formed a Special Investigation Team (SIT) to determine the content's reach, platforms used, the accused's motive, and whether accomplices were involved. Case filed under the IT Act. Authorities described it as a direct threat to national security and democratic stability.`,
+    link: "https://the420.in/ai-deepfake-arrest-muzaffarpur-bihar-president-pm-impersonation/"
+  },
 
   {
     title: "High Court Orders Removal of AI-Generated Video",
@@ -416,16 +422,7 @@ AP CID has registered a criminal case and warned that creating or sharing such d
     link: "https://timesofindia.indiatimes.com/city/vijayawada/ap-government-warns-against-circulation-of-ai-videos-targeting-naidu/articleshow/123791915.cms?utm_source=chatgpt.com"
 
   },
-  {
-    title: "AI for Defense (But Also Showing the Risk)",
-    date: "Jun 20, 2025",
-    summary: `Airtel in Andhra Pradesh has rolled out an AI-powered fraud detection system to protect users from online scams. 
-It scans over 1 billion URLs every day and can block harmful or malicious websites in less than 100 milliseconds.
-If a user clicks a suspicious link, the system redirects them to a warning page saying: “Blocked! Airtel found this site dangerous!”
-The platform gives fraud warnings in local languages, including Telugu, making it easier for people across Andhra Pradesh to understand. 
-This service is free and works silently in the background — users don’t need to install anything.`,
-    link: "https://www.deccanchronicle.com/southern-states/andhra-pradesh/airtel-cracks-down-on-online-fraud-in-andhra-pradesh-shields-8-million-users-in-real-time-1886462"
-  },
+
   {
     title: "Deepfake Video in Vijayawada",
     date: "Mar 7, 2025",
@@ -434,8 +431,7 @@ This service is free and works silently in the background — users don’t need
     The Andhra Pradesh Crime Investigation Department (CID) has registered a case against those who created and circulated the deepfake content.
     Authorities emphasise that creating or forwarding such fake videos is a criminal offence and have urged citizens not to believe or share unverified material.
     The government also appealed for responsible use of social media and for citizens to verify content before forwarding it`,
-    link: "https://newschecker.in/ai-deepfake/elon-musks-deepfake-videos-on-bjp-rss-conspiracy-in-arunachal-pradesh-debunked"
-
+    link: "https://timesofindia.indiatimes.com/city/vijayawada/ap-government-warns-against-circulation-of-ai-videos-targeting-naidu/articleshow/123791915.cms"
   },
   
   {
@@ -449,24 +445,7 @@ During the police raid, they seized: ₹41.20 lakh cash, 8 mobile phones, SIM ca
 Police also suspect a private bank manager helped them run the scam`,
 link: "https://www.ndtv.com/andhra-pradesh-news/andhra-techie-invested-rs-1-74-crore-in-fake-apps-cybercrime-gang-busted-9001535"
   },
-  {
-    title: "Cyber Fraud / Impersonation",
-    date: "May 23, 2025",
-    summary: `A fraud gang used AI‑generated video calls to impersonate Andhra Pradesh CM N. Chandrababu Naidu and TDP leader Devineni Uma Maheswara Rao
-Around 18 TDP leaders from Telangana believed the fake video calls were real, thinking they had been personally invited by Naidu.
-One of the TDP leaders sent ₹35,000 after getting a fake call showing Uma speaking to him.
-The fraudsters promised “tickets” for local body elections and said Naidu would meet them personally.
-Police have registered a case under cybercrime laws and are investigating the gang, which appears to be led by someone from Eluru. `,
-link: "https://www.business-standard.com/pti-stories/national/andhra-police-bust-international-cyber-fraud-syndicate-33-held-125052300626_1.html"
-  },
-  {
-    title: "AI-Driven Fake News",
-    date: "16 Oct 2025",
-    summary: `The Andhra Pradesh DGP, Harish Kumar Gupta, has warned that people misusing social media to spread fake news or provocative AI-generated content will face strict legal action.
-The police are monitoring social media continuously to catch those creating or sharing misleading content meant to stir up communal, religious, or regional tensions. 
-If someone is found making or sharing fake content — especially with AI — the police can register cases under the Bharatiya Nyaya Sanhita (BNS).`,
-    link: "https://www.newindianexpress.com/states/andhra-pradesh/2025/Oct/16/andhra-police-to-act-tough-against-fake-news-ai-content-misuse"
-  },
+
   {
     title: "Deepfake video calls / impersonation",
     date: "Oct 11, 2025",
@@ -477,20 +456,6 @@ The fraudsters promised “tickets” for local body elections and said Naidu wo
 Police have registered a case under cybercrime laws and are investigating the gang, which appears to be led by someone from Eluru. `,
     link: "https://www.thehansindia.com/andhra-pradesh/conmen-dupe-tdp-leaders-with-ai-fake-videos-of-cm-1013693"
 
-  }
-  ,
-  {
-    title: "Man Arrested for AI-Generated Deepfakes of President Murmu and PM Modi — Muzaffarpur",
-    date: "Jan 2026",
-    summary: `Pramod Kumar Raj of Muzaffarpur, Bihar, was arrested for creating and circulating AI-generated deepfake videos and audio clips with fabricated speeches attributed to President Droupadi Murmu and Prime Minister Narendra Modi. Muzaffarpur police seized his mobile phone for forensic analysis and formed a Special Investigation Team (SIT) to determine the content's reach, platforms used, the accused's motive, and whether accomplices were involved. Case filed under the IT Act. Authorities described it as a direct threat to national security and democratic stability.`,
-    link: "https://the420.in/ai-deepfake-arrest-muzaffarpur-bihar-president-pm-impersonation/"
-  }
-,
-  {
-    title: "Aadhaar Biometric Fingerprint Cloning Gang Busted — 440 Victims, Kadapa",
-    date: "Feb 2023",
-    summary: `Police in Kadapa, Andhra Pradesh, arrested key members of a criminal gang that defrauded 440 people across Andhra Pradesh and Telangana using cloned Aadhaar biometrics. The gang harvested fingerprint data from land registry websites and replicated them onto silicon or rubber fake fingers using polymer liquid and photographic enhancement. These were used to perform unauthorised withdrawals through the Aadhaar-Enabled Payments System (AePS) — bypassing two-factor authentication without the account holder's knowledge. Police seized biometric cloning equipment including temperature modulators, polymer liquid, rubber thumb impression printers, and unauthorised biometric machines. The gang was linked to 128 fraud cases across multiple states. Investigation led by SP K.K.N. Anburajan.`,
-    link: "https://www.biometricupdate.com/202302/indian-police-nab-fraudsters-who-cloned-fingerprints-to-spoof-aadhaar"
   }
 
 ],
