@@ -669,28 +669,7 @@ link : 'https://www.boomlive.in/fact-check/viral-video-rally-protest-manipur-cla
     { title: "TSPSC paper leak: AI ChatGPT and bluetooth used to cheat in exam", date: "May 30, 2023",
       summary : `one of the accused allegedly used ChatGPT and electronic devices to share answers with the candidates appearing in at least two exams conducted for recruitment in government departments.`,
       link : "https://www.thenewsminute.com/telangana/tspsc-paper-leak-ai-chatgpt-and-bluetooth-used-cheat-exam-177862"
-     },
-    {
-      title: "TRUST AICS 2025 Conference — Experts Warn on AI Weaponisation",
-      date: "Aug 31, 2025",
-      type: "Policy",
-      description: "At Telangana's TRUST AICS 2025 conference on AI and cybersecurity, officials warned that AI is being weaponised by fraudsters. The Cyber Security Bureau reported handling approximately 250 cybercrime complaints daily, prompting calls for expanded state capacity and inter-agency coordination.",
-      link: "https://timesofindia.indiatimes.com/city/hyderabad/ai-double-edged-sword-becomes-new-tool-for-fraudsters-say-experts/articleshow/123606410.cms"
-    },
-    {
-      title: "AI Advisory Council — 'AI-Powered Telangana' Strategy (2024–2027)",
-      date: "Oct 03, 2024",
-      type: "Policy Framework",
-      description: "Telangana released its 'AI-Powered Telangana' strategy paper (September 2024) — a three-year roadmap targeting 20% government workforce productivity boost and improved public service delivery for 10+ million citizens. An AI Advisory Council under the CM's Office functions as 'NITI Aayog for AI in Telangana.' All 35 government departments must appoint trained AI nodal officers, with AI curriculum in 100% senior secondary schools by 2027 and 5 lakh professionals trained.",
-      link: "https://www.cio.inc/government-telangana-develops-ambitious-ai-strategy-a-26438"
-    },
-    {
-      title: "Telangana AI Mission (T-AIM) with NASSCOM",
-      date: "Jul 12, 2021",
-      type: "Partnership",
-      description: "Telangana established T-AIM (Telangana AI Mission) in partnership with NASSCOM, driving execution across six pillars of the state's AI Framework. In July 2025, Telangana launched India's first state-led Digital Public Infrastructure (DPI) for AI — an open-source, privacy-compliant platform democratising AI access for startups, researchers, and citizens across healthcare, agriculture, education, and governance, alongside the TGDeX data exchange platform.",
-      link: "https://nasscom.in/knowledge-center/publications/state-artificial-intelligence-ecosystem-telangana"
-    }
+     }
   ],
   "Uttar Pradesh": [
    {
@@ -828,6 +807,30 @@ link : 'https://www.boomlive.in/fact-check/viral-video-rally-protest-manipur-cla
 // GOVERNANCE DATA — state-wise policy & legal responses
 // ─────────────────────────────────────────────────────────
 const governanceData = {
+
+  "Telangana": [
+    {
+      title: "TRUST AICS 2025 Conference — Experts Warn on AI Weaponisation",
+      date: "Aug 31, 2025",
+      type: "Policy",
+      description: "At Telangana's TRUST AICS 2025 conference on AI and cybersecurity, officials warned that AI is being weaponised by fraudsters. The Cyber Security Bureau reported handling approximately 250 cybercrime complaints daily, prompting calls for expanded state capacity and inter-agency coordination.",
+      link: "https://timesofindia.indiatimes.com/city/hyderabad/ai-double-edged-sword-becomes-new-tool-for-fraudsters-say-experts/articleshow/123606410.cms"
+    },
+    {
+      title: "AI Advisory Council — 'AI-Powered Telangana' Strategy (2024–2027)",
+      date: "Oct 03, 2024",
+      type: "Policy Framework",
+      description: "Telangana released its 'AI-Powered Telangana' strategy paper (September 2024) — a three-year roadmap targeting 20% government workforce productivity boost and improved public service delivery for 10+ million citizens. An AI Advisory Council under the CM's Office functions as 'NITI Aayog for AI in Telangana.' All 35 government departments must appoint trained AI nodal officers, with AI curriculum in 100% senior secondary schools by 2027 and 5 lakh professionals trained.",
+      link: "https://www.cio.inc/government-telangana-develops-ambitious-ai-strategy-a-26438"
+    },
+    {
+      title: "Telangana AI Mission (T-AIM) with NASSCOM",
+      date: "Jul 12, 2021",
+      type: "Partnership",
+      description: "Telangana established T-AIM (Telangana AI Mission) in partnership with NASSCOM, driving execution across six pillars of the state's AI Framework. In July 2025, Telangana launched India's first state-led Digital Public Infrastructure (DPI) for AI — an open-source, privacy-compliant platform democratising AI access for startups, researchers, and citizens across healthcare, agriculture, education, and governance, alongside the TGDeX data exchange platform.",
+      link: "https://nasscom.in/knowledge-center/publications/state-artificial-intelligence-ecosystem-telangana"
+    }
+  ],
 
   "Meghalaya": [
     {
