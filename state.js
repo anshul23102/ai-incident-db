@@ -144,33 +144,7 @@ Police said this scam reflects how social media is being misused to run financia
 
 "Assam": [
   {
-    title: "AI-Generated Persona Used for Fraud",
-    date: "22 July 2025",
-    summary: `There was a hugely popular Instagram profile called "Babydoll Archi", which many believed to be a young Assamese influencer.
-In reality, that persona was completely fake — made by her ex-boyfriend, who is a mechanical engineer
-He used old photos of her and AI tools (like Midjourney, Desire AI) to create very realistic but false videos and images.
-The fake profile posted "travel" videos, dance reels, bold/sensual content — even an image of her with adult actress Kendra Lust. 
-Experts say this is a powerful example of how AI can be used to steal someone’s identity and cause serious emotional and social harm. `,
-    link: "https://www.eyerys.com/articles/timeline/she-doesnt-exist-damage-real-babydoll-archi-and-inside-indias-deefake-porn-crisis?page=10#event-a-href-articles-timeline-oldest-living-person-frequently-uses-twitterthe-oldest-living-person-frequently-uses-twitter-to-share-secrets-of-her-long-life-a"
-
-
-  },
-  // {
-  //   title: "-",
-  //   date: "-"
-  // },
-  {
-    title: "Morphed pic using AI",
-    date: "Jul 14, 2025",
-    summary: `A mechanical engineer from the Tinsukia district in Assam was arrested by the Dibrugarh Police for using AI tools to create and circulate morphed explicit images of a woman
-    The pictures were then shared online, making it look like the woman was part of the adult film industry.
-    The man reportedly made about ₹10 lakh by posting and selling these fake images on paid websites.
-    A case has been filed under laws related to cybercrime, defamation, and privacy violation.
-    The incident shocked people in Assam and showed how AI can be misused to harm someone’s image and dignity.`,
-    link: "https://timesofindia.indiatimes.com/city/guwahati/tinsukia-techie-held-for-creating-circulating-morphed-pics-using-ai/articleshow/122422410.cms"
-  },
-  {
-    title: "Assam-Based Influencer 'Dhunu Joni' AI Body-Swap Deepfake Controversy",
+    title: "Assam-Based Influencer ‘Dhunu Joni’ AI Body-Swap Deepfake Controversy",
     date: "Nov 2025",
     summary: `An Assam-based social media influencer known as Dhunu Joni became the subject of a deepfake controversy in November 2025, when a clip allegedly created using AI body-swap technology was widely circulated.
 Reports from multiple fact-checking outlets suggested the footage was AI-generated rather than authentic. The influencer subsequently deactivated all her social media accounts amid the controversy and harassment.
@@ -178,25 +152,11 @@ The case was part of a broader wave of AI-generated MMS scandals targeting women
     link: "https://zeenews.india.com/viral/year-ender-2025-viral-videos-19-minute-mms-leaks-digital-privacy-2999174.html"
   },
   {
-    title: "7,621 Cybercrime Complaints in Assam — Highest in Northeast India",
-    date: "2023 (documented 2024)",
-    summary: `Assam recorded 7,621 cybercrime complaints in 2023 — the highest among all northeastern states — involving ₹3,441.8 lakh. A NIELIT cybersecurity conference held in Guwahati in November 2025 specifically flagged AI-driven fraud as a major and growing component of these cases.
-Microsoft cybersecurity experts at the conference noted that India lost ₹22,845 crore to cybercrime in 2024, with AI-enabled attacks being a significant driver. The average cost of a data breach in India in 2025 reached ₹22 crore — the highest on record.`,
-    link: "https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2003158&reg=3&lang=2#:~:text=A%20toll%2Dfree%20Helpline%20number%20%271930%27%20has%20been,get%20assistance%20in%20lodging%20online%20cyber%20complaints."
-  },
-  {
     title: "432 AI-Generated Posts Flagged During Assam State Elections",
     date: "Nov 2025",
-    summary: `During the Assam assembly bypolls in late 2025, the Election Commission's monitoring cell flagged 432 individual pieces of content identified as AI-generated or heavily manipulated. The content ranged from deepfake videos of state politicians to synthetic news images designed to inflame caste and religious tensions. Assam Police's Cyber Crime unit filed FIRs against seven individuals linked to the disinformation operation, two of whom were found to have used commercial AI video generation tools registered to fake accounts. The scale of AI-driven electoral interference was the largest documented in any northeastern state to date.`,
+    summary: `During the Assam assembly bypolls in late 2025, the Election Commission’s monitoring cell flagged 432 individual pieces of content identified as AI-generated or heavily manipulated. The content ranged from deepfake videos of state politicians to synthetic news images designed to inflame caste and religious tensions. Assam Police’s Cyber Crime unit filed FIRs against seven individuals linked to the disinformation operation, two of whom were found to have used commercial AI video generation tools registered to fake accounts. The scale of AI-driven electoral interference was the largest documented in any northeastern state to date.`,
     link: "https://scroll.in/latest/1091949/ahead-of-assam-polls-ai-generated-disinformation-targeted-muslims-state-congress-chief-study"
   },
-  {
-    title: "Babydoll Archi Deepfake Revenge Porn Case — Perpetrator Arrested, Tinsukia",
-    date: "Jul 2024",
-    summary: `A self-taught AI enthusiast and mechanical engineer from Tinsukia district, Assam, created a fake social media persona called "Babydoll Archi" as an act of revenge against a woman named Sanchi (name changed). He used AI image generation tools — including the platform Dzine — to morph Sanchi's real photographs into AI-generated explicit images and videos, then circulated them under the fake profile. Investigators traced his address in Tinsukia and arrested him on July 12, 2024. He was charged with sexual harassment, distribution of obscene material, defamation, forgery with intent to harm reputation, and cheating by personification. One of the first documented arrests in Assam specifically for AI-generated deepfake revenge pornography.`,
-    link: "https://www.newsbytesapp.com/news/science/indian-woman-targeted-in-deepfake-erotica/story"
-  }
-
 ],
 
 "Goa": [
@@ -1214,13 +1174,6 @@ const governanceData = {
       type: "Law Enforcement",
       description: "Assam recorded 7,621 cybercrime complaints involving ₹3,441.8 lakh through the MHA's Citizen Financial Cyber Fraud Reporting and Management System in 2023 — the highest among all northeastern states. The system enables real-time coordination between police, banks, and payment platforms to freeze fraudulent transactions within the golden hour. Assam Police Cyber Cell coordinates with I4C to recover funds lost to AI-enabled phishing, fake investment apps, and voice cloning scams.",
       link: "https://www.sentinelassam.com/topheadlines/assam-7621-cases-of-cyber-fraud-in-2023"
-    },
-    {
-      title: "Tinsukia Techie Arrested for AI-Morphed Explicit Images",
-      date: "Jul 14, 2025",
-      type: "Law Enforcement",
-      description: "Dibrugarh Police arrested a mechanical engineer for using AI tools to create and circulate morphed explicit images of a woman, selling them on paid websites for approximately ₹10 lakh. Cases were registered under cybercrime, defamation, and privacy violation laws — one of the first such arrests in North-East India.",
-      link: "https://timesofindia.indiatimes.com/city/guwahati/tinsukia-techie-held-for-creating-circulating-morphed-pics-using-ai/articleshow/122422410.cms"
     },
     {
       title: "Assam Budget 2025 — India's First Dedicated AI Anti-Deepfake Cybercrime Unit",
