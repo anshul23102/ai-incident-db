@@ -840,24 +840,17 @@ link : 'https://www.boomlive.in/fact-check/viral-video-rally-protest-manipur-cla
 
 "Himachal Pradesh": [
   {
-    title: "Cyber fraudsters lure Himachal Pradesh's elderly men into honey trap",
+    title: "Cyber fraudsters lure Himachal Pradesh’s elderly men into honey trap",
     date: "Mar 28, 2022",
     summary: `Cyber fraudsters ran an AI-aided "honeytrap" extortion scheme. They engaged elderly men on WhatsApp, recorded video chats and digitally morphed victims’ faces into pornographic clips Voice‑modulation apps were also used to mimic women’s voices The scammers then blackmailed the victims for money, extorting lakhs of rupees.`,
     link:"https://www.tribuneindia.com/news/himachal/cyber-fraudsters-target-himachal-pradeshs-elderly-men-381307/#:~:text=The%20police%20said%20in%20some,being%20used%20to%20receive%20payments"
   },
   {
-    title: "Himachal Pradesh Records 18,706 Cybercrime Complaints — 52% Rise Driven by AI Fraud",
-    date: "2024",
-    summary: `Himachal Pradesh Police recorded 18,706 cybercrime complaints in 2024 — a 52% increase over 2023 — with AI-enhanced fraud categorised as the dominant driver. The surge was concentrated in digital arrest scams (1,847 cases), deepfake investment fraud (2,314 cases), and voice-cloning blackmail. Shimla, Kangra, and Mandi districts accounted for the majority of complaints. The Himachal Pradesh Cyber Crime Unit recovered ₹12.3 crore through rapid response fund-freeze actions for 892 victims.`,
-    link: "https://www.tribuneindia.com/news/himachal/himachal-sees-surge-in-cybercrimes-18706-complaints-in-2025/"
+    title: "FIR Filed for AI-Generated Obscene Profiles of Female IAS Officer",
+    date: "Nov 10, 2025",
+    summary: `Shimla Police registered a case under the Bharatiya Nyaya Sanhita and IT Act after a suspect created fake Facebook profiles posing as a female SDM (Sub-Divisional Magistrate) and posted AI-generated obscene images to harass and defame her.`,
+    link: "https://www.tribuneindia.com/news/himachal/one-booked-for-creating-fake-social-media-accounts-of-sdm/"
   },
-  {
-    title: "135 Crypto Fraud Cases in Himachal Pradesh — AI-Generated Platforms Lure Mountain Investors",
-    date: "2024",
-    summary: `Himachal Pradesh police registered 135 cryptocurrency fraud cases in 2024, with victims losing ₹28.6 crore to AI-generated fake crypto trading platforms. The platforms used deepfake video endorsements of prominent businesspeople and politicians to establish credibility, with AI chatbots simulating real-time portfolio management. Victims from Dharamsala, Solan, and Palampur — including retired government employees and teachers — were disproportionately targeted. Police issued an advisory specifically warning about AI-generated crypto scheme promotions distributed via YouTube and Telegram.`,
-    link: "http://himachalpr.gov.in/OneNews.aspx?Language=1&ID=31992#:~:text=I%20am%20observing%20that%20complaints,assured%20of%20every%20possible%20assistance."
-  }
-
 ],
 
 "Jharkhand": [
@@ -1253,13 +1246,6 @@ const governanceData = {
       type: "Judicial Action",
       description: "The Himachal Pradesh High Court granted bail to a fruit vendor charged under the new sedition law for sharing an AI-generated image labelling PM Modi as 'Pakistan Zindabad'. The court ruled that praising another country does not amount to sedition — setting an important limit on state overreach in AI content prosecution.",
       link: "https://thewire.in/law/pakistan-zindabad-denouncing-india-is-not-sedition-himachal-pradesh-high-court"
-    },
-    {
-      title: "FIR Filed for AI-Generated Obscene Profiles of Female IAS Officer",
-      date: "Nov 10, 2025",
-      type: "Law Enforcement",
-      description: "Shimla Police registered a case under the Bharatiya Nyaya Sanhita and IT Act after a suspect created fake Facebook profiles posing as a female SDM (Sub-Divisional Magistrate) and posted AI-generated obscene images to harass and defame her.",
-      link: "https://www.tribuneindia.com/news/himachal/one-booked-for-creating-fake-social-media-accounts-of-sdm/"
     },
     {
       title: "Himachal Pradesh Plans 650-Bigha Cyber City in Solan for AI-Driven Enterprises",
