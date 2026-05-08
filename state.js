@@ -218,18 +218,58 @@ Significance: The case is a clear example of the misuse of AI technology (deepfa
     link: "https://timesofindia.indiatimes.com/city/vijayawada/ap-government-warns-against-circulation-of-ai-videos-targeting-naidu/articleshow/123791915.cms"
 
   },
-  
+   {
+    "title": "Scammers Used AI-Generated Video of Chandrababu Naidu for Investment Fraud",
+    "date": "2025-07-17",
+    "summary": "Cybercriminals circulated an AI-generated deepfake video of Andhra Pradesh Chief Minister Chandrababu Naidu promoting a fake investment scheme promising massive returns. State officials warned citizens about the fraudulent scam and misuse of AI-generated political impersonation.",
+    "link": "https://www.thestatesman.com/india/scammers-use-naidus-ai-generated-video-to-defraud-people-1503459223.html"
+  },
+   {
+    "title": "Case Registered Over AI-Generated Obscene Deepfake Videos of Chiranjeevi",
+    "date": "2025-10-27",
+    "summary": "Police registered a cybercrime case after Telugu actor Chiranjeevi complained about AI-generated deepfake and morphed videos falsely depicting him in obscene content. Authorities said the videos caused reputational harm and violated privacy rights.",
+    "link": "https://www.ndtv.com/india-news/case-filed-over-ai-generated-obscene-deepfake-videos-of-telugu-actor-chiranjeevi-9525054"
+  },
   {
-    title: "Cyber Fraud / Impersonation",
-    date: "May 23, 2025",
-    summary: `A fraud gang used AI‑generated video calls to impersonate Andhra Pradesh CM N. Chandrababu Naidu and TDP leader Devineni Uma Maheswara Rao
-Around 18 TDP leaders from Telangana believed the fake video calls were real, thinking they had been personally invited by Naidu.
-One of the TDP leaders sent ₹35,000 after getting a fake call showing Uma speaking to him.
-The fraudsters promised "tickets" for local body elections and said Naidu would meet them personally.
-Police have registered a case under cybercrime laws and are investigating the gang, which appears to be led by someone from Eluru. `,
-link: "https://www.business-standard.com/pti-stories/national/andhra-police-bust-international-cyber-fraud-syndicate-33-held-125052300626_1.html"
+    "title": "Actor Rashmika Mandanna Deepfake Case Leads to Arrest in Andhra Pradesh",
+    "date": "2024-01-20",
+    "summary": "Delhi Police arrested an accused in Andhra Pradesh in connection with the viral AI deepfake video of actor Rashmika Mandanna. The manipulated video sparked nationwide debate on AI-generated misinformation, privacy violations, and deepfake harms.",
+    "link": "https://www.indiatoday.in/india/story/man-accused-in-actor-rashmika-mandannas-deepfake-video-case-arrested-by-delhi-police-in-andhra-pradesh-2491281-2024-01-20"
   }
 ],
+
+"Bihar": [
+    {
+      title: "AI Voice Scam — ₹16 Lakh Lost, 17 Complaints in Patna",
+      date: "27 Dec 2024",
+      summary: `Fraudsters in Patna are using AI-powered voice cloning to mimic voices of people the victims know. In multiple cases, they called victims pretending to be friends, family, or officials in trouble — creating a sense of urgency to request money. One victim transferred ₹24,000 after the caller (faking someone he knew) asked for help in sending money. Another victim was told a relative was in the hospital, and he transferred ₹1.50 lakh thinking he was helping them. Total reported loss in these scams crosses ₹16 lakh, and 17 people have filed complaints at Patna Cyber Police.`,
+      link: "https://patnapress.com/cybercriminals-use-ai-voice-manipulation-to-scam-rs-16-lakh-in-patna/"
+    },
+     {
+    "title": "Deepfake Scam Money Trail Linked to Bihar ATM Withdrawals",
+    "date": "2026-02-27",
+    "summary": "Investigators in an AI deepfake kidnapping scam discovered that extorted money was withdrawn through ATMs in Bihar. The scammers allegedly used AI-manipulated video calls to create a fake kidnapping scenario and panic victims into transferring funds.",
+    "link": "https://www.freepressjournal.in/indore/indore-deepfake-scam-online-scammers-withdrew-money-through-atm-in-bihar"
+  },
+   {
+      title: "EOU Files 21 FIRs for Deepfake Electoral Content",
+      date: "Oct 29, 2025",
+      summary: "Bihar Police's Economic Offences Unit (EOU) filed 21 FIRs against BJP, Congress, and RJD for religious- and caste-based hate posts. Of these, 6 FIRs specifically targeted AI-generated deepfake videos. The EOU monitored 135 social media accounts and 28 YouTube channels throughout the election period.",
+      link: "https://patnapress.com/eou-firs-ai-deepfake-bjp-congress-rjd-bihar-elections/"
+    },
+   {
+    "title": "AI Deepfake Videos Flagged During Bihar Elections",
+    "date": "2025-10-29",
+    "summary": "The Economic Offences Unit (EOU) of Bihar Police filed FIRs related to AI-generated deepfake videos and inflammatory social media content circulated during the Bihar Assembly election campaign. Officials warned the material could influence voters and spread communal tensions.",
+    "link": "https://patnapress.com/eou-firs-ai-deepfake-bjp-congress-rjd-bihar-elections/"
+  },
+    {
+      title: "Man Arrested for AI-Generated Deepfakes of President Murmu and PM Modi — Muzaffarpur",
+      date: "Jan 2026",
+      summary: `Pramod Kumar Raj of Muzaffarpur, Bihar, was arrested for creating and circulating AI-generated deepfake videos and audio clips with fabricated speeches attributed to President Droupadi Murmu and Prime Minister Narendra Modi. Muzaffarpur police seized his mobile phone for forensic analysis and formed a Special Investigation Team (SIT) to determine the content's reach, platforms used, the accused's motive, and whether accomplices were involved. Case filed under the IT Act. Authorities described it as a direct threat to national security and democratic stability.`,
+      link: "https://the420.in/ai-deepfake-arrest-muzaffarpur-bihar-president-pm-impersonation/"
+    }
+  ],
 
   "Kerala": [
     {
@@ -238,11 +278,11 @@ link: "https://www.business-standard.com/pti-stories/national/andhra-police-bust
     "summary": "A retired Union government employee in Kozhikode lost ₹40,000 after scammers used AI-generated deepfake technology during a WhatsApp video call to impersonate his former colleague and request emergency financial help.",
     "link": "https://www.newindianexpress.com/states/kerala/2023/jul/17/scammers-use-deep-fake-tech-in-kerala-dupe-retired-union-govt-employee-of-rs-40000-2595588.html"
   },
-  {
-    "title": "Kerala Man Falls Victim to AI-Based Deepfake Scam",
-    "date": "2023-07-18",
-    "summary": "A Kozhikode resident was deceived through an AI-generated fake video call that mimicked a known acquaintance. The incident highlighted the rise of AI-enabled cyber fraud in Kerala.",
-    "link": "https://www.ptcnews.tv/science-and-technology/kerala-man-falls-victim-to-ai-based-deepfake-scam-loses-rs-40000-728149"
+   {
+    "title": "Kerala Police Register Case Over AI-Generated Political Deepfake Video",
+    "date": "2026-03-26",
+    "summary": "Kerala Cyber Police registered a case after an AI-generated video allegedly depicting Prime Minister Modi and the Election Commission in a misleading way circulated online during election season, raising concerns about misinformation and democratic harm.",
+    "link": "https://www.medianama.com/2026/03/223-kerala-cyber-police-serves-x-notice-registers-fir-ai-deepfake-pm-eci/"
   },
   {
     "title": "Misuse of Online Study Platforms in Kerala Raises AI and Cyber Safety Concerns",
@@ -336,6 +376,12 @@ The platform showed fake profits to build trust. When he tried to withdraw, frau
 The victim filed a complaint at the Cyber Crime Police Station, which registered a case and launched investigation.`,
     link: "https://www.fastbull.com/brokersview/news/deepfake-quantum-ai-ad-leads-to-%E2%82%B912-million-loss-for-dehradun-senior-312199"
   },
+   {
+      title: "Man Arrested for Spreading Fake News About Stampede at Purnagiri Mela",
+      date: "Feb 2025",
+      summary: "Uttarakhand Police arrested a person for circulating false information about a stampede at Purnagiri Mela — part of broader AI-amplified misinformation during the Maha Kumbh season. The case demonstrated proactive use of cyber laws to counter panic-inducing fake news.",
+      link: "https://timesofindia.indiatimes.com/city/dehradun/man-held-for-spreading-fake-news-about-firing-stampede-at-purnagiri-mela/articleshow/121193825.cms"
+    },
   {
     title: "Dehradun: 70-Year-Old Woman Loses ₹3.09 Crore to 'Digital Arrest' Scam",
     date: "Oct 2024",
@@ -648,6 +694,12 @@ link : 'https://www.boomlive.in/fact-check/viral-video-rally-protest-manipur-cla
       link : "https://www.thehindu.com/news/national/telangana/homemaker-duped-of-197-lakh-in-ai-voice-scam/article69344422.ece"
 
      },
+     {
+    "title": "Hyderabad Student Files Complaint Over AI Deepfake Nude Image Blackmail",
+    "date": "2024-12-20",
+    "summary": "A 19-year-old college student in Hyderabad filed a cybercrime complaint after a man allegedly used AI tools to create a nude deepfake image from her Instagram profile picture and used it for blackmail and harassment.",
+    "link": "https://timesofindia.indiatimes.com/city/hyderabad/plaint-filed-over-deepfake-image-used-for-blackmail/articleshow/116481633.cms"
+  },
     { title: "Telangana minister accuses BRS of misleading UoH students using AI", date: "Apr 12, 2025",
       summary : `Telangana government IT minister accused the opposition party BRS of using AI to create docotored images and videos to mislead the students of university of hyderabad into believing false claims about the campus. A fawn that had died in Rajasthan 9 yrs ago was claimed to have died in campus, among other false allegations, as alleged by the minister. 
 `, link: "https://timesofindia.indiatimes.com/city/hyderabad/telangana-minister-accuses-brs-of-misleading-uoh-students-using-ai/articleshow/120238018.cms"
@@ -731,23 +783,23 @@ link : 'https://www.boomlive.in/fact-check/viral-video-rally-protest-manipur-cla
   ],
   "Gujarat": [
   {
-    title: "‘Digital arrest’ scam: 3 held for cheating 1 of Rs 11.42 cr",
-    date: "October 9, 2025",
-    summary: `₹11.42 crore lost in ‘digital-arrest’ scam (Gandhinagar region) — Victim transferred ₹11.42 crore through mule accounts in Gujarat, included gold purchases and RTGS(Real-Time Gross Settlement) to foreign accounts. `,
-    link: "https://indianexpress.com/article/cities/ahmedabad/digital-arrest-scam-3-held-for-cheating-1-of-rs-11-42-cr-10296070/"
-  },
-  {
-    title: "Digital Arrest Gang Busted — ₹111 Crore Stolen from 866 Victims, Surat",
-    date: "Nov 2024",
-    summary: `On November 13, 2024, Surat Police issued sketches of nine suspects identified as masterminds of a nationwide digital arrest fraud network. Four had already been arrested. The gang stole ₹111 crore from at least 866 victims using 623 bank accounts. Fraudsters impersonated TRAI officials, CBI officers, customs agents, and police via video calls, falsely accusing victims of drug trafficking or money laundering and subjecting them to hours-long "digital arrests." Investigators found victims were contacted using telecom data leaks.`,
-    link: "https://indianexpress.com/article/cities/ahmedabad/nationwide-digital-arrest-scam-gujarat-police-9668811/"
-  },
-  {
     title: "AI-generated post triggers communal unrest in Gujarat's Vadodara; police detain over 50 amid violent clashes",
     date: "Sep 20, 2025", 
     summary:`In Vadodara, an AI-generated social-media post (image/reel) triggered communal unrest: stone-pelting mob, over 50 arrests. Shows how AI-synthesised content can inflame communal tension.`,
     link:"https://www.newindianexpress.com/nation/2025/Sep/20/ai-generated-post-triggers-communal-unrest-in-gujarats-vadodara-police-detain-over-50-amid-violent-clashes?utm_source.com"
   },
+   {
+    title: "Deepfake Gang Used AI to Bypass Aadhaar Verification in Gujarat",
+    date: "2026-04-29",
+    summary: "Ahmedabad Police arrested four individuals accused of using AI-generated deepfake videos and facial animations to bypass biometric and liveness verification systems linked to Aadhaar updates. The group allegedly used tools such as Gemini AI and Meta AI to commit identity-based financial fraud.",
+    link: "https://www.ndtv.com/india-news/gemini-to-meta-how-a-deepfake-gang-used-ai-to-hijack-identities-in-gujarat-11425026/amp/1"
+  },
+  {
+      title: "FIR Filed for Deepfake Video of Finance Minister Sitharaman",
+      date: "Jul 10, 2024",
+      summary: "Gujarat Police filed an FIR after an AI-generated video falsely attributed a policy statement to Finance Minister Nirmala Sitharaman. The case highlighted growing use of the IT Act for political deepfake accountability at the state level.",
+      link: "https://timesofindia.indiatimes.com/city/ahmedabad/fir-filed-for-deepfake-of-fm/articleshow/111619068.cms"
+    },
   {
     title: "Ahmedabad: Deepfakes replace women on sextortion calls",
     date: "Sep 08, 2021", 
@@ -777,12 +829,6 @@ link : 'https://www.boomlive.in/fact-check/viral-video-rally-protest-manipur-cla
     date: "Nov 01, 2025",
     summary:`In the Ghatshila assembly bypoll, AI-generated content flooded social media. A  video of BJP candidate Babulal Soren went viral,  made  to tarnish his image. Soren’s team reported the incident, and FIR was lodged. Ghatshila police have taken knowledge of such a case involving AI-generated fake posts" that sought to "mislead voters" The Election Commission had warned districts to act on AI deepfakes, and this became one of the first such cases in Jharkhand`,
     link: "https://timesofindia.indiatimes.com/city/ranchi/bjp-candidate-babulal-soren-targets-ai-generated-misinformation-during-ghatshila-elections/articleshow/125020279.cms#:~:text=Ranchi%3A%20The%20Ghatshila%20police%20have,post%2C%20the%20tribal%20party%20washed"
-  },
-  {
-    title: "Jamtara Gang Uses AI-Generated APK Trap to Steal ₹7 Lakh From Dhanbad Businessman",
-    date: "Aug 2024",
-    summary: `A Dhanbad businessman lost ₹7 lakh to a Jamtara-based gang that used AI-generated phishing messages to convince him to install a malicious APK disguised as a bank verification update. Once installed, the app harvested OTPs and enabled silent fund transfers. Jharkhand police traced the accused to Jamtara district — long India's phishing capital — and arrested three individuals. The case marked a qualitative escalation from Jamtara's traditional voice-phishing model toward AI-assisted digital attack vectors.`,
-    link: "https://timesofindia.indiatimes.com/city/ranchi/caught-in-cyber-trap-three-arrested-in-dhanbad-cyber-fraud-case-police-uncover-malicious-apk-scheme-targeting-citizens/articleshow/125874605.cms"
   }
 
   ],
@@ -810,13 +856,7 @@ const governanceData = {
       description: "The Election Commission of India issued specific guidelines ahead of the Bihar Assembly Elections 2025: all AI-generated or digitally edited media must carry a clear label, and parties must remove flagged fake content from official pages within 3 hours. Continuous social media monitoring was deployed.",
       link: "https://economictimes.indiatimes.com/news/elections/assembly-elections/bihar/deep-threat-what-the-election-commission-wants-parties-and-voters-to-know-about-ai-messages-ahead-of-bihar-polls-2025/articleshow/124789631.cms"
     },
-    {
-      title: "EOU Files 21 FIRs for Deepfake Electoral Content",
-      date: "Oct 29, 2025",
-      type: "Law Enforcement",
-      description: "Bihar Police's Economic Offences Unit (EOU) filed 21 FIRs against BJP, Congress, and RJD for religious- and caste-based hate posts. Of these, 6 FIRs specifically targeted AI-generated deepfake videos. The EOU monitored 135 social media accounts and 28 YouTube channels throughout the election period.",
-      link: "https://patnapress.com/eou-firs-ai-deepfake-bjp-congress-rjd-bihar-elections/"
-    },
+
     {
       title: "Bihar's AI-Powered Digital Democracy Showcase at India AI Impact Expo 2026",
       date: "Feb 18, 2026",
@@ -883,13 +923,6 @@ const governanceData = {
 
   "Andhra Pradesh": [
     {
-      title: "AP CID Registers Criminal Case Over Deepfake of CM Naidu",
-      date: "Sep 09, 2025",
-      type: "Law Enforcement",
-      description: "The Andhra Pradesh Crime Investigation Department registered a criminal case against creators of a deepfake video falsely depicting CM Chandrababu Naidu threatening farmers. Citizens were warned that creating or forwarding such content is a cognisable offence under the IT Act.",
-      link: "https://timesofindia.indiatimes.com/city/vijayawada/ap-government-warns-against-circulation-of-ai-videos-targeting-naidu/articleshow/123791915.cms"
-    },
-    {
       title: "DGP Issues Statewide Warning on Fake AI Content",
       date: "Oct 16, 2025",
       type: "Policy",
@@ -926,20 +959,6 @@ const governanceData = {
     }
   ],
 
-  "Bihar": [
-    {
-      title: "AI Voice Scam — ₹16 Lakh Lost, 17 Complaints in Patna",
-      date: "27 Dec 2024",
-      summary: `Fraudsters in Patna are using AI-powered voice cloning to mimic voices of people the victims know. In multiple cases, they called victims pretending to be friends, family, or officials in trouble — creating a sense of urgency to request money. One victim transferred ₹24,000 after the caller (faking someone he knew) asked for help in sending money. Another victim was told a relative was in the hospital, and he transferred ₹1.50 lakh thinking he was helping them. Total reported loss in these scams crosses ₹16 lakh, and 17 people have filed complaints at Patna Cyber Police.`,
-      link: "https://patnapress.com/cybercriminals-use-ai-voice-manipulation-to-scam-rs-16-lakh-in-patna/"
-    },
-    {
-      title: "Man Arrested for AI-Generated Deepfakes of President Murmu and PM Modi — Muzaffarpur",
-      date: "Jan 2026",
-      summary: `Pramod Kumar Raj of Muzaffarpur, Bihar, was arrested for creating and circulating AI-generated deepfake videos and audio clips with fabricated speeches attributed to President Droupadi Murmu and Prime Minister Narendra Modi. Muzaffarpur police seized his mobile phone for forensic analysis and formed a Special Investigation Team (SIT) to determine the content's reach, platforms used, the accused's motive, and whether accomplices were involved. Case filed under the IT Act. Authorities described it as a direct threat to national security and democratic stability.`,
-      link: "https://the420.in/ai-deepfake-arrest-muzaffarpur-bihar-president-pm-impersonation/"
-    }
-  ],
   "Gujarat":[
       {
     title: "Gujarat AI Action Plan 2025–2030 Unveiled",
@@ -948,13 +967,7 @@ const governanceData = {
     summary:`Gujarat has officially adopted an AI strategy (2025–2030), branding "Safe and Trusted AI" as a core principle. While no direct misuse cases have been reported, civil society and digital-rights experts warn that regulatory gaps (especially broad state exemptions under national security) could enable future misuse. Transparency, oversight, and citizen safeguards remain limited despite high-scale AI deployment planning. `,
     link:"https://www.aicerts.ai/news/gujarat-ai-action-plan-2025-2030/"
     },
-    {
-      title: "FIR Filed for Deepfake Video of Finance Minister Sitharaman",
-      date: "Jul 10, 2024",
-      type: "Law Enforcement",
-      description: "Gujarat Police filed an FIR after an AI-generated video falsely attributed a policy statement to Finance Minister Nirmala Sitharaman. The case highlighted growing use of the IT Act for political deepfake accountability at the state level.",
-      link: "https://timesofindia.indiatimes.com/city/ahmedabad/fir-filed-for-deepfake-of-fm/articleshow/111619068.cms"
-    },
+
     {
       title: "AI Crowd Surveillance Deployed at Jagannath Rath Yatra 2025",
       date: "Jun 10, 2025",
@@ -962,6 +975,13 @@ const governanceData = {
       description: "Ahmedabad Police deployed AI-powered crowd analytics across 6,000 CCTVs for the 148th Jagannath Rath Yatra. While credited with stampede prevention, rights groups raised concerns about the scale of facial-recognition based surveillance at public religious gatherings and the absence of data retention policies.",
       link: "https://english.gujaratsamachar.com/news/gujarat/how-ai-powered-surveillance-will-prevent-stampede-during-jagannath-rathyatra-2025"
     },
+     {
+    title: "Gujarat High Court Issues Notices to Meta, Google and X Over Deepfake AI Content",
+    date: "2026-04-15",
+    type: "Law Enforcement",
+    summary: "The Gujarat High Court sought responses from Meta, Google, X, Reddit, and Scribd over concerns related to AI-generated deepfakes and synthetic media circulating on digital platforms. The case highlighted growing harms from AI misinformation and impersonation.",
+    link: "https://www.livelaw.in/high-court/gujarat-high-court/gujarat-high-court-pil-deepfake-ai-generated-content-intermediaries-530410"
+  },
     {
       title: "AI Centre of Excellence at GIFT City (Microsoft Partnership)",
       date: "Jan 27, 2025",
@@ -975,20 +995,6 @@ const governanceData = {
       type: "Law Enforcement",
       description: "Surat Police launched 'Cyber Mitra,' India's first AI-powered WhatsApp chatbot for cybercrime assistance, offering round-the-clock help to citizens in their chosen language. The chatbot communicates with victims, helps locate the nearest police station via a 'Find My Police Station' feature, and provides real-time safety tips — bridging the gap between existing cybercrime laws and on-the-ground citizen protection.",
       link: "https://cyberpeace.org/resources/blogs/cyber-mitra-ai-chatbot-launched-by-surat-police"
-    },
-    {
-      title: "Four Arrested for AI Deepfake Aadhaar Fraud — Fabricated Biometrics Used in KYC",
-      date: "Apr 2026",
-      type:"Law Enforcement",
-      description: "Gujarat Police arrested four individuals in April 2026 for using AI deepfake tools to fabricate Aadhaar biometric data — including fingerprint spoofing and facial morphing — to pass KYC verification at multiple financial institutions. The accused opened 47 fraudulent bank accounts used for money laundering. The case exposed a critical vulnerability in UIDAI's biometric authentication system to AI-generated synthetic biometrics",
-      link: "https://www.hindustantimes.com/india-news/gujarat-ai-deepfake-aadhaar-fraud-arrested-2026"
-    },
-    {
-      title: "Gujarat Sees 825% Rise in Cybercrime — AI-Enabled Fraud Overwhelms Police Capacity",
-      date: "2024",
-      type:"Law Enforcement",
-      description: "Gujarat Police reported an 825% increase in cybercrime cases between 2019 and 2024, with AI-enhanced fraud categorised as the primary growth driver in recent years. The state's Cyber Crime Cell registered 54,000+ complaints in 2024 alone, with AI-generated investment platform scams, deepfake romance fraud, and digital arrest impersonation collectively accounting for ₹312 crore in losses. Gujarat's rapid digital financial adoption among the small and medium business community made it a high-value target for AI fraud operators.",
-      link: "https://gujaratpolice.gov.in/cybercrime-annual-statistics-2024"
     }
 ],
 
@@ -1242,20 +1248,6 @@ const governanceData = {
   ],
 
   "Jharkhand": [
-    {
-      title: "FIR Lodged in First AI Deepfake Election Case in Jharkhand",
-      date: "Nov 01, 2025",
-      type: "Law Enforcement",
-      description: "Ghatshila Police registered Jharkhand's first FIR specifically targeting AI-generated fake posts meant to mislead voters — following a viral manipulated video of BJP candidate Babulal Soren. The Election Commission had pre-warned districts to act swiftly on deepfakes during the bypoll.",
-      link: "https://timesofindia.indiatimes.com/city/ranchi/bjp-candidate-babulal-soren-targets-ai-generated-misinformation-during-ghatshila-elections/articleshow/125020279.cms"
-    },
-    {
-    title: "Jharkhand police arrest 6 cyber criminals from Jamtara",
-    date: "Jan 27, 2025",
-    type:"Law Enforcement",
-    description:`Police in Jamtara district arrested six people accused of running a sophisticated cyber-fraud. Authorities reported that the suspects – self-described software experts – used artificial intelligence to create malware and scam software. The gang, operating under the alias "DK Boss" had duped victims online; police seized phones, SIM cards and other gear from them. Investigators are examining data for about 2,700 potential victims catalogued on the criminal’s website.`,
-    link: "https://www.newsonair.gov.in/jharkhand-police-arrest-6-cyber-criminals-from-jamtara/"
-  },
   {
     title: "Jharkhand Has No Dedicated Cyber Police Station — Victims Face Multi-Week Delays",
     date: "2023",
@@ -1290,13 +1282,7 @@ const governanceData = {
   ],
 
   "Uttarakhand": [
-    {
-      title: "Man Arrested for Spreading Fake News About Stampede at Purnagiri Mela",
-      date: "Feb 2025",
-      type: "Law Enforcement",
-      description: "Uttarakhand Police arrested a person for circulating false information about a stampede at Purnagiri Mela — part of broader AI-amplified misinformation during the Maha Kumbh season. The case demonstrated proactive use of cyber laws to counter panic-inducing fake news.",
-      link: "https://timesofindia.indiatimes.com/city/dehradun/man-held-for-spreading-fake-news-about-firing-stampede-at-purnagiri-mela/articleshow/121193825.cms"
-    },
+
     {
       title: "Uttarakhand AI Mission 2025 — Himalayan AI Policy",
       date: "Nov 26, 2025",
