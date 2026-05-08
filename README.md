@@ -1,5 +1,5 @@
 <p align="center">
-<img src="images/pic3.png" alt="AI Impact Summit – Bharat 2026 India" height="90" />
+<img src="images/pic3.png" alt="AI Impact Summit – Bharat 2026 India" height="900" />
 </p>
 
 # AI Incident Database – India
