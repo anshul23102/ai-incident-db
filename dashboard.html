@@ -336,9 +336,13 @@
       });
     });
 
+    /* ── Count governance entries ── */
+    const totalGovernance = Object.values(governanceData).reduce((sum, arr) => sum + arr.length, 0);
+    const totalEntries = allIncidents.length + totalGovernance;
+
     /* ── Stat cards ── */
     const statData = [
-      { num: allIncidents.length, label: "Total Incidents", sub: "Across all 28 states" },
+      { num: totalEntries, label: "Total Entries", sub: `${allIncidents.length} incidents · ${totalGovernance} governance` },
       { num: 28, label: "States Covered", sub: "Out of 28 documented" },
       { num: [...new Set(allIncidents.map(i => i.cat.key))].length, label: "Harm Categories", sub: "Distinct types identified" },
       { num: allIncidents.filter(i => i.year === 2025 || i.year === 2026).length, label: "2025–2026 Incidents", sub: "Most active period on record" },
