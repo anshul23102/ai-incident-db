@@ -1772,6 +1772,13 @@ function renderPage() {
   document.getElementById("stateTitle").textContent = stateName + " – Incidents & Governance";
   document.title = stateName + " – AI Incidents";
 
+  // Show Reports tab only if this state has report entries
+  const reportsBtn = document.querySelector(".tab-btn[data-tab='reports']");
+  if (reportsBtn) {
+    const hasReports = (reportsData[stateName] || []).length > 0;
+    reportsBtn.style.display = hasReports ? "" : "none";
+  }
+
   // Tab state
   document.querySelectorAll(".tab-btn").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.tab === tab);
