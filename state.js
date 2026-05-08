@@ -200,40 +200,6 @@ Microsoft cybersecurity experts at the conference noted that India lost ₹22,84
 ],
 
 "Goa": [
-  {
-    title: "AI-tech to boost women's safety at GIDC estates",
-    date: "Nov 11, 2019",
-    summary:`The Goa Industrial Development Corporation (GIDC) installed 26 AI-powered smart CCTV cameras at the Pilerne Industrial Estate in 2025. The system includes 4 Automatic Number Plate Recognition (ANPR) units and covers eight key locations to enhance safety, particularly for women working in industrial zones. Officials stated it would operate 24×7, recording activity and triggering alerts.`,
-    link:"https://timesofindia.indiatimes.com/city/goa/ai-tech-to-boost-womens-safety-at-gidc-estates/articleshow/125233064.cms?utm_source.com"
-
-  },
-  {
-    title: "Goa Using Self-Driving, AI-Powered Robots As Lifeguards On Beaches",
-    date: "Feb 06, 2023",
-    summary:`Introduced in 2023 by Drishti Marine (Goa’s state-appointed lifeguard agency), AI robots like "Aurus" and the "Triton Surveillance System" were deployed on busy beaches. Aurus is a self-driving robot that patrols unsafe areas, monitors beach activity, and assists during rescues.Triton uses AI-powered monitoring and communication systems to give lifeguards early alerts about unsafe conditions.These tools are credited with reducing drowning incidents and improving emergency response times. While hailed as a technological leap, there are concerns about data privacy and ongoing operational costs`,
-    link:"https://www.ndtv.com/india-news/goa-using-self-driving-ai-powered-robots-as-lifeguards-on-beaches-3757599?utm_source.com"
-  },
-  {  title: "AI-powered robots-BANE or BOON",
-    date: "Feb 14, 2023",
-    summary:`In an editorial published by Gomantak Times (Feb 14, 2023), columnist Fr. Carlos Luis SAC raised questions about the ethical use of AI lifeguards like Aurus on Goa’s beaches. While acknowledging their safety potential, he warned: These systems collect data from beachgoers that could be misused. There’s no clarity on who controls the data or how long it is stored. He advocated for ethical safeguards, transparency, and public consent to ensure AI remains a public good.`,
-    link:"https://www.gomantaktimes.com/opinion/ai-powered-robots-on-goas-beaches-bane-or-boon?utm_source.com"
-  },
-  {
-    title: "Goa police uses AI tools to tackle cybercrimes: CM Sawant",
-    date: "July 22, 2025",
-    summary:`On July 22, 2025, Chief Minister Pramod Sawant told the Goa Legislative Assembly that the state police were using several AI tools, including:
-"Spot the Scam" – which uses AI to detect fraudulent activity and scams online.
-"Radical Content Analyser" – which scans digital content for signs of extremism or hate speech.
- He positioned these tools as key to tackling cybercrime and protecting citizens. Critics, however, note that without clear rules, such tools could lead to overreach or misuse.`,
-    link:"https://theprint.in/india/goa-police-uses-ai-tools-to-tackle-cybercrimes-cm-sawant/2698729/?utm_source.com"
-  },
-  {
-    title: "Goa Loses ₹74 Crore to Cybercrime 2023–2025 — Elderly and Tourists Most Vulnerable",
-    date: "2025",
-    summary: `Goa Police cyber wing reported that the state lost ₹74 crore to cybercrime between 2023 and 2025, with AI-enhanced fraud methods — including deepfake investment scams, digital arrest impersonation, and voice-cloned emergencies — comprising 68% of cases by value. Elderly residents (60+) and tourists unfamiliar with local support infrastructure were the most vulnerable demographics. A disproportionate share of scams targeted foreign nationals, given Goa's large expatriate and tourism population. The Goa Cyber Crime Cell coordinated with Interpol in four cross-border fraud cases involving operators in Southeast Asia.`,
-    link: "https://www.goapolice.gov.in/cybercrime-report-2025"
-  }
-
 ],
 
 "Odisha": [
@@ -1184,6 +1150,20 @@ const governanceData = {
   ],
 
   "Goa": [
+    {
+      title: "GIDC Pilerne Industrial Estate AI Surveillance for Women's Safety",
+      date: "May 2025",
+      type: "Surveillance",
+      description: "The Goa Industrial Development Corporation installed 26 AI-powered smart CCTV cameras at the Pilerne Industrial Estate, including 4 Automatic Number Plate Recognition units covering eight key locations. The system operates 24x7, recording activity and triggering alerts, with a focus on enhancing safety for women working in industrial zones.",
+      link: "https://timesofindia.indiatimes.com/city/goa/ai-tech-to-boost-womens-safety-at-gidc-estates/articleshow/125233064.cms"
+    },
+    {
+      title: "AI Robot Lifeguards Deployed on Goa Beaches",
+      date: "Feb 2023",
+      type: "Surveillance",
+      description: "Drishti Marine, Goa's state-appointed lifeguard agency, deployed AI robots including Aurus and the Triton Surveillance System on busy beaches. Aurus patrols unsafe areas and assists during rescues while Triton provides AI-powered monitoring and early alerts about unsafe conditions. The deployment raised concerns about data privacy and the absence of clear data governance frameworks for beachgoers.",
+      link: "https://www.ndtv.com/india-news/goa-using-self-driving-ai-powered-robots-as-lifeguards-on-beaches-3757599"
+    },
     {
       title: "Goa Police Launches 'Deep Trace' AI Investigation Tool",
       date: "May 03, 2025",
