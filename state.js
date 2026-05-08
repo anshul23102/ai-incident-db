@@ -1431,6 +1431,13 @@ const governanceData = {
       type: "Law Enforcement",
       description: "Delhi Police registered a First Information Report against the creator of a manipulated video falsely depicting Amit Shah advocating abolition of SC/ST/OBC reservations — a significant misrepresentation of his actual speech at a Telangana rally. The doctored video was created by X user 'Dabangyogi'. The case set a precedent for FIRs on politically motivated AI-manipulated content.",
       link: "https://www.business-standard.com/india-news/delhi-police-files-fir-over-fake-video-of-amit-shah-s-remark-on-reservation-124042900203_1.html"
+    },
+    {
+      title: "India Hosts AI Impact Summit 2026 in New Delhi — 89 Countries Endorse New Delhi Declaration",
+      date: "Feb 18, 2026",
+      type: "Policy Framework",
+      description: "The AI Impact Summit 2026, held in New Delhi on 18 and 19 February 2026, concluded with the adoption of the New Delhi Declaration on AI Impact, endorsed by 89 countries and international organisations. Built around seven strategic pillars and the philosophy of Sarvajan Hitaya Sarvajan Sukhaya, it launched platforms including Global AI Impact Commons and Trusted AI Commons, establishing India as a convening power in global AI governance.",
+      link: "https://www.drishtiias.com/daily-updates/daily-news-analysis/new-delhi-declaration-on-ai-impact"
     }
   ],
 
