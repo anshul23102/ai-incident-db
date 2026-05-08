@@ -1063,7 +1063,21 @@ const governanceData = {
       type: "Policy",
       description: "Rajasthan launched an AI-based competency assessment across government schools in all 41 districts (March 2025), covering approximately 25.87 lakh students of Classes 3, 4, 6, and 7, including Sanskrit school students. The initiative uses AI to evaluate learning levels and improve education quality at scale. Additionally, the state has integrated AI into the school curriculum and launched the iStart Learning Management System for digital skill development.",
       link: "https://doitc.rajasthan.gov.in/Content/AiInitiative.aspx?menu_id=67"
-    }
+    },
+    {
+      title: "Regional AI Impact Conference 2026 — MoUs with Google, IIT Delhi and NLU Jodhpur",
+      date: "Jan 06, 2026",
+      type: "Partnership",
+      description: "Rajasthan hosted the Regional AI Impact Conference (January 2026) as a precursor to the India AI Impact Summit 2026. Three MoUs were signed: with Google for AI and ML pilot projects in healthcare, agriculture, transport, and citizen services; with IIT Delhi for an AI Centre of Excellence, hackathons, and startup mentoring; and with NLU Jodhpur for promoting trustworthy and ethical AI through capacity building of government officials.",
+      link: "https://changingtomorrow.in/rajasthan-launches-ai-ml-policy-2026-and-national-ai-literacy-programme-at-digifest-rajasthan-x-tie-global-summit/"
+    },
+    {
+      title: "AI-Driven Facial Authentication for MGNREGA and Pensioner Verification",
+      date: "Feb 10, 2026",
+      type: "Policy",
+      description: "Rajasthan deployed AI-driven facial authentication to verify 80 lakh MGNREGA job cardholders starting from Kota, to curb identity fraud in welfare delivery. Simultaneously, the state introduced AI-powered face recognition via mobile app and an analytical dashboard for pensioner verification and pension disbursement, ensuring timely payments, reducing delays, and improving transparency in governance of social welfare schemes.",
+      link: "https://doitc.rajasthan.gov.in/Content/AiInitiative.aspx?menu_id=67"
+    },
   ],
 
   "Odisha": [
