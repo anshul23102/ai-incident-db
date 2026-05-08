@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="images/pic1" alt="IIIT Delhi" height="80" />
+</p>
+
 # AI Incident Database – India
 
 A state-wise interactive database documenting AI-related harm incidents across India from 2021 to 2025. Built as part of a B.Tech Project at IIIT Delhi, Department of Social Science and Humanities.
@@ -7,6 +11,10 @@ A state-wise interactive database documenting AI-related harm incidents across I
 ---
 
 ## About the Project
+
+<p align="center">
+  <img src="images/pic2" alt="INDIAai – A MeitY, NEGD & NASSCOM Initiative" height="70" />
+</p>
 
 Artificial Intelligence misuse is no longer a future risk in India — it is an ongoing reality. This project documents and analyses state-wise incidents of AI-related harm including deepfakes, financial fraud, voice cloning scams, electoral manipulation, and algorithm-amplified communal conflict.
 
@@ -100,7 +108,11 @@ Department of Social Science and Humanities
 - Siddhant Gautam (2021100)
 
 
-**Supervisors:** Suriya Krishna B S · Prof. Dr. Manohar Kumar · Prof. Dr. Rajesh Sharma(Associate Dean @ Plaksha University)
+**Supervisors:** Suriya Krishna B S · Prof. Dr. Manohar Kumar
+
+<p align="center">
+  <img src="images/pic3" alt="AI Impact Summit – Bharat 2026 India" height="90" />
+</p>
 
 ---
 
