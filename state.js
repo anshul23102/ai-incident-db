@@ -1260,7 +1260,22 @@ const governanceData = {
     }
   ],
 
-  "Chhattisgarh": [],
+  "Chhattisgarh": [
+    {
+      title: "Chief Minister's AI Mission Allocated Rs 100 Crore Annually in Chhattisgarh Budget",
+      date: "Feb 24, 2026",
+      type: "Policy Framework",
+      description: "Chhattisgarh launched the Chief Minister's AI Mission in its 2026-27 Sankalp budget, committing Rs 100 crore annually for five years. Part of a Rs 1.72 lakh crore state budget, this is Chhattisgarh's first dedicated AI governance initiative, aiming to integrate AI into public service delivery, education, and industry, signalling a formal transition from reactive cybercrime response to proactive AI ecosystem building.",
+      link: "https://yourstory.com/2026/02/chhattisgarh-budget-2026-27-rs-1-72-lakh-crore-bastar-ai-mission"
+    },
+    {
+      title: "One State One Platform: AI-Powered E-Governance Platform Launched",
+      date: "Mar 26, 2025",
+      type: "Policy Framework",
+      description: "Chhattisgarh's State Urban Development Agency (SUDA) launched a comprehensive e-governance project delivering fully online services across all 192 urban bodies under One State One Platform and Digital Chhattisgarh. The project incorporates AI and data analytics to track patterns in citizen complaints, predict potential issues, and evaluate official performance, enabling evidence-based policy decisions and elevating urban administration to smart governance across the state.",
+      link: "https://egov.eletsonline.com/2025/03/chhattisgarh-on-the-path-of-digital-progress-emergence-as-a-progressive-digital-state/"
+    },
+  ],
 
   "Uttarakhand": [
     {
