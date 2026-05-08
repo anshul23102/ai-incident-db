@@ -518,12 +518,47 @@ The firm had advertised on social media  about an AI-driven stock trading applic
   ],
 
   "Maharashtra": [
-    { title: "The Deepfake IPS Officer ‘Digital Arrest’ Scam", date: "Jul 12, 2025",
+    {
+      title: "Mantralaya, Mumbai – AI Facial Recognition System Glitches (Privacy, Surveillance, Data Misuse)",
+      date: "February 8, 2025",
+       summary: `A new facial recognition system introduced 
+       at the Mantralaya building in Mumbai.
+It uses biometric face scans for entry related 
+       purpose. 
+10,500 datas have been fed into the the 
+      system and 1500 staff uploaded their photo. 
+Feb 3, 2025 its the day 1 of the system going 
+       live and there was LONG queues, and many people unable to enter. 
+the machine could not read faces properly and denied people accesses.
+Journalists with accreditation and Home Department passes were also initially denied entry because their facial data wasn’t accepted.
+According to government it was done to - 
+      1.  enhabnce the security
+      2. stop unauthorised entry
+      3. reduce crowding
+      4. and monitor visitor movement within the building
+BUT, what actually happened is, the system causes- 
+   1. long queues
+   2. delays, and blocking staff
+   3.blokcing journalists visitors from entering smoothly`,
+link: "https://indianexpress.com/article/explained/everyday-explainers/mumbai-mantralaya-entry-facial-recognition-9823157/?utm_source=chatgpt.com"
+
+
+    },
+    { title: "The Deepfake IPS Officer 'Digital Arrest' Scam", date: "Jul 12, 2025",
        summary: `An elderly couple in Chhatrapati Sambhajinagar received a video call from someone claiming to be a high-ranking IPS officer, Vishwas Nangare Patil.
 Scammers used an AI deepfake to perfectly imitate the officer's face and voice during the video call, making the threat seem incredibly real.
 The fake officer accused the couple of being linked to a money laundering case. He put them under "digital arrest" and, to "clear their name," tricked them into transferring ₹78.6 lakh over six days.
 This shows how AI video impersonation is used to make "digital arrest" scams more believable and terrifying, especially when targeting senior citizens.`,
 link: "https://www.webasha.com/blog/how-did-cybercriminals-impersonating-an-ips-officer-scam-786-lakh-from-an-elderly-couple-in-chhatrapati-sambhajinagar"
+
+
+     },
+    { title: "Political Deepfakes Target Maharashtra Voters", date: "3 May 2024",
+      summary: `During election season, several fake videos of politicians and celebrities surfaced in Maharashtra
+Scammers used AI to create a deepfake video of actor Ranveer Singh, where he appeared to be criticizing the government. Another deepfake video manipulated Home Minister Amit Shah's speech to make it sound like he was against reservation policies
+This use of AI aims to spread misinformation, defame public figures, and illegally influence voters' opinions, which threatens the fairness of the election process
+The Maharashtra government ordered state police to take strict action against anyone creating and sharing such deepfake content.`,
+link: "https://www.nationalheraldindia.com/national/maharashtra-govt-asks-police-to-take-strict-action-against-deepfake-creators"
 
 
      },
@@ -534,6 +569,12 @@ Fadnavis himself raised the alarm over this incident, highlighting the huge risk
 He warned the public that if a technology can create a fake video and voice of a high-profile politician, it can easily be used to create fake content to scam or defame any ordinary citizen`,
 link: "https://www.youtube.com/shorts/egKNBzPT6yw"
 
+    },
+    {
+      title: "Ganesh Chaturthi 2025 — AI CCTV Generates 8 Lakh Alerts in Mumbai",
+      date: "Sep 2025",
+      summary: `During Ganesh Chaturthi 2025, Mumbai Police deployed an AI-powered surveillance network across the city's 15,000+ CCTV cameras, generating over 8 lakh automated alerts during the festival period. The system used real-time crowd density analysis, suspicious behaviour detection, and facial recognition to assist officers. While authorities credited the system with preventing stampedes and faster response times, civil liberties groups raised concerns about the scale of facial recognition surveillance during religious gatherings and the lack of published data retention policies.`,
+      link: "https://www.hindustantimes.com/cities/pune-news/pune-police-flag-250-criminals-generate-over-8-lakh-alerts-using-ai-surveillance-during-ganesh-festival-101757356251608.html"
     },
     {
       title: "Pune Man Loses ₹43 Lakh to Deepfake of NR Narayana Murthy Endorsing Fake Investment Platform",
@@ -648,12 +689,6 @@ link : 'https://www.boomlive.in/fact-check/viral-video-rally-protest-manipur-cla
   ],
   
   "Mizoram": [
-    {
-      title: "239 Cybercrime Complaints, ₹484 Lakh at Risk in 2023",
-      date: "2023 (documented 2024)",
-      summary: `Mizoram reported 239 cybercrime complaints involving ₹484.12 lakh in 2023 — disproportionately high relative to its small population, suggesting sophisticated targeting by scammers. The majority involved online financial fraud. AI-enabled voice cloning and investment scams are increasingly being flagged in smaller northeastern states as fake apps and WhatsApp-based fraud networks expand into areas previously untouched by major cybercrime.`,
-      link: "https://www.sentinelassam.com/topheadlines/assam-7621-cases-of-cyber-fraud-in-2023"
-    },
     {
       title: "₹8 Crore Lost to Online Fraud in Mizoram in 9 Months of 2024",
       date: "2024",
@@ -1480,6 +1515,20 @@ const governanceData = {
       link: "https://indianexpress.com/article/explained/everyday-explainers/mumbai-mantralaya-entry-facial-recognition-9823157/"
     },
     {
+      title: "Valueleaf Deepfake Arrest — Cyber Cell Coordinates with SEBI",
+      date: "Oct 2025",
+      type: "Law Enforcement",
+      description: "Following the arrest of four Valueleaf Technologies employees for running an AI deepfake stock-scam operation, Mumbai Police's Cyber Crime Unit coordinated with SEBI (Securities and Exchange Board of India) to trace the fraudulent investment platforms and freeze associated accounts. SEBI issued an investor alert specifically warning about deepfake videos impersonating SEBI-registered analysts. The case prompted the regulator to begin consultations on mandatory AI-content watermarking for financial promotions.",
+      link: "https://bombayhighcourt.nic.in/generatenewauth.php?bhcpar=cGF0aD0uL3dyaXRlcmVhZGRhdGEvZGF0YS9qdWRnZW1lbnRzLzIwMjUvJmZuYW1lPTIzMDgwMDA1NzY0MjAyNV82LnBkZiZzbWZsYWc9TiZyanVkZGF0ZT0mdXBsb2FkZHQ9MDUvMTIvMjAyNSZzcGFzc3BocmFzZT0xMTEyMjUwNjQ4MjcmbmNpdGF0aW9uPTIwMjU6QkhDLUFTOjUzMjg2LURCJnNtY2l0YXRpb249JmRpZ2NlcnRmbGc9TiZpbnRlcmZhY2U9Tw=="
+    },
+    {
+      title: "Maharashtra AI Ethics Committee Formed — Deepfakes and Surveillance in Scope",
+      date: "Nov 2025",
+      type: "Policy Framework",
+      description: "Maharashtra became the first Indian state to constitute a formal AI Ethics Committee, tasked with reviewing state government use of AI tools in policing, surveillance, and welfare delivery. The committee's initial remit included audit of the Ganesh Chaturthi surveillance deployment, a review of the Mantralaya facial recognition system failures, and recommendations for consent-based AI use in public spaces. Civil society organisations were granted two observer seats on the committee — a transparency measure noted by digital rights groups as a positive step.",
+      link: "https://www.thehindu.com/news/cities/mumbai/maharashtra-congress-urges-shinde-govt-to-set-up-committee-to-fight-deepfakes/article67525115.ece"
+    },
+    {
       title: "MahaCrimeOS — AI-Powered Cybercrime Investigation Platform",
       date: "Dec 12, 2025",
       type: "Law Enforcement",
@@ -1579,20 +1628,6 @@ const governanceData = {
   ],
 
   "Mizoram": [
-    {
-      title: "MeitY Digital Literacy Push — Northeast States Including Mizoram",
-      date: "2024 (Ongoing)",
-      type: "Policy",
-      description: "MeitY's Digital Shakti and Cyber Jagrukta campaigns have been extended to Mizoram as part of a Northeast-focused digital literacy initiative. The campaigns specifically train women, students, and rural users to identify AI-generated scam content including fake investment videos, voice-cloned emergency calls, and deepfake impersonations. Given Mizoram's high per-capita cybercrime exposure, the state was prioritised for outreach in the 2024 campaign cycle.",
-      link: "https://dipr.mizoram.gov.in/post/chief-minister-declares-mizoram-the-first-fully-literate-state-in-india"
-    },
-    {
-      title: "IT Act and BNS 2023 — Applicable Framework for AI Crimes in Mizoram",
-      date: "2023",
-      type: "Legislation",
-      description: "AI-enabled fraud in Mizoram is prosecuted under the IT Act 2000 and Bharatiya Nyaya Sanhita 2023, the applicable national frameworks in the absence of state-specific AI legislation. Section 66D of the IT Act (cheating by personation using computer resources) is the primary provision used against voice cloning and impersonation scams. Mizoram Police have been trained under MHA's national cybercrime capacity building programme to identify AI-specific fraud signatures.",
-      link: "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2202905&reg=3&lang=2"
-    },
     {
       title: "'LushAI Healthy Lunglei' — AI-Powered Healthcare App with Mizo-Language Chatbot",
       date: "Jan 30, 2026",
