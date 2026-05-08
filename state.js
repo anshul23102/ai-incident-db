@@ -981,8 +981,22 @@ const governanceData = {
       type: "Policy Framework",
       description: "Bihar's State Election Commission launched India's first state-level mobile e-voting system using AI facial recognition and blockchain for secure, inclusive elections — targeting migrants, elderly, and disabled voters. An AI-based OCR counting system enables real-time EVM data validation. This demonstrates AI governance applied to democratic processes: rule-making, tech-driven implementation, and built-in audit oversight.",
       link: "https://patnapress.com/bihar-ai-digital-democracy-smart-governance-india-expo/"
+    },
+    {
+      title: "Mega AI Centre of Excellence Built with Bihar Government, Tiger Analytics and IIT Patna",
+      date: "Feb 18, 2026",
+      type: "Partnership",
+      description: "Bihar signed an MoU with Tiger Analytics and IIT Patna at the India AI Impact Summit 2026 to build a Mega AI Centre of Excellence, one of India's largest. It targets 10,000 jobs, 50,000 youth trained, and AI-driven solutions in agriculture, healthcare, and governance. The Bihar AI Mission formalizes a state-level governance ecosystem for responsible AI adoption.",
+      link: "https://www.tigeranalytics.com/news/tiger-analytics-and-govt-of-bihar-sign-mou-to-build-a-mega-ai-centre-of-excellence-in-bihar/"
+    },
+    {
+      title: "Unified AI-Powered Digital Governance Platform BiharOne Launched",
+      date: "Mar 27, 2026",
+      type: "Policy Framework",
+      description: "Bihar launched BiharOne, an Rs 87 crore unified digital governance platform integrating all government services into a single window. It features AI-powered chatbots in local languages and real-time analytics for data-driven policymaking. Implemented by CIPL with BELTRON support, it eliminates multi-office visits, enabling transparent, efficient, and citizen-centric service delivery across the state.",
+      link: "https://www.oneindia.com/india/biharone-digital-governance-platform-launch-2024-012-8038857.html"
     }
-    ], 
+    ],
   "Gujarat":[
       {
     title: "Gujarat AI Action Plan 2025–2030 Unveiled",
