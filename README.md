@@ -100,7 +100,7 @@ Department of Social Science and Humanities
 - Siddhant Gautam (2021100)
 
 
-**Supervisors:** Suriya Krishna B S · Prof. Dr. Manohar Kumar
+**Supervisors:** Suriya Krishna B S · Prof. Dr. Manohar Kumar · Prof. Rajesh Sharma(Associate Dean @ Plaksha University)
 
 ---
 
