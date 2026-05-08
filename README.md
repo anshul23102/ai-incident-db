@@ -104,7 +104,6 @@ Department of Social Science and Humanities
 
 - Anshul Jain (2023102)
 - Dhruv Kantroo (2022167)
-- Sukhmani Kaur 
 - Siddhant Gautam (2021100)
 
 
