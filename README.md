@@ -116,7 +116,7 @@ Department of Social Science and Humanities
 <table align="center">
   <tr>
     <td><img src="images/pic5.jpg" alt="IIIT Delhi" height="90" /></td>
-    <td><img src="images/plashka.png" alt="Plaksha University" height="90" /></td>
+    <td><img src="images/plashka.png" alt="Plaksha University" height="110" /></td>
   </tr>
 </table>
 
