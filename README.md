@@ -114,7 +114,7 @@ Department of Social Science and Humanities
 
 
 <p align="center">
-<img src="images/pic4.jpg" alt="IIITD logo" height="90" />
+<img src="images/pic5.jpg" alt="IIITD logo" height="90" />
 </p>
 
 ---
