@@ -1,4 +1,4 @@
-// --- Incident data for each state ---
+// --- Incident data for each state ---  ____
 // For now, only Karnataka is filled based on your list.
 // You can later add other states in the same format.
 const incidentsData = {
