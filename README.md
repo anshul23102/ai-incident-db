@@ -111,7 +111,7 @@ Department of Social Science and Humanities
 **Supervisors:** Suriya Krishna B S · Prof. Dr. Manohar Kumar
 
 <p align="center">
-  <img src="images/pic3" alt="AI Impact Summit – Bharat 2026 India" height="90" />
+  <img src="images/pic4" alt="AI Impact Summit – Bharat 2026 India" height="100" />
 </p>
 
 ---
