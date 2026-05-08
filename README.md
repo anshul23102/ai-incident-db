@@ -4,7 +4,7 @@
 
 # AI Incident Database – India
 
-A state-wise interactive database documenting AI-related harm incidents across India from 2021 to 2025. Built as part of a B.Tech Project at IIIT Delhi, Department of Social Science and Humanities.
+A state-wise interactive database documenting AI-related harm incidents across India from 2021 to 2026. Built as part of a B.Tech Project at IIIT Delhi, Department of Social Science and Humanities.
 
 🔗 **Live Site:** [https://anshul23102.github.io/ai-incident-db](https://anshul23102.github.io/ai-incident-db)
 
@@ -18,7 +18,7 @@ A state-wise interactive database documenting AI-related harm incidents across I
 
 Artificial Intelligence misuse is no longer a future risk in India — it is an ongoing reality. This project documents and analyses state-wise incidents of AI-related harm including deepfakes, financial fraud, voice cloning scams, electoral manipulation, and algorithm-amplified communal conflict.
 
-The database covers **28 Indian states** across a **2021–2025** timeline and categorises incidents into 6 primary harm types. It also documents governance responses at both the state and central government level.
+The database covers **28 Indian states** across a **2021–2026** timeline and categorises incidents into 6 primary harm types. It also documents governance responses at both the state and central government level.
 
 ---
 
