@@ -34,20 +34,7 @@ const incidentsData = {
       link: "https://the420.in/bengaluru-cybercrime-deepfake-scam-virat-kohli-nirmala-sitharaman/"
     },
   ],
-  "Bihar": [
-  {
-    title: "AI Voice Scam",
-    date: "27 Dec 2024",
-    summary: `Fraudsters in Patna are using AI-powered voice cloning to mimic voices of people the victims know. 
-In multiple cases, they called victims pretending to be friends, family, or officials in trouble — creating a sense of urgency to request money. 
-One victim transferred ₹24,000 after the caller (faking someone he knew) asked for help in sending money. 
-Another victim was told a relative was in the hospital, and he transferred ₹1.50 lakh thinking he was helping them.
-Total reported loss in these scams crosses ₹16 lakh, and 17 people have filed complaints at Patna Cyber Police. `,
-    link: "https://patnapress.com/cybercriminals-use-ai-voice-manipulation-to-scam-rs-16-lakh-in-patna/"
 
-  }
-    
-],
 
 "Chhattisgarh": [
   {
@@ -808,6 +795,51 @@ link : 'https://www.boomlive.in/fact-check/viral-video-rally-protest-manipur-cla
 // ─────────────────────────────────────────────────────────
 const governanceData = {
 
+  "Bihar": [
+    {
+      title: "High Court Orders Removal of AI-Generated Video",
+      date: "17 Sept 2025",
+      type: "Judicial Action",
+      description: "Patna High Court strongly reprimanded the Congress party for sharing an AI-generated video showing PM Modi and his late mother.",
+      link: "https://navbharattimes.indiatimes.com/state/bihar/patna/bihar-election-2025-court-reprimands-congress-over-ai-video-chirag-paswan-says-this-was-bound-to-happen/articleshow/123947561.cms?"
+    },
+    {
+      title: "Election Commission AI Content Rules for Bihar Assembly Polls",
+      date: "Oct 24, 2025",
+      type: "Electoral Regulation",
+      description: "The Election Commission of India issued specific guidelines ahead of the Bihar Assembly Elections 2025: all AI-generated or digitally edited media must carry a clear label, and parties must remove flagged fake content from official pages within 3 hours. Continuous social media monitoring was deployed.",
+      link: "https://economictimes.indiatimes.com/news/elections/assembly-elections/bihar/deep-threat-what-the-election-commission-wants-parties-and-voters-to-know-about-ai-messages-ahead-of-bihar-polls-2025/articleshow/124789631.cms"
+    },
+    {
+      title: "EOU Files 21 FIRs for Deepfake Electoral Content",
+      date: "Oct 29, 2025",
+      type: "Law Enforcement",
+      description: "Bihar Police's Economic Offences Unit (EOU) filed 21 FIRs against BJP, Congress, and RJD for religious- and caste-based hate posts. Of these, 6 FIRs specifically targeted AI-generated deepfake videos. The EOU monitored 135 social media accounts and 28 YouTube channels throughout the election period.",
+      link: "https://patnapress.com/eou-firs-ai-deepfake-bjp-congress-rjd-bihar-elections/"
+    },
+    {
+      title: "Bihar's AI-Powered Digital Democracy Showcase at India AI Impact Expo 2026",
+      date: "Feb 18, 2026",
+      type: "Policy Framework",
+      description: "Bihar's State Election Commission launched India's first state-level mobile e-voting system using AI facial recognition and blockchain for secure, inclusive elections — targeting migrants, elderly, and disabled voters. An AI-based OCR counting system enables real-time EVM data validation. This demonstrates AI governance applied to democratic processes: rule-making, tech-driven implementation, and built-in audit oversight.",
+      link: "https://patnapress.com/bihar-ai-digital-democracy-smart-governance-india-expo/"
+    },
+    {
+      title: "Mega AI Centre of Excellence — Bihar Government, Tiger Analytics & IIT Patna MoU",
+      date: "Feb 18, 2026",
+      type: "Partnership",
+      description: "Bihar signed an MoU with Tiger Analytics and IIT Patna at the India AI Impact Summit 2026 to build a Mega AI Centre of Excellence, one of India's largest. It targets 10,000 jobs, 50,000 youth trained, and AI-driven solutions in agriculture, healthcare, and governance. The Bihar AI Mission formalizes a state-level governance ecosystem for responsible AI adoption.",
+      link: "https://www.tigeranalytics.com/news/tiger-analytics-and-govt-of-bihar-sign-mou-to-build-a-mega-ai-centre-of-excellence-in-bihar/"
+    },
+    {
+      title: "Unified AI-Powered Digital Governance Platform BiharOne Launched",
+      date: "Mar 27, 2026",
+      type: "Policy Framework",
+      description: "Bihar launched BiharOne, an ₹87 crore unified digital governance platform integrating all government services into a single window. It features AI-powered chatbots in local languages and real-time analytics for data-driven policymaking. Implemented by CIPL with BELTRON support, it eliminates multi-office visits, enabling transparent, efficient, and citizen-centric service delivery across the state.",
+      link: "https://www.oneindia.com/india/biharone-digital-governance-platform-launch-2024-012-8038857.html"
+    }
+  ],
+
   "Telangana": [
     {
       title: "TRUST AICS 2025 Conference — Experts Warn on AI Weaponisation",
@@ -894,57 +926,20 @@ const governanceData = {
     }
   ],
 
-  "Bihar":[
-      {
-    title: "High Court Orders Removal of AI-Generated Video",
-    date: "17 Sept 2025",
-    type: "Electoral Regulation",
-    description: "Patna High Court strongly reprimanded the Congress party for sharing an AI-generated video showing PM Modi and his late mother.",
-    link: "https://navbharattimes.indiatimes.com/state/bihar/patna/bihar-election-2025-court-reprimands-congress-over-ai-video-chirag-paswan-says-this-was-bound-to-happen/articleshow/123947561.cms?"
-  },
+  "Bihar": [
     {
-      title: "Election Commission AI Content Rules for Bihar Assembly Polls",
-      date: "Oct 24, 2025",
-      type: "Electoral Regulation",
-      description: "The Election Commission of India issued specific guidelines ahead of the Bihar Assembly Elections 2025: all AI-generated or digitally edited media must carry a clear label, and parties must remove flagged fake content from official pages within 3 hours. Continuous social media monitoring was deployed.",
-      link: "https://economictimes.indiatimes.com/news/elections/assembly-elections/bihar/deep-threat-what-the-election-commission-wants-parties-and-voters-to-know-about-ai-messages-ahead-of-bihar-polls-2025/articleshow/124789631.cms"
-    },
-      {
-    title: "Man Arrested for AI-Generated Deepfakes of President Murmu and PM Modi — Muzaffarpur",
-    date: "Jan 2026",
-    type: "Law Enforcement",
-    summary: `Pramod Kumar Raj of Muzaffarpur, Bihar, was arrested for creating and circulating AI-generated deepfake videos and audio clips with fabricated speeches attributed to President Droupadi Murmu and Prime Minister Narendra Modi. Muzaffarpur police seized his mobile phone for forensic analysis and formed a Special Investigation Team (SIT) to determine the content's reach, platforms used, the accused's motive, and whether accomplices were involved. Case filed under the IT Act. Authorities described it as a direct threat to national security and democratic stability.`,
-    link: "https://the420.in/ai-deepfake-arrest-muzaffarpur-bihar-president-pm-impersonation/"
-  },
-    {
-      title: "EOU Files 21 FIRs for Deepfake Electoral Content",
-      date: "Oct 29, 2025",
-      type: "Law Enforcement",
-      description: "Bihar Police's Economic Offences Unit (EOU) filed 21 FIRs against BJP, Congress, and RJD for religious- and caste-based hate posts. Of these, 6 FIRs specifically targeted AI-generated deepfake videos. The EOU monitored 135 social media accounts and 28 YouTube channels throughout the election period.",
-      link: "https://patnapress.com/eou-firs-ai-deepfake-bjp-congress-rjd-bihar-elections/"
+      title: "AI Voice Scam — ₹16 Lakh Lost, 17 Complaints in Patna",
+      date: "27 Dec 2024",
+      summary: `Fraudsters in Patna are using AI-powered voice cloning to mimic voices of people the victims know. In multiple cases, they called victims pretending to be friends, family, or officials in trouble — creating a sense of urgency to request money. One victim transferred ₹24,000 after the caller (faking someone he knew) asked for help in sending money. Another victim was told a relative was in the hospital, and he transferred ₹1.50 lakh thinking he was helping them. Total reported loss in these scams crosses ₹16 lakh, and 17 people have filed complaints at Patna Cyber Police.`,
+      link: "https://patnapress.com/cybercriminals-use-ai-voice-manipulation-to-scam-rs-16-lakh-in-patna/"
     },
     {
-      title: "Bihar's AI-Powered Digital Democracy Showcase at India AI Impact Expo 2026",
-      date: "Feb 18, 2026",
-      type: "Policy Framework",
-      description: "Bihar's State Election Commission launched India's first state-level mobile e-voting system using AI facial recognition and blockchain for secure, inclusive elections — targeting migrants, elderly, and disabled voters. An AI-based OCR counting system enables real-time EVM data validation. This demonstrates AI governance applied to democratic processes: rule-making, tech-driven implementation, and built-in audit oversight.",
-      link: "https://patnapress.com/bihar-ai-digital-democracy-smart-governance-india-expo/"
-    },
-    {
-      title: "Mega AI Centre of Excellence Built with Bihar Government, Tiger Analytics and IIT Patna",
-      date: "Feb 18, 2026",
-      type: "Partnership",
-      description: "Bihar signed an MoU with Tiger Analytics and IIT Patna at the India AI Impact Summit 2026 to build a Mega AI Centre of Excellence, one of India's largest. It targets 10,000 jobs, 50,000 youth trained, and AI-driven solutions in agriculture, healthcare, and governance. The Bihar AI Mission formalizes a state-level governance ecosystem for responsible AI adoption.",
-      link: "https://www.tigeranalytics.com/news/tiger-analytics-and-govt-of-bihar-sign-mou-to-build-a-mega-ai-centre-of-excellence-in-bihar/"
-    },
-    {
-      title: "Unified AI-Powered Digital Governance Platform BiharOne Launched",
-      date: "Mar 27, 2026",
-      type: "Policy Framework",
-      description: "Bihar launched BiharOne, an Rs 87 crore unified digital governance platform integrating all government services into a single window. It features AI-powered chatbots in local languages and real-time analytics for data-driven policymaking. Implemented by CIPL with BELTRON support, it eliminates multi-office visits, enabling transparent, efficient, and citizen-centric service delivery across the state.",
-      link: "https://www.oneindia.com/india/biharone-digital-governance-platform-launch-2024-012-8038857.html"
+      title: "Man Arrested for AI-Generated Deepfakes of President Murmu and PM Modi — Muzaffarpur",
+      date: "Jan 2026",
+      summary: `Pramod Kumar Raj of Muzaffarpur, Bihar, was arrested for creating and circulating AI-generated deepfake videos and audio clips with fabricated speeches attributed to President Droupadi Murmu and Prime Minister Narendra Modi. Muzaffarpur police seized his mobile phone for forensic analysis and formed a Special Investigation Team (SIT) to determine the content's reach, platforms used, the accused's motive, and whether accomplices were involved. Case filed under the IT Act. Authorities described it as a direct threat to national security and democratic stability.`,
+      link: "https://the420.in/ai-deepfake-arrest-muzaffarpur-bihar-president-pm-impersonation/"
     }
-    ],
+  ],
   "Gujarat":[
       {
     title: "Gujarat AI Action Plan 2025–2030 Unveiled",
