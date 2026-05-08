@@ -4,83 +4,35 @@
 const incidentsData = {
   "Karnataka": [
     {
-      title: "Trump Hotel Rentel",
-  date: "May 28, 2025",
-  summary: `Around 200 people in Karnataka were cheated through an app called "Trump Hotel Rental".
-App shows the AI-generated videos of Donald Trump in order to gain trust. People were told that if they rented virtual 
-hotel rooms, they would earn high profits.
-Initially, the app allowed users to withdraw small amounts like Rs.300 to gain their trust. People were encouraged 
-and invested up to Rs.10 lakhs as the app kept showing fake profits.
-After 5–6 months, the app stopped working. Users could not withdraw money and the scammers disappeared.
-Total loss was around Rs.2 crore. This is a major example of AI deepfake-driven fraud.`,
-  link: "https://timesofindia.indiatimes.com/technology/tech-news/trump-hotel-rental-app-how-200-people-lost-over-rs-2-crore-in-this-online-investment-scam/articleshow/121453922.cms"
-
-      
-    },
-    {
-      title: "AI-Powered Phishing Emails in Karnataka",
-      date: "October 9 2025",
-      summary: `A Karnataka report found that 82.8% of phishing emails sent to people were created using AI tools.
-These emails looked extremely real, causing more people to fall for scams.
-As a result, cybercrime almost doubled in several rural areas.
-Most victims were elderly individuals, women, and people with limited digital awareness.`,
-    link: "https://www.newindianexpress.com/states/karnataka/2025/Jun/26/ai-driving-force-behind-828-per-cent-of-phishing-emails-in-karnataka"
-
+      title: "Trump Hotel Rental App Scam — 200 Victims Lose ₹2 Crore",
+      date: "May 28, 2025",
+      summary: `Around 200 people in Karnataka were cheated through an app called "Trump Hotel Rental". The app showed AI-generated videos of Donald Trump to gain trust and told people that renting virtual hotel rooms would earn high profits. Initially the app allowed small withdrawals like Rs 300 to build confidence. People then invested up to Rs 10 lakh each as the app showed fake profits. After 5 to 6 months the app stopped working, users could not withdraw money, and the scammers disappeared. Total losses were around Rs 2 crore.`,
+      link: "https://timesofindia.indiatimes.com/technology/tech-news/trump-hotel-rental-app-how-200-people-lost-over-rs-2-crore-in-this-online-investment-scam/articleshow/121453922.cms"
     },
     {
       title: "Mangaluru Man Loses ₹22.59 Lakh to Fake Promo Video",
       date: "Aug 02, 2025",
-      summary: `A Mangaluru man watched what appeared to be a genuine promotional video on Facebook.
-The video was AI-edited to make the offer look trustworthy.
-He invested his money step-by-step into an online trading scheme promoted in the video.
-Eventually, he lost ₹22.59 lakh when the app stopped responding, revealing the entire scheme was fake.`,
-    link: "https://timesofindia.indiatimes.com/city/mangaluru/duped-by-fake-promo-video-karnataka-man-loses-rs-22-59-lakh-in-online-investment-scam/articleshow/123058939.cms"
-
-    },
-    {
-      title: "Karnataka Fake News / Misinformation Law Concerns",
-      date: "Jul 01, 2025",
-       summary: `The Karnataka government proposed a law that could punish "fake news" creators with up to 7 years in jail.
-The move came after rising concerns about AI-generated misinformation.
-However, many citizens feared the law could harm free speech or punish innocent people.
-The proposal triggered debate about balancing public safety with digital freedom.`,
-    link: "https://economictimes.indiatimes.com/news/bengaluru-news/karnataka-pushes-jail-terms-for-fake-news-sparks-worries/articleshow/122171237.cms"
+      summary: `A Mangaluru man watched what appeared to be a genuine promotional video on Facebook. The video was AI-edited to make the offer look trustworthy. He invested his money step by step into an online trading scheme promoted in the video. He eventually lost ₹22.59 lakh when the app stopped responding, revealing the entire scheme was fake.`,
+      link: "https://timesofindia.indiatimes.com/city/mangaluru/duped-by-fake-promo-video-karnataka-man-loses-rs-22-59-lakh-in-online-investment-scam/articleshow/123058939.cms"
     },
     {
       title: "Bengaluru Woman Loses ₹3.75 Crore to Deepfake Video",
-      date: "11 september 2025",
-      summary: `A woman in Bengaluru viewed an online video that seemed to feature a well-known spiritual leader.
-The clip was an AI-generated deepfake created to gain her trust.
-Believing the video, she invested her money into an online platform promoted in the message.
-She lost ₹3.75 crore after scammers used the deepfake to manipulate her.`,
-    link: "https://www.deccanherald.com/india/karnataka/bengaluru/sadhguru-invested-in-online-firm-bengaluru-woman-falls-for-ai-generated-deepfake-video-loses-rs-375-crore-3723681"
+      date: "Sep 11, 2025",
+      summary: `A woman in Bengaluru viewed an online video that seemed to feature a well-known spiritual leader. The clip was an AI-generated deepfake created to gain her trust. Believing the video, she invested her money into an online platform promoted in the message and lost ₹3.75 crore after scammers used the deepfake to manipulate her.`,
+      link: "https://www.deccanherald.com/india/karnataka/bengaluru/sadhguru-invested-in-online-firm-bengaluru-woman-falls-for-ai-generated-deepfake-video-loses-rs-375-crore-3723681"
     },
     {
-      title: "ChatGPT Medical Advice Leads to Harmful Outcomes — Hyderabad/Bengaluru Cases",
-      date: "Nov 10, 2025",
-      summary: `Globally documented AI Incident #1281 specifically flagged alleged harmful health outcomes following the use of ChatGPT-generated medical advice in Hyderabad. Similar cases were reported across urban India including Bengaluru, where patients sought AI chatbot advice instead of professional consultation.
-Experts warned that AI chatbots providing medical guidance without disclaimer systems create serious public health risks — particularly among users who lack digital literacy to distinguish AI responses from verified medical opinion.`,
-      link: "https://www.news18.com/cities/bengaluru-news/master-health-checks-ai-and-anxiety-are-we-testing-more-than-needed-ws-el-10022722.html"
-    },
-    {
-      title: "Karnataka Records 60,000 Cybercrime Complaints — 12% of National Total",
-      date: "Oct 2025",
-      summary: `Karnataka, driven by Bengaluru's IT ecosystem, recorded approximately 60,000 cybercrime complaints in 2025 — accounting for nearly 12% of all complaints nationwide and representing a 137% surge over 2022 figures. Cyber police attributed the spike largely to AI-enabled fraud: deepfake investment scams, voice-cloning scams targeting IT professionals, and AI-generated phishing emails (which accounted for over 82% of phishing in the state). Karnataka's cybercrime figure is the highest of any non-metro-dominant state and rivals Maharashtra's tally, prompting the state to announce a new dedicated AI Fraud Investigation Unit within the Karnataka State Police Cyber Crime Wing.`,
-      link: "https://www.deccanherald.com/india/karnataka/over-60000-cyber-crime-related-complaints-registered-in-last-four-years-in-karnataka-3448057"
-    },
-    {
-      title: "Bengaluru Software Engineer Loses ₹32 Crore in Six-Month 'Digital Arrest' Scam",
+      title: "Bengaluru Software Engineer Loses ₹32 Crore in Six-Month Digital Arrest Scam",
       date: "Nov 2025",
-      summary: `A 57-year-old woman software engineer from Indiranagar, Bengaluru was defrauded of nearly ₹32 crore (₹31.83 crore) in one of the largest and longest-running cyber frauds ever recorded in Karnataka. The scam began on September 15, 2024, with a call from fraudsters impersonating DHL officials, who claimed a parcel booked in her name contained MDMA, credit cards, and forged passports. The case was then "transferred" to scammers posing as CBI officers, who placed her under continuous Skype surveillance — a textbook "digital arrest" — using forged documents, fake arrest warrants, and impersonated officials in police-style backdrops to maintain the illusion of authority. Over six months, she was coerced into making 187 separate bank transfers, including a ₹2 crore "surety" between October 24 and November 3, 2024. Communication abruptly ended on March 26, 2025, and she filed a formal complaint with Bengaluru cyber police only in June 2025 after her son's wedding. The case has become a reference point for India's escalating wave of AI- and deepfake-aided impersonation frauds targeting senior tech professionals.`,
+      summary: `A 57-year-old woman software engineer from Indiranagar, Bengaluru was defrauded of nearly ₹32 crore in one of the largest and longest-running cyber frauds ever recorded in Karnataka. The scam began on September 15, 2024, with a call from fraudsters impersonating DHL officials who claimed a parcel booked in her name contained MDMA and forged passports. The case was then transferred to scammers posing as CBI officers who placed her under continuous Skype surveillance using forged documents and fake arrest warrants. Over six months she was coerced into making 187 separate bank transfers. She filed a formal complaint with Bengaluru cyber police in June 2025 after her son's wedding.`,
       link: "https://www.businesstoday.in/india/story/a-nightmare-on-skype-bengaluru-techie-loses-rs-32-crore-in-digital-arrest-fraud-502607-2025-11-18"
     },
-  {
-    title: "Bengaluru Cybercrime Police File Suo Motu Case — Deepfake Stock Trading Scam",
-    date: "Nov 2025",
-    summary: `Bengaluru's cybercrime unit registered a suo motu case after AI-generated deepfake videos of Virat Kohli, Finance Minister Nirmala Sitharaman, Infosys founder NR Narayana Murthy, philanthropist Sudha Murty, and businessman Anant Ambani were found circulating on social media, falsely portraying them endorsing fraudulent stock trading applications. The videos instructed viewers to download fake apps and invest money with promised returns of ₹10,000–₹1 lakh. Forensic analysis confirmed AI manipulation. Case filed under the IT Act and Section 318 of the Bharatiya Nyaya Sanhita.`,
-    link: "https://the420.in/bengaluru-cybercrime-deepfake-scam-virat-kohli-nirmala-sitharaman/"
-  }
-
+    {
+      title: "Bengaluru Cybercrime Police File Suo Motu Case on Deepfake Stock Trading Scam",
+      date: "Nov 2025",
+      summary: `Bengaluru's cybercrime unit registered a suo motu case after AI-generated deepfake videos of Virat Kohli, Finance Minister Nirmala Sitharaman, Infosys founder NR Narayana Murthy, philanthropist Sudha Murty, and businessman Anant Ambani were found circulating on social media, falsely portraying them endorsing fraudulent stock trading applications. The videos instructed viewers to download fake apps and invest money with promised returns of ₹10,000 to ₹1 lakh. Forensic analysis confirmed AI manipulation. Case filed under the IT Act and Section 318 of the Bharatiya Nyaya Sanhita.`,
+      link: "https://the420.in/bengaluru-cybercrime-deepfake-scam-virat-kohli-nirmala-sitharaman/"
+    },
   ],
   "Bihar": [
   {
@@ -1719,6 +1671,21 @@ const reportsData = {
       date: "2024",
       summary: `Himachal Pradesh police registered 135 cryptocurrency fraud cases in 2024, with victims losing Rs 28.6 crore to AI-generated fake crypto trading platforms. The platforms used deepfake video endorsements of prominent businesspeople and politicians to establish credibility, with AI chatbots simulating real-time portfolio management. Victims from Dharamsala, Solan, and Palampur including retired government employees and teachers were disproportionately targeted. Police issued an advisory warning about AI-generated crypto scheme promotions distributed via YouTube and Telegram.`,
       link: "http://himachalpr.gov.in/OneNews.aspx?Language=1&ID=31992"
+    },
+  ],
+
+  "Karnataka": [
+    {
+      title: "82.8% of Phishing Emails in Karnataka Generated by AI",
+      date: "Jun 2025",
+      summary: `A Karnataka police report found that 82.8% of phishing emails targeting people in the state were created using AI tools. These emails were more convincing and harder to detect, leading to a near-doubling of cybercrime in several rural areas. Most victims were elderly individuals, women, and people with limited digital awareness.`,
+      link: "https://www.newindianexpress.com/states/karnataka/2025/Jun/26/ai-driving-force-behind-828-per-cent-of-phishing-emails-in-karnataka"
+    },
+    {
+      title: "Karnataka Records 60,000 Cybercrime Complaints — 12% of National Total",
+      date: "Oct 2025",
+      summary: `Karnataka recorded approximately 60,000 cybercrime complaints in 2025, accounting for nearly 12% of all complaints nationwide and representing a 137% surge over 2022 figures. Cyber police attributed the spike largely to AI-enabled fraud including deepfake investment scams, voice-cloning scams targeting IT professionals, and AI-generated phishing emails. Karnataka's cybercrime figure rivals Maharashtra's tally, prompting the state to announce a new dedicated AI Fraud Investigation Unit within the Karnataka State Police Cyber Crime Wing.`,
+      link: "https://www.deccanherald.com/india/karnataka/over-60000-cyber-crime-related-complaints-registered-in-last-four-years-in-karnataka-3448057"
     },
   ],
 
