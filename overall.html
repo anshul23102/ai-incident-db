@@ -477,7 +477,7 @@
     { num: 28,                                label:'States Covered' },
     { num: topState,                       label:'Most Active State' },
     { num: HARM_TYPES.length - 1,          label:'Harm Categories'  },
-  ].map(s=>`<div class="map-stat"><div class="map-stat-num">${s.num}</div><div class="map-stat-label">${s.label}</div></div>`).join('');
+  ].map(s=>`<div class="map-stat"><div class="map-stat-num" style="${typeof s.num === 'string' ? 'font-size:1.05rem;line-height:1.25;word-break:break-word;' : ''}">${s.num}</div><div class="map-stat-label">${s.label}</div></div>`).join('');
 
   document.getElementById('sevRow').innerHTML = [
     {key:'critical',label:'Critical Incidents',color:'#ef4444'},
