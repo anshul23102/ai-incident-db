@@ -6,7 +6,7 @@ const incidentsData = {
     {
       title: "Trump Hotel Rentel",
   date: "May 28, 2025",
-  summary: `Around 200 people in Karnataka were cheated through an app called “Trump Hotel Rental”.
+  summary: `Around 200 people in Karnataka were cheated through an app called "Trump Hotel Rental".
 App shows the AI-generated videos of Donald Trump in order to gain trust. People were told that if they rented virtual 
 hotel rooms, they would earn high profits.
 Initially, the app allowed users to withdraw small amounts like Rs.300 to gain their trust. People were encouraged 
@@ -49,7 +49,7 @@ Eventually, he lost ₹22.59 lakh when the app stopped responding, revealing the
     {
       title: "Karnataka Fake News / Misinformation Law Concerns",
       date: "Jul 01, 2025",
-       summary: `The Karnataka government proposed a law that could punish “fake news” creators with up to 7 years in jail.
+       summary: `The Karnataka government proposed a law that could punish "fake news" creators with up to 7 years in jail.
 The move came after rising concerns about AI-generated misinformation.
 However, many citizens feared the law could harm free speech or punish innocent people.
 The proposal triggered debate about balancing public safety with digital freedom.`,
@@ -166,7 +166,7 @@ A First Information Report (FIR) was filed under the IT Act for this offense.`,
     title: "Fraudsters Pose as CBI, RBI & Police to Scam Raipur Residents",
     date: "Aug 23, 2025",
     summary: `A gang based in Cambodia and operating in India was arrested for a scam in Raipur, Chhattisgarh, where they posed as officials from agencies like Central Bureau of Investigation (CBI), Reserve Bank of India (RBI), the telecom department and local police. 
-    The victims were falsely told their mobile numbers were linked to money-laundering or other serious crimes, and were then coerced into “staying online” via WhatsApp video calls for long periods (“digital arrest” tactic).
+    The victims were falsely told their mobile numbers were linked to money-laundering or other serious crimes, and were then coerced into "staying online" via WhatsApp video calls for long periods ("digital arrest" tactic).
     In two detailed cases: one victim lost about ₹14 lakh, another about ₹88 lakh. 
     Five suspects have been arrested across multiple states (Delhi, Uttar Pradesh, Maharashtra, Madhya Pradesh) working as part of this syndicate.
     The investigation is ongoing; police are tracking digital evidence and freezing suspicious transactions.`,
@@ -176,10 +176,10 @@ A First Information Report (FIR) was filed under the IT Act for this offense.`,
   {
     title: "Scams / Identity Fraud",
     date: "Oct 11, 2025",
-    summary: `Chhattisgarh Police, under “Operation Cyber Shield,” busted a big inter-state scam involving fake matrimony services.
+    summary: `Chhattisgarh Police, under "Operation Cyber Shield," busted a big inter-state scam involving fake matrimony services.
 11 people were arrested from Jamshedpur (Jharkhand) and Bilaspur (Chhattisgarh). 
-The gang used 262 fake social media accounts on Instagram, Facebook, and YouTube to create “matrimony profiles.” 
-Victims paid money into mule bank accounts to get “matrimonial details” (like biodata, address), but after payment, they were ghosted. 
+The gang used 262 fake social media accounts on Instagram, Facebook, and YouTube to create "matrimony profiles." 
+Victims paid money into mule bank accounts to get "matrimonial details" (like biodata, address), but after payment, they were ghosted. 
 A case was registered for fraud involving 79 mule accounts in HDFC Bank. 
 Police said this scam reflects how social media is being misused to run financial frauds.`,
     link: "https://timesofindia.indiatimes.com/city/raipur/cyber-shield-op-busts-massive-online-matrimony-scam-11-held-in-jharkhand-and-chhattisgarh/articleshow/124481969.cms"
@@ -190,10 +190,10 @@ Police said this scam reflects how social media is being misused to run financia
   {
     title: "AI-Generated Persona Used for Fraud",
     date: "22 July 2025",
-    summary: `There was a hugely popular Instagram profile called “Babydoll Archi”, which many believed to be a young Assamese influencer.
+    summary: `There was a hugely popular Instagram profile called "Babydoll Archi", which many believed to be a young Assamese influencer.
 In reality, that persona was completely fake — made by her ex-boyfriend, who is a mechanical engineer
 He used old photos of her and AI tools (like Midjourney, Desire AI) to create very realistic but false videos and images.
-The fake profile posted “travel” videos, dance reels, bold/sensual content — even an image of her with adult actress Kendra Lust. 
+The fake profile posted "travel" videos, dance reels, bold/sensual content — even an image of her with adult actress Kendra Lust. 
 Experts say this is a powerful example of how AI can be used to steal someone’s identity and cause serious emotional and social harm. `,
     link: "https://thefederal.com/category/states/north-east/assam/babydoll-archi-deepfake-case-exposes-disturbing-ai-identity-theft-198189"
 
@@ -254,14 +254,14 @@ Microsoft cybersecurity experts at the conference noted that India lost ₹22,84
   {
     title: "Goa police's AI-powered 'Deep Trace' to probe deep dark crimes",
     date: "May 3, 2025", 
-    summary:`In May 2025, Goa Police launched “Deep Trace,” an in-house developed AI tool that uses publicly available data (like mobile numbers, vehicle registrations, and PAN card links) to identify suspects and trace digital footprints. The system was successfully tested in real cases, including murders and complex investigations. It was publicly launched in the presence of the Chief Minister. However, there is no public audit or information about how the system ensures data protection or avoids errors.`,
+    summary:`In May 2025, Goa Police launched "Deep Trace," an in-house developed AI tool that uses publicly available data (like mobile numbers, vehicle registrations, and PAN card links) to identify suspects and trace digital footprints. The system was successfully tested in real cases, including murders and complex investigations. It was publicly launched in the presence of the Chief Minister. However, there is no public audit or information about how the system ensures data protection or avoids errors.`,
     link:"https://timesofindia.indiatimes.com/city/goa/goa-polices-ai-powered-deep-trace-to-probe-deep-dark-crimes/articleshow/120833963.cms?"
   
   },
   {
     title: "Goa Using Self-Driving, AI-Powered Robots As Lifeguards On Beaches",
     date: "Feb 06, 2023",
-    summary:`Introduced in 2023 by Drishti Marine (Goa’s state-appointed lifeguard agency), AI robots like “Aurus” and the “Triton Surveillance System” were deployed on busy beaches. Aurus is a self-driving robot that patrols unsafe areas, monitors beach activity, and assists during rescues.Triton uses AI-powered monitoring and communication systems to give lifeguards early alerts about unsafe conditions.These tools are credited with reducing drowning incidents and improving emergency response times. While hailed as a technological leap, there are concerns about data privacy and ongoing operational costs`,
+    summary:`Introduced in 2023 by Drishti Marine (Goa’s state-appointed lifeguard agency), AI robots like "Aurus" and the "Triton Surveillance System" were deployed on busy beaches. Aurus is a self-driving robot that patrols unsafe areas, monitors beach activity, and assists during rescues.Triton uses AI-powered monitoring and communication systems to give lifeguards early alerts about unsafe conditions.These tools are credited with reducing drowning incidents and improving emergency response times. While hailed as a technological leap, there are concerns about data privacy and ongoing operational costs`,
     link:"https://www.ndtv.com/india-news/goa-using-self-driving-ai-powered-robots-as-lifeguards-on-beaches-3757599?utm_source.com"
   },
   {  title: "AI-powered robots-BANE or BOON",
@@ -273,8 +273,8 @@ Microsoft cybersecurity experts at the conference noted that India lost ₹22,84
     title: "Goa police uses AI tools to tackle cybercrimes: CM Sawant",
     date: "July 22, 2025",
     summary:`On July 22, 2025, Chief Minister Pramod Sawant told the Goa Legislative Assembly that the state police were using several AI tools, including:
-“Spot the Scam” – which uses AI to detect fraudulent activity and scams online.
-“Radical Content Analyser” – which scans digital content for signs of extremism or hate speech.
+"Spot the Scam" – which uses AI to detect fraudulent activity and scams online.
+"Radical Content Analyser" – which scans digital content for signs of extremism or hate speech.
  He positioned these tools as key to tackling cybercrime and protecting citizens. Critics, however, note that without clear rules, such tools could lead to overreach or misuse.`,
     link:"https://theprint.in/india/goa-police-uses-ai-tools-to-tackle-cybercrimes-cm-sawant/2698729/?utm_source.com"
   },
@@ -353,7 +353,7 @@ The issue has intensified political tensions during the ongoing election campaig
     summary: `A fraud gang used AI‑generated video calls to impersonate Andhra Pradesh CM N. Chandrababu Naidu and TDP leader Devineni Uma Maheswara Rao
 Around 18 TDP leaders from Telangana believed the fake video calls were real, thinking they had been personally invited by Naidu.
 One of the TDP leaders sent ₹35,000 after getting a fake call showing Uma speaking to him.
-The fraudsters promised “tickets” for local body elections and said Naidu would meet them personally.
+The fraudsters promised "tickets" for local body elections and said Naidu would meet them personally.
 Police have registered a case under cybercrime laws and are investigating the gang, which appears to be led by someone from Eluru. `,
 link: "https://www.business-standard.com/pti-stories/national/andhra-police-bust-international-cyber-fraud-syndicate-33-held-125052300626_1.html"
   }
@@ -380,42 +380,42 @@ link: "https://www.business-standard.com/pti-stories/national/andhra-police-bust
   }
   ],
 
-  “Haryana/ Delhi”: [
+  "Haryana/ Delhi": [
   {
-    title: “AI Glitch Cuts Off Pensions, Wrongly Declares Thousands of Elderly “Dead””,
-    date: “25 Jan 2024”,
-    summary: `AI-driven Parivar Pehchan Patra (PPP) system wrongly identified several pensioners as “dead,” cutting off their welfare. 102‑yr‑old Dhuli Chand had his pension stopped and even staged a mock wedding to prove he was alive. Nearly 277,115 elderly and 52,479 widows were affected by these AI errors`,
-    link: “https://www.aljazeera.com/economy/2024/1/25/in-india-an-algorithm-declares-them-dead-they-have-to-prove-theyre#:~:text=Chand%20resorted%20to%20the%20antic,to%20%E2%80%9Cyour%20uncle%20is%20alive%E2%80%9D”
+    title: "AI Glitch Cuts Off Pensions, Wrongly Declares Thousands of Elderly \"Dead\"",
+    date: "25 Jan 2024",
+    summary: `AI-driven Parivar Pehchan Patra (PPP) system wrongly identified several pensioners as "dead," cutting off their welfare. 102‑yr‑old Dhuli Chand had his pension stopped and even staged a mock wedding to prove he was alive. Nearly 277,115 elderly and 52,479 widows were affected by these AI errors`,
+    link: "https://www.aljazeera.com/economy/2024/1/25/in-india-an-algorithm-declares-them-dead-they-have-to-prove-theyre#:~:text=Chand%20resorted%20to%20the%20antic,to%20%E2%80%9Cyour%20uncle%20is%20alive%E2%80%9D"
   },
   {
-    title: “Lawyer Duped by Deepfake Voice Scam, Helpless as Authorities Fail to Act”,
-    date: “Oct 27, 2024”,
-    summary: `Lawyer Girraj Pandey was duped by a phone call in which scammers used AI-cloned voice of his friend to ask for money. Pandey transferred ₹25,000 (after fake SMS “deposit” alerts) before realizing it was a scam. Police and bank took no immediate action.`,
-    link: “https://timesofindia.indiatimes.com/city/delhi/lawyer-duped-by-deepfake-voice-scam-helpless-as-authorities-allegedly-fail-to-act/articleshow/114311267.cms#:~:text=The%20scammer%20had%20cleverly%20sent,just%20as%20I%E2%80%99ve%20done%20in”
+    title: "Lawyer Duped by Deepfake Voice Scam, Helpless as Authorities Fail to Act",
+    date: "Oct 27, 2024",
+    summary: `Lawyer Girraj Pandey was duped by a phone call in which scammers used AI-cloned voice of his friend to ask for money. Pandey transferred ₹25,000 (after fake SMS "deposit" alerts) before realizing it was a scam. Police and bank took no immediate action.`,
+    link: "https://timesofindia.indiatimes.com/city/delhi/lawyer-duped-by-deepfake-voice-scam-helpless-as-authorities-allegedly-fail-to-act/articleshow/114311267.cms#:~:text=The%20scammer%20had%20cleverly%20sent,just%20as%20I%E2%80%99ve%20done%20in"
   },
   {
-    title: “Faridabad Teen Blackmailed With AI-Generated Pics of 3 Sisters, Dies by Suicide”,
-    date: “Oct 17, 2024”,
+    title: "Faridabad Teen Blackmailed With AI-Generated Pics of 3 Sisters, Dies by Suicide",
+    date: "Oct 17, 2024",
     summary: `A 19‑year-old college student, Rahul Bharti, was blackmailed with AI-generated obscene images/videos of himself and his three sisters. The accused demanded ₹20,000 to not circulate the fakes. Under severe distress, Rahul consumed poison and died by suicide.`,
-    link: “https://www.ndtv.com/india-news/faridabad-man-blackmailed-with-ai-generated-pics-of-3-sisters-he-dies-by-suicide-9522971#:~:text=Investigation%20revealed%20a%20chat%20between,come%20to%20me”
+    link: "https://www.ndtv.com/india-news/faridabad-man-blackmailed-with-ai-generated-pics-of-3-sisters-he-dies-by-suicide-9522971#:~:text=Investigation%20revealed%20a%20chat%20between,come%20to%20me"
   },
   {
-    title: “Manisha Death Case: FIRs Against 10 Social Media Accounts for Spreading Fake News”,
-    date: “Aug 19, 2025”,
+    title: "Manisha Death Case: FIRs Against 10 Social Media Accounts for Spreading Fake News",
+    date: "Aug 19, 2025",
     summary: `In a high-profile schoolteacher’s death in Bhiwani, Haryana Police cracked down on online misinformation. In August 2025 the Tribune reported that police served notices and filed FIRs against 10 social-media accounts for spreading inflammatory false news about the case. By October 2025, police noted dozens of AI-generated fake videos circulating on social media defaming the victim’s family. Amar Ujala reports that the Bhiwani police registered a fresh FIR for spreading these AI-created, misleading videos and false claims about the victim.`,
-    link: “https://www.tribuneindia.com/news/haryana/manisha-death-case-firs-against-10-social-media-accounts-for-spreading-fake-news/#:~:text=The%20Bhiwani%20police%20have%20served,in%20the%20Manisha%20death%20case”
+    link: "https://www.tribuneindia.com/news/haryana/manisha-death-case-firs-against-10-social-media-accounts-for-spreading-fake-news/#:~:text=The%20Bhiwani%20police%20have%20served,in%20the%20Manisha%20death%20case"
   },
   {
-    title: “Nirmala Sitharaman Deepfake Crypto Scam — National Scale, Delhi Epicentre”,
-    date: “Jun 2025”,
-    summary: `A widely circulated AI-generated deepfake video falsely showed Finance Minister Nirmala Sitharaman endorsing a fictitious cryptocurrency scheme called “Quantum AI,” duping thousands of investors across India. A similar deepfake falsely featured Google CEO Sundar Pichai lending credibility to a fake government investment platform. CloudSEK’s report found that brand abuse accounts for nearly one-third of all cybercrime incidents in India. Losses from AI-enabled financial scams were projected to exceed ₹20,000 crore by end of 2025 — a 76% rise from 2024. Delhi’s cyber police coordinated with MeitY and platforms to remove the videos. The incident prompted I4C to expand its deepfake tracking capacity.`,
-    link: “https://nationalcybersecurity.com/india-faces-%E2%82%B920000-crore-cybercrime-threat-in-2025-amid-surge-in-ai-driven-deepfake-investment-scams-cybercrime-infosec/”
+    title: "Nirmala Sitharaman Deepfake Crypto Scam — National Scale, Delhi Epicentre",
+    date: "Jun 2025",
+    summary: `A widely circulated AI-generated deepfake video falsely showed Finance Minister Nirmala Sitharaman endorsing a fictitious cryptocurrency scheme called "Quantum AI," duping thousands of investors across India. A similar deepfake falsely featured Google CEO Sundar Pichai lending credibility to a fake government investment platform. CloudSEK’s report found that brand abuse accounts for nearly one-third of all cybercrime incidents in India. Losses from AI-enabled financial scams were projected to exceed ₹20,000 crore by end of 2025 — a 76% rise from 2024. Delhi’s cyber police coordinated with MeitY and platforms to remove the videos. The incident prompted I4C to expand its deepfake tracking capacity.`,
+    link: "https://nationalcybersecurity.com/india-faces-%E2%82%B920000-crore-cybercrime-threat-in-2025-amid-surge-in-ai-driven-deepfake-investment-scams-cybercrime-infosec/"
   },
   {
-    title: “Ankur Warikoo Deepfake — Delhi HC Issues Landmark John Doe Order”,
-    date: “2025”,
+    title: "Ankur Warikoo Deepfake — Delhi HC Issues Landmark John Doe Order",
+    date: "2025",
     summary: `Delhi High Court granted a landmark John Doe order to personal finance influencer Ankur Warikoo after AI-generated deepfake videos using his face, voice, and likeness circulated on social media — luring followers into WhatsApp groups for fraudulent stock market advice. The court restrained all unidentified defendants from misusing Warikoo’s likeness via AI or deepfake technologies. Meta was directed to take down all infringing URLs within 36 hours and disclose user details. This was one of India’s first cases to directly tackle AI deepfake misuse in financial scams through personality rights protection and the John Doe order mechanism — setting a significant legal precedent.`,
-    link: “https://law.asia/ai-deepfake-legal-response/”
+    link: "https://law.asia/ai-deepfake-legal-response/"
   }
 ],
 "Arunachal Pradesh": [
@@ -572,7 +572,7 @@ GNET researchers documented how the synthetic content amplified sectarian grieva
     date: "May 5, 2024",
     summary : `During the 2024 Lok Sabha elections, CPI(M) released a 2-minute AI-generated video of former West Bengal CM Buddhadeb Bhattacharjee, who is elderly and unable to campaign.
 The video showed him speaking against TMC and BJP, mentioning Sandeshkhali, corruption, demonetization, and corporate nexus.
-The party publicly stated that AI was used to simulate what he “would have said” if he were healthy and present.`,
+The party publicly stated that AI was used to simulate what he "would have said" if he were healthy and present.`,
     link: "https://www.thehindu.com/elections/lok-sabha/cpim-releases-ai-generated-video-of-buddhadeb-seeking-the-support-of-left-candidates/article68142045.ece"
   },{
   title: "Mamata Banerjee Deepfake Dancing Video",
@@ -643,7 +643,7 @@ They forced him to wash the Brahmin’s feet and drink it as a punishment. `,
       summary: `A businessman in Pune saw a fake AI-made video that looked like a well known share trading expert.
 He downloaded the investment app through a whatsap group 
 Between March 27 and May 9, he sent a total of Rs. 54.6 lakh, to different fake bank accounts.  
-The app showed he had “earned” Rs. 2.52 crore, around more than 400% profit without withdrawing. 
+The app showed he had "earned" Rs. 2.52 crore, around more than 400% profit without withdrawing. 
 Police later found that only ₹10 lakh could be tracked to one account, the rest of the money was moved through Tether cryptocurrency to foreign scammers. 
 Total of 5 people were arrested - 2 from MP and 3 from Delhi`,
 link: "https://indianexpress.com/article/cities/pune/deepfake-video-share-fraud-mp-delhi-siphon-fund-crypto-route-10167811/"
@@ -1214,7 +1214,7 @@ While not all cases were AI-specific, the trend reflects rising digital vulnerab
 
   "Telangana": [
     { title: "Hyderabad Woman Falls Victim to AI Voice Scam, Loses Rs 1.97 Lakh", date: "Mar 18, 2025",
-      summary : `A 72-year-old homemaker from Hyderabad was tricked into transferring ₹1.97 lakh after falling prey to an AI-generated voice scam.The woman first received a WhatsApp message that appeared to be from her sister urgently requesting money. She then called and heard a familiar voice confirm with a “yes.” She proceeded to transfer the amount only to later realise she had been deceived. `,
+      summary : `A 72-year-old homemaker from Hyderabad was tricked into transferring ₹1.97 lakh after falling prey to an AI-generated voice scam.The woman first received a WhatsApp message that appeared to be from her sister urgently requesting money. She then called and heard a familiar voice confirm with a "yes." She proceeded to transfer the amount only to later realise she had been deceived. `,
       link : "https://www.thehindu.com/news/national/telangana/homemaker-duped-of-197-lakh-in-ai-voice-scam/article69344422.ece"
 
      },
@@ -1399,13 +1399,13 @@ While not all cases were AI-specific, the trend reflects rising digital vulnerab
   {
     title: "Cyber fraudsters lure Himachal Pradesh's elderly men into honey trap",
     date: "Mar 28, 2022",
-    summary: `Cyber fraudsters ran an AI-aided “honeytrap” extortion scheme. They engaged elderly men on WhatsApp, recorded video chats and digitally morphed victims’ faces into pornographic clips Voice‑modulation apps were also used to mimic women’s voices The scammers then blackmailed the victims for money, extorting lakhs of rupees.`,
+    summary: `Cyber fraudsters ran an AI-aided "honeytrap" extortion scheme. They engaged elderly men on WhatsApp, recorded video chats and digitally morphed victims’ faces into pornographic clips Voice‑modulation apps were also used to mimic women’s voices The scammers then blackmailed the victims for money, extorting lakhs of rupees.`,
     link:"https://www.tribuneindia.com/news/himachal/cyber-fraudsters-target-himachal-pradeshs-elderly-men-381307/#:~:text=The%20police%20said%20in%20some,being%20used%20to%20receive%20payments"
   },
   {
     title: "AI-Generated Image Lands Fruit Vendor in Sedition Case; Court Says No Offence",
     date: "Aug 22, 2025",
-    summary: `A fruit vendor was charged under the new sedition law for sharing an AI-generated image of PM Modi labeled “Pakistan Zindabad”. The Himachal High Court later granted him bail, holding that merely praising another country did not amount to sedition. This case shows how AI-manipulated political content can lead to serious legal and social consequences. .`,
+    summary: `A fruit vendor was charged under the new sedition law for sharing an AI-generated image of PM Modi labeled "Pakistan Zindabad". The Himachal High Court later granted him bail, holding that merely praising another country did not amount to sedition. This case shows how AI-manipulated political content can lead to serious legal and social consequences. .`,
     link:"https://thewire.in/law/pakistan-zindabad-denouncing-india-is-not-sedition-himachal-pradesh-high-court"
   },
   {
@@ -1440,7 +1440,7 @@ While not all cases were AI-specific, the trend reflects rising digital vulnerab
   {
     title: "BJP Candidate Babulal Soren Targets AI-Generated Misinformation During Ghatshila Elections",
     date: "Nov 01, 2025",
-    summary:`In the Ghatshila assembly bypoll, AI-generated content flooded social media. A  video of BJP candidate Babulal Soren went viral,  made  to tarnish his image. Soren’s team reported the incident, and FIR was lodged. Ghatshila police have taken knowledge of such a case involving AI-generated fake posts” that sought to “mislead voters” The Election Commission had warned districts to act on AI deepfakes, and this became one of the first such cases in Jharkhand`,
+    summary:`In the Ghatshila assembly bypoll, AI-generated content flooded social media. A  video of BJP candidate Babulal Soren went viral,  made  to tarnish his image. Soren’s team reported the incident, and FIR was lodged. Ghatshila police have taken knowledge of such a case involving AI-generated fake posts" that sought to "mislead voters" The Election Commission had warned districts to act on AI deepfakes, and this became one of the first such cases in Jharkhand`,
     link: "https://timesofindia.indiatimes.com/city/ranchi/bjp-candidate-babulal-soren-targets-ai-generated-misinformation-during-ghatshila-elections/articleshow/125020279.cms#:~:text=Ranchi%3A%20The%20Ghatshila%20police%20have,post%2C%20the%20tribal%20party%20washed"
   },
   {
@@ -1547,7 +1547,7 @@ const governanceData = {
     title: "Gujarat AI Action Plan 2025–2030 Unveiled",
     date: "July 23, 2025", 
     type: "Policy Framework",
-    summary:`Gujarat has officially adopted an AI strategy (2025–2030), branding “Safe and Trusted AI” as a core principle. While no direct misuse cases have been reported, civil society and digital-rights experts warn that regulatory gaps (especially broad state exemptions under national security) could enable future misuse. Transparency, oversight, and citizen safeguards remain limited despite high-scale AI deployment planning. `,
+    summary:`Gujarat has officially adopted an AI strategy (2025–2030), branding "Safe and Trusted AI" as a core principle. While no direct misuse cases have been reported, civil society and digital-rights experts warn that regulatory gaps (especially broad state exemptions under national security) could enable future misuse. Transparency, oversight, and citizen safeguards remain limited despite high-scale AI deployment planning. `,
     link:"https://www.aicerts.ai/news/gujarat-ai-action-plan-2025-2030/"
     },
     {
@@ -1854,7 +1854,7 @@ const governanceData = {
     title: "Jharkhand police arrest 6 cyber criminals from Jamtara",
     date: "Jan 27, 2025",
     type:"Law Enforcement",
-    description:`Police in Jamtara district arrested six people accused of running a sophisticated cyber-fraud. Authorities reported that the suspects – self-described software experts – used artificial intelligence to create malware and scam software. The gang, operating under the alias “DK Boss” had duped victims online; police seized phones, SIM cards and other gear from them. Investigators are examining data for about 2,700 potential victims catalogued on the criminal’s website.`,
+    description:`Police in Jamtara district arrested six people accused of running a sophisticated cyber-fraud. Authorities reported that the suspects – self-described software experts – used artificial intelligence to create malware and scam software. The gang, operating under the alias "DK Boss" had duped victims online; police seized phones, SIM cards and other gear from them. Investigators are examining data for about 2,700 potential victims catalogued on the criminal’s website.`,
     link: "https://www.newsonair.gov.in/jharkhand-police-arrest-6-cyber-criminals-from-jamtara/"
   },
   {
