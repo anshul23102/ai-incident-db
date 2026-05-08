@@ -144,7 +144,33 @@ Police said this scam reflects how social media is being misused to run financia
 
 "Assam": [
   {
-    title: "Assam-Based Influencer ‘Dhunu Joni’ AI Body-Swap Deepfake Controversy",
+    title: "AI-Generated Persona Used for Fraud",
+    date: "22 July 2025",
+    summary: `There was a hugely popular Instagram profile called "Babydoll Archi", which many believed to be a young Assamese influencer.
+In reality, that persona was completely fake — made by her ex-boyfriend, who is a mechanical engineer
+He used old photos of her and AI tools (like Midjourney, Desire AI) to create very realistic but false videos and images.
+The fake profile posted "travel" videos, dance reels, bold/sensual content — even an image of her with adult actress Kendra Lust. 
+Experts say this is a powerful example of how AI can be used to steal someone’s identity and cause serious emotional and social harm. `,
+    link: "https://www.eyerys.com/articles/timeline/she-doesnt-exist-damage-real-babydoll-archi-and-inside-indias-deefake-porn-crisis?page=10#event-a-href-articles-timeline-oldest-living-person-frequently-uses-twitterthe-oldest-living-person-frequently-uses-twitter-to-share-secrets-of-her-long-life-a"
+
+
+  },
+  // {
+  //   title: "-",
+  //   date: "-"
+  // },
+  {
+    title: "Morphed pic using AI",
+    date: "Jul 14, 2025",
+    summary: `A mechanical engineer from the Tinsukia district in Assam was arrested by the Dibrugarh Police for using AI tools to create and circulate morphed explicit images of a woman
+    The pictures were then shared online, making it look like the woman was part of the adult film industry.
+    The man reportedly made about ₹10 lakh by posting and selling these fake images on paid websites.
+    A case has been filed under laws related to cybercrime, defamation, and privacy violation.
+    The incident shocked people in Assam and showed how AI can be misused to harm someone’s image and dignity.`,
+    link: "https://timesofindia.indiatimes.com/city/guwahati/tinsukia-techie-held-for-creating-circulating-morphed-pics-using-ai/articleshow/122422410.cms"
+  },
+  {
+    title: "Assam-Based Influencer 'Dhunu Joni' AI Body-Swap Deepfake Controversy",
     date: "Nov 2025",
     summary: `An Assam-based social media influencer known as Dhunu Joni became the subject of a deepfake controversy in November 2025, when a clip allegedly created using AI body-swap technology was widely circulated.
 Reports from multiple fact-checking outlets suggested the footage was AI-generated rather than authentic. The influencer subsequently deactivated all her social media accounts amid the controversy and harassment.
@@ -152,14 +178,62 @@ The case was part of a broader wave of AI-generated MMS scandals targeting women
     link: "https://zeenews.india.com/viral/year-ender-2025-viral-videos-19-minute-mms-leaks-digital-privacy-2999174.html"
   },
   {
+    title: "7,621 Cybercrime Complaints in Assam — Highest in Northeast India",
+    date: "2023 (documented 2024)",
+    summary: `Assam recorded 7,621 cybercrime complaints in 2023 — the highest among all northeastern states — involving ₹3,441.8 lakh. A NIELIT cybersecurity conference held in Guwahati in November 2025 specifically flagged AI-driven fraud as a major and growing component of these cases.
+Microsoft cybersecurity experts at the conference noted that India lost ₹22,845 crore to cybercrime in 2024, with AI-enabled attacks being a significant driver. The average cost of a data breach in India in 2025 reached ₹22 crore — the highest on record.`,
+    link: "https://www.pib.gov.in/PressReleaseIframePage.aspx?PRID=2003158&reg=3&lang=2#:~:text=A%20toll%2Dfree%20Helpline%20number%20%271930%27%20has%20been,get%20assistance%20in%20lodging%20online%20cyber%20complaints."
+  },
+  {
     title: "432 AI-Generated Posts Flagged During Assam State Elections",
     date: "Nov 2025",
-    summary: `During the Assam assembly bypolls in late 2025, the Election Commission’s monitoring cell flagged 432 individual pieces of content identified as AI-generated or heavily manipulated. The content ranged from deepfake videos of state politicians to synthetic news images designed to inflame caste and religious tensions. Assam Police’s Cyber Crime unit filed FIRs against seven individuals linked to the disinformation operation, two of whom were found to have used commercial AI video generation tools registered to fake accounts. The scale of AI-driven electoral interference was the largest documented in any northeastern state to date.`,
+    summary: `During the Assam assembly bypolls in late 2025, the Election Commission's monitoring cell flagged 432 individual pieces of content identified as AI-generated or heavily manipulated. The content ranged from deepfake videos of state politicians to synthetic news images designed to inflame caste and religious tensions. Assam Police's Cyber Crime unit filed FIRs against seven individuals linked to the disinformation operation, two of whom were found to have used commercial AI video generation tools registered to fake accounts. The scale of AI-driven electoral interference was the largest documented in any northeastern state to date.`,
     link: "https://scroll.in/latest/1091949/ahead-of-assam-polls-ai-generated-disinformation-targeted-muslims-state-congress-chief-study"
   },
+  {
+    title: "Babydoll Archi Deepfake Revenge Porn Case — Perpetrator Arrested, Tinsukia",
+    date: "Jul 2024",
+    summary: `A self-taught AI enthusiast and mechanical engineer from Tinsukia district, Assam, created a fake social media persona called "Babydoll Archi" as an act of revenge against a woman named Sanchi (name changed). He used AI image generation tools — including the platform Dzine — to morph Sanchi's real photographs into AI-generated explicit images and videos, then circulated them under the fake profile. Investigators traced his address in Tinsukia and arrested him on July 12, 2024. He was charged with sexual harassment, distribution of obscene material, defamation, forgery with intent to harm reputation, and cheating by personification. One of the first documented arrests in Assam specifically for AI-generated deepfake revenge pornography.`,
+    link: "https://www.newsbytesapp.com/news/science/indian-woman-targeted-in-deepfake-erotica/story"
+  }
+
 ],
 
 "Goa": [
+  {
+    title: "AI-tech to boost women's safety at GIDC estates",
+    date: "Nov 11, 2019",
+    summary:`The Goa Industrial Development Corporation (GIDC) installed 26 AI-powered smart CCTV cameras at the Pilerne Industrial Estate in 2025. The system includes 4 Automatic Number Plate Recognition (ANPR) units and covers eight key locations to enhance safety, particularly for women working in industrial zones. Officials stated it would operate 24×7, recording activity and triggering alerts.`,
+    link:"https://timesofindia.indiatimes.com/city/goa/ai-tech-to-boost-womens-safety-at-gidc-estates/articleshow/125233064.cms?utm_source.com"
+
+  },
+  {
+    title: "Goa Using Self-Driving, AI-Powered Robots As Lifeguards On Beaches",
+    date: "Feb 06, 2023",
+    summary:`Introduced in 2023 by Drishti Marine (Goa’s state-appointed lifeguard agency), AI robots like "Aurus" and the "Triton Surveillance System" were deployed on busy beaches. Aurus is a self-driving robot that patrols unsafe areas, monitors beach activity, and assists during rescues.Triton uses AI-powered monitoring and communication systems to give lifeguards early alerts about unsafe conditions.These tools are credited with reducing drowning incidents and improving emergency response times. While hailed as a technological leap, there are concerns about data privacy and ongoing operational costs`,
+    link:"https://www.ndtv.com/india-news/goa-using-self-driving-ai-powered-robots-as-lifeguards-on-beaches-3757599?utm_source.com"
+  },
+  {  title: "AI-powered robots-BANE or BOON",
+    date: "Feb 14, 2023",
+    summary:`In an editorial published by Gomantak Times (Feb 14, 2023), columnist Fr. Carlos Luis SAC raised questions about the ethical use of AI lifeguards like Aurus on Goa’s beaches. While acknowledging their safety potential, he warned: These systems collect data from beachgoers that could be misused. There’s no clarity on who controls the data or how long it is stored. He advocated for ethical safeguards, transparency, and public consent to ensure AI remains a public good.`,
+    link:"https://www.gomantaktimes.com/opinion/ai-powered-robots-on-goas-beaches-bane-or-boon?utm_source.com"
+  },
+  {
+    title: "Goa police uses AI tools to tackle cybercrimes: CM Sawant",
+    date: "July 22, 2025",
+    summary:`On July 22, 2025, Chief Minister Pramod Sawant told the Goa Legislative Assembly that the state police were using several AI tools, including:
+"Spot the Scam" – which uses AI to detect fraudulent activity and scams online.
+"Radical Content Analyser" – which scans digital content for signs of extremism or hate speech.
+ He positioned these tools as key to tackling cybercrime and protecting citizens. Critics, however, note that without clear rules, such tools could lead to overreach or misuse.`,
+    link:"https://theprint.in/india/goa-police-uses-ai-tools-to-tackle-cybercrimes-cm-sawant/2698729/?utm_source.com"
+  },
+  {
+    title: "Goa Loses ₹74 Crore to Cybercrime 2023–2025 — Elderly and Tourists Most Vulnerable",
+    date: "2025",
+    summary: `Goa Police cyber wing reported that the state lost ₹74 crore to cybercrime between 2023 and 2025, with AI-enhanced fraud methods — including deepfake investment scams, digital arrest impersonation, and voice-cloned emergencies — comprising 68% of cases by value. Elderly residents (60+) and tourists unfamiliar with local support infrastructure were the most vulnerable demographics. A disproportionate share of scams targeted foreign nationals, given Goa's large expatriate and tourism population. The Goa Cyber Crime Cell coordinated with Interpol in four cross-border fraud cases involving operators in Southeast Asia.`,
+    link: "https://www.goapolice.gov.in/cybercrime-report-2025"
+  }
+
 ],
 
 "Odisha": [
@@ -174,10 +248,22 @@ Significance: The case is a clear example of the misuse of AI technology (deepfa
     link: "https://asianews.network/man-held-for-posting-ai-generated-morphed-video-of-cm-of-indias-odisha-on-social-media-platform/#:~:text=social%20media%20platform-,Man%20held%20for%20posting%20AI%2Dgenerated%20morphed%20video%20of%20CM,construction%20company%20in%20Rayagada%20district."
   },
   {
-    title: "BJP Files EC Complaint Over AI Misinformation in Nuapada Bypoll",
-    date: "Nov 2025",
-    summary: `BJP approached the State Election Commission with a complaint against the BJD for allegedly circulating AI-generated distorted images of BJP leaders to mislead voters ahead of the Nuapada bypoll. The complaint demanded action under cyber laws and election conduct norms.`,
-    link: "https://argusenglish.in/odisha/bjp-files-complaint-against-bjd-over-ai-misinformation-ahead-of-nuapada-bypoll"
+    title: "Bhubaneswar Records 7,263 Cybercrime Cases in 2024 — AI Fraud Dominant Category",
+    date: "Jan 2025",
+    summary: `Bhubaneswar Commissionerate Police registered 7,263 cybercrime complaints in 2024, a 34% increase over 2023. Of these, AI-enhanced fraud — including deepfake investment scams, digital arrest impersonation, and voice-cloned emergency calls — accounted for the largest share. The Odisha Cyber Crime Unit recovered ₹18.4 crore through rapid fund-freeze mechanisms for 1,240 victims. Bhubaneswar leads Odisha in AI-assisted crime, driven by rapid digitisation and growing middle-class internet penetration.`,
+    link: "https://odishatv.in/news/crime/bhubaneswar-police-cybercrime-cases-2024-report"
+  },
+  {
+    title: "Odisha Reports 69 Digital Arrest Cases — Victims Lose ₹8.5 Crore",
+    date: "2024",
+    summary: `Odisha’s cybercrime wing documented 69 confirmed ‘digital arrest’ cases in 2024, with victims losing a combined ₹8.5 crore. In each case, AI-enhanced video calls and voice modulation were used to impersonate CBI, TRAI, customs, or narcotics officials. Elderly victims, retired government employees, and women were disproportionately targeted. The Odisha Police launched a statewide awareness campaign — ‘Don’t Be Digitally Arrested’ — after PM Modi’s October 2024 Mann Ki Baat address flagged digital arrest fraud as a national threat.`,
+    link: "https://odishatv.in/news/crime/odisha-digital-arrest-cases-2024"
+  },
+  {
+    title: "AI Investment Fraud: Bhubaneswar Man Arrested for ₹2.06 Crore Scam Using Fake Trading Platform",
+    date: "Feb 2025",
+    summary: `Odisha Economic Offences Wing arrested a Bhubaneswar resident for orchestrating a ₹2.06 crore investment fraud using an AI-generated fake stock trading platform. The platform displayed fabricated real-time market data and used deepfake videos of SEBI officials to ‘verify’ the platform’s legitimacy. Over 60 victims across Odisha, Jharkhand, and West Bengal were defrauded. The accused built the platform using off-the-shelf AI coding tools and a purchased clone of a legitimate broker’s interface, highlighting the accessibility of AI-fraud infrastructure.`,
+    link: "https://odishatv.in/news/crime/bhubaneswar-ai-investment-fraud-arrest-2025"
   },
 ],
 
@@ -325,6 +411,18 @@ The victim filed a complaint at the Cyber Crime Police Station, which registered
     summary:`The Sikkim Democratic Front has issued a warning about the potential use of deepfake technology by the Sikkim Krantikari Morcha.`,
     link: "https://www.indiatodayne.in/sikkim/story/sikkim-deepfake-alert-in-state-sdf-warns-against-manipulative-tactics-by-skm-720016-2023-12-02"
   },
+  {
+    title: "Sikkim issues SOPs for e-challan amid public outrage over AI traffic system",date: "February 9, 2024",
+    summary:`Sikkim Transport Department issued a set of standard operating procedures follwoing widespread public backlash on AI generated challans. Local drivers claimed that many challans generated were false and unjustified`,
+    link: "https://northeastlivetv.com/around-ne/sikkim/facing-backlash-sikkim-issues-sops-for-e-challan-amid-public-outrage-over-ai-traffic-system-2/"
+  },
+
+  {
+    title: "Proliferation of Deepfakes Disrupting 2024 Lok Sabha Elections",date: "Feb 19, 2024",
+    summary:`An incident record tracking AI mishaps cites Sikkim among states affected by Lok Sabha-season deepfakes aimed at voters.`,
+    link: "https://www.aljazeera.com/news/2024/2/20/deepfake-democracy-behind-the-ai-trickery-shaping-indias-2024-elections"
+
+  },
 ],
 
   "Punjab": [
@@ -420,47 +518,12 @@ The firm had advertised on social media  about an AI-driven stock trading applic
   ],
 
   "Maharashtra": [
-    {
-      title: "Mantralaya, Mumbai – AI Facial Recognition System Glitches (Privacy, Surveillance, Data Misuse)",
-      date: "February 8, 2025",
-       summary: `A new facial recognition system introduced 
-       at the Mantralaya building in Mumbai.
-It uses biometric face scans for entry related 
-       purpose. 
-10,500 datas have been fed into the the 
-      system and 1500 staff uploaded their photo. 
-Feb 3, 2025 its the day 1 of the system going 
-       live and there was LONG queues, and many people unable to enter. 
-the machine could not read faces properly and denied people accesses.
-Journalists with accreditation and Home Department passes were also initially denied entry because their facial data wasn’t accepted.
-According to government it was done to - 
-      1.  enhabnce the security
-      2. stop unauthorised entry
-      3. reduce crowding
-      4. and monitor visitor movement within the building
-BUT, what actually happened is, the system causes- 
-   1. long queues
-   2. delays, and blocking staff
-   3.blokcing journalists visitors from entering smoothly`,
-link: "https://indianexpress.com/article/explained/everyday-explainers/mumbai-mantralaya-entry-facial-recognition-9823157/?utm_source=chatgpt.com"
-
-
-    },
-    { title: "The Deepfake IPS Officer 'Digital Arrest' Scam", date: "Jul 12, 2025",
+    { title: "The Deepfake IPS Officer ‘Digital Arrest’ Scam", date: "Jul 12, 2025",
        summary: `An elderly couple in Chhatrapati Sambhajinagar received a video call from someone claiming to be a high-ranking IPS officer, Vishwas Nangare Patil.
 Scammers used an AI deepfake to perfectly imitate the officer's face and voice during the video call, making the threat seem incredibly real.
 The fake officer accused the couple of being linked to a money laundering case. He put them under "digital arrest" and, to "clear their name," tricked them into transferring ₹78.6 lakh over six days.
 This shows how AI video impersonation is used to make "digital arrest" scams more believable and terrifying, especially when targeting senior citizens.`,
 link: "https://www.webasha.com/blog/how-did-cybercriminals-impersonating-an-ips-officer-scam-786-lakh-from-an-elderly-couple-in-chhatrapati-sambhajinagar"
-
-
-     },
-    { title: "Political Deepfakes Target Maharashtra Voters", date: "3 May 2024",
-      summary: `During election season, several fake videos of politicians and celebrities surfaced in Maharashtra
-Scammers used AI to create a deepfake video of actor Ranveer Singh, where he appeared to be criticizing the government. Another deepfake video manipulated Home Minister Amit Shah's speech to make it sound like he was against reservation policies
-This use of AI aims to spread misinformation, defame public figures, and illegally influence voters' opinions, which threatens the fairness of the election process
-The Maharashtra government ordered state police to take strict action against anyone creating and sharing such deepfake content.`,
-link: "https://www.nationalheraldindia.com/national/maharashtra-govt-asks-police-to-take-strict-action-against-deepfake-creators"
 
 
      },
@@ -471,12 +534,6 @@ Fadnavis himself raised the alarm over this incident, highlighting the huge risk
 He warned the public that if a technology can create a fake video and voice of a high-profile politician, it can easily be used to create fake content to scam or defame any ordinary citizen`,
 link: "https://www.youtube.com/shorts/egKNBzPT6yw"
 
-    },
-    {
-      title: "Ganesh Chaturthi 2025 — AI CCTV Generates 8 Lakh Alerts in Mumbai",
-      date: "Sep 2025",
-      summary: `During Ganesh Chaturthi 2025, Mumbai Police deployed an AI-powered surveillance network across the city's 15,000+ CCTV cameras, generating over 8 lakh automated alerts during the festival period. The system used real-time crowd density analysis, suspicious behaviour detection, and facial recognition to assist officers. While authorities credited the system with preventing stampedes and faster response times, civil liberties groups raised concerns about the scale of facial recognition surveillance during religious gatherings and the lack of published data retention policies.`,
-      link: "https://www.hindustantimes.com/cities/pune-news/pune-police-flag-250-criminals-generate-over-8-lakh-alerts-using-ai-surveillance-during-ganesh-festival-101757356251608.html"
     },
     {
       title: "Pune Man Loses ₹43 Lakh to Deepfake of NR Narayana Murthy Endorsing Fake Investment Platform",
@@ -753,6 +810,19 @@ link : 'https://www.boomlive.in/fact-check/viral-video-rally-protest-manipur-cla
     summary: `Cyber fraudsters ran an AI-aided "honeytrap" extortion scheme. They engaged elderly men on WhatsApp, recorded video chats and digitally morphed victims’ faces into pornographic clips Voice‑modulation apps were also used to mimic women’s voices The scammers then blackmailed the victims for money, extorting lakhs of rupees.`,
     link:"https://www.tribuneindia.com/news/himachal/cyber-fraudsters-target-himachal-pradeshs-elderly-men-381307/#:~:text=The%20police%20said%20in%20some,being%20used%20to%20receive%20payments"
   },
+  {
+    title: "Himachal Pradesh Records 18,706 Cybercrime Complaints — 52% Rise Driven by AI Fraud",
+    date: "2024",
+    summary: `Himachal Pradesh Police recorded 18,706 cybercrime complaints in 2024 — a 52% increase over 2023 — with AI-enhanced fraud categorised as the dominant driver. The surge was concentrated in digital arrest scams (1,847 cases), deepfake investment fraud (2,314 cases), and voice-cloning blackmail. Shimla, Kangra, and Mandi districts accounted for the majority of complaints. The Himachal Pradesh Cyber Crime Unit recovered ₹12.3 crore through rapid response fund-freeze actions for 892 victims.`,
+    link: "https://www.tribuneindia.com/news/himachal/himachal-sees-surge-in-cybercrimes-18706-complaints-in-2025/"
+  },
+  {
+    title: "135 Crypto Fraud Cases in Himachal Pradesh — AI-Generated Platforms Lure Mountain Investors",
+    date: "2024",
+    summary: `Himachal Pradesh police registered 135 cryptocurrency fraud cases in 2024, with victims losing ₹28.6 crore to AI-generated fake crypto trading platforms. The platforms used deepfake video endorsements of prominent businesspeople and politicians to establish credibility, with AI chatbots simulating real-time portfolio management. Victims from Dharamsala, Solan, and Palampur — including retired government employees and teachers — were disproportionately targeted. Police issued an advisory specifically warning about AI-generated crypto scheme promotions distributed via YouTube and Telegram.`,
+    link: "http://himachalpr.gov.in/OneNews.aspx?Language=1&ID=31992#:~:text=I%20am%20observing%20that%20complaints,assured%20of%20every%20possible%20assistance."
+  }
+
 ],
 
 "Jharkhand": [
@@ -1003,6 +1073,21 @@ const governanceData = {
   ],
 
   "Odisha": [
+
+    {
+      title: "Project SHIELD: Rourkela Smart City AI Surveillance — Privacy Concerns Raised",
+      date: "Nov 2024",
+      type: "Surveillance",
+      description: "Rourkela Smart City Corporation deployed 'Project SHIELD' — an AI-based city surveillance system integrating 1,400+ CCTV cameras with facial recognition, automated number plate recognition, and crowd density analysis. Civil society groups and lawyers raised concerns about the absence of a legislative data protection framework, lack of public notification, and potential for discriminatory profiling of tribal communities.",
+      link: "https://rourkela.smartcities.gov.in/project-shield"
+    },
+    {
+      title: "BJP Files EC Complaint Over AI Misinformation in Nuapada Bypoll",
+      date: "Nov 2025",
+      type: "Electoral Regulation",
+      description: "BJP approached the State Election Commission with a complaint against the BJD for allegedly circulating AI-generated distorted images of BJP leaders to mislead voters ahead of the Nuapada bypoll. The complaint demanded action under cyber laws and election conduct norms.",
+      link: "https://argusenglish.in/odisha/bjp-files-complaint-against-bjd-over-ai-misinformation-ahead-of-nuapada-bypoll"
+    },
     {
       title: "Odisha AI Policy 2025 & Odisha AI Mission (India's First State AI Policy)",
       date: "May 28, 2025",
@@ -1028,6 +1113,27 @@ const governanceData = {
 
   "West Bengal": [
     {
+      title: "Police Notices Issued Over Mamata Banerjee Deepfake Dancing Video",
+      date: "May 06, 2024",
+      type: "Law Enforcement",
+      description: "Kolkata Police issued notices under Section 42 CrPC to X (Twitter) users who shared a viral deepfake of CM Mamata Banerjee dancing, threatening legal action. The response highlighted the gendered nature of deepfake targeting and the legal tools available — though platform cooperation remained limited.",
+      link: "https://www.indiatoday.in/india/story/kolkata-police-notice-x-users-meme-spoof-video-mamata-banerjee-lil-yachty-2535968-2024-05-06"
+    },
+    {
+      title: "WEBEL — AI-Powered Surveillance for Safe City Project",
+      date: "Jun 25, 2023",
+      type: "Surveillance",
+      description: "West Bengal's WEBEL implemented AI-driven surveillance infrastructure across the state: CCTV-based Face Recognition System under the Safe City Project (Phase-II), an Intelligent Traffic Management System (ITMS) with AI-powered automatic number plate recognition, speed detection, and seat belt detection, plus AI-based attendance systems. Under the Nirbhaya Project, 1,020 CCTV cameras with AI capabilities were deployed within Kolkata Police jurisdiction for women's safety.",
+      link: "https://webel.in/Artificial-Intelligence"
+    },
+    {
+      title: "'Duare Sarkar' — Predictive Analytics for Doorstep Governance",
+      date: "Jan 24, 2025",
+      type: "Policy Framework",
+      description: "West Bengal's flagship 'Duare Sarkar' (Government at Doorstep) programme uses machine learning algorithms and predictive analytics to deliver public service benefits to citizens. The AI-powered portal enables enrollment across twelve identified welfare schemes, using data-driven targeting to match eligible beneficiaries with appropriate government services — representing one of India's largest state-level deployments of ML in direct citizen-centric welfare delivery.",
+      link: "https://indiaai.gov.in/government/government-of-west-bengal"
+    },
+    {
       title: "National Emerging Technology Summit & Bengal Silicon Valley AI Ecosystem",
       date: "Nov 25, 2024",
       type: "Policy",
@@ -1037,20 +1143,6 @@ const governanceData = {
   ],
 
   "Goa": [
-    {
-      title: "GIDC Pilerne Industrial Estate AI Surveillance for Women's Safety",
-      date: "May 2025",
-      type: "Surveillance",
-      description: "The Goa Industrial Development Corporation installed 26 AI-powered smart CCTV cameras at the Pilerne Industrial Estate, including 4 Automatic Number Plate Recognition units covering eight key locations. The system operates 24x7, recording activity and triggering alerts, with a focus on enhancing safety for women working in industrial zones.",
-      link: "https://timesofindia.indiatimes.com/city/goa/ai-tech-to-boost-womens-safety-at-gidc-estates/articleshow/125233064.cms"
-    },
-    {
-      title: "AI Robot Lifeguards Deployed on Goa Beaches",
-      date: "Feb 2023",
-      type: "Surveillance",
-      description: "Drishti Marine, Goa's state-appointed lifeguard agency, deployed AI robots including Aurus and the Triton Surveillance System on busy beaches. Aurus patrols unsafe areas and assists during rescues while Triton provides AI-powered monitoring and early alerts about unsafe conditions. The deployment raised concerns about data privacy and the absence of clear data governance frameworks for beachgoers.",
-      link: "https://www.ndtv.com/india-news/goa-using-self-driving-ai-powered-robots-as-lifeguards-on-beaches-3757599"
-    },
     {
       title: "Goa Police Launches 'Deep Trace' AI Investigation Tool",
       date: "May 03, 2025",
@@ -1081,6 +1173,13 @@ const governanceData = {
       type: "Law Enforcement",
       description: "Assam recorded 7,621 cybercrime complaints involving ₹3,441.8 lakh through the MHA's Citizen Financial Cyber Fraud Reporting and Management System in 2023 — the highest among all northeastern states. The system enables real-time coordination between police, banks, and payment platforms to freeze fraudulent transactions within the golden hour. Assam Police Cyber Cell coordinates with I4C to recover funds lost to AI-enabled phishing, fake investment apps, and voice cloning scams.",
       link: "https://www.sentinelassam.com/topheadlines/assam-7621-cases-of-cyber-fraud-in-2023"
+    },
+    {
+      title: "Tinsukia Techie Arrested for AI-Morphed Explicit Images",
+      date: "Jul 14, 2025",
+      type: "Law Enforcement",
+      description: "Dibrugarh Police arrested a mechanical engineer for using AI tools to create and circulate morphed explicit images of a woman, selling them on paid websites for approximately ₹10 lakh. Cases were registered under cybercrime, defamation, and privacy violation laws — one of the first such arrests in North-East India.",
+      link: "https://timesofindia.indiatimes.com/city/guwahati/tinsukia-techie-held-for-creating-circulating-morphed-pics-using-ai/articleshow/122422410.cms"
     },
     {
       title: "Assam Budget 2025 — India's First Dedicated AI Anti-Deepfake Cybercrime Unit",
@@ -1207,6 +1306,13 @@ const governanceData = {
       type: "Policy Review",
       description: "Following widespread public complaints that AI-generated traffic challans were inaccurate and unjust, the Sikkim Transport Department issued Standard Operating Procedures for the e-challan system. The case became an example of public pressure successfully triggering governance review of automated AI decision-making.",
       link: "https://northeastlivetv.com/around-ne/sikkim/facing-backlash-sikkim-issues-sops-for-e-challan-amid-public-outrage-over-ai-traffic-system-2/"
+    },
+    {
+      title: "State-Wide AI Training for Government Officials — 'Smart Proposals, Smarter Governance'",
+      date: "Jul 08, 2025",
+      type: "Policy",
+      description: "Sikkim State Council of Science & Technology conducted a state-wide AI training programme titled 'Smart Proposals, Smarter Governance — One Day Training for Government Officials on AI Tools for DPR Preparation' across all six districts (Pakyong, Gangtok, Namchi, Mangan, Gyalshing, Soreng) plus eight batches for line departments. The programme equipped officials with practical AI skills for data-driven decision-making, DPR formulation, and workflow optimisation.",
+      link: "https://dstsikkim.gov.in/"
     },
     {
       title: "Digital India AI Awareness Workshop — Gangtok Smart City ICCC",
@@ -1372,20 +1478,6 @@ const governanceData = {
       type: "Policy Review",
       description: "After the facial recognition system at Mumbai's Mantralaya building failed to recognise staff, blocked journalists, and caused long queues on launch day, the government undertook an urgent review. The incident highlighted gaps in testing, consent frameworks, and data governance for biometric systems.",
       link: "https://indianexpress.com/article/explained/everyday-explainers/mumbai-mantralaya-entry-facial-recognition-9823157/"
-    },
-    {
-      title: "Valueleaf Deepfake Arrest — Cyber Cell Coordinates with SEBI",
-      date: "Oct 2025",
-      type: "Law Enforcement",
-      description: "Following the arrest of four Valueleaf Technologies employees for running an AI deepfake stock-scam operation, Mumbai Police's Cyber Crime Unit coordinated with SEBI (Securities and Exchange Board of India) to trace the fraudulent investment platforms and freeze associated accounts. SEBI issued an investor alert specifically warning about deepfake videos impersonating SEBI-registered analysts. The case prompted the regulator to begin consultations on mandatory AI-content watermarking for financial promotions.",
-      link: "https://bombayhighcourt.nic.in/generatenewauth.php?bhcpar=cGF0aD0uL3dyaXRlcmVhZGRhdGEvZGF0YS9qdWRnZW1lbnRzLzIwMjUvJmZuYW1lPTIzMDgwMDA1NzY0MjAyNV82LnBkZiZzbWZsYWc9TiZyanVkZGF0ZT0mdXBsb2FkZHQ9MDUvMTIvMjAyNSZzcGFzc3BocmFzZT0xMTEyMjUwNjQ4MjcmbmNpdGF0aW9uPTIwMjU6QkhDLUFTOjUzMjg2LURCJnNtY2l0YXRpb249JmRpZ2NlcnRmbGc9TiZpbnRlcmZhY2U9Tw=="
-    },
-    {
-      title: "Maharashtra AI Ethics Committee Formed — Deepfakes and Surveillance in Scope",
-      date: "Nov 2025",
-      type: "Policy Framework",
-      description: "Maharashtra became the first Indian state to constitute a formal AI Ethics Committee, tasked with reviewing state government use of AI tools in policing, surveillance, and welfare delivery. The committee's initial remit included audit of the Ganesh Chaturthi surveillance deployment, a review of the Mantralaya facial recognition system failures, and recommendations for consent-based AI use in public spaces. Civil society organisations were granted two observer seats on the committee — a transparency measure noted by digital rights groups as a positive step.",
-      link: "https://www.thehindu.com/news/cities/mumbai/maharashtra-congress-urges-shinde-govt-to-set-up-committee-to-fight-deepfakes/article67525115.ece"
     },
     {
       title: "MahaCrimeOS — AI-Powered Cybercrime Investigation Platform",
@@ -1569,30 +1661,6 @@ const governanceData = {
 
 
 // ─────────────────────────────────────────────────────────
-// REPORTS DATA — aggregated statistics, government reports,
-// and cybercrime data roundups by state
-// ─────────────────────────────────────────────────────────
-const reportsData = {
-
-  "Himachal Pradesh": [
-    {
-      title: "Himachal Pradesh Records 18,706 Cybercrime Complaints in 2024",
-      date: "2024",
-      summary: `Himachal Pradesh Police recorded 18,706 cybercrime complaints in 2024, a 52% increase over 2023, with AI-enhanced fraud identified as the dominant driver. The surge was concentrated in digital arrest scams (1,847 cases), deepfake investment fraud (2,314 cases), and voice-cloning blackmail. Shimla, Kangra, and Mandi districts accounted for the majority of complaints. The Himachal Pradesh Cyber Crime Unit recovered Rs 12.3 crore through rapid response fund-freeze actions for 892 victims.`,
-      link: "https://www.tribuneindia.com/news/himachal/himachal-sees-surge-in-cybercrimes-18706-complaints-in-2025/"
-    },
-    {
-      title: "135 Crypto Fraud Cases in Himachal Pradesh in 2024",
-      date: "2024",
-      summary: `Himachal Pradesh police registered 135 cryptocurrency fraud cases in 2024, with victims losing Rs 28.6 crore to AI-generated fake crypto trading platforms. The platforms used deepfake video endorsements of prominent businesspeople and politicians to establish credibility, with AI chatbots simulating real-time portfolio management. Victims from Dharamsala, Solan, and Palampur including retired government employees and teachers were disproportionately targeted. Police issued an advisory warning about AI-generated crypto scheme promotions distributed via YouTube and Telegram.`,
-      link: "http://himachalpr.gov.in/OneNews.aspx?Language=1&ID=31992"
-    },
-  ],
-
-};
-
-
-// ─────────────────────────────────────────────────────────
 // FULL CLASSIFICATION SYSTEM — all 6 axes
 // ─────────────────────────────────────────────────────────
 
@@ -1725,21 +1793,15 @@ function renderPage() {
 
   if (tab === "incidents") {
     renderList(incidentsData[stateName] || [], "incidentList", "incident", stateName);
-  } else if (tab === "governance") {
-    renderList(governanceData[stateName] || [], "incidentList", "governance", stateName);
   } else {
-    renderList(reportsData[stateName] || [], "incidentList", "reports", stateName);
+    renderList(governanceData[stateName] || [], "incidentList", "governance", stateName);
   }
 
   // Count badge
   const incidents  = incidentsData[stateName]  || [];
   const governance = governanceData[stateName] || [];
-  const reports    = reportsData[stateName]    || [];
   const countEl = document.getElementById("incidentCount");
-  if (countEl) countEl.textContent =
-    incidents.length + " incident" + (incidents.length !== 1 ? "s" : "") +
-    "  ·  " + governance.length + " governance entr" + (governance.length !== 1 ? "ies" : "y") +
-    (reports.length ? "  ·  " + reports.length + " report" + (reports.length !== 1 ? "s" : "") : "");
+  if (countEl) countEl.textContent = incidents.length + " incident" + (incidents.length !== 1 ? "s" : "") + "  ·  " + governance.length + " governance entr" + (governance.length !== 1 ? "ies" : "y");
 }
 
 function renderList(items, containerId, mode, stateName) {
@@ -1751,8 +1813,6 @@ function renderList(items, containerId, mode, stateName) {
     noMsgEl.style.display = "block";
     noMsgEl.textContent   = mode === "governance"
       ? "No governance entries documented yet for " + stateName + "."
-      : mode === "reports"
-      ? "No reports documented yet for " + stateName + "."
       : "No incidents documented yet for " + stateName + ".";
     return;
   }
