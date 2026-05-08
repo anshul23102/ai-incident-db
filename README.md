@@ -1,5 +1,6 @@
+
 <p align="center">
-<img src="images/pic3.png" alt="AI Impact Summit – Bharat 2026 India" height="900" />
+<img src="images/pic2.png" alt="INDIAai – A MeitY, NEGD & NASSCOM Initiative" height="350" />
 </p>
 
 # AI Incident Database – India
@@ -11,9 +12,8 @@ A state-wise interactive database documenting AI-related harm incidents across I
 ---
 
 ## About the Project
-
 <p align="center">
-<img src="images/pic2.png" alt="INDIAai – A MeitY, NEGD & NASSCOM Initiative" height="300" />
+<img src="images/pic3.png" alt="AI Impact Summit – Bharat 2026 India" height="900" />
 </p>
 
 Artificial Intelligence misuse is no longer a future risk in India — it is an ongoing reality. This project documents and analyses state-wise incidents of AI-related harm including deepfakes, financial fraud, voice cloning scams, electoral manipulation, and algorithm-amplified communal conflict.
